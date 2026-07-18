@@ -367,7 +367,18 @@ class PipelineOrchestrator:
         """Compute final scores for all models."""
         logger.info("Scoring models...")
 
-        engine = ScoringEngine(self.settings.scoring)
+        # Compute reference value: max AA coding_index across all ratings
+        reference_value = self.settings.scoring.reference.manual_reference_value
+        if self.ratings:
+            max_coding = max(
+                (r.benchmark.artificial_analysis_coding_agent_index or 0 for r in self.ratings),
+                default=None,
+            )
+            if max_coding and max_coding > 0:
+                reference_value = max_coding
+                logger.info("  AA reference auto-detected: %.1f", max_coding)
+
+        engine = ScoringEngine(self.settings.scoring, reference_value=reference_value)
         endpoints_map = {e.canonical_model_id: e for e in self.collected_endpoints}
         models_map = {m.canonical_model_id: m for m in self.collected_models}
 

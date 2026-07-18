@@ -106,8 +106,11 @@ class ScoringEngine:
 
         coding_agent = benchmark.artificial_analysis_coding_agent_index
         if coding_agent is not None:
-            # Use the raw AA index score directly — it's already a percentage-like value
-            base_score = coding_agent
+            # Normalize to percentage using reference (max across AA data)
+            if self.reference_value and self.reference_value > 0:
+                base_score = (coding_agent / self.reference_value) * 100
+            else:
+                base_score = coding_agent
         else:
             # Fall back to coding index if available
             coding_index = benchmark.artificial_analysis_coding_index
