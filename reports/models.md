@@ -1,6 +1,6 @@
 # Отчёт по моделям — Free AI Model Router
 
-*Сгенерировано: 2026-07-18 17:50:00 UTC*
+*Сгенерировано: 2026-07-18 18:10:59 UTC*
 
 *Источник рейтингов: Artificial Analysis (api)*
 
@@ -29,7 +29,7 @@ context 262k | success |
 | 12 | openrouter | google/gemma-4-26b-a4b-it:free | 18.0% |  | verified_free | нет данных
 context 262k | success |
 | 13 | openrouter | google/gemma-4-31b-it:free | 18.0% |  | verified_free | нет данных
-context 262k | rate_limited |
+context 262k | success |
 | 14 | openrouter | nvidia/nemotron-3-super-120b-a12b:free | 18.0% |  | verified_free | нет данных
 context 1000k | success |
 | 15 | openrouter | nvidia/nemotron-3-nano-30b-a3b:free | 18.0% |  | verified_free | нет данных
