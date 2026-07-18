@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T15:27:16.998211Z",
+  "generated_at": "2026-07-18T17:50:00.869544Z",
   "reference_scored_at": "ChatGPT-5.6 Sol High",
   "endpoints": [
     {
@@ -387,11 +387,11 @@
       "is_primary": false
     },
     {
-      "endpoint_id": "groq/qwen/qwen3.6-27b",
+      "endpoint_id": "groq/openai/gpt-oss-120b",
       "provider_id": "groq",
       "provider_name": "groq",
-      "canonical_model_id": "groq/qwen/qwen3.6-27b",
-      "model_name": "qwen/qwen3.6-27b",
+      "canonical_model_id": "groq/openai/gpt-oss-120b",
+      "model_name": "openai/gpt-oss-120b",
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "documented_free",
@@ -399,11 +399,11 @@
       "is_primary": false
     },
     {
-      "endpoint_id": "groq/llama-3.1-8b-instant",
+      "endpoint_id": "groq/openai/gpt-oss-20b",
       "provider_id": "groq",
       "provider_name": "groq",
-      "canonical_model_id": "groq/llama-3.1-8b-instant",
-      "model_name": "llama-3.1-8b-instant",
+      "canonical_model_id": "groq/openai/gpt-oss-20b",
+      "model_name": "openai/gpt-oss-20b",
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "documented_free",
@@ -423,27 +423,15 @@
       "is_primary": false
     },
     {
-      "endpoint_id": "groq/openai/gpt-oss-120b",
+      "endpoint_id": "groq/qwen/qwen3.6-27b",
       "provider_id": "groq",
       "provider_name": "groq",
-      "canonical_model_id": "groq/openai/gpt-oss-120b",
-      "model_name": "openai/gpt-oss-120b",
+      "canonical_model_id": "groq/qwen/qwen3.6-27b",
+      "model_name": "qwen/qwen3.6-27b",
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "documented_free",
       "rank": 36,
-      "is_primary": false
-    },
-    {
-      "endpoint_id": "groq/allam-2-7b",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/allam-2-7b",
-      "model_name": "allam-2-7b",
-      "final_score": 18.0,
-      "quality_band": "good",
-      "free_status": "documented_free",
-      "rank": 37,
       "is_primary": false
     },
     {
@@ -455,7 +443,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "documented_free",
-      "rank": 38,
+      "rank": 37,
       "is_primary": false
     },
     {
@@ -467,7 +455,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "documented_free",
-      "rank": 39,
+      "rank": 38,
       "is_primary": false
     },
     {
@@ -479,19 +467,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "documented_free",
-      "rank": 40,
-      "is_primary": false
-    },
-    {
-      "endpoint_id": "groq/openai/gpt-oss-20b",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/openai/gpt-oss-20b",
-      "model_name": "openai/gpt-oss-20b",
-      "final_score": 18.0,
-      "quality_band": "good",
-      "free_status": "documented_free",
-      "rank": 41,
+      "rank": 39,
       "is_primary": false
     },
     {
@@ -500,6 +476,30 @@
       "provider_name": "groq",
       "canonical_model_id": "groq/canopylabs/orpheus-v1-english",
       "model_name": "canopylabs/orpheus-v1-english",
+      "final_score": 18.0,
+      "quality_band": "good",
+      "free_status": "documented_free",
+      "rank": 40,
+      "is_primary": false
+    },
+    {
+      "endpoint_id": "groq/llama-3.1-8b-instant",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/llama-3.1-8b-instant",
+      "model_name": "llama-3.1-8b-instant",
+      "final_score": 18.0,
+      "quality_band": "good",
+      "free_status": "documented_free",
+      "rank": 41,
+      "is_primary": false
+    },
+    {
+      "endpoint_id": "groq/allam-2-7b",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/allam-2-7b",
+      "model_name": "allam-2-7b",
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "documented_free",
@@ -1356,16 +1356,16 @@
     "zai/glm-5-turbo",
     "zai/glm-5.1",
     "zai/glm-5.2",
-    "groq/qwen/qwen3.6-27b",
-    "groq/llama-3.1-8b-instant",
-    "groq/llama-3.3-70b-versatile",
     "groq/openai/gpt-oss-120b",
-    "groq/allam-2-7b",
+    "groq/openai/gpt-oss-20b",
+    "groq/llama-3.3-70b-versatile",
+    "groq/qwen/qwen3.6-27b",
     "groq/canopylabs/orpheus-arabic-saudi",
     "groq/groq/compound",
     "groq/groq/compound-mini",
-    "groq/openai/gpt-oss-20b",
     "groq/canopylabs/orpheus-v1-english",
+    "groq/llama-3.1-8b-instant",
+    "groq/allam-2-7b",
     "mistral/mistral-medium-2505",
     "mistral/mistral-medium-2508",
     "mistral/open-mistral-nemo",

@@ -1,6 +1,6 @@
 # Отчёт по моделям — Free AI Model Router
 
-*Сгенерировано: 2026-07-18 15:27:16 UTC*
+*Сгенерировано: 2026-07-18 17:50:00 UTC*
 
 *Источник рейтингов: Artificial Analysis (api)*
 
@@ -60,26 +60,26 @@ context 131k | rate_limited |
 | 30 | zai | glm-5-turbo | 18.0% |  | account_specific_free | нет данных | invalid_response |
 | 31 | zai | glm-5.1 | 18.0% |  | account_specific_free | нет данных | invalid_response |
 | 32 | zai | glm-5.2 | 18.0% |  | account_specific_free | нет данных | invalid_response |
-| 33 | groq | qwen/qwen3.6-27b | 18.0% |  | documented_free | нет данных
+| 33 | groq | openai/gpt-oss-120b | 18.0% |  | documented_free | нет данных
 context 131k | success |
-| 34 | groq | llama-3.1-8b-instant | 18.0% |  | documented_free | нет данных
+| 34 | groq | openai/gpt-oss-20b | 18.0% |  | documented_free | нет данных
 context 131k | success |
 | 35 | groq | llama-3.3-70b-versatile | 18.0% |  | documented_free | нет данных
 context 131k | success |
-| 36 | groq | openai/gpt-oss-120b | 18.0% |  | documented_free | нет данных
+| 36 | groq | qwen/qwen3.6-27b | 18.0% |  | documented_free | нет данных
 context 131k | success |
-| 37 | groq | allam-2-7b | 18.0% |  | documented_free | нет данных
+| 37 | groq | canopylabs/orpheus-arabic-saudi | 18.0% |  | documented_free | нет данных
+context 4k | invalid_response |
+| 38 | groq | groq/compound | 18.0% |  | documented_free | нет данных
+context 131k | success |
+| 39 | groq | groq/compound-mini | 18.0% |  | documented_free | нет данных
+context 131k | success |
+| 40 | groq | canopylabs/orpheus-v1-english | 18.0% |  | documented_free | нет данных
+context 4k | invalid_response |
+| 41 | groq | llama-3.1-8b-instant | 18.0% |  | documented_free | нет данных
+context 131k | success |
+| 42 | groq | allam-2-7b | 18.0% |  | documented_free | нет данных
 context 4k | success |
-| 38 | groq | canopylabs/orpheus-arabic-saudi | 18.0% |  | documented_free | нет данных
-context 4k | invalid_response |
-| 39 | groq | groq/compound | 18.0% |  | documented_free | нет данных
-context 131k | success |
-| 40 | groq | groq/compound-mini | 18.0% |  | documented_free | нет данных
-context 131k | success |
-| 41 | groq | openai/gpt-oss-20b | 18.0% |  | documented_free | нет данных
-context 131k | success |
-| 42 | groq | canopylabs/orpheus-v1-english | 18.0% |  | documented_free | нет данных
-context 4k | invalid_response |
 | 43 | mistral | mistral-medium-2505 | 18.0% |  | account_specific_free | нет данных | success |
 | 44 | mistral | mistral-medium-2508 | 18.0% |  | account_specific_free | нет данных | success |
 | 45 | mistral | open-mistral-nemo | 18.0% |  | account_specific_free | нет данных | success |
@@ -564,16 +564,16 @@ context 4k | invalid_response |
 | 409 | zai/glm-5-turbo | 18.0 | high | — | — | ✓ |
 | 410 | zai/glm-5.1 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
 | 411 | zai/glm-5.2 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
-| 412 | groq/qwen/qwen3.6-27b | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
-| 413 | groq/llama-3.1-8b-instant | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 412 | groq/openai/gpt-oss-120b | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 413 | groq/openai/gpt-oss-20b | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
 | 414 | groq/llama-3.3-70b-versatile | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
-| 415 | groq/openai/gpt-oss-120b | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
-| 416 | groq/allam-2-7b | 18.0 | low | — | context_below_minimum (4096 < 128000): -8.0, low_match_confidence: -4.0 | ✓ |
-| 417 | groq/canopylabs/orpheus-arabic-saudi | 18.0 | low | — | context_below_minimum (4000 < 128000): -8.0, low_match_confidence: -4.0 | ✓ |
-| 418 | groq/groq/compound | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
-| 419 | groq/groq/compound-mini | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
-| 420 | groq/openai/gpt-oss-20b | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
-| 421 | groq/canopylabs/orpheus-v1-english | 18.0 | low | — | context_below_minimum (4000 < 128000): -8.0, low_match_confidence: -4.0 | ✓ |
+| 415 | groq/qwen/qwen3.6-27b | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 416 | groq/canopylabs/orpheus-arabic-saudi | 18.0 | low | — | context_below_minimum (4000 < 128000): -8.0, low_match_confidence: -4.0 | ✓ |
+| 417 | groq/groq/compound | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 418 | groq/groq/compound-mini | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 419 | groq/canopylabs/orpheus-v1-english | 18.0 | low | — | context_below_minimum (4000 < 128000): -8.0, low_match_confidence: -4.0 | ✓ |
+| 420 | groq/llama-3.1-8b-instant | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 421 | groq/allam-2-7b | 18.0 | low | — | context_below_minimum (4096 < 128000): -8.0, low_match_confidence: -4.0 | ✓ |
 | 422 | mistral/mistral-medium-2505 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
 | 423 | mistral/mistral-medium-2508 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
 | 424 | mistral/open-mistral-nemo | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
