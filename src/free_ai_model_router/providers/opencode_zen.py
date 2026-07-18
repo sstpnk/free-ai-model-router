@@ -25,7 +25,7 @@ from free_ai_model_router.providers.base import (
 
 logger = logging.getLogger(__name__)
 
-ZEN_API_BASE = "https://api.opencode.cloud/zen/v1"
+ZEN_API_BASE = "https://opencode.ai/zen/v1"
 ZEN_MODELS_URL = f"{ZEN_API_BASE}/models"
 
 
@@ -60,7 +60,7 @@ class OpenCodeZenAdapter:
             results.append(ProviderModel(
                 provider_model_id=model_id,
                 name=m.get("name", model_id),
-                litellm_model=f"openrouter/{model_id}" if "/" not in model_id else model_id,
+                litellm_model=f"opencode_zen/{model_id}" if "/" not in model_id else model_id,
                 api_base=ZEN_API_BASE,
                 api_style=ApiStyle.OPENAI_COMPATIBLE,
                 context_tokens=context,

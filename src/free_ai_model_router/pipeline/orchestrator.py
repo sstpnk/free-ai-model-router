@@ -79,7 +79,7 @@ class PipelineOrchestrator:
         try:
             # Initialize HTTP client with SSRF protection
             allowed_domains = [
-                "openrouter.ai", "opencode.cloud", "z.ai",
+                "openrouter.ai", "opencode.ai", "opencode.cloud", "z.ai",
                 "api.groq.com", "generativelanguage.googleapis.com",
                 "api.mistral.ai", "api.openai.com",
                 "api.anthropic.com", "api.x.ai",
