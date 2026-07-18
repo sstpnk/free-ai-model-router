@@ -335,7 +335,7 @@ class PipelineOrchestrator:
                     api_base=endpoint.api_base,
                 )
                 try:
-                    result = await adapter.verify_model(pm, api_key)
+                    result = await asyncio.wait_for(adapter.verify_model(pm, api_key), timeout=20)
                     endpoint.runtime_check.checked = True
                     endpoint.runtime_check.status = result.status
                     endpoint.runtime_check.checked_at = datetime.now(timezone.utc)
