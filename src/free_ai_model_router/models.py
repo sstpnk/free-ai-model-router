@@ -196,6 +196,7 @@ class BenchmarkScores(BaseModel):
     deep_swe: Optional[float] = None
     swe_atlas_qna: Optional[float] = None
     intelligence_index: Optional[float] = None
+    agentic_index: Optional[float] = None
     agent_harness: Optional[str] = None
     reasoning_setting: Optional[str] = None
     evaluated_at: Optional[datetime] = None

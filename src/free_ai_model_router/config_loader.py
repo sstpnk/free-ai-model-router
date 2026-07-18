@@ -16,11 +16,12 @@ from free_ai_model_router.models import (
 
 
 def _load_yaml(path: Path) -> dict[str, Any]:
-    """Load and parse a YAML file."""
+    """Load and parse a YAML file, returning empty dict for None/empty."""
     if not path.exists():
         raise FileNotFoundError(f"Config file not found: {path}")
     with open(path, encoding="utf-8") as f:
-        return yaml.safe_load(f)
+        data = yaml.safe_load(f)
+    return data if isinstance(data, dict) else {}
 
 
 def load_providers(path: Path) -> ProviderConfigList:
@@ -43,8 +44,9 @@ def load_scoring(path: Path) -> ScoringConfig:
 
 def load_overrides(path: Path) -> ManualOverrideList:
     """Load manual overrides from manual-overrides.yaml."""
-    data = _load_yaml(path) if path.exists() else {"overrides": []}
-    return ManualOverrideList(**data)
+    data = _load_yaml(path) if path.exists() else {}
+    overrides = data.get("overrides") or []
+    return ManualOverrideList(overrides=overrides)
 
 
 class Settings:

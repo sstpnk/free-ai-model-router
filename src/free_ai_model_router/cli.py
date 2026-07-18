@@ -139,13 +139,13 @@ def run_all(
     ))
 
     if state.success:
-        click.echo("✓ Pipeline completed successfully")
+        click.echo("[OK] Pipeline completed successfully")
     elif state.partial_success:
-        click.echo("⚠ Pipeline completed with errors:")
+        click.echo("[WARN] Pipeline completed with errors:")
         for err in state.errors:
             click.echo(f"  - {err}")
     else:
-        click.echo("✗ Pipeline failed:")
+        click.echo("[FAIL] Pipeline failed:")
         for err in state.errors:
             click.echo(f"  - {err}")
         sys.exit(1)

@@ -199,7 +199,7 @@ class PipelineOrchestrator:
         logger.info("Total: %d models from %d providers", len(all_models), len(adapters))
 
     def _init_adapters(self) -> list:
-        """Initialize provider adapters based on config."""
+        """Initialize provider adapters based on config, passing API keys if available."""
         assert self.http is not None
         adapters = []
         adapter_map = {
@@ -215,8 +215,9 @@ class PipelineOrchestrator:
                 continue
             adapter_cls = adapter_map.get(provider.provider_id)
             if adapter_cls:
-                adapters.append(adapter_cls(self.http))
-                logger.info("  Initialized adapter: %s", provider.provider_id)
+                api_key = self.settings.get_provider_api_key(provider.provider_id)
+                adapters.append(adapter_cls(self.http, api_key=api_key))
+                logger.info("  Initialized adapter: %s (key=%s)", provider.provider_id, "yes" if api_key else "no")
 
         return adapters
 

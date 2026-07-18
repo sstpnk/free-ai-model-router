@@ -34,14 +34,17 @@ class ZAIAdapter:
 
     provider_id = "zai"
 
-    def __init__(self, http_client: HttpClient) -> None:
+    def __init__(self, http_client: HttpClient, api_key: Optional[str] = None) -> None:
         self.http = http_client
+        self.api_key = api_key
 
     async def discover_models(self) -> list[ProviderModel]:
+        headers = {"Authorization": f"Bearer {self.api_key}"} if self.api_key else None
         data = await self.http.fetch_json(
             ZAI_MODELS_URL,
+            headers=headers,
             use_cache=True,
-            cache_ttl_seconds=7200,
+            cache_ttl_seconds=3600,
         )
         models_raw = data.get("data", []) if isinstance(data.get("data"), list) else []
         results: list[ProviderModel] = []

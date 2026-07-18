@@ -18,11 +18,9 @@ from free_ai_model_router.models import (
 
 logger = logging.getLogger(__name__)
 
-# Official AA Data API endpoints
-AA_API_BASE_V1 = "https://api.artificialanalysis.ai/v1"
-AA_CODING_AGENTS_URL = f"{AA_API_BASE_V1}/coding-agents"
-AA_MODELS_URL = f"{AA_API_BASE_V1}/models"
-AA_PROVIDERS_URL = f"{AA_API_BASE_V1}/providers"
+# Official AA Data API endpoints (v2)
+AA_API_BASE_V2 = "https://artificialanalysis.ai/api/v2"
+AA_FREE_MODELS_URL = f"{AA_API_BASE_V2}/language/models/free"
 
 # Public page as fallback
 AA_CODING_AGENTS_PAGE = "https://artificialanalysis.ai/agents/coding-agents"
@@ -42,12 +40,12 @@ class ArtificialAnalysisCollector:
         self._current_run_source: str = "none"
 
     async def fetch_coding_agent_index(self) -> list[dict[str, Any]]:
-        """Fetch Coding Agent Index via API or fall back to page."""
+        """Fetch coding index from AA v2 API (free tier) or fall back to page."""
         if self.api_key:
             try:
                 data = await self.http.fetch_json(
-                    AA_CODING_AGENTS_URL,
-                    auth_header="X-API-Key",
+                    AA_FREE_MODELS_URL,
+                    auth_header="x-api-key",
                     auth_token=self.api_key,
                     use_cache=True,
                     cache_ttl_seconds=14400,  # 4 hours — preserve quota
@@ -112,13 +110,13 @@ class ArtificialAnalysisCollector:
         """Find a model entry in the coding agent index by name matching."""
         name_lower = model_name.lower()
         for entry in index_data:
-            entry_name = str(entry.get("model", entry.get("name", entry.get("id", "")))).lower()
+            entry_name = str(entry.get("name", entry.get("id", ""))).lower()
             if name_lower in entry_name or entry_name in name_lower:
                 return entry
-            # Also check aliases
-            for alias in entry.get("aliases", []):
-                if name_lower in alias.lower():
-                    return entry
+            # Also check slug
+            slug = entry.get("slug", "")
+            if slug and name_lower in slug.lower():
+                return entry
         return None
 
     async def rate_model(
@@ -127,30 +125,30 @@ class ArtificialAnalysisCollector:
         index_data: list[dict[str, Any]],
         reference_value: Optional[float] = None,
     ) -> ModelRating:
-        """Compute rating for a single model using AA coding agent index."""
+        """Compute rating for a single model using AA v2 API data."""
         entry = self._find_model_in_index(model.name, index_data)
 
         benchmark = BenchmarkScores()
         normalized = NormalizedScores()
 
         if entry:
-            raw_score = entry.get("score", entry.get("coding_agent_index"))
-            coding_index = entry.get("coding_index")
-            terminal_bench = entry.get("terminal_bench", entry.get("terminal_bench_v2"))
-            deep_swe = entry.get("deep_swe")
-            swe_atlas = entry.get("swe_atlas_qna")
-            intelligence = entry.get("intelligence_index")
+            evals = entry.get("evaluations", {})
+
+            raw_score = evals.get("artificial_analysis_coding_index")
+            coding_index = evals.get("artificial_analysis_coding_index")
+            terminal_bench = evals.get("terminalbench_v2_1", evals.get("terminalbench_hard"))
+            deep_swe = evals.get("deep_swe")
+            intelligence = evals.get("artificial_analysis_intelligence_index")
+            agentic_index = evals.get("artificial_analysis_agentic_index")
 
             benchmark.artificial_analysis_coding_agent_index = raw_score
             benchmark.artificial_analysis_coding_index = coding_index
             benchmark.terminal_bench_v2 = terminal_bench
             benchmark.deep_swe = deep_swe
-            benchmark.swe_atlas_qna = swe_atlas
             benchmark.intelligence_index = intelligence
-            benchmark.agent_harness = entry.get("agent_harness", entry.get("harness"))
-            benchmark.reasoning_setting = entry.get("reasoning_setting", entry.get("reasoning"))
+            benchmark.agentic_index = agentic_index
             benchmark.evaluated_at = datetime.now(timezone.utc)
-            benchmark.source_url = AA_CODING_AGENTS_PAGE
+            benchmark.source_url = AA_DATA_API_DOCS
 
             # Normalize to percentage
             if raw_score is not None:

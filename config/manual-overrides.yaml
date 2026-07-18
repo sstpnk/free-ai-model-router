@@ -1,7 +1,7 @@
 # Manual overrides for cases where automated detection is incorrect or insufficient.
 # Each entry MUST include a reason, source, and optional expiry.
 
-overrides:
+overrides: []
   # Example: model that is free for a specific account but not documented as free
   # - canonical_model_id: provider/model-name
   #   field: free_status

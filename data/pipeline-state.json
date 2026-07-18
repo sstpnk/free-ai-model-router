@@ -1,0 +1,16 @@
+{
+  "run_id": "1a4fc2d417be",
+  "started_at": "2026-07-18T13:14:41.270610Z",
+  "completed_at": "2026-07-18T13:15:18.919596Z",
+  "success": true,
+  "partial_success": false,
+  "errors": [
+    "Provider openrouter: Failed to fetch https://openrouter.ai/api/v1/models after 3 attempts",
+    "Provider opencode_zen: Failed to fetch https://api.opencode.cloud/zen/v1/models after 3 attempts",
+    "Provider zai: name 'models_url' is not defined",
+    "Provider groq: Failed to fetch https://api.groq.com/openai/v1/models after 3 attempts",
+    "Provider gemini: Failed to fetch https://generativelanguage.googleapis.com/v1beta/models after 3 attempts",
+    "Provider mistral: Failed to fetch https://api.mistral.ai/v1/models after 3 attempts"
+  ],
+  "source_health": {}
+}
