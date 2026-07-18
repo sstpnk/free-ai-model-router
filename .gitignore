@@ -5,16 +5,11 @@ __pycache__/
 dist/
 build/
 
-# Data cache
+# Generated output — tracked in git for daily workflow commits
+# Temp data dirs (cache, raw fetched data, history diffs)
 data/cache/
 data/raw/
 data/history/
-
-# Generated output
-output/*
-!output/.gitkeep
-reports/*
-!reports/.gitkeep
 
 # Environment
 .env

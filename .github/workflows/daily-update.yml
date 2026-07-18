@@ -66,25 +66,17 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
 
-      - name: Check for meaningful changes
-        id: diff-check
-        run: |
-          git add -N output/ reports/
-          if git diff --exit-code output/ reports/; then
-            echo "No meaningful changes — skipping commit"
-            echo "skip_commit=true" >> $GITHUB_OUTPUT
-          else
-            echo "skip_commit=false" >> $GITHUB_OUTPUT
-          fi
-
       - name: Commit and push
-        if: steps.diff-check.outputs.skip_commit == 'false'
         run: |
           git config user.name "free-ai-model-router[bot]"
           git config user.email "bot@free-ai-model-router.example.com"
-          git add output/ reports/ data/normalized/
-          git commit -m "data: daily model update $(date +'%Y-%m-%d')"
-          git push
+          git add -A output/ reports/
+          if git diff --cached --quiet; then
+            echo "No new changes generated — skipping commit"
+          else
+            git commit -m "data: daily model update $(date +'%Y-%m-%d')"
+            git push
+          fi
 
       - name: GitHub Actions Summary
         run: |
