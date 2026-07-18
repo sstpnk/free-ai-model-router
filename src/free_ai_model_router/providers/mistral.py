@@ -53,11 +53,10 @@ class MistralAdapter:
             if not model_id:
                 continue
 
-            created = m.get("created")
-            # Mistral has a free tier (le Chat, trial credits for API)
-            # Usually models with "tiny" or specific IDs are free-tier accessible
-            is_free = "tiny" in model_id.lower()
-            free_status = FreeStatus.DOCUMENTED_FREE if is_free else FreeStatus.UNKNOWN
+            # All models accessible via user's Mistral API key.
+            # Mistral doesn't expose free/paid via model list endpoint.
+            # User's key determines access, so all are account-specific free.
+            free_status = FreeStatus.ACCOUNT_SPECIFIC_FREE
 
             results.append(ProviderModel(
                 provider_model_id=model_id,

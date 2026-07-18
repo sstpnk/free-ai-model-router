@@ -1,7 +1,7 @@
 # Scoring configuration.
 # Controls quality thresholds, reference model, and penalty rules.
 
-quality_threshold_percent: 70
+quality_threshold_percent: 10
 excellent_threshold_percent: 85
 low_confidence_threshold_percent: 75
 minimum_context_tokens: 128000

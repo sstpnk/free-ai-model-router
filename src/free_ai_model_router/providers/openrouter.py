@@ -55,13 +55,9 @@ class OpenRouterAdapter:
             if not model_id:
                 continue
 
-            # Determine free status from OpenRouter naming convention
+            # Only models with :free suffix are free on OpenRouter.
+            # Pricing info on a paid aggregator is not a reliable free indicator.
             free_status = FreeStatus.VERIFIED_FREE if ":free" in model_id else FreeStatus.UNKNOWN
-
-            # Check if model is free via pricing
-            pricing = m.get("pricing", {})
-            if pricing.get("prompt") == "0" and pricing.get("completion") == "0":
-                free_status = FreeStatus.VERIFIED_FREE
 
             context = m.get("context_length")
             limits = Limits(

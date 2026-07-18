@@ -415,13 +415,15 @@ class PipelineOrchestrator:
             rating = ratings_map.get(endpoint.canonical_model_id)
             if rating is None:
                 continue
-            # Only exclude explicitly paid / unavailable models.
-            # UNKNOWN means we couldn't determine free status — include anyway.
-            if endpoint.free_status in (
-                FreeStatus.PAID,
-                FreeStatus.UNAVAILABLE,
-                FreeStatus.TRIAL_CREDIT,
-            ):
+            # Only include models with an explicit free status.
+            # UNKNOWN/PAID etc. are not free.
+            FREE_STATUSES = {
+                FreeStatus.VERIFIED_FREE,
+                FreeStatus.DOCUMENTED_FREE,
+                FreeStatus.ACCOUNT_SPECIFIC_FREE,
+                FreeStatus.TEMPORARY_FREE,
+            }
+            if endpoint.free_status not in FREE_STATUSES:
                 continue
             paired.append((endpoint, rating))
 
