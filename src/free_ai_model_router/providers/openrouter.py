@@ -109,7 +109,7 @@ class OpenRouterAdapter:
         """Verify model by sending a minimal chat completion request."""
         import httpx
         try:
-            async with httpx.AsyncClient(timeout=30) as client:
+            async with httpx.AsyncClient(timeout=15) as client:
                 import time
                 start = time.monotonic()
                 response = await client.post(

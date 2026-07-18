@@ -305,6 +305,8 @@ class PipelineOrchestrator:
         adapters = self._init_adapters()
         adapter_by_id = {a.provider_id: a for a in adapters}
 
+        # Build list of (endpoint, adapter, api_key) triples to verify
+        to_verify: list[tuple[ProviderEndpoint, Any, str]] = []
         for endpoint in self.collected_endpoints:
             provider_id = endpoint.provider_id
             api_key = self.settings.get_provider_api_key(provider_id)
@@ -317,33 +319,42 @@ class PipelineOrchestrator:
             adapter = adapter_by_id.get(provider_id)
             if not adapter:
                 continue
+            to_verify.append((endpoint, adapter, api_key))
 
-            try:
-                # Create a ProviderModel from the endpoint for verification
+        # Verify in parallel with concurrency limit
+        sem = asyncio.Semaphore(10)
+
+        async def _verify_one(
+            endpoint: ProviderEndpoint,
+            adapter: Any,
+            api_key: str,
+        ) -> None:
+            async with sem:
                 pm = ProviderModel(
                     provider_model_id=endpoint.provider_model_id,
                     api_base=endpoint.api_base,
                 )
-                result = await adapter.verify_model(pm, api_key)
-                endpoint.runtime_check.checked = True
-                endpoint.runtime_check.status = result.status
-                endpoint.runtime_check.checked_at = datetime.now(timezone.utc)
-                endpoint.runtime_check.latency_ms = result.latency_ms
-                endpoint.runtime_check.http_status = result.http_status
+                try:
+                    result = await adapter.verify_model(pm, api_key)
+                    endpoint.runtime_check.checked = True
+                    endpoint.runtime_check.status = result.status
+                    endpoint.runtime_check.checked_at = datetime.now(timezone.utc)
+                    endpoint.runtime_check.latency_ms = result.latency_ms
+                    endpoint.runtime_check.http_status = result.http_status
+                    if result.status.value == "success":
+                        endpoint.runtime_check.consecutive_failures = 0
+                    else:
+                        endpoint.runtime_check.consecutive_failures += 1
+                    logger.debug("  %s/%s: %s (%dms)",
+                                 endpoint.provider_id, endpoint.provider_model_id,
+                                 result.status.value, result.latency_ms or 0)
+                except Exception as e:
+                    logger.warning("  %s/%s verification failed: %s",
+                                   endpoint.provider_id, endpoint.provider_model_id, e)
+                    endpoint.runtime_check.checked = True
+                    endpoint.runtime_check.status_str = "provider_unavailable"
 
-                if result.status.value == "success":
-                    endpoint.runtime_check.consecutive_failures = 0
-                else:
-                    endpoint.runtime_check.consecutive_failures += 1
-
-                logger.debug("  %s/%s: %s (%dms)",
-                             provider_id, endpoint.provider_model_id,
-                             result.status.value, result.latency_ms or 0)
-            except Exception as e:
-                logger.warning("  %s/%s verification failed: %s",
-                               provider_id, endpoint.provider_model_id, e)
-                endpoint.runtime_check.checked = True
-                endpoint.runtime_check.status_str = "provider_unavailable"
+        await asyncio.gather(*(_verify_one(ep, ad, ak) for ep, ad, ak in to_verify))
 
         self.source_health["api_verification"] = SourceHealth(
             source_id="api_verification",

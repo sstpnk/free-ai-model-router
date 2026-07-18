@@ -96,7 +96,7 @@ class GeminiAdapter:
         try:
             import time
             start = time.monotonic()
-            async with httpx.AsyncClient(timeout=30) as client:
+            async with httpx.AsyncClient(timeout=15) as client:
                 url = f"{GEMINI_API_BASE}/models/{model.provider_model_id}:generateContent?key={api_key}"
                 response = await client.post(
                     url,

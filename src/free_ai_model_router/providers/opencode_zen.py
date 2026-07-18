@@ -82,7 +82,7 @@ class OpenCodeZenAdapter:
         try:
             import time
             start = time.monotonic()
-            async with httpx.AsyncClient(timeout=30) as client:
+            async with httpx.AsyncClient(timeout=15) as client:
                 response = await client.post(
                     f"{ZEN_API_BASE}/chat/completions",
                     headers={
