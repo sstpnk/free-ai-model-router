@@ -24,6 +24,7 @@ from free_ai_model_router.models import (
     RoutedEndpoint,
     SourceHealth,
     FreeStatus,
+    VerificationStatus,
 )
 from free_ai_model_router.providers.base import ProviderModel
 from free_ai_model_router.providers.gemini import GeminiAdapter
@@ -313,7 +314,7 @@ class PipelineOrchestrator:
 
             if not api_key:
                 endpoint.runtime_check.checked = False
-                endpoint.runtime_check.status_str = "not_tested"
+                endpoint.runtime_check.status = VerificationStatus.NOT_TESTED
                 continue
 
             adapter = adapter_by_id.get(provider_id)
@@ -352,7 +353,7 @@ class PipelineOrchestrator:
                     logger.warning("  %s/%s verification failed: %s",
                                    endpoint.provider_id, endpoint.provider_model_id, e)
                     endpoint.runtime_check.checked = True
-                    endpoint.runtime_check.status_str = "provider_unavailable"
+                    endpoint.runtime_check.status = VerificationStatus.PROVIDER_UNAVAILABLE
 
         await asyncio.gather(*(_verify_one(ep, ad, ak) for ep, ad, ak in to_verify))
 
