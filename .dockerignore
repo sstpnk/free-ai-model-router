@@ -1,0 +1,11 @@
+.git/
+.gitignore
+data/cache/
+data/history/
+output/
+reports/
+__pycache__/
+*.pyc
+.env
+.omo/
+.codegraph/

@@ -1,0 +1,76 @@
+# Data sources for model discovery and benchmarking.
+# Each source defines how to fetch, how often, and staleness tolerance.
+
+sources:
+  - source_id: artificial_analysis_api
+    name: Artificial Analysis Data API
+    type: api
+    base_url: https://api.artificialanalysis.ai
+    priority: 1
+    cache_ttl_minutes: 360  # 6 hours — API has limited free quota
+    staleness_threshold_minutes: 1440  # 24 hours before data marked stale
+    auth_type: api_key
+    auth_header: X-API-Key
+    endpoints:
+      coding_agents: /v1/coding-agents
+      models: /v1/models
+      providers: /v1/providers
+
+  - source_id: artificial_analysis_page
+    name: Artificial Analysis Coding Agents Page
+    type: web_page
+    url: https://artificialanalysis.ai/agents/coding-agents
+    priority: 2  # fallback when API unavailable
+    cache_ttl_minutes: 360
+    staleness_threshold_minutes: 1440
+    auth_type: none
+
+  - source_id: huggingface_hub
+    name: Hugging Face Hub API
+    type: api
+    base_url: https://huggingface.co/api
+    priority: 1
+    cache_ttl_minutes: 180  # 3 hours — free API, generous rate limits
+    staleness_threshold_minutes: 720
+    auth_type: optional
+    endpoints:
+      models_search: /models
+      inference_providers: /inference-providers
+
+  - source_id: openrouter_api
+    name: OpenRouter API
+    type: api
+    base_url: https://openrouter.ai/api/v1
+    priority: 1
+    cache_ttl_minutes: 120
+    staleness_threshold_minutes: 1440
+    auth_type: api_key
+    endpoints:
+      models: /models
+
+  - source_id: litellm_catalog
+    name: LiteLLM Provider Catalog
+    type: web_page
+    url: https://docs.litellm.ai/docs/providers
+    priority: 2
+    cache_ttl_minutes: 1440  # 24 hours — docs change slowly
+    staleness_threshold_minutes: 4320  # 3 days
+    auth_type: none
+
+  - source_id: litellm_cost_map
+    name: LiteLLM Model Cost Map
+    type: web_page
+    url: https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json
+    priority: 1
+    cache_ttl_minutes: 1440
+    staleness_threshold_minutes: 4320
+    auth_type: none
+
+  - source_id: github_models_catalog
+    name: GitHub Models Catalog
+    type: web_page
+    url: https://github.com/marketplace/models
+    priority: 2
+    cache_ttl_minutes: 1440
+    staleness_threshold_minutes: 4320
+    auth_type: none

@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Data cache
+data/cache/
+data/raw/
+data/history/
+
+# Generated output
+output/*
+!output/.gitkeep
+reports/*
+!reports/.gitkeep
+
+# Environment
+.env
+.env.local
+*.key
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Codegraph index
+.codegraph/
+
+# OpenCode state
+.omo/

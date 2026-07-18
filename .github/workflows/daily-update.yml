@@ -1,0 +1,108 @@
+name: Daily Model Update
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 05:17 UTC daily — avoids top-of-hour scheduler congestion
+    - cron: "17 5 * * *"
+
+# Minimal permissions — only contents write for commits
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pyproject.toml
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[litellm]"
+
+      - name: Restore data cache
+        uses: actions/cache@v4
+        with:
+          path: data/cache/
+          key: ${{ runner.os }}-model-cache-${{ github.run_id }}
+          restore-keys: |
+            ${{ runner.os }}-model-cache-
+
+      - name: Collect provider models
+        run: python -m free_ai_model_router collect
+        env:
+          ARTIFICIAL_ANALYSIS_API_KEY: ${{ secrets.ARTIFICIAL_ANALYSIS_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENCODE_ZEN_API_KEY: ${{ secrets.OPENCODE_ZEN_API_KEY }}
+          ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+
+      - name: Discover new candidates
+        run: python -m free_ai_model_router discover
+
+      - name: Collect benchmarks
+        run: python -m free_ai_model_router rank
+        env:
+          ARTIFICIAL_ANALYSIS_API_KEY: ${{ secrets.ARTIFICIAL_ANALYSIS_API_KEY }}
+
+      - name: Verify API access
+        run: python -m free_ai_model_router verify
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENCODE_ZEN_API_KEY: ${{ secrets.OPENCODE_ZEN_API_KEY }}
+          ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+
+      - name: Generate LiteLLM config
+        run: python -m free_ai_model_router generate
+
+      - name: Generate reports
+        run: python -m free_ai_model_router report
+
+      - name: Check for meaningful changes
+        id: diff-check
+        run: |
+          git add -N output/ reports/
+          if git diff --exit-code output/ reports/; then
+            echo "No meaningful changes — skipping commit"
+            echo "skip_commit=true" >> $GITHUB_OUTPUT
+          else
+            echo "skip_commit=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push
+        if: steps.diff-check.outputs.skip_commit == 'false'
+        run: |
+          git config user.name "free-ai-model-router[bot]"
+          git config user.email "bot@free-ai-model-router.example.com"
+          git add output/ reports/ data/normalized/
+          git commit -m "data: daily model update $(date +'%Y-%m-%d')"
+          git push
+
+      - name: GitHub Actions Summary
+        run: |
+          echo "## Free AI Model Router — Daily Update" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Date:** $(date +'%Y-%m-%d')" >> $GITHUB_STEP_SUMMARY
+          echo "- **Config:** \`output/litellm-config-sample.yaml\`" >> $GITHUB_STEP_SUMMARY
+          echo "- **Reports:** \`reports/\`" >> $GITHUB_STEP_SUMMARY
+          if [ -f reports/models.md ]; then
+            echo "- Models in route: \`$(grep -c '| ✓ |' reports/models.md || echo 0)\`" >> $GITHUB_STEP_SUMMARY
+          fi

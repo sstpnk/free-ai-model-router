@@ -1,0 +1,45 @@
+# Scoring configuration.
+# Controls quality thresholds, reference model, and penalty rules.
+
+quality_threshold_percent: 70
+excellent_threshold_percent: 85
+low_confidence_threshold_percent: 75
+minimum_context_tokens: 128000
+
+reference:
+  name: ChatGPT-5.6 Sol High
+  score_percent: 100
+  artificial_analysis_model_id: null
+  manual_reference_value: null  # fallback when reference not in current dataset
+
+routing:
+  prefer_provider_diversity: true
+  disallow_shared_quota_as_independent_fallback: true
+  include_temporary_free: true
+  include_account_specific_free: true
+
+# Weighting scheme. Two modes:
+#   - composite_primary: Coding Agent Index is main aggregator, others are small corrections
+#   - component_weighted: recalculate from individual components
+scoring_mode: composite_primary
+
+weights:
+  coding_agent_index: 0.50
+  coding_model_index: 0.20
+  terminal_bench: 0.10
+  repository_understanding: 0.08
+  tool_calling: 0.05
+  context_utility: 0.03
+  endpoint_reliability: 0.03
+  latency_and_speed: 0.01
+
+penalties:
+  no_tool_calling: -5.0
+  unstable_structured_output: -3.0
+  context_below_minimum: -8.0
+  temporary_free: -2.0
+  opaque_quota: -3.0
+  two_consecutive_failures: -10.0
+  low_match_confidence: -4.0
+  trial_credit_only: -15.0
+  unsupported_litellm_adapter: -5.0

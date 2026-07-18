@@ -1,0 +1,21 @@
+# Manual overrides for cases where automated detection is incorrect or insufficient.
+# Each entry MUST include a reason, source, and optional expiry.
+
+overrides:
+  # Example: model that is free for a specific account but not documented as free
+  # - canonical_model_id: provider/model-name
+  #   field: free_status
+  #   value: account_specific_free
+  #   reason: "Free for my account since 2026-06, confirmed via billing page"
+  #   source: "https://provider.example.com/account/billing"
+  #   added_at: "2026-07-18"
+  #   expires_at: "2026-09-01"
+  #
+  # Example: model routing exclusion
+  # - canonical_model_id: provider/model-name
+  #   field: excluded_from_router
+  #   value: true
+  #   reason: "Model returns empty responses for coding queries"
+  #   source: "manual verification 2026-07-15"
+  #   added_at: "2026-07-15"
+  #   expires_at: "2026-08-15"

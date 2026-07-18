@@ -1,0 +1,26 @@
+# Manual model identity aliases.
+# Maps provider-specific model IDs to canonical model IDs.
+# Format: provider_id:provider_model_id -> canonical_model_id
+
+aliases:
+  # OpenRouter
+  openrouter:openai/gpt-4o: openai/gpt-4o
+  openrouter:mistral/mistral-large: mistral/mistral-large
+  openrouter:google/gemini-2.0-flash: google/gemini-2.0-flash
+  openrouter:deepseek/deepseek-chat: deepseek/deepseek-v3
+  openrouter:anthropic/claude-sonnet-4: anthropic/claude-sonnet-4
+
+  # z.ai
+  zai:glm-4.7-flash: zhipu/glm-4.7-flash
+
+  # Groq
+  groq:llama-3.3-70b-versatile: meta/llama-3.3-70b
+
+  # Cloudflare
+  cloudflare:@cf/meta/llama-3.3-70b-instruct-fp8-fast: meta/llama-3.3-70b
+
+  # DeepInfra
+  deepinfra:meta-llama/Llama-3.3-70B-Instruct: meta/llama-3.3-70b
+
+  # Hugging Face
+  huggingface:meta-llama/Llama-3.3-70B-Instruct: meta/llama-3.3-70b

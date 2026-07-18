@@ -1,0 +1,283 @@
+# Provider registry — each entry defines a known AI model provider.
+# Adding a provider = create YAML entry + optional Python adapter in src/providers/.
+# ---
+# adapter: Python module path in src/free_ai_model_router/providers/
+#   When null, the generic openai_compatible adapter is used if api_style allows.
+# discovery_priority: for ordering multi-source model discovery
+# enabled: false disables all collection/verification for this provider
+
+providers:
+  - provider_id: openrouter
+    name: OpenRouter
+    website: https://openrouter.ai
+    api_base: https://openrouter.ai/api/v1
+    api_style: openai_compatible
+    adapter: openrouter
+    discovery_priority: 10
+    enabled: true
+    sources:
+      models_api: https://openrouter.ai/api/v1/models
+      pricing_page: https://openrouter.ai/models
+      docs: https://openrouter.ai/docs
+      changelog: https://openrouter.ai/changelog
+
+  - provider_id: opencode_zen
+    name: OpenCode Zen
+    website: https://opencode.cloud
+    api_base: https://api.opencode.cloud/zen/v1
+    api_style: openai_compatible
+    adapter: opencode_zen
+    discovery_priority: 20
+    enabled: true
+    sources:
+      docs: https://opencode.cloud/docs
+      models_page: https://opencode.cloud/zen/models
+
+  - provider_id: zai
+    name: z.ai
+    website: https://z.ai
+    api_base: https://api.z.ai/api/paas/v4
+    api_style: openai_compatible
+    adapter: zai
+    discovery_priority: 30
+    enabled: true
+    sources:
+      docs: https://z.ai/docs
+      status: https://status.z.ai
+
+  - provider_id: groq
+    name: Groq
+    website: https://groq.com
+    api_base: https://api.groq.com/openai/v1
+    api_style: openai_compatible
+    adapter: groq
+    discovery_priority: 40
+    enabled: true
+    sources:
+      models_api: https://api.groq.com/openai/v1/models
+      pricing_page: https://groq.com/pricing
+      docs: https://console.groq.com/docs
+      status: https://status.groq.com
+
+  - provider_id: gemini
+    name: Google Gemini API
+    website: https://ai.google.dev
+    api_base: https://generativelanguage.googleapis.com/v1beta
+    api_style: google_ai
+    adapter: gemini
+    discovery_priority: 50
+    enabled: true
+    sources:
+      models_api: https://generativelanguage.googleapis.com/v1beta/models
+      pricing_page: https://ai.google.dev/pricing
+      docs: https://ai.google.dev/docs
+
+  - provider_id: mistral
+    name: Mistral AI
+    website: https://mistral.ai
+    api_base: https://api.mistral.ai/v1
+    api_style: openai_compatible
+    adapter: mistral
+    discovery_priority: 60
+    enabled: true
+    sources:
+      models_api: https://api.mistral.ai/v1/models
+      pricing_page: https://mistral.ai/products/la-plateforme#pricing
+      docs: https://docs.mistral.ai
+
+  - provider_id: github_models
+    name: GitHub Models
+    website: https://github.com/marketplace/models
+    api_base: https://models.inference.ai.azure.com
+    api_style: openai_compatible
+    adapter: null
+    discovery_priority: 70
+    enabled: true
+    sources:
+      models_page: https://github.com/marketplace/models
+      docs: https://docs.github.com/en/github-models
+
+  - provider_id: cloudflare
+    name: Cloudflare Workers AI
+    website: https://developers.cloudflare.com/workers-ai
+    api_base: https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/v1
+    api_style: openai_compatible
+    adapter: null
+    discovery_priority: 80
+    enabled: true
+    sources:
+      models_api: https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search
+      docs: https://developers.cloudflare.com/workers-ai
+
+  - provider_id: huggingface
+    name: Hugging Face Inference Providers
+    website: https://huggingface.co
+    api_base: https://api-inference.huggingface.co/v1
+    api_style: openai_compatible
+    adapter: huggingface
+    discovery_priority: 90
+    enabled: true
+    sources:
+      models_api: https://huggingface.co/api/models
+      docs: https://huggingface.co/docs/inference-providers
+
+  - provider_id: cerebras
+    name: Cerebras Inference
+    website: https://cerebras.ai
+    api_base: https://api.cerebras.ai/v1
+    api_style: openai_compatible
+    adapter: null
+    discovery_priority: 100
+    enabled: true
+    sources:
+      docs: https://inference-docs.cerebras.ai
+
+  - provider_id: sambanova
+    name: SambaNova Cloud
+    website: https://cloud.sambanova.ai
+    api_base: https://api.sambanova.ai/v1
+    api_style: openai_compatible
+    adapter: null
+    discovery_priority: 110
+    enabled: true
+    sources:
+      docs: https://docs.sambanova.ai
+
+  - provider_id: together
+    name: Together AI
+    website: https://together.ai
+    api_base: https://api.together.xyz/v1
+    api_style: openai_compatible
+    adapter: null
+    discovery_priority: 120
+    enabled: true
+    sources:
+      pricing_page: https://together.ai/pricing
+      docs: https://docs.together.ai
+
+  - provider_id: fireworks
+    name: Fireworks AI
+    website: https://fireworks.ai
+    api_base: https://api.fireworks.ai/inference/v1
+    api_style: openai_compatible
+    adapter: null
+    discovery_priority: 130
+    enabled: true
+    sources:
+      models_api: https://api.fireworks.ai/inference/v1/models
+      docs: https://docs.fireworks.ai
+
+  - provider_id: deepinfra
+    name: DeepInfra
+    website: https://deepinfra.com
+    api_base: https://api.deepinfra.com/v1/openai
+    api_style: openai_compatible
+    adapter: null
+    discovery_priority: 140
+    enabled: true
+    sources:
+      models_page: https://deepinfra.com/models
+      docs: https://deepinfra.com/docs
+
+  - provider_id: siliconflow
+    name: SiliconFlow
+    website: https://siliconflow.cn
+    api_base: https://api.siliconflow.cn/v1
+    api_style: openai_compatible
+    adapter: null
+    discovery_priority: 150
+    enabled: true
+    sources:
+      docs: https://docs.siliconflow.cn
+
+  - provider_id: nebius
+    name: Nebius AI Studio
+    website: https://studio.nebius.ai
+    api_base: https://api.studio.nebius.ai/v1
+    api_style: openai_compatible
+    adapter: null
+    discovery_priority: 160
+    enabled: true
+    sources:
+      docs: https://docs.nebius.ai
+
+  - provider_id: hyperbolic
+    name: Hyperbolic
+    website: https://hyperbolic.xyz
+    api_base: https://api.hyperbolic.xyz/v1
+    api_style: openai_compatible
+    adapter: null
+    discovery_priority: 170
+    enabled: true
+    sources:
+      docs: https://docs.hyperbolic.xyz
+
+  - provider_id: replicate
+    name: Replicate
+    website: https://replicate.com
+    api_base: https://api.replicate.com/v1
+    api_style: openai_compatible
+    adapter: null
+    discovery_priority: 180
+    enabled: true
+    sources:
+      models_page: https://replicate.com/explore
+      docs: https://replicate.com/docs
+
+  - provider_id: cohere
+    name: Cohere
+    website: https://cohere.com
+    api_base: https://api.cohere.com/v2
+    api_style: cohere
+    adapter: null
+    discovery_priority: 190
+    enabled: true
+    sources:
+      docs: https://docs.cohere.com
+
+  - provider_id: deepseek
+    name: DeepSeek
+    website: https://deepseek.com
+    api_base: https://api.deepseek.com/v1
+    api_style: openai_compatible
+    adapter: null
+    discovery_priority: 200
+    enabled: true
+    sources:
+      docs: https://platform.deepseek.com/docs
+
+  # Paid-only providers — monitored in case free tiers appear
+  - provider_id: openai
+    name: OpenAI
+    website: https://openai.com
+    api_base: https://api.openai.com/v1
+    api_style: openai_compatible
+    adapter: null
+    discovery_priority: 1000
+    enabled: true
+    sources:
+      models_api: https://api.openai.com/v1/models
+      docs: https://platform.openai.com/docs
+
+  - provider_id: anthropic
+    name: Anthropic
+    website: https://anthropic.com
+    api_base: https://api.anthropic.com/v1
+    api_style: anthropic
+    adapter: null
+    discovery_priority: 1010
+    enabled: true
+    sources:
+      models_api: https://api.anthropic.com/v1/models
+      docs: https://docs.anthropic.com
+
+  - provider_id: xai
+    name: xAI
+    website: https://x.ai
+    api_base: https://api.x.ai/v1
+    api_style: openai_compatible
+    adapter: null
+    discovery_priority: 1020
+    enabled: true
+    sources:
+      docs: https://docs.x.ai
