@@ -1,6 +1,6 @@
 # Отчёт по моделям — Free AI Model Router
 
-*Сгенерировано: 2026-07-18 15:19:16 UTC*
+*Сгенерировано: 2026-07-18 15:27:16 UTC*
 
 *Источник рейтингов: Artificial Analysis (api)*
 
@@ -8,41 +8,170 @@
 
 | Место | Поставщик | Модель | Качество | Уверенность | Бесплатность | Лимиты | Статус API |
 |---|---:|---:|---:|:---:|:---:|---:|:---:|
-| 1 | opencode_zen | gpt-5.5 | 90.9% |  | unknown | нет данных | invalid_response |
-| 2 | openrouter | moonshotai/kimi-k2.6 | 86.3% |  | unknown | нет данных
+| 1 | openrouter | cohere/north-mini-code:free | 58.9% |  | verified_free | нет данных
+context 256k | success |
+| 2 | mistral | mistral-medium | 41.7% |  | account_specific_free | нет данных | success |
+| 3 | mistral | mistral-medium-3 | 41.7% |  | account_specific_free | нет данных | success |
+| 4 | mistral | mistral-medium | 41.7% |  | account_specific_free | нет данных | success |
+| 5 | mistral | mistral-medium-3 | 41.7% |  | account_specific_free | нет данных | success |
+| 6 | openrouter | tencent/hy3:free | 18.0% |  | verified_free | нет данных
 context 262k | success |
-| 3 | openrouter | xiaomi/mimo-v2.5-pro | 84.6% |  | unknown | нет данных
-context 1048k | success |
-| 4 | openrouter | nex-agi/nex-n2-pro | 83.4% |  | unknown | нет данных
+| 7 | openrouter | poolside/laguna-xs-2.1:free | 18.0% |  | verified_free | нет данных
 context 262k | success |
-| 5 | openrouter | xiaomi/mimo-v2.5 | 80.9% |  | unknown | нет данных
-context 1048k | success |
-| 6 | opencode_zen | mimo-v2.5-free | 76.9% |  | unknown | нет данных | success |
-| 7 | opencode_zen | minimax-m3 | 73.3% |  | unknown | нет данных | invalid_response |
+| 8 | openrouter | nvidia/nemotron-3.5-content-safety:free | 18.0% |  | verified_free | нет данных
+context 128k | success |
+| 9 | openrouter | nvidia/nemotron-3-ultra-550b-a55b:free | 18.0% |  | verified_free | нет данных
+context 1000k | success |
+| 10 | openrouter | nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free | 18.0% |  | verified_free | нет данных
+context 256k | success |
+| 11 | openrouter | poolside/laguna-m.1:free | 18.0% |  | verified_free | нет данных
+context 262k | success |
+| 12 | openrouter | google/gemma-4-26b-a4b-it:free | 18.0% |  | verified_free | нет данных
+context 262k | success |
+| 13 | openrouter | google/gemma-4-31b-it:free | 18.0% |  | verified_free | нет данных
+context 262k | rate_limited |
+| 14 | openrouter | nvidia/nemotron-3-super-120b-a12b:free | 18.0% |  | verified_free | нет данных
+context 1000k | success |
+| 15 | openrouter | nvidia/nemotron-3-nano-30b-a3b:free | 18.0% |  | verified_free | нет данных
+context 256k | success |
+| 16 | openrouter | nvidia/nemotron-nano-12b-v2-vl:free | 18.0% |  | verified_free | нет данных
+context 128k | success |
+| 17 | openrouter | qwen/qwen3-next-80b-a3b-instruct:free | 18.0% |  | verified_free | нет данных
+context 262k | rate_limited |
+| 18 | openrouter | nvidia/nemotron-nano-9b-v2:free | 18.0% |  | verified_free | нет данных
+context 128k | success |
+| 19 | openrouter | openai/gpt-oss-20b:free | 18.0% |  | verified_free | нет данных
+context 131k | success |
+| 20 | openrouter | qwen/qwen3-coder:free | 18.0% |  | verified_free | нет данных
+context 1048k | rate_limited |
+| 21 | openrouter | cognitivecomputations/dolphin-mistral-24b-venice-edition:free | 18.0% |  | verified_free | нет данных
+context 32k | rate_limited |
+| 22 | openrouter | meta-llama/llama-3.3-70b-instruct:free | 18.0% |  | verified_free | нет данных
+context 131k | rate_limited |
+| 23 | openrouter | meta-llama/llama-3.2-3b-instruct:free | 18.0% |  | verified_free | нет данных
+context 131k | rate_limited |
+| 24 | openrouter | nousresearch/hermes-3-llama-3.1-405b:free | 18.0% |  | verified_free | нет данных
+context 131k | rate_limited |
+| 25 | zai | glm-4.5 | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 26 | zai | glm-4.5-air | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 27 | zai | glm-4.6 | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 28 | zai | glm-4.7 | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 29 | zai | glm-5 | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 30 | zai | glm-5-turbo | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 31 | zai | glm-5.1 | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 32 | zai | glm-5.2 | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 33 | groq | qwen/qwen3.6-27b | 18.0% |  | documented_free | нет данных
+context 131k | success |
+| 34 | groq | llama-3.1-8b-instant | 18.0% |  | documented_free | нет данных
+context 131k | success |
+| 35 | groq | llama-3.3-70b-versatile | 18.0% |  | documented_free | нет данных
+context 131k | success |
+| 36 | groq | openai/gpt-oss-120b | 18.0% |  | documented_free | нет данных
+context 131k | success |
+| 37 | groq | allam-2-7b | 18.0% |  | documented_free | нет данных
+context 4k | success |
+| 38 | groq | canopylabs/orpheus-arabic-saudi | 18.0% |  | documented_free | нет данных
+context 4k | invalid_response |
+| 39 | groq | groq/compound | 18.0% |  | documented_free | нет данных
+context 131k | success |
+| 40 | groq | groq/compound-mini | 18.0% |  | documented_free | нет данных
+context 131k | success |
+| 41 | groq | openai/gpt-oss-20b | 18.0% |  | documented_free | нет данных
+context 131k | success |
+| 42 | groq | canopylabs/orpheus-v1-english | 18.0% |  | documented_free | нет данных
+context 4k | invalid_response |
+| 43 | mistral | mistral-medium-2505 | 18.0% |  | account_specific_free | нет данных | success |
+| 44 | mistral | mistral-medium-2508 | 18.0% |  | account_specific_free | нет данных | success |
+| 45 | mistral | open-mistral-nemo | 18.0% |  | account_specific_free | нет данных | success |
+| 46 | mistral | open-mistral-nemo-2407 | 18.0% |  | account_specific_free | нет данных | success |
+| 47 | mistral | mistral-tiny-2407 | 18.0% |  | account_specific_free | нет данных | success |
+| 48 | mistral | mistral-tiny-latest | 18.0% |  | account_specific_free | нет данных | success |
+| 49 | mistral | codestral-2508 | 18.0% |  | account_specific_free | нет данных | success |
+| 50 | mistral | codestral-latest | 18.0% |  | account_specific_free | нет данных | success |
+| 51 | mistral | mistral-code-latest | 18.0% |  | account_specific_free | нет данных | success |
+| 52 | mistral | mistral-code-fim-latest | 18.0% |  | account_specific_free | нет данных | success |
+| 53 | mistral | devstral-2512 | 18.0% |  | account_specific_free | нет данных | success |
+| 54 | mistral | devstral-medium-latest | 18.0% |  | account_specific_free | нет данных | success |
+| 55 | mistral | devstral-latest | 18.0% |  | account_specific_free | нет данных | success |
+| 56 | mistral | mistral-code-agent-latest | 18.0% |  | account_specific_free | нет данных | success |
+| 57 | mistral | mistral-small-2603 | 18.0% |  | account_specific_free | нет данных | success |
+| 58 | mistral | mistral-small-latest | 18.0% |  | account_specific_free | нет данных | success |
+| 59 | mistral | mistral-vibe-cli-fast | 18.0% |  | account_specific_free | нет данных | success |
+| 60 | mistral | magistral-small-latest | 18.0% |  | account_specific_free | нет данных | success |
+| 61 | mistral | magistral-medium-2509 | 18.0% |  | account_specific_free | нет данных | success |
+| 62 | mistral | magistral-medium-latest | 18.0% |  | account_specific_free | нет данных | success |
+| 63 | mistral | voxtral-small-2507 | 18.0% |  | account_specific_free | нет данных | success |
+| 64 | mistral | voxtral-small-latest | 18.0% |  | account_specific_free | нет данных | success |
+| 65 | mistral | labs-leanstral-1-5-1 | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 66 | mistral | labs-leanstral-1-5 | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 67 | mistral | mistral-large-2512 | 18.0% |  | account_specific_free | нет данных | success |
+| 68 | mistral | mistral-large-latest | 18.0% |  | account_specific_free | нет данных | success |
+| 69 | mistral | mistral-large-2512 | 18.0% |  | account_specific_free | нет данных | success |
+| 70 | mistral | mistral-large-latest | 18.0% |  | account_specific_free | нет данных | success |
+| 71 | mistral | ministral-3b-2512 | 18.0% |  | account_specific_free | нет данных | success |
+| 72 | mistral | ministral-3b-latest | 18.0% |  | account_specific_free | нет данных | success |
+| 73 | mistral | ministral-8b-2512 | 18.0% |  | account_specific_free | нет данных | success |
+| 74 | mistral | ministral-8b-latest | 18.0% |  | account_specific_free | нет данных | success |
+| 75 | mistral | ministral-14b-2512 | 18.0% |  | account_specific_free | нет данных | success |
+| 76 | mistral | ministral-14b-latest | 18.0% |  | account_specific_free | нет данных | success |
+| 77 | mistral | mistral-medium-latest | 18.0% |  | account_specific_free | нет данных | success |
+| 78 | mistral | mistral-medium-3-5 | 18.0% |  | account_specific_free | нет данных | success |
+| 79 | mistral | mistral-medium-3.5 | 18.0% |  | account_specific_free | нет данных | success |
+| 80 | mistral | mistral-medium-2604 | 18.0% |  | account_specific_free | нет данных | success |
+| 81 | mistral | mistral-vibe-cli-latest | 18.0% |  | account_specific_free | нет данных | success |
+| 82 | mistral | mistral-vibe-cli-with-tools | 18.0% |  | account_specific_free | нет данных | success |
+| 83 | mistral | mistral-medium-latest | 18.0% |  | account_specific_free | нет данных | success |
+| 84 | mistral | mistral-medium-3-5 | 18.0% |  | account_specific_free | нет данных | success |
+| 85 | mistral | mistral-medium-3.5 | 18.0% |  | account_specific_free | нет данных | success |
+| 86 | mistral | mistral-medium-2604 | 18.0% |  | account_specific_free | нет данных | success |
+| 87 | mistral | mistral-vibe-cli-latest | 18.0% |  | account_specific_free | нет данных | success |
+| 88 | mistral | mistral-vibe-cli-with-tools | 18.0% |  | account_specific_free | нет данных | success |
+| 89 | mistral | magistral-small-2509 | 18.0% |  | account_specific_free | нет данных | success |
+| 90 | mistral | mistral-small-2506 | 18.0% |  | account_specific_free | нет данных | success |
+| 91 | mistral | mistral-embed-2312 | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 92 | mistral | mistral-embed | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 93 | mistral | codestral-embed | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 94 | mistral | codestral-embed-2505 | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 95 | mistral | mistral-moderation-2603 | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 96 | mistral | mistral-ocr-2512 | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 97 | mistral | mistral-ocr-3-0 | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 98 | mistral | mistral-ocr-3 | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 99 | mistral | mistral-ocr-latest | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 100 | mistral | mistral-ocr-4-0 | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 101 | mistral | mistral-ocr-4 | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 102 | mistral | voxtral-mini-2602 | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 103 | mistral | voxtral-mini-latest | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 104 | mistral | voxtral-mini-transcribe-realtime-2602 | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 105 | mistral | voxtral-mini-realtime-2602 | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 106 | mistral | voxtral-mini-realtime-latest | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 107 | mistral | voxtral-mini-realtime-mellon-greek-2606-solutions | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 108 | mistral | voxtral-mini-tts-2603 | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 109 | mistral | voxtral-mini-tts-latest | 18.0% |  | account_specific_free | нет данных | invalid_response |
+| 110 | mistral | voxtral-mini-tts-mellon-greek-2606-solutions | 18.0% |  | account_specific_free | нет данных | invalid_response |
 
 ## Все ранжированные модели
 
 | № | Модель | Качество (%) | Уверенность | Бесплатность | Штрафы | В маршруте |
 |---:|---|---:|:---:|:---:|:---:|:---:|
-| 1 | opencode_zen/gpt-5.5 | 90.9 | high | — | no_tool_calling: -5.0 | ✓ |
-| 2 | openrouter/moonshotai/kimi-k2.6 | 86.3 | high | — | — | ✓ |
-| 3 | openrouter/xiaomi/mimo-v2.5-pro | 84.6 | high | — | — | ✓ |
-| 4 | openrouter/nex-agi/nex-n2-pro | 83.4 | high | — | — | ✓ |
-| 5 | openrouter/xiaomi/mimo-v2.5 | 80.9 | high | — | — | ✓ |
-| 6 | opencode_zen/mimo-v2.5-free | 76.9 | high | — | no_tool_calling: -5.0 | ✓ |
-| 7 | opencode_zen/minimax-m3 | 73.3 | high | — | no_tool_calling: -5.0 | ✓ |
+| 1 | opencode_zen/gpt-5.5 | 90.9 | high | — | no_tool_calling: -5.0 | — |
+| 2 | openrouter/moonshotai/kimi-k2.6 | 86.3 | high | — | — | — |
+| 3 | openrouter/xiaomi/mimo-v2.5-pro | 84.6 | high | — | — | — |
+| 4 | openrouter/nex-agi/nex-n2-pro | 83.4 | high | — | — | — |
+| 5 | openrouter/xiaomi/mimo-v2.5 | 80.9 | high | — | — | — |
+| 6 | opencode_zen/mimo-v2.5-free | 76.9 | high | — | no_tool_calling: -5.0 | — |
+| 7 | opencode_zen/minimax-m3 | 73.3 | high | — | no_tool_calling: -5.0 | — |
 | 8 | opencode_zen/minimax-m2.7 | 66.8 | high | — | no_tool_calling: -5.0 | — |
-| 9 | openrouter/cohere/north-mini-code:free | 58.9 | high | — | — | — |
+| 9 | openrouter/cohere/north-mini-code:free | 58.9 | high | — | — | ✓ |
 | 10 | openrouter/google/gemini-2.5-pro | 55.6 | high | — | — | — |
 | 11 | openrouter/google/gemini-2.5-pro-preview | 55.6 | high | — | — | — |
 | 12 | openrouter/google/gemini-2.5-pro-preview-05-06 | 55.6 | high | — | — | — |
 | 13 | openrouter/mistralai/devstral-2512 | 53.3 | high | — | — | — |
 | 14 | openrouter/mistralai/mistral-small-3.1-24b-instruct | 47.9 | high | — | — | — |
 | 15 | openrouter/mistralai/mistral-medium-3.1 | 41.7 | high | — | — | — |
-| 16 | mistral/mistral-medium | 41.7 | high | — | — | — |
-| 17 | mistral/mistral-medium-3 | 41.7 | high | — | — | — |
-| 18 | mistral/mistral-medium | 41.7 | high | — | — | — |
-| 19 | mistral/mistral-medium-3 | 41.7 | high | — | — | — |
+| 16 | mistral/mistral-medium | 41.7 | high | — | — | ✓ |
+| 17 | mistral/mistral-medium-3 | 41.7 | high | — | — | ✓ |
+| 18 | mistral/mistral-medium | 41.7 | high | — | — | ✓ |
+| 19 | mistral/mistral-medium-3 | 41.7 | high | — | — | ✓ |
 | 20 | openrouter/mistralai/mistral-large-2512 | 41.3 | high | — | — | — |
 | 21 | openrouter/mistralai/mistral-small-3.2-24b-instruct | 33.1 | high | — | — | — |
 | 22 | openrouter/openai/gpt-3.5-turbo-0613 | 24.7 | high | — | context_below_minimum (4095 < 128000): -8.0 | — |
@@ -92,9 +221,9 @@ context 1048k | success |
 | 66 | openrouter/aion-labs/aion-3.0-mini | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 67 | openrouter/aion-labs/aion-3.0 | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 68 | openrouter/tencent/hy3 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 69 | openrouter/tencent/hy3:free | 18.0 | low | — | low_match_confidence: -4.0 | — |
+| 69 | openrouter/tencent/hy3:free | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
 | 70 | openrouter/poolside/laguna-xs-2.1 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 71 | openrouter/poolside/laguna-xs-2.1:free | 18.0 | low | — | low_match_confidence: -4.0 | — |
+| 71 | openrouter/poolside/laguna-xs-2.1:free | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
 | 72 | openrouter/anthropic/claude-sonnet-5 | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 73 | openrouter/google/gemini-3.1-flash-lite-image | 18.0 | low | — | context_below_minimum (65536 < 128000): -8.0, low_match_confidence: -4.0 | — |
 | 74 | openrouter/nex-agi/nex-n2-mini | 18.0 | low | — | low_match_confidence: -4.0 | — |
@@ -105,9 +234,9 @@ context 1048k | success |
 | 79 | openrouter/openrouter/fusion | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 80 | openrouter/~anthropic/claude-fable-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 81 | openrouter/anthropic/claude-fable-5 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 82 | openrouter/nvidia/nemotron-3.5-content-safety:free | 18.0 | low | — | low_match_confidence: -4.0 | — |
+| 82 | openrouter/nvidia/nemotron-3.5-content-safety:free | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
 | 83 | openrouter/nvidia/nemotron-3-ultra-550b-a55b | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 84 | openrouter/nvidia/nemotron-3-ultra-550b-a55b:free | 18.0 | low | — | low_match_confidence: -4.0 | — |
+| 84 | openrouter/nvidia/nemotron-3-ultra-550b-a55b:free | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
 | 85 | openrouter/qwen/qwen3.7-plus | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 86 | openrouter/minimax/minimax-m3 | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 87 | openrouter/stepfun/step-3.7-flash | 18.0 | low | — | low_match_confidence: -4.0 | — |
@@ -123,9 +252,9 @@ context 1048k | success |
 | 97 | openrouter/openai/gpt-chat-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 98 | openrouter/x-ai/grok-4.3 | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 99 | openrouter/ibm-granite/granite-4.1-8b | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 100 | openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free | 18.0 | low | — | low_match_confidence: -4.0 | — |
+| 100 | openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
 | 101 | openrouter/poolside/laguna-m.1 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 102 | openrouter/poolside/laguna-m.1:free | 18.0 | low | — | low_match_confidence: -4.0 | — |
+| 102 | openrouter/poolside/laguna-m.1:free | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
 | 103 | openrouter/~anthropic/claude-haiku-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 104 | openrouter/~openai/gpt-mini-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 105 | openrouter/~google/gemini-pro-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
@@ -150,9 +279,9 @@ context 1048k | success |
 | 124 | openrouter/anthropic/claude-opus-4.7 | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 125 | openrouter/z-ai/glm-5.1 | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 126 | openrouter/google/gemma-4-26b-a4b-it | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 127 | openrouter/google/gemma-4-26b-a4b-it:free | 18.0 | low | — | low_match_confidence: -4.0 | — |
+| 127 | openrouter/google/gemma-4-26b-a4b-it:free | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
 | 128 | openrouter/google/gemma-4-31b-it | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 129 | openrouter/google/gemma-4-31b-it:free | 18.0 | low | — | low_match_confidence: -4.0 | — |
+| 129 | openrouter/google/gemma-4-31b-it:free | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
 | 130 | openrouter/qwen/qwen3.6-plus | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 131 | openrouter/z-ai/glm-5v-turbo | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 132 | openrouter/arcee-ai/trinity-large-thinking | 18.0 | low | — | low_match_confidence: -4.0 | — |
@@ -168,7 +297,7 @@ context 1048k | success |
 | 142 | openrouter/mistralai/mistral-small-2603 | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 143 | openrouter/z-ai/glm-5-turbo | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 144 | openrouter/nvidia/nemotron-3-super-120b-a12b | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 145 | openrouter/nvidia/nemotron-3-super-120b-a12b:free | 18.0 | low | — | low_match_confidence: -4.0 | — |
+| 145 | openrouter/nvidia/nemotron-3-super-120b-a12b:free | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
 | 146 | openrouter/bytedance-seed/seed-2.0-lite | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 147 | openrouter/qwen/qwen3.5-9b | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 148 | openrouter/openai/gpt-5.4-pro | 18.0 | low | — | low_match_confidence: -4.0 | — |
@@ -208,7 +337,7 @@ context 1048k | success |
 | 182 | openrouter/z-ai/glm-4.7 | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 183 | openrouter/google/gemini-3-flash-preview | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 184 | openrouter/nvidia/nemotron-3-nano-30b-a3b | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 185 | openrouter/nvidia/nemotron-3-nano-30b-a3b:free | 18.0 | low | — | low_match_confidence: -4.0 | — |
+| 185 | openrouter/nvidia/nemotron-3-nano-30b-a3b:free | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
 | 186 | openrouter/openai/gpt-5.2-chat | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 187 | openrouter/openai/gpt-5.2-pro | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 188 | openrouter/openai/gpt-5.2 | 18.0 | low | — | low_match_confidence: -4.0 | — |
@@ -233,7 +362,7 @@ context 1048k | success |
 | 207 | openrouter/perplexity/sonar-pro-search | 18.0 | high | — | — | — |
 | 208 | openrouter/mistralai/voxtral-small-24b-2507 | 18.0 | low | — | context_below_minimum (32000 < 128000): -8.0, low_match_confidence: -4.0 | — |
 | 209 | openrouter/openai/gpt-oss-safeguard-20b | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 210 | openrouter/nvidia/nemotron-nano-12b-v2-vl:free | 18.0 | low | — | low_match_confidence: -4.0 | — |
+| 210 | openrouter/nvidia/nemotron-nano-12b-v2-vl:free | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
 | 211 | openrouter/minimax/minimax-m2 | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 212 | openrouter/qwen/qwen3-vl-32b-instruct | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 213 | openrouter/openai/gpt-5-image-mini | 18.0 | low | — | low_match_confidence: -4.0 | — |
@@ -257,10 +386,10 @@ context 1048k | success |
 | 231 | openrouter/deepseek/deepseek-v3.1-terminus | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 232 | openrouter/qwen/qwen3-coder-flash | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 233 | openrouter/qwen/qwen3-next-80b-a3b-thinking | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 234 | openrouter/qwen/qwen3-next-80b-a3b-instruct:free | 18.0 | high | — | — | — |
+| 234 | openrouter/qwen/qwen3-next-80b-a3b-instruct:free | 18.0 | high | — | — | ✓ |
 | 235 | openrouter/qwen/qwen-plus-2025-07-28 | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 236 | openrouter/qwen/qwen-plus-2025-07-28:thinking | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 237 | openrouter/nvidia/nemotron-nano-9b-v2:free | 18.0 | low | — | low_match_confidence: -4.0 | — |
+| 237 | openrouter/nvidia/nemotron-nano-9b-v2:free | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
 | 238 | openrouter/qwen/qwen3-30b-a3b-thinking-2507 | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 239 | openrouter/nousresearch/hermes-4-70b | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 240 | openrouter/nousresearch/hermes-4-405b | 18.0 | low | — | low_match_confidence: -4.0 | — |
@@ -273,7 +402,7 @@ context 1048k | success |
 | 247 | openrouter/openai/gpt-5-nano | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 248 | openrouter/openai/gpt-oss-120b | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 249 | openrouter/openai/gpt-oss-20b | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 250 | openrouter/openai/gpt-oss-20b:free | 18.0 | low | — | low_match_confidence: -4.0 | — |
+| 250 | openrouter/openai/gpt-oss-20b:free | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
 | 251 | openrouter/anthropic/claude-opus-4.1 | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 252 | openrouter/mistralai/codestral-2508 | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 253 | openrouter/qwen/qwen3-coder-30b-a3b-instruct | 18.0 | low | — | low_match_confidence: -4.0 | — |
@@ -282,12 +411,12 @@ context 1048k | success |
 | 256 | openrouter/z-ai/glm-4.5-air | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 257 | openrouter/qwen/qwen3-235b-a22b-thinking-2507 | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 258 | openrouter/qwen/qwen3-coder | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 259 | openrouter/qwen/qwen3-coder:free | 18.0 | low | — | low_match_confidence: -4.0 | — |
+| 259 | openrouter/qwen/qwen3-coder:free | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
 | 260 | openrouter/bytedance/ui-tars-1.5-7b | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 261 | openrouter/google/gemini-2.5-flash-lite | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 262 | openrouter/qwen/qwen3-235b-a22b-2507 | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 263 | openrouter/cognitivecomputations/dolphin-mistral-24b-venice-edition | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 264 | openrouter/cognitivecomputations/dolphin-mistral-24b-venice-edition:free | 18.0 | low | — | context_below_minimum (32768 < 128000): -8.0, low_match_confidence: -4.0 | — |
+| 264 | openrouter/cognitivecomputations/dolphin-mistral-24b-venice-edition:free | 18.0 | low | — | context_below_minimum (32768 < 128000): -8.0, low_match_confidence: -4.0 | ✓ |
 | 265 | openrouter/tencent/hunyuan-a13b-instruct | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 266 | openrouter/morph/morph-v3-large | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 267 | openrouter/morph/morph-v3-fast | 18.0 | low | — | context_below_minimum (81920 < 128000): -8.0, low_match_confidence: -4.0 | — |
@@ -336,7 +465,7 @@ context 1048k | success |
 | 310 | openrouter/openai/o1 | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 311 | openrouter/cohere/command-r7b-12-2024 | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 312 | openrouter/meta-llama/llama-3.3-70b-instruct | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 313 | openrouter/meta-llama/llama-3.3-70b-instruct:free | 18.0 | low | — | low_match_confidence: -4.0 | — |
+| 313 | openrouter/meta-llama/llama-3.3-70b-instruct:free | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
 | 314 | openrouter/amazon/nova-lite-v1 | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 315 | openrouter/openai/gpt-4o-2024-11-20 | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 316 | openrouter/mistralai/mistral-large-2407 | 18.0 | low | — | low_match_confidence: -4.0 | — |
@@ -349,14 +478,14 @@ context 1048k | success |
 | 323 | openrouter/thedrummer/rocinante-12b | 18.0 | low | — | context_below_minimum (65536 < 128000): -8.0, low_match_confidence: -4.0 | — |
 | 324 | openrouter/meta-llama/llama-3.2-1b-instruct | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 325 | openrouter/meta-llama/llama-3.2-3b-instruct | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 326 | openrouter/meta-llama/llama-3.2-3b-instruct:free | 18.0 | low | — | low_match_confidence: -4.0 | — |
+| 326 | openrouter/meta-llama/llama-3.2-3b-instruct:free | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
 | 327 | openrouter/qwen/qwen-2.5-72b-instruct | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 328 | openrouter/cohere/command-r-08-2024 | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 329 | openrouter/cohere/command-r-plus-08-2024 | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 330 | openrouter/sao10k/l3.1-euryale-70b | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 331 | openrouter/nousresearch/hermes-3-llama-3.1-70b | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 332 | openrouter/nousresearch/hermes-3-llama-3.1-405b | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 333 | openrouter/nousresearch/hermes-3-llama-3.1-405b:free | 18.0 | low | — | low_match_confidence: -4.0 | — |
+| 333 | openrouter/nousresearch/hermes-3-llama-3.1-405b:free | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
 | 334 | openrouter/sao10k/l3-lunaris-8b | 18.0 | low | — | context_below_minimum (8192 < 128000): -8.0, low_match_confidence: -4.0 | — |
 | 335 | openrouter/openai/gpt-4o-2024-08-06 | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 336 | openrouter/meta-llama/llama-3.1-70b-instruct | 18.0 | low | — | low_match_confidence: -4.0 | — |
@@ -427,92 +556,92 @@ context 1048k | success |
 | 401 | opencode_zen/hy3-free | 18.0 | low | — | no_tool_calling: -5.0, low_match_confidence: -4.0 | — |
 | 402 | opencode_zen/nemotron-3-ultra-free | 18.0 | low | — | no_tool_calling: -5.0, low_match_confidence: -4.0 | — |
 | 403 | opencode_zen/north-mini-code-free | 18.0 | low | — | no_tool_calling: -5.0, low_match_confidence: -4.0 | — |
-| 404 | zai/glm-4.5 | 18.0 | high | — | — | — |
-| 405 | zai/glm-4.5-air | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 406 | zai/glm-4.6 | 18.0 | high | — | — | — |
-| 407 | zai/glm-4.7 | 18.0 | high | — | — | — |
-| 408 | zai/glm-5 | 18.0 | high | — | — | — |
-| 409 | zai/glm-5-turbo | 18.0 | high | — | — | — |
-| 410 | zai/glm-5.1 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 411 | zai/glm-5.2 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 412 | groq/qwen/qwen3.6-27b | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 413 | groq/llama-3.1-8b-instant | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 414 | groq/llama-3.3-70b-versatile | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 415 | groq/openai/gpt-oss-120b | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 416 | groq/allam-2-7b | 18.0 | low | — | context_below_minimum (4096 < 128000): -8.0, low_match_confidence: -4.0 | — |
-| 417 | groq/canopylabs/orpheus-arabic-saudi | 18.0 | low | — | context_below_minimum (4000 < 128000): -8.0, low_match_confidence: -4.0 | — |
-| 418 | groq/groq/compound | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 419 | groq/groq/compound-mini | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 420 | groq/openai/gpt-oss-20b | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 421 | groq/canopylabs/orpheus-v1-english | 18.0 | low | — | context_below_minimum (4000 < 128000): -8.0, low_match_confidence: -4.0 | — |
-| 422 | mistral/mistral-medium-2505 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 423 | mistral/mistral-medium-2508 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 424 | mistral/open-mistral-nemo | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 425 | mistral/open-mistral-nemo-2407 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 426 | mistral/mistral-tiny-2407 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 427 | mistral/mistral-tiny-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 428 | mistral/codestral-2508 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 429 | mistral/codestral-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 430 | mistral/mistral-code-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 431 | mistral/mistral-code-fim-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 432 | mistral/devstral-2512 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 433 | mistral/devstral-medium-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 434 | mistral/devstral-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 435 | mistral/mistral-code-agent-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 436 | mistral/mistral-small-2603 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 437 | mistral/mistral-small-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 438 | mistral/mistral-vibe-cli-fast | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 439 | mistral/magistral-small-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 440 | mistral/magistral-medium-2509 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 441 | mistral/magistral-medium-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 442 | mistral/voxtral-small-2507 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 443 | mistral/voxtral-small-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 444 | mistral/labs-leanstral-1-5-1 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 445 | mistral/labs-leanstral-1-5 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 446 | mistral/mistral-large-2512 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 447 | mistral/mistral-large-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 448 | mistral/mistral-large-2512 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 449 | mistral/mistral-large-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 450 | mistral/ministral-3b-2512 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 451 | mistral/ministral-3b-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 452 | mistral/ministral-8b-2512 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 453 | mistral/ministral-8b-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 454 | mistral/ministral-14b-2512 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 455 | mistral/ministral-14b-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 456 | mistral/mistral-medium-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 457 | mistral/mistral-medium-3-5 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 458 | mistral/mistral-medium-3.5 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 459 | mistral/mistral-medium-2604 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 460 | mistral/mistral-vibe-cli-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 461 | mistral/mistral-vibe-cli-with-tools | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 462 | mistral/mistral-medium-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 463 | mistral/mistral-medium-3-5 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 464 | mistral/mistral-medium-3.5 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 465 | mistral/mistral-medium-2604 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 466 | mistral/mistral-vibe-cli-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 467 | mistral/mistral-vibe-cli-with-tools | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 468 | mistral/magistral-small-2509 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 469 | mistral/mistral-small-2506 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 470 | mistral/mistral-embed-2312 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 471 | mistral/mistral-embed | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 472 | mistral/codestral-embed | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 473 | mistral/codestral-embed-2505 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 474 | mistral/mistral-moderation-2603 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 475 | mistral/mistral-ocr-2512 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 476 | mistral/mistral-ocr-3-0 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 477 | mistral/mistral-ocr-3 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 478 | mistral/mistral-ocr-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 479 | mistral/mistral-ocr-4-0 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 480 | mistral/mistral-ocr-4 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 481 | mistral/voxtral-mini-2602 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 482 | mistral/voxtral-mini-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 483 | mistral/voxtral-mini-transcribe-realtime-2602 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 484 | mistral/voxtral-mini-realtime-2602 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 485 | mistral/voxtral-mini-realtime-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 486 | mistral/voxtral-mini-realtime-mellon-greek-2606-solutions | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 487 | mistral/voxtral-mini-tts-2603 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 488 | mistral/voxtral-mini-tts-latest | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 489 | mistral/voxtral-mini-tts-mellon-greek-2606-solutions | 18.0 | low | — | low_match_confidence: -4.0 | — |
+| 404 | zai/glm-4.5 | 18.0 | high | — | — | ✓ |
+| 405 | zai/glm-4.5-air | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 406 | zai/glm-4.6 | 18.0 | high | — | — | ✓ |
+| 407 | zai/glm-4.7 | 18.0 | high | — | — | ✓ |
+| 408 | zai/glm-5 | 18.0 | high | — | — | ✓ |
+| 409 | zai/glm-5-turbo | 18.0 | high | — | — | ✓ |
+| 410 | zai/glm-5.1 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 411 | zai/glm-5.2 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 412 | groq/qwen/qwen3.6-27b | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 413 | groq/llama-3.1-8b-instant | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 414 | groq/llama-3.3-70b-versatile | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 415 | groq/openai/gpt-oss-120b | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 416 | groq/allam-2-7b | 18.0 | low | — | context_below_minimum (4096 < 128000): -8.0, low_match_confidence: -4.0 | ✓ |
+| 417 | groq/canopylabs/orpheus-arabic-saudi | 18.0 | low | — | context_below_minimum (4000 < 128000): -8.0, low_match_confidence: -4.0 | ✓ |
+| 418 | groq/groq/compound | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 419 | groq/groq/compound-mini | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 420 | groq/openai/gpt-oss-20b | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 421 | groq/canopylabs/orpheus-v1-english | 18.0 | low | — | context_below_minimum (4000 < 128000): -8.0, low_match_confidence: -4.0 | ✓ |
+| 422 | mistral/mistral-medium-2505 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 423 | mistral/mistral-medium-2508 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 424 | mistral/open-mistral-nemo | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 425 | mistral/open-mistral-nemo-2407 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 426 | mistral/mistral-tiny-2407 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 427 | mistral/mistral-tiny-latest | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 428 | mistral/codestral-2508 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 429 | mistral/codestral-latest | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 430 | mistral/mistral-code-latest | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 431 | mistral/mistral-code-fim-latest | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 432 | mistral/devstral-2512 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 433 | mistral/devstral-medium-latest | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 434 | mistral/devstral-latest | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 435 | mistral/mistral-code-agent-latest | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 436 | mistral/mistral-small-2603 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 437 | mistral/mistral-small-latest | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 438 | mistral/mistral-vibe-cli-fast | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 439 | mistral/magistral-small-latest | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 440 | mistral/magistral-medium-2509 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 441 | mistral/magistral-medium-latest | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 442 | mistral/voxtral-small-2507 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 443 | mistral/voxtral-small-latest | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 444 | mistral/labs-leanstral-1-5-1 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 445 | mistral/labs-leanstral-1-5 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 446 | mistral/mistral-large-2512 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 447 | mistral/mistral-large-latest | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 448 | mistral/mistral-large-2512 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 449 | mistral/mistral-large-latest | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 450 | mistral/ministral-3b-2512 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 451 | mistral/ministral-3b-latest | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 452 | mistral/ministral-8b-2512 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 453 | mistral/ministral-8b-latest | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 454 | mistral/ministral-14b-2512 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 455 | mistral/ministral-14b-latest | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 456 | mistral/mistral-medium-latest | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 457 | mistral/mistral-medium-3-5 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 458 | mistral/mistral-medium-3.5 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 459 | mistral/mistral-medium-2604 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 460 | mistral/mistral-vibe-cli-latest | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 461 | mistral/mistral-vibe-cli-with-tools | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 462 | mistral/mistral-medium-latest | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 463 | mistral/mistral-medium-3-5 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 464 | mistral/mistral-medium-3.5 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 465 | mistral/mistral-medium-2604 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 466 | mistral/mistral-vibe-cli-latest | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 467 | mistral/mistral-vibe-cli-with-tools | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 468 | mistral/magistral-small-2509 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 469 | mistral/mistral-small-2506 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 470 | mistral/mistral-embed-2312 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 471 | mistral/mistral-embed | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 472 | mistral/codestral-embed | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 473 | mistral/codestral-embed-2505 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 474 | mistral/mistral-moderation-2603 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 475 | mistral/mistral-ocr-2512 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 476 | mistral/mistral-ocr-3-0 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 477 | mistral/mistral-ocr-3 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 478 | mistral/mistral-ocr-latest | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 479 | mistral/mistral-ocr-4-0 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 480 | mistral/mistral-ocr-4 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 481 | mistral/voxtral-mini-2602 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 482 | mistral/voxtral-mini-latest | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 483 | mistral/voxtral-mini-transcribe-realtime-2602 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 484 | mistral/voxtral-mini-realtime-2602 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 485 | mistral/voxtral-mini-realtime-latest | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 486 | mistral/voxtral-mini-realtime-mellon-greek-2606-solutions | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 487 | mistral/voxtral-mini-tts-2603 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 488 | mistral/voxtral-mini-tts-latest | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 489 | mistral/voxtral-mini-tts-mellon-greek-2606-solutions | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
 
 ### Легенда
 
