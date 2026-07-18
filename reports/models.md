@@ -1,21 +1,30 @@
 # Отчёт по моделям — Free AI Model Router
 
-*Сгенерировано: 2026-07-18 14:57:34 UTC*
+*Сгенерировано: 2026-07-18 15:02:02 UTC*
 
 *Источник рейтингов: Artificial Analysis (api)*
 
 ## Маршрут (включены в litellm-config-sample.yaml)
 
-_Маршрут пуст — ни одна модель не прошла порог._
+| Место | Поставщик | Модель | Качество | Уверенность | Бесплатность | Лимиты | Статус API |
+|---|---:|---:|---:|:---:|:---:|---:|:---:|
+| 1 | openrouter | xiaomi/mimo-v2.5-pro | 98.0% |  | unknown | нет данных
+context 1048k | success |
+| 2 | openrouter | moonshotai/kimi-k2.6 | 98.0% |  | unknown | нет данных
+context 262k | success |
+| 3 | openrouter | nex-agi/nex-n2-pro | 96.8% |  | unknown | нет данных
+context 262k | success |
+| 4 | openrouter | xiaomi/mimo-v2.5 | 93.7% |  | unknown | нет данных
+context 1048k | success |
 
 ## Все ранжированные модели
 
 | № | Модель | Качество (%) | Уверенность | Бесплатность | Штрафы | В маршруте |
 |---:|---|---:|:---:|:---:|:---:|:---:|
-| 1 | openrouter/xiaomi/mimo-v2.5-pro | 98.0 | high | — | — | — |
-| 2 | openrouter/moonshotai/kimi-k2.6 | 98.0 | high | — | — | — |
-| 3 | openrouter/nex-agi/nex-n2-pro | 96.8 | high | — | — | — |
-| 4 | openrouter/xiaomi/mimo-v2.5 | 93.7 | high | — | — | — |
+| 1 | openrouter/xiaomi/mimo-v2.5-pro | 98.0 | high | — | — | ✓ |
+| 2 | openrouter/moonshotai/kimi-k2.6 | 98.0 | high | — | — | ✓ |
+| 3 | openrouter/nex-agi/nex-n2-pro | 96.8 | high | — | — | ✓ |
+| 4 | openrouter/xiaomi/mimo-v2.5 | 93.7 | high | — | — | ✓ |
 | 5 | openrouter/cohere/north-mini-code:free | 67.2 | high | — | — | — |
 | 6 | openrouter/google/gemini-2.5-pro | 63.1 | high | — | — | — |
 | 7 | openrouter/google/gemini-2.5-pro-preview | 63.1 | high | — | — | — |

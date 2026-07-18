@@ -1,7 +1,61 @@
 {
-  "generated_at": "2026-07-18T14:57:34.964683Z",
+  "generated_at": "2026-07-18T15:02:02.069848Z",
   "reference_scored_at": "ChatGPT-5.6 Sol High",
-  "endpoints": [],
-  "fallback_chain": [],
+  "endpoints": [
+    {
+      "endpoint_id": "openrouter/xiaomi/mimo-v2.5-pro",
+      "provider_id": "openrouter",
+      "provider_name": "openrouter",
+      "canonical_model_id": "openrouter/xiaomi/mimo-v2.5-pro",
+      "model_name": "xiaomi/mimo-v2.5-pro",
+      "final_score": 98.0,
+      "quality_band": "excellent",
+      "free_status": "unknown",
+      "rank": 1,
+      "is_primary": true
+    },
+    {
+      "endpoint_id": "openrouter/moonshotai/kimi-k2.6",
+      "provider_id": "openrouter",
+      "provider_name": "openrouter",
+      "canonical_model_id": "openrouter/moonshotai/kimi-k2.6",
+      "model_name": "moonshotai/kimi-k2.6",
+      "final_score": 98.0,
+      "quality_band": "excellent",
+      "free_status": "unknown",
+      "rank": 2,
+      "is_primary": false
+    },
+    {
+      "endpoint_id": "openrouter/nex-agi/nex-n2-pro",
+      "provider_id": "openrouter",
+      "provider_name": "openrouter",
+      "canonical_model_id": "openrouter/nex-agi/nex-n2-pro",
+      "model_name": "nex-agi/nex-n2-pro",
+      "final_score": 96.8,
+      "quality_band": "excellent",
+      "free_status": "unknown",
+      "rank": 3,
+      "is_primary": false
+    },
+    {
+      "endpoint_id": "openrouter/xiaomi/mimo-v2.5",
+      "provider_id": "openrouter",
+      "provider_name": "openrouter",
+      "canonical_model_id": "openrouter/xiaomi/mimo-v2.5",
+      "model_name": "xiaomi/mimo-v2.5",
+      "final_score": 93.7,
+      "quality_band": "excellent",
+      "free_status": "unknown",
+      "rank": 4,
+      "is_primary": false
+    }
+  ],
+  "fallback_chain": [
+    "openrouter/xiaomi/mimo-v2.5-pro",
+    "openrouter/moonshotai/kimi-k2.6",
+    "openrouter/nex-agi/nex-n2-pro",
+    "openrouter/xiaomi/mimo-v2.5"
+  ],
   "scoring_mode": "composite_primary"
 }
