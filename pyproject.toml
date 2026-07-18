@@ -5,12 +5,37 @@ build-backend = "hatchling.build"
 [project]
 name = "free-ai-model-router"
 version = "0.1.0"
-description = "Daily discovery, verification, ranking and routing of free AI coding models"
+description = "Daily ETL that discovers, benchmarks, and ranks free AI coding models — generates a verified LiteLLM routing config"
+readme = "README.md"
 requires-python = ">=3.12"
-license = { text = "MIT" }
+license = "MIT"
 authors = [
-    { name = "sstpnk" },
+    { name = "sstpnk", email = "oss@sstpnk.dev" },
 ]
+keywords = [
+    "ai", "llm", "routing", "litellm", "free-models",
+    "coding-agents", "benchmark", "etl", "openrouter",
+    "groq", "gemini", "mistral",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+Homepage = "https://github.com/sstpnk/free-ai-model-router"
+Repository = "https://github.com/sstpnk/free-ai-model-router"
+Documentation = "https://github.com/sstpnk/free-ai-model-router#readme"
+"Changelog" = "https://github.com/sstpnk/free-ai-model-router/releases"
+"Issues" = "https://github.com/sstpnk/free-ai-model-router/issues"
 
 dependencies = [
     "click>=8.1",
