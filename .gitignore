@@ -31,6 +31,9 @@ reports/*
 .DS_Store
 Thumbs.db
 
+# Requirements doc (internal)
+free-ai-model-router-requirements.md
+
 # Codegraph index
 .codegraph/
 
