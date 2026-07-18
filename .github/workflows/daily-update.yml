@@ -41,8 +41,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-model-cache-
 
-      - name: Collect provider models
-        run: python -m free_ai_model_router collect
+      # Consolidated pipeline run — each individual command runs the full pipeline
+      # anyway, so run-all with --no-runtime-checks does collect+discover+benchmark+score+generate+report
+      - name: Run pipeline (collect, discover, benchmark, score, generate, report)
+        run: python -m free_ai_model_router run-all --no-runtime-checks
         env:
           ARTIFICIAL_ANALYSIS_API_KEY: ${{ secrets.ARTIFICIAL_ANALYSIS_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
@@ -51,30 +53,18 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
-
-      - name: Discover new candidates
-        run: python -m free_ai_model_router discover
-
-      - name: Collect benchmarks
-        run: python -m free_ai_model_router rank
-        env:
-          ARTIFICIAL_ANALYSIS_API_KEY: ${{ secrets.ARTIFICIAL_ANALYSIS_API_KEY }}
+          HUGGINGFACE_API_KEY: ${{ secrets.HUGGINGFACE_API_KEY }}
 
       - name: Verify API access
         run: python -m free_ai_model_router verify
         env:
+          ARTIFICIAL_ANALYSIS_API_KEY: ${{ secrets.ARTIFICIAL_ANALYSIS_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           OPENCODE_ZEN_API_KEY: ${{ secrets.OPENCODE_ZEN_API_KEY }}
           ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
-
-      - name: Generate LiteLLM config
-        run: python -m free_ai_model_router generate
-
-      - name: Generate reports
-        run: python -m free_ai_model_router report
 
       - name: Check for meaningful changes
         id: diff-check
