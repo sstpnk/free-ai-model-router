@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T07:43:49.753821Z",
+  "generated_at": "2026-07-22T07:43:44.870145Z",
   "reference_scored_at": "ChatGPT-5.6 Sol High",
   "endpoints": [
     {
@@ -39,27 +39,15 @@
       "is_primary": false
     },
     {
-      "endpoint_id": "mistral/mistral-medium",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-medium",
-      "model_name": "mistral-medium",
-      "final_score": 41.7,
+      "endpoint_id": "openrouter/poolside/laguna-s-2.1:free",
+      "provider_id": "openrouter",
+      "provider_name": "openrouter",
+      "canonical_model_id": "openrouter/poolside/laguna-s-2.1:free",
+      "model_name": "poolside/laguna-s-2.1:free",
+      "final_score": 18.0,
       "quality_band": "good",
-      "free_status": "account_specific_free",
+      "free_status": "verified_free",
       "rank": 4,
-      "is_primary": false
-    },
-    {
-      "endpoint_id": "mistral/mistral-medium-3",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-medium-3",
-      "model_name": "mistral-medium-3",
-      "final_score": 41.7,
-      "quality_band": "good",
-      "free_status": "account_specific_free",
-      "rank": 5,
       "is_primary": false
     },
     {
@@ -71,7 +59,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "verified_free",
-      "rank": 6,
+      "rank": 5,
       "is_primary": false
     },
     {
@@ -83,7 +71,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "verified_free",
-      "rank": 7,
+      "rank": 6,
       "is_primary": false
     },
     {
@@ -95,7 +83,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "verified_free",
-      "rank": 8,
+      "rank": 7,
       "is_primary": false
     },
     {
@@ -107,7 +95,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "verified_free",
-      "rank": 9,
+      "rank": 8,
       "is_primary": false
     },
     {
@@ -119,7 +107,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "verified_free",
-      "rank": 10,
+      "rank": 9,
       "is_primary": false
     },
     {
@@ -131,7 +119,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "verified_free",
-      "rank": 11,
+      "rank": 10,
       "is_primary": false
     },
     {
@@ -143,7 +131,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "verified_free",
-      "rank": 12,
+      "rank": 11,
       "is_primary": false
     },
     {
@@ -155,7 +143,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "verified_free",
-      "rank": 13,
+      "rank": 12,
       "is_primary": false
     },
     {
@@ -167,7 +155,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "verified_free",
-      "rank": 14,
+      "rank": 13,
       "is_primary": false
     },
     {
@@ -179,7 +167,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "verified_free",
-      "rank": 15,
+      "rank": 14,
       "is_primary": false
     },
     {
@@ -191,7 +179,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "verified_free",
-      "rank": 16,
+      "rank": 15,
       "is_primary": false
     },
     {
@@ -203,7 +191,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "verified_free",
-      "rank": 17,
+      "rank": 16,
       "is_primary": false
     },
     {
@@ -215,7 +203,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 18,
+      "rank": 17,
       "is_primary": false
     },
     {
@@ -227,7 +215,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 19,
+      "rank": 18,
       "is_primary": false
     },
     {
@@ -239,7 +227,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 20,
+      "rank": 19,
       "is_primary": false
     },
     {
@@ -251,7 +239,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 21,
+      "rank": 20,
       "is_primary": false
     },
     {
@@ -263,7 +251,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 22,
+      "rank": 21,
       "is_primary": false
     },
     {
@@ -275,7 +263,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 23,
+      "rank": 22,
       "is_primary": false
     },
     {
@@ -287,7 +275,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 24,
+      "rank": 23,
       "is_primary": false
     },
     {
@@ -299,55 +287,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 25,
-      "is_primary": false
-    },
-    {
-      "endpoint_id": "groq/llama-3.1-8b-instant",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/llama-3.1-8b-instant",
-      "model_name": "llama-3.1-8b-instant",
-      "final_score": 18.0,
-      "quality_band": "good",
-      "free_status": "documented_free",
-      "rank": 26,
-      "is_primary": false
-    },
-    {
-      "endpoint_id": "groq/llama-3.3-70b-versatile",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/llama-3.3-70b-versatile",
-      "model_name": "llama-3.3-70b-versatile",
-      "final_score": 18.0,
-      "quality_band": "good",
-      "free_status": "documented_free",
-      "rank": 27,
-      "is_primary": false
-    },
-    {
-      "endpoint_id": "groq/openai/gpt-oss-120b",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/openai/gpt-oss-120b",
-      "model_name": "openai/gpt-oss-120b",
-      "final_score": 18.0,
-      "quality_band": "good",
-      "free_status": "documented_free",
-      "rank": 28,
-      "is_primary": false
-    },
-    {
-      "endpoint_id": "groq/canopylabs/orpheus-arabic-saudi",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/canopylabs/orpheus-arabic-saudi",
-      "model_name": "canopylabs/orpheus-arabic-saudi",
-      "final_score": 18.0,
-      "quality_band": "good",
-      "free_status": "documented_free",
-      "rank": 29,
+      "rank": 24,
       "is_primary": false
     },
     {
@@ -359,7 +299,31 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "documented_free",
-      "rank": 30,
+      "rank": 25,
+      "is_primary": false
+    },
+    {
+      "endpoint_id": "groq/llama-3.3-70b-versatile",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/llama-3.3-70b-versatile",
+      "model_name": "llama-3.3-70b-versatile",
+      "final_score": 18.0,
+      "quality_band": "good",
+      "free_status": "documented_free",
+      "rank": 26,
+      "is_primary": false
+    },
+    {
+      "endpoint_id": "groq/canopylabs/orpheus-arabic-saudi",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/canopylabs/orpheus-arabic-saudi",
+      "model_name": "canopylabs/orpheus-arabic-saudi",
+      "final_score": 18.0,
+      "quality_band": "good",
+      "free_status": "documented_free",
+      "rank": 27,
       "is_primary": false
     },
     {
@@ -371,19 +335,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "documented_free",
-      "rank": 31,
-      "is_primary": false
-    },
-    {
-      "endpoint_id": "groq/allam-2-7b",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/allam-2-7b",
-      "model_name": "allam-2-7b",
-      "final_score": 18.0,
-      "quality_band": "good",
-      "free_status": "documented_free",
-      "rank": 32,
+      "rank": 28,
       "is_primary": false
     },
     {
@@ -395,7 +347,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "documented_free",
-      "rank": 33,
+      "rank": 29,
       "is_primary": false
     },
     {
@@ -407,7 +359,19 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "documented_free",
-      "rank": 34,
+      "rank": 30,
+      "is_primary": false
+    },
+    {
+      "endpoint_id": "groq/allam-2-7b",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/allam-2-7b",
+      "model_name": "allam-2-7b",
+      "final_score": 18.0,
+      "quality_band": "good",
+      "free_status": "documented_free",
+      "rank": 31,
       "is_primary": false
     },
     {
@@ -419,7 +383,31 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "documented_free",
-      "rank": 35,
+      "rank": 32,
+      "is_primary": false
+    },
+    {
+      "endpoint_id": "groq/llama-3.1-8b-instant",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/llama-3.1-8b-instant",
+      "model_name": "llama-3.1-8b-instant",
+      "final_score": 18.0,
+      "quality_band": "good",
+      "free_status": "documented_free",
+      "rank": 33,
+      "is_primary": false
+    },
+    {
+      "endpoint_id": "groq/openai/gpt-oss-120b",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/openai/gpt-oss-120b",
+      "model_name": "openai/gpt-oss-120b",
+      "final_score": 18.0,
+      "quality_band": "good",
+      "free_status": "documented_free",
+      "rank": 34,
       "is_primary": false
     },
     {
@@ -431,7 +419,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 36,
+      "rank": 35,
       "is_primary": false
     },
     {
@@ -443,7 +431,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 37,
+      "rank": 36,
       "is_primary": false
     },
     {
@@ -455,7 +443,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 38,
+      "rank": 37,
       "is_primary": false
     },
     {
@@ -467,7 +455,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 39,
+      "rank": 38,
       "is_primary": false
     },
     {
@@ -479,7 +467,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 40,
+      "rank": 39,
       "is_primary": false
     },
     {
@@ -491,7 +479,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 41,
+      "rank": 40,
       "is_primary": false
     },
     {
@@ -503,7 +491,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 42,
+      "rank": 41,
       "is_primary": false
     },
     {
@@ -515,7 +503,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 43,
+      "rank": 42,
       "is_primary": false
     },
     {
@@ -527,7 +515,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 44,
+      "rank": 43,
       "is_primary": false
     },
     {
@@ -539,7 +527,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 45,
+      "rank": 44,
       "is_primary": false
     },
     {
@@ -551,7 +539,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 46,
+      "rank": 45,
       "is_primary": false
     },
     {
@@ -563,7 +551,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 47,
+      "rank": 46,
       "is_primary": false
     },
     {
@@ -575,7 +563,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 48,
+      "rank": 47,
       "is_primary": false
     },
     {
@@ -587,7 +575,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 49,
+      "rank": 48,
       "is_primary": false
     },
     {
@@ -599,7 +587,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 50,
+      "rank": 49,
       "is_primary": false
     },
     {
@@ -611,7 +599,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 51,
+      "rank": 50,
       "is_primary": false
     },
     {
@@ -623,7 +611,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 52,
+      "rank": 51,
       "is_primary": false
     },
     {
@@ -635,7 +623,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 53,
+      "rank": 52,
       "is_primary": false
     },
     {
@@ -647,7 +635,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 54,
+      "rank": 53,
       "is_primary": false
     },
     {
@@ -659,7 +647,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 55,
+      "rank": 54,
       "is_primary": false
     },
     {
@@ -671,7 +659,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 56,
+      "rank": 55,
       "is_primary": false
     },
     {
@@ -683,7 +671,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 57,
+      "rank": 56,
       "is_primary": false
     },
     {
@@ -695,7 +683,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 58,
+      "rank": 57,
       "is_primary": false
     },
     {
@@ -707,55 +695,31 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
+      "rank": 58,
+      "is_primary": false
+    },
+    {
+      "endpoint_id": "mistral/mistral-large-2512",
+      "provider_id": "mistral",
+      "provider_name": "mistral",
+      "canonical_model_id": "mistral/mistral-large-2512",
+      "model_name": "mistral-large-2512",
+      "final_score": 18.0,
+      "quality_band": "good",
+      "free_status": "account_specific_free",
       "rank": 59,
       "is_primary": false
     },
     {
-      "endpoint_id": "mistral/mistral-large-2512",
+      "endpoint_id": "mistral/mistral-large-latest",
       "provider_id": "mistral",
       "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-large-2512",
-      "model_name": "mistral-large-2512",
+      "canonical_model_id": "mistral/mistral-large-latest",
+      "model_name": "mistral-large-latest",
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
       "rank": 60,
-      "is_primary": false
-    },
-    {
-      "endpoint_id": "mistral/mistral-large-latest",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-large-latest",
-      "model_name": "mistral-large-latest",
-      "final_score": 18.0,
-      "quality_band": "good",
-      "free_status": "account_specific_free",
-      "rank": 61,
-      "is_primary": false
-    },
-    {
-      "endpoint_id": "mistral/mistral-large-2512",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-large-2512",
-      "model_name": "mistral-large-2512",
-      "final_score": 18.0,
-      "quality_band": "good",
-      "free_status": "account_specific_free",
-      "rank": 62,
-      "is_primary": false
-    },
-    {
-      "endpoint_id": "mistral/mistral-large-latest",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-large-latest",
-      "model_name": "mistral-large-latest",
-      "final_score": 18.0,
-      "quality_band": "good",
-      "free_status": "account_specific_free",
-      "rank": 63,
       "is_primary": false
     },
     {
@@ -767,7 +731,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 64,
+      "rank": 61,
       "is_primary": false
     },
     {
@@ -779,7 +743,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 65,
+      "rank": 62,
       "is_primary": false
     },
     {
@@ -791,7 +755,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 66,
+      "rank": 63,
       "is_primary": false
     },
     {
@@ -803,7 +767,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 67,
+      "rank": 64,
       "is_primary": false
     },
     {
@@ -815,7 +779,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 68,
+      "rank": 65,
       "is_primary": false
     },
     {
@@ -827,7 +791,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 69,
+      "rank": 66,
       "is_primary": false
     },
     {
@@ -836,6 +800,42 @@
       "provider_name": "mistral",
       "canonical_model_id": "mistral/mistral-medium-latest",
       "model_name": "mistral-medium-latest",
+      "final_score": 18.0,
+      "quality_band": "good",
+      "free_status": "account_specific_free",
+      "rank": 67,
+      "is_primary": false
+    },
+    {
+      "endpoint_id": "mistral/mistral-medium-3-5",
+      "provider_id": "mistral",
+      "provider_name": "mistral",
+      "canonical_model_id": "mistral/mistral-medium-3-5",
+      "model_name": "mistral-medium-3-5",
+      "final_score": 18.0,
+      "quality_band": "good",
+      "free_status": "account_specific_free",
+      "rank": 68,
+      "is_primary": false
+    },
+    {
+      "endpoint_id": "mistral/mistral-medium-3.5",
+      "provider_id": "mistral",
+      "provider_name": "mistral",
+      "canonical_model_id": "mistral/mistral-medium-3.5",
+      "model_name": "mistral-medium-3.5",
+      "final_score": 18.0,
+      "quality_band": "good",
+      "free_status": "account_specific_free",
+      "rank": 69,
+      "is_primary": false
+    },
+    {
+      "endpoint_id": "mistral/mistral-medium-2604",
+      "provider_id": "mistral",
+      "provider_name": "mistral",
+      "canonical_model_id": "mistral/mistral-medium-2604",
+      "model_name": "mistral-medium-2604",
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
@@ -843,11 +843,11 @@
       "is_primary": false
     },
     {
-      "endpoint_id": "mistral/mistral-medium-3-5",
+      "endpoint_id": "mistral/mistral-vibe-cli-latest",
       "provider_id": "mistral",
       "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-medium-3-5",
-      "model_name": "mistral-medium-3-5",
+      "canonical_model_id": "mistral/mistral-vibe-cli-latest",
+      "model_name": "mistral-vibe-cli-latest",
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
@@ -855,123 +855,15 @@
       "is_primary": false
     },
     {
-      "endpoint_id": "mistral/mistral-medium-3.5",
+      "endpoint_id": "mistral/mistral-vibe-cli-with-tools",
       "provider_id": "mistral",
       "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-medium-3.5",
-      "model_name": "mistral-medium-3.5",
+      "canonical_model_id": "mistral/mistral-vibe-cli-with-tools",
+      "model_name": "mistral-vibe-cli-with-tools",
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
       "rank": 72,
-      "is_primary": false
-    },
-    {
-      "endpoint_id": "mistral/mistral-medium-2604",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-medium-2604",
-      "model_name": "mistral-medium-2604",
-      "final_score": 18.0,
-      "quality_band": "good",
-      "free_status": "account_specific_free",
-      "rank": 73,
-      "is_primary": false
-    },
-    {
-      "endpoint_id": "mistral/mistral-vibe-cli-latest",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-vibe-cli-latest",
-      "model_name": "mistral-vibe-cli-latest",
-      "final_score": 18.0,
-      "quality_band": "good",
-      "free_status": "account_specific_free",
-      "rank": 74,
-      "is_primary": false
-    },
-    {
-      "endpoint_id": "mistral/mistral-vibe-cli-with-tools",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-vibe-cli-with-tools",
-      "model_name": "mistral-vibe-cli-with-tools",
-      "final_score": 18.0,
-      "quality_band": "good",
-      "free_status": "account_specific_free",
-      "rank": 75,
-      "is_primary": false
-    },
-    {
-      "endpoint_id": "mistral/mistral-medium-latest",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-medium-latest",
-      "model_name": "mistral-medium-latest",
-      "final_score": 18.0,
-      "quality_band": "good",
-      "free_status": "account_specific_free",
-      "rank": 76,
-      "is_primary": false
-    },
-    {
-      "endpoint_id": "mistral/mistral-medium-3-5",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-medium-3-5",
-      "model_name": "mistral-medium-3-5",
-      "final_score": 18.0,
-      "quality_band": "good",
-      "free_status": "account_specific_free",
-      "rank": 77,
-      "is_primary": false
-    },
-    {
-      "endpoint_id": "mistral/mistral-medium-3.5",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-medium-3.5",
-      "model_name": "mistral-medium-3.5",
-      "final_score": 18.0,
-      "quality_band": "good",
-      "free_status": "account_specific_free",
-      "rank": 78,
-      "is_primary": false
-    },
-    {
-      "endpoint_id": "mistral/mistral-medium-2604",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-medium-2604",
-      "model_name": "mistral-medium-2604",
-      "final_score": 18.0,
-      "quality_band": "good",
-      "free_status": "account_specific_free",
-      "rank": 79,
-      "is_primary": false
-    },
-    {
-      "endpoint_id": "mistral/mistral-vibe-cli-latest",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-vibe-cli-latest",
-      "model_name": "mistral-vibe-cli-latest",
-      "final_score": 18.0,
-      "quality_band": "good",
-      "free_status": "account_specific_free",
-      "rank": 80,
-      "is_primary": false
-    },
-    {
-      "endpoint_id": "mistral/mistral-vibe-cli-with-tools",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-vibe-cli-with-tools",
-      "model_name": "mistral-vibe-cli-with-tools",
-      "final_score": 18.0,
-      "quality_band": "good",
-      "free_status": "account_specific_free",
-      "rank": 81,
       "is_primary": false
     },
     {
@@ -983,7 +875,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 82,
+      "rank": 73,
       "is_primary": false
     },
     {
@@ -995,7 +887,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 83,
+      "rank": 74,
       "is_primary": false
     },
     {
@@ -1007,7 +899,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 84,
+      "rank": 75,
       "is_primary": false
     },
     {
@@ -1019,7 +911,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 85,
+      "rank": 76,
       "is_primary": false
     },
     {
@@ -1031,7 +923,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 86,
+      "rank": 77,
       "is_primary": false
     },
     {
@@ -1043,7 +935,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 87,
+      "rank": 78,
       "is_primary": false
     },
     {
@@ -1055,7 +947,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 88,
+      "rank": 79,
       "is_primary": false
     },
     {
@@ -1067,7 +959,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 89,
+      "rank": 80,
       "is_primary": false
     },
     {
@@ -1079,7 +971,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 90,
+      "rank": 81,
       "is_primary": false
     },
     {
@@ -1091,7 +983,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 91,
+      "rank": 82,
       "is_primary": false
     },
     {
@@ -1103,7 +995,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 92,
+      "rank": 83,
       "is_primary": false
     },
     {
@@ -1115,7 +1007,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 93,
+      "rank": 84,
       "is_primary": false
     },
     {
@@ -1127,7 +1019,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 94,
+      "rank": 85,
       "is_primary": false
     },
     {
@@ -1139,7 +1031,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 95,
+      "rank": 86,
       "is_primary": false
     },
     {
@@ -1151,7 +1043,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 96,
+      "rank": 87,
       "is_primary": false
     },
     {
@@ -1163,7 +1055,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 97,
+      "rank": 88,
       "is_primary": false
     },
     {
@@ -1175,7 +1067,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 98,
+      "rank": 89,
       "is_primary": false
     },
     {
@@ -1187,7 +1079,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 99,
+      "rank": 90,
       "is_primary": false
     },
     {
@@ -1199,7 +1091,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 100,
+      "rank": 91,
       "is_primary": false
     },
     {
@@ -1211,7 +1103,7 @@
       "final_score": 18.0,
       "quality_band": "good",
       "free_status": "account_specific_free",
-      "rank": 101,
+      "rank": 92,
       "is_primary": false
     }
   ],
@@ -1219,8 +1111,7 @@
     "openrouter/cohere/north-mini-code:free",
     "mistral/mistral-medium",
     "mistral/mistral-medium-3",
-    "mistral/mistral-medium",
-    "mistral/mistral-medium-3",
+    "openrouter/poolside/laguna-s-2.1:free",
     "openrouter/poolside/laguna-xs-2.1:free",
     "openrouter/nvidia/nemotron-3.5-content-safety:free",
     "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
@@ -1241,16 +1132,16 @@
     "zai/glm-5-turbo",
     "zai/glm-5.1",
     "zai/glm-5.2",
-    "groq/llama-3.1-8b-instant",
-    "groq/llama-3.3-70b-versatile",
-    "groq/openai/gpt-oss-120b",
-    "groq/canopylabs/orpheus-arabic-saudi",
     "groq/groq/compound",
+    "groq/llama-3.3-70b-versatile",
+    "groq/canopylabs/orpheus-arabic-saudi",
     "groq/qwen/qwen3.6-27b",
-    "groq/allam-2-7b",
     "groq/canopylabs/orpheus-v1-english",
     "groq/openai/gpt-oss-20b",
+    "groq/allam-2-7b",
     "groq/groq/compound-mini",
+    "groq/llama-3.1-8b-instant",
+    "groq/openai/gpt-oss-120b",
     "mistral/mistral-medium-2505",
     "mistral/mistral-medium-2508",
     "mistral/open-mistral-nemo",
@@ -1277,20 +1168,12 @@
     "mistral/labs-leanstral-1-5",
     "mistral/mistral-large-2512",
     "mistral/mistral-large-latest",
-    "mistral/mistral-large-2512",
-    "mistral/mistral-large-latest",
     "mistral/ministral-3b-2512",
     "mistral/ministral-3b-latest",
     "mistral/ministral-8b-2512",
     "mistral/ministral-8b-latest",
     "mistral/ministral-14b-2512",
     "mistral/ministral-14b-latest",
-    "mistral/mistral-medium-latest",
-    "mistral/mistral-medium-3-5",
-    "mistral/mistral-medium-3.5",
-    "mistral/mistral-medium-2604",
-    "mistral/mistral-vibe-cli-latest",
-    "mistral/mistral-vibe-cli-with-tools",
     "mistral/mistral-medium-latest",
     "mistral/mistral-medium-3-5",
     "mistral/mistral-medium-3.5",
