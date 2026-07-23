@@ -1,6 +1,6 @@
 # Отчёт по моделям — Free AI Model Router
 
-*Сгенерировано: 2026-07-22 07:43:44 UTC*
+*Сгенерировано: 2026-07-23 07:45:31 UTC*
 
 *Источник рейтингов: Artificial Analysis (api)*
 
@@ -15,7 +15,7 @@ context 256k | success |
 | 4 | openrouter | poolside/laguna-s-2.1:free | 18.0% |  | verified_free | нет данных
 context 262k | success |
 | 5 | openrouter | poolside/laguna-xs-2.1:free | 18.0% |  | verified_free | нет данных
-context 262k | success |
+context 262k | rate_limited |
 | 6 | openrouter | nvidia/nemotron-3.5-content-safety:free | 18.0% |  | verified_free | нет данных
 context 128k | success |
 | 7 | openrouter | nvidia/nemotron-3-ultra-550b-a55b:free | 18.0% |  | verified_free | нет данных
@@ -23,7 +23,7 @@ context 1000k | success |
 | 8 | openrouter | nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free | 18.0% |  | verified_free | нет данных
 context 256k | success |
 | 9 | openrouter | poolside/laguna-m.1:free | 18.0% |  | verified_free | нет данных
-context 262k | rate_limited |
+context 262k | success |
 | 10 | openrouter | google/gemma-4-26b-a4b-it:free | 18.0% |  | verified_free | нет данных
 context 262k | success |
 | 11 | openrouter | google/gemma-4-31b-it:free | 18.0% |  | verified_free | нет данных
@@ -46,26 +46,26 @@ context 131k | success |
 | 22 | zai | glm-5-turbo | 18.0% |  | account_specific_free | нет данных | invalid_response |
 | 23 | zai | glm-5.1 | 18.0% |  | account_specific_free | нет данных | invalid_response |
 | 24 | zai | glm-5.2 | 18.0% |  | account_specific_free | нет данных | invalid_response |
-| 25 | groq | groq/compound | 18.0% |  | documented_free | нет данных
-context 131k | success |
-| 26 | groq | llama-3.3-70b-versatile | 18.0% |  | documented_free | нет данных
-context 131k | success |
-| 27 | groq | canopylabs/orpheus-arabic-saudi | 18.0% |  | documented_free | нет данных
+| 25 | groq | canopylabs/orpheus-v1-english | 18.0% |  | documented_free | нет данных
 context 4k | invalid_response |
-| 28 | groq | qwen/qwen3.6-27b | 18.0% |  | documented_free | нет данных
+| 26 | groq | groq/compound-mini | 18.0% |  | documented_free | нет данных
 context 131k | success |
-| 29 | groq | canopylabs/orpheus-v1-english | 18.0% |  | documented_free | нет данных
+| 27 | groq | llama-3.3-70b-versatile | 18.0% |  | documented_free | нет данных
+context 131k | success |
+| 28 | groq | groq/compound | 18.0% |  | documented_free | нет данных
+context 131k | success |
+| 29 | groq | qwen/qwen3.6-27b | 18.0% |  | documented_free | нет данных
+context 131k | success |
+| 30 | groq | llama-3.1-8b-instant | 18.0% |  | documented_free | нет данных
+context 131k | success |
+| 31 | groq | openai/gpt-oss-20b | 18.0% |  | documented_free | нет данных
+context 131k | success |
+| 32 | groq | canopylabs/orpheus-arabic-saudi | 18.0% |  | documented_free | нет данных
 context 4k | invalid_response |
-| 30 | groq | openai/gpt-oss-20b | 18.0% |  | documented_free | нет данных
+| 33 | groq | openai/gpt-oss-120b | 18.0% |  | documented_free | нет данных
 context 131k | success |
-| 31 | groq | allam-2-7b | 18.0% |  | documented_free | нет данных
+| 34 | groq | allam-2-7b | 18.0% |  | documented_free | нет данных
 context 4k | success |
-| 32 | groq | groq/compound-mini | 18.0% |  | documented_free | нет данных
-context 131k | success |
-| 33 | groq | llama-3.1-8b-instant | 18.0% |  | documented_free | нет данных
-context 131k | success |
-| 34 | groq | openai/gpt-oss-120b | 18.0% |  | documented_free | нет данных
-context 131k | success |
 | 35 | mistral | mistral-medium-2505 | 18.0% |  | account_specific_free | нет данных | success |
 | 36 | mistral | mistral-medium-2508 | 18.0% |  | account_specific_free | нет данных | success |
 | 37 | mistral | open-mistral-nemo | 18.0% |  | account_specific_free | нет данных | success |
@@ -79,7 +79,7 @@ context 131k | success |
 | 45 | mistral | devstral-2512 | 18.0% |  | account_specific_free | нет данных | success |
 | 46 | mistral | devstral-medium-latest | 18.0% |  | account_specific_free | нет данных | success |
 | 47 | mistral | devstral-latest | 18.0% |  | account_specific_free | нет данных | success |
-| 48 | mistral | mistral-code-agent-latest | 18.0% |  | account_specific_free | нет данных | success |
+| 48 | mistral | mistral-code-agent-latest | 18.0% |  | account_specific_free | нет данных | timeout |
 | 49 | mistral | mistral-small-2603 | 18.0% |  | account_specific_free | нет данных | success |
 | 50 | mistral | mistral-small-latest | 18.0% |  | account_specific_free | нет данных | success |
 | 51 | mistral | mistral-vibe-cli-fast | 18.0% |  | account_specific_free | нет данных | success |
@@ -134,54 +134,54 @@ context 131k | success |
 | 3 | openrouter/xiaomi/mimo-v2.5-pro | 84.6 | high | — | — | — |
 | 4 | openrouter/nex-agi/nex-n2-pro | 83.4 | high | — | — | — |
 | 5 | openrouter/xiaomi/mimo-v2.5 | 80.9 | high | — | — | — |
-| 6 | opencode_zen/mimo-v2.5-free | 76.9 | high | — | no_tool_calling: -5.0 | — |
-| 7 | opencode_zen/minimax-m3 | 73.3 | high | — | no_tool_calling: -5.0 | — |
-| 8 | openrouter/google/gemini-3.5-flash-lite | 72.8 | high | — | — | — |
-| 9 | opencode_zen/minimax-m2.7 | 66.8 | high | — | no_tool_calling: -5.0 | — |
-| 10 | openrouter/cohere/north-mini-code:free | 58.9 | high | — | — | ✓ |
-| 11 | openrouter/google/gemini-2.5-pro | 55.6 | high | — | — | — |
-| 12 | openrouter/google/gemini-2.5-pro-preview | 55.6 | high | — | — | — |
-| 13 | openrouter/google/gemini-2.5-pro-preview-05-06 | 55.6 | high | — | — | — |
-| 14 | openrouter/mistralai/devstral-2512 | 53.3 | high | — | — | — |
-| 15 | openrouter/inception/mercury-2 | 53.2 | high | — | — | — |
-| 16 | openrouter/mistralai/mistral-small-3.1-24b-instruct | 47.9 | high | — | — | — |
-| 17 | openrouter/mistralai/mistral-medium-3.1 | 41.7 | high | — | — | — |
-| 18 | mistral/mistral-medium | 41.7 | high | — | — | ✓ |
-| 19 | mistral/mistral-medium-3 | 41.7 | high | — | — | ✓ |
-| 20 | openrouter/mistralai/mistral-large-2512 | 41.3 | high | — | — | — |
-| 21 | openrouter/mistralai/mistral-small-3.2-24b-instruct | 33.1 | high | — | — | — |
-| 22 | openrouter/openai/gpt-3.5-turbo-0613 | 24.7 | high | — | context_below_minimum (4095 < 128000): -8.0 | — |
-| 23 | openrouter/openai/gpt-3.5-turbo-instruct | 24.7 | high | — | context_below_minimum (4095 < 128000): -8.0 | — |
-| 24 | openrouter/openai/gpt-3.5-turbo-16k | 24.7 | high | — | context_below_minimum (16385 < 128000): -8.0 | — |
-| 25 | openrouter/openai/gpt-3.5-turbo | 24.7 | high | — | context_below_minimum (16385 < 128000): -8.0 | — |
-| 26 | openrouter/openai/o3-deep-research | 20.1 | high | — | — | — |
-| 27 | openrouter/openai/o3-pro | 20.1 | high | — | — | — |
-| 28 | openrouter/openai/o3 | 20.1 | high | — | — | — |
-| 29 | openrouter/openai/o3-mini-high | 20.1 | high | — | — | — |
-| 30 | openrouter/openai/o3-mini | 20.1 | high | — | — | — |
-| 31 | openrouter/inclusionai/ling-2.6-1t | 20.0 | high | — | — | — |
-| 32 | openrouter/moonshotai/kimi-k2.7-code | 19.9 | high | — | — | — |
-| 33 | openrouter/moonshotai/kimi-k2.5 | 19.9 | high | — | — | — |
-| 34 | openrouter/moonshotai/kimi-k2-thinking | 19.9 | high | — | — | — |
-| 35 | openrouter/moonshotai/kimi-k2-0905 | 19.9 | high | — | — | — |
-| 36 | openrouter/moonshotai/kimi-k2 | 19.9 | high | — | — | — |
-| 37 | openrouter/openai/gpt-4.1 | 19.9 | high | — | — | — |
-| 38 | openrouter/openai/gpt-4.1-mini | 19.9 | high | — | — | — |
-| 39 | openrouter/openai/gpt-4.1-nano | 19.9 | high | — | — | — |
-| 40 | openrouter/qwen/qwen3-vl-30b-a3b-instruct | 19.8 | high | — | — | — |
-| 41 | openrouter/qwen/qwen3-next-80b-a3b-instruct | 19.8 | high | — | — | — |
-| 42 | openrouter/mistralai/mistral-medium-3-5 | 19.7 | high | — | — | — |
-| 43 | openrouter/qwen/qwen3-vl-8b-instruct | 19.7 | high | — | — | — |
-| 44 | openrouter/mistralai/mistral-medium-3 | 19.7 | high | — | — | — |
-| 45 | openrouter/cohere/command-a | 19.7 | high | — | — | — |
-| 46 | openrouter/amazon/nova-micro-v1 | 19.7 | high | — | — | — |
-| 47 | openrouter/amazon/nova-pro-v1 | 19.7 | high | — | — | — |
-| 48 | openrouter/anthropic/claude-3-haiku | 19.7 | high | — | — | — |
-| 49 | openrouter/mistralai/mistral-large | 19.7 | high | — | — | — |
-| 50 | openrouter/ibm-granite/granite-4.0-h-micro | 19.6 | high | — | — | — |
-| 51 | openrouter/poolside/laguna-s-2.1 | 18.0 | low | — | low_match_confidence: -4.0 | — |
-| 52 | openrouter/poolside/laguna-s-2.1:free | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
-| 53 | openrouter/google/gemini-3.6-flash | 18.0 | low | — | low_match_confidence: -4.0 | — |
+| 6 | opencode_zen/minimax-m3 | 73.3 | high | — | no_tool_calling: -5.0 | — |
+| 7 | opencode_zen/mimo-v2.5-free | 71.3 | high | — | no_tool_calling: -5.0 | — |
+| 8 | opencode_zen/minimax-m2.7 | 66.8 | high | — | no_tool_calling: -5.0 | — |
+| 9 | openrouter/cohere/north-mini-code:free | 58.9 | high | — | — | ✓ |
+| 10 | openrouter/google/gemini-2.5-pro | 55.6 | high | — | — | — |
+| 11 | openrouter/google/gemini-2.5-pro-preview | 55.6 | high | — | — | — |
+| 12 | openrouter/google/gemini-2.5-pro-preview-05-06 | 55.6 | high | — | — | — |
+| 13 | openrouter/mistralai/devstral-2512 | 53.3 | high | — | — | — |
+| 14 | openrouter/inception/mercury-2 | 53.2 | high | — | — | — |
+| 15 | openrouter/mistralai/mistral-small-3.1-24b-instruct | 47.9 | high | — | — | — |
+| 16 | openrouter/mistralai/mistral-medium-3.1 | 41.7 | high | — | — | — |
+| 17 | mistral/mistral-medium | 41.7 | high | — | — | ✓ |
+| 18 | mistral/mistral-medium-3 | 41.7 | high | — | — | ✓ |
+| 19 | openrouter/mistralai/mistral-large-2512 | 41.3 | high | — | — | — |
+| 20 | openrouter/mistralai/mistral-small-3.2-24b-instruct | 33.1 | high | — | — | — |
+| 21 | openrouter/openai/gpt-3.5-turbo-0613 | 24.7 | high | — | context_below_minimum (4095 < 128000): -8.0 | — |
+| 22 | openrouter/openai/gpt-3.5-turbo-instruct | 24.7 | high | — | context_below_minimum (4095 < 128000): -8.0 | — |
+| 23 | openrouter/openai/gpt-3.5-turbo-16k | 24.7 | high | — | context_below_minimum (16385 < 128000): -8.0 | — |
+| 24 | openrouter/openai/gpt-3.5-turbo | 24.7 | high | — | context_below_minimum (16385 < 128000): -8.0 | — |
+| 25 | openrouter/openai/o3-deep-research | 20.1 | high | — | — | — |
+| 26 | openrouter/openai/o3-pro | 20.1 | high | — | — | — |
+| 27 | openrouter/openai/o3 | 20.1 | high | — | — | — |
+| 28 | openrouter/openai/o3-mini-high | 20.1 | high | — | — | — |
+| 29 | openrouter/openai/o3-mini | 20.1 | high | — | — | — |
+| 30 | openrouter/inclusionai/ling-2.6-1t | 20.0 | high | — | — | — |
+| 31 | openrouter/moonshotai/kimi-k2.7-code | 19.9 | high | — | — | — |
+| 32 | openrouter/moonshotai/kimi-k2.5 | 19.9 | high | — | — | — |
+| 33 | openrouter/moonshotai/kimi-k2-thinking | 19.9 | high | — | — | — |
+| 34 | openrouter/moonshotai/kimi-k2-0905 | 19.9 | high | — | — | — |
+| 35 | openrouter/moonshotai/kimi-k2 | 19.9 | high | — | — | — |
+| 36 | openrouter/openai/gpt-4.1 | 19.9 | high | — | — | — |
+| 37 | openrouter/openai/gpt-4.1-mini | 19.9 | high | — | — | — |
+| 38 | openrouter/openai/gpt-4.1-nano | 19.9 | high | — | — | — |
+| 39 | openrouter/qwen/qwen3-vl-30b-a3b-instruct | 19.8 | high | — | — | — |
+| 40 | openrouter/qwen/qwen3-next-80b-a3b-instruct | 19.8 | high | — | — | — |
+| 41 | openrouter/mistralai/mistral-medium-3-5 | 19.7 | high | — | — | — |
+| 42 | openrouter/qwen/qwen3-vl-8b-instruct | 19.7 | high | — | — | — |
+| 43 | openrouter/mistralai/mistral-medium-3 | 19.7 | high | — | — | — |
+| 44 | openrouter/cohere/command-a | 19.7 | high | — | — | — |
+| 45 | openrouter/amazon/nova-micro-v1 | 19.7 | high | — | — | — |
+| 46 | openrouter/amazon/nova-pro-v1 | 19.7 | high | — | — | — |
+| 47 | openrouter/anthropic/claude-3-haiku | 19.7 | high | — | — | — |
+| 48 | openrouter/mistralai/mistral-large | 19.7 | high | — | — | — |
+| 49 | openrouter/ibm-granite/granite-4.0-h-micro | 19.6 | high | — | — | — |
+| 50 | openrouter/poolside/laguna-s-2.1 | 18.0 | low | — | low_match_confidence: -4.0 | — |
+| 51 | openrouter/poolside/laguna-s-2.1:free | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 52 | openrouter/google/gemini-3.6-flash | 18.0 | low | — | low_match_confidence: -4.0 | — |
+| 53 | openrouter/google/gemini-3.5-flash-lite | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 54 | openrouter/meituan/longcat-2.0 | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 55 | openrouter/thinkingmachines/inkling | 18.0 | low | — | low_match_confidence: -4.0 | — |
 | 56 | openrouter/openrouter/auto-beta | 18.0 | low | — | low_match_confidence: -4.0 | — |
@@ -538,16 +538,16 @@ context 131k | success |
 | 407 | zai/glm-5-turbo | 18.0 | high | — | — | ✓ |
 | 408 | zai/glm-5.1 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
 | 409 | zai/glm-5.2 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
-| 410 | groq/groq/compound | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
-| 411 | groq/llama-3.3-70b-versatile | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
-| 412 | groq/canopylabs/orpheus-arabic-saudi | 18.0 | low | — | context_below_minimum (4000 < 128000): -8.0, low_match_confidence: -4.0 | ✓ |
-| 413 | groq/qwen/qwen3.6-27b | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
-| 414 | groq/canopylabs/orpheus-v1-english | 18.0 | low | — | context_below_minimum (4000 < 128000): -8.0, low_match_confidence: -4.0 | ✓ |
-| 415 | groq/openai/gpt-oss-20b | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
-| 416 | groq/allam-2-7b | 18.0 | low | — | context_below_minimum (4096 < 128000): -8.0, low_match_confidence: -4.0 | ✓ |
-| 417 | groq/groq/compound-mini | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
-| 418 | groq/llama-3.1-8b-instant | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
-| 419 | groq/openai/gpt-oss-120b | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 410 | groq/canopylabs/orpheus-v1-english | 18.0 | low | — | context_below_minimum (4000 < 128000): -8.0, low_match_confidence: -4.0 | ✓ |
+| 411 | groq/groq/compound-mini | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 412 | groq/llama-3.3-70b-versatile | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 413 | groq/groq/compound | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 414 | groq/qwen/qwen3.6-27b | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 415 | groq/llama-3.1-8b-instant | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 416 | groq/openai/gpt-oss-20b | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 417 | groq/canopylabs/orpheus-arabic-saudi | 18.0 | low | — | context_below_minimum (4000 < 128000): -8.0, low_match_confidence: -4.0 | ✓ |
+| 418 | groq/openai/gpt-oss-120b | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
+| 419 | groq/allam-2-7b | 18.0 | low | — | context_below_minimum (4096 < 128000): -8.0, low_match_confidence: -4.0 | ✓ |
 | 420 | mistral/mistral-medium-2505 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
 | 421 | mistral/mistral-medium-2508 | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
 | 422 | mistral/open-mistral-nemo | 18.0 | low | — | low_match_confidence: -4.0 | ✓ |
