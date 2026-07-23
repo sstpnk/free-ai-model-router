@@ -186,18 +186,19 @@ class CloudflareAdapter:
             if not model_id:
                 continue
 
-            # Log model IDs before filtering
-            logger.info("Cloudflare model ID: %s (starts with @cf/: %s)", model_id, model_id.startswith(CLOUDFLARE_HOSTED_PREFIX))
+            # Check the model field (not id) for @cf/ prefix
+            cloudflare_model_id = str(m.get("model") or model_id)
+            logger.info("Cloudflare model field: %s (starts with @cf/: %s)", cloudflare_model_id, cloudflare_model_id.startswith(CLOUDFLARE_HOSTED_PREFIX))
 
             # Only Cloudflare-hosted models
-            if not model_id.startswith(CLOUDFLARE_HOSTED_PREFIX):
-                logger.info("Model %s filtered out (not starting with @cf/)", model_id)
+            if not cloudflare_model_id.startswith(CLOUDFLARE_HOSTED_PREFIX):
+                logger.info("Model %s filtered out (model field doesn't start with @cf/)", cloudflare_model_id)
                 continue
 
             logger.info("Cloudflare model passed filter: %s", model_id)
 
             # Determine task type
-            task_type = self._resolve_task_type(m, model_id)
+            task_type = self._resolve_task_type(m, cloudflare_model_id)
             modalities = _get_modalities(task_type)
             rate_limit = TASK_RATE_LIMITS.get(task_type, 300)
 
@@ -218,9 +219,9 @@ class CloudflareAdapter:
             tool_calling = "function-calling" in caps_str or "function calling" in caps_str
 
             results.append(ProviderModel(
-                provider_model_id=model_id,
-                name=str(m.get("name", model_id)),
-                litellm_model=f"cloudflare/{model_id}",
+                provider_model_id=cloudflare_model_id,
+                name=str(m.get("name", cloudflare_model_id)),
+                litellm_model=f"cloudflare/{cloudflare_model_id}",
                 api_base=api_base,
                 api_style=ApiStyle.OPENAI_COMPATIBLE,
                 context_tokens=ctx,
