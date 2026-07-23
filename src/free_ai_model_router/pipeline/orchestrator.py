@@ -140,7 +140,7 @@ class PipelineOrchestrator:
         return self.state
 
     async def _collect_providers(self) -> None:
-        """Discover models from configured providers, keep only :free models."""
+        """Discover models from configured providers."""
         assert self.http is not None
         adapters = self._init_adapters()
         all_models: list[ProviderModel] = []
@@ -154,10 +154,6 @@ class PipelineOrchestrator:
                 models = await adapter.discover_models()
                 all_models.extend(models)
                 for m in models:
-                    # Keep only :free suffix models
-                    if ":free" not in m.provider_model_id:
-                        continue
-
                     ep = adapter.to_provider_endpoint(m)
                     self.collected_endpoints.append(ep)
                     
@@ -180,9 +176,8 @@ class PipelineOrchestrator:
                         self.collected_models.append(canonical)
                         seen_canonical_ids.add(ep.canonical_model_id)
                         
-                logger.info("  %s: discovered %d models (%d with :free suffix)", 
-                           adapter.provider_id, len(models), 
-                           sum(1 for m in models if ":free" in m.provider_model_id))
+                logger.info("  %s: discovered %d models", 
+                           adapter.provider_id, len(models))
             except Exception as e:
                 logger.warning("  %s: collection failed: %s", adapter.provider_id, e)
                 self.state.errors.append(f"Provider {adapter.provider_id}: {e}")
@@ -193,7 +188,7 @@ class PipelineOrchestrator:
             last_success_at=datetime.now(timezone.utc),
             consecutive_failures=0,
         )
-        logger.info("Total: %d :free endpoints from %d providers, %d unique canonical models", 
+        logger.info("Total: %d endpoints from %d providers, %d unique canonical models", 
                    len(self.collected_endpoints), len(adapters), len(seen_canonical_ids))
 
     def _init_adapters(self) -> list:
