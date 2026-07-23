@@ -12,6 +12,7 @@ from free_ai_model_router.models import (
     Availability,
     FreeStatus,
     Limits,
+    Modality,
     ProviderEndpoint,
     VerificationStatus,
 )
@@ -80,7 +81,7 @@ class GeminiAdapter:
                 context_tokens=None,  # Not exposed in list endpoint
                 free_status=free_status,
                 tool_calling=True,
-                vision="vision" in model_id.lower() or "imagen" in model_id.lower(),
+                modalities=[Modality.IMAGE_ANALYSIS] if ("vision" in model_id.lower() or "imagen" in model_id.lower()) else None,
                 raw_data=m,
             ))
         return results

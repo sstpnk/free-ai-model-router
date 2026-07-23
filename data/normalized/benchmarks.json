@@ -1,1 +1,1500 @@
-[]
+[
+  {
+    "canonical_model_id": "opencode_zen/claude-fable-5",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1631.0,
+      "evaluated_at": "2026-07-18 18:06:53.424150+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 85.14285714285715,
+      "reliability_percent": 90.0,
+      "final_router_score": 86.1,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "excellent",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/claude-opus-4-8",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1534.0,
+      "evaluated_at": "2026-07-18 18:06:53.424226+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 71.28571428571429,
+      "reliability_percent": 90.0,
+      "final_router_score": 75.0,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/claude-opus-4-7",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1555.0,
+      "evaluated_at": "2026-07-18 18:06:53.424270+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 74.28571428571428,
+      "reliability_percent": 90.0,
+      "final_router_score": 77.4,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/claude-opus-4-6",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1536.0,
+      "evaluated_at": "2026-07-18 18:06:53.424308+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 71.57142857142857,
+      "reliability_percent": 90.0,
+      "final_router_score": 75.3,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/claude-opus-4-5",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1490.0,
+      "evaluated_at": "2026-07-18 18:06:53.424425+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 65.0,
+      "reliability_percent": 90.0,
+      "final_router_score": 70.0,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/claude-opus-4-1",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1386.0,
+      "evaluated_at": "2026-07-18 18:06:53.424566+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 50.14285714285714,
+      "reliability_percent": 90.0,
+      "final_router_score": 58.1,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/claude-sonnet-5",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1542.0,
+      "evaluated_at": "2026-07-18 18:06:53.424631+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 72.42857142857143,
+      "reliability_percent": 90.0,
+      "final_router_score": 75.9,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/claude-sonnet-4-6",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1522.0,
+      "evaluated_at": "2026-07-18 18:06:53.424666+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 69.57142857142857,
+      "reliability_percent": 90.0,
+      "final_router_score": 73.7,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/claude-sonnet-4-5",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1388.0,
+      "evaluated_at": "2026-07-18 18:06:53.424788+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 50.42857142857143,
+      "reliability_percent": 90.0,
+      "final_router_score": 58.3,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/claude-sonnet-4",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1522.0,
+      "evaluated_at": "2026-07-18 18:06:53.424855+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 69.57142857142857,
+      "reliability_percent": 90.0,
+      "final_router_score": 73.7,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/claude-haiku-4-5",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1327.0,
+      "evaluated_at": "2026-07-18 18:06:53.425014+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 41.714285714285715,
+      "reliability_percent": 90.0,
+      "final_router_score": 51.4,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/gemini-3.5-flash",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1504.0,
+      "evaluated_at": "2026-07-18 18:06:53.425049+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 67.0,
+      "reliability_percent": 90.0,
+      "final_router_score": 71.6,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/gemini-3.1-pro",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1444.0,
+      "evaluated_at": "2026-07-18 18:06:53.425144+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 58.42857142857142,
+      "reliability_percent": 90.0,
+      "final_router_score": 64.7,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/gemini-3-flash",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1437.0,
+      "evaluated_at": "2026-07-18 18:06:53.425179+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 57.42857142857143,
+      "reliability_percent": 90.0,
+      "final_router_score": 63.9,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/gpt-5.6-sol",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1618.0,
+      "evaluated_at": "2026-07-18 18:06:53.425223+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 83.28571428571429,
+      "reliability_percent": 90.0,
+      "final_router_score": 84.6,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/gpt-5.6-terra",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": null,
+      "evaluated_at": null,
+      "source_url": null
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 1.0,
+      "reliability_percent": 90.0,
+      "final_router_score": 18.8,
+      "penalties_applied": [
+        "no_tool_calling: -5.0",
+        "low_match_confidence: -4.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "low"
+  },
+  {
+    "canonical_model_id": "opencode_zen/gpt-5.6-luna",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": null,
+      "evaluated_at": null,
+      "source_url": null
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 1.0,
+      "reliability_percent": 90.0,
+      "final_router_score": 18.8,
+      "penalties_applied": [
+        "no_tool_calling: -5.0",
+        "low_match_confidence: -4.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "low"
+  },
+  {
+    "canonical_model_id": "opencode_zen/gpt-5.5",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1618.0,
+      "evaluated_at": "2026-07-18 18:06:53.425642+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 83.28571428571429,
+      "reliability_percent": 90.0,
+      "final_router_score": 84.6,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/gpt-5.5-pro",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": null,
+      "evaluated_at": null,
+      "source_url": null
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 1.0,
+      "reliability_percent": 90.0,
+      "final_router_score": 18.8,
+      "penalties_applied": [
+        "no_tool_calling: -5.0",
+        "low_match_confidence: -4.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "low"
+  },
+  {
+    "canonical_model_id": "opencode_zen/gpt-5.4",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1386.0,
+      "evaluated_at": "2026-07-18 18:06:53.425860+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 50.14285714285714,
+      "reliability_percent": 90.0,
+      "final_router_score": 58.1,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/gpt-5.4-pro",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1386.0,
+      "evaluated_at": "2026-07-18 18:06:53.425989+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 50.14285714285714,
+      "reliability_percent": 90.0,
+      "final_router_score": 58.1,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/gpt-5.4-mini",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1398.0,
+      "evaluated_at": "2026-07-18 18:06:53.426099+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 51.85714285714286,
+      "reliability_percent": 90.0,
+      "final_router_score": 59.5,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/gpt-5.4-nano",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1386.0,
+      "evaluated_at": "2026-07-18 18:06:53.426226+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 50.14285714285714,
+      "reliability_percent": 90.0,
+      "final_router_score": 58.1,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/gpt-5.3-codex-spark",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": null,
+      "evaluated_at": null,
+      "source_url": null
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 1.0,
+      "reliability_percent": 90.0,
+      "final_router_score": 18.8,
+      "penalties_applied": [
+        "no_tool_calling: -5.0",
+        "low_match_confidence: -4.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "low"
+  },
+  {
+    "canonical_model_id": "opencode_zen/gpt-5.3-codex",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1406.0,
+      "evaluated_at": "2026-07-18 18:06:53.426514+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 52.99999999999999,
+      "reliability_percent": 90.0,
+      "final_router_score": 60.4,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/gpt-5.2",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1406.0,
+      "evaluated_at": "2026-07-18 18:06:53.426546+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 52.99999999999999,
+      "reliability_percent": 90.0,
+      "final_router_score": 60.4,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/gpt-5.2-codex",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1334.0,
+      "evaluated_at": "2026-07-18 18:06:53.426580+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 42.714285714285715,
+      "reliability_percent": 90.0,
+      "final_router_score": 52.2,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/gpt-5.1",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1340.0,
+      "evaluated_at": "2026-07-18 18:06:53.426613+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 43.57142857142857,
+      "reliability_percent": 90.0,
+      "final_router_score": 52.9,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/gpt-5.1-codex-max",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1340.0,
+      "evaluated_at": "2026-07-18 18:06:53.426850+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 43.57142857142857,
+      "reliability_percent": 90.0,
+      "final_router_score": 52.9,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/gpt-5.1-codex",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1330.0,
+      "evaluated_at": "2026-07-18 18:06:53.426991+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 42.14285714285714,
+      "reliability_percent": 90.0,
+      "final_router_score": 51.7,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/gpt-5.1-codex-mini",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1240.0,
+      "evaluated_at": "2026-07-18 18:06:53.427081+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 29.285714285714285,
+      "reliability_percent": 90.0,
+      "final_router_score": 41.4,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/gpt-5",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1618.0,
+      "evaluated_at": "2026-07-18 18:06:53.427176+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 83.28571428571429,
+      "reliability_percent": 90.0,
+      "final_router_score": 84.6,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/gpt-5-codex",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1406.0,
+      "evaluated_at": "2026-07-18 18:06:53.427305+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 52.99999999999999,
+      "reliability_percent": 90.0,
+      "final_router_score": 60.4,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/gpt-5-nano",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": null,
+      "evaluated_at": null,
+      "source_url": null
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 1.0,
+      "reliability_percent": 90.0,
+      "final_router_score": 18.8,
+      "penalties_applied": [
+        "no_tool_calling: -5.0",
+        "low_match_confidence: -4.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "low"
+  },
+  {
+    "canonical_model_id": "opencode_zen/grok-build-0.1",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": null,
+      "evaluated_at": null,
+      "source_url": null
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 1.0,
+      "reliability_percent": 90.0,
+      "final_router_score": 18.8,
+      "penalties_applied": [
+        "no_tool_calling: -5.0",
+        "low_match_confidence: -4.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "low"
+  },
+  {
+    "canonical_model_id": "opencode_zen/grok-4.5",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1558.0,
+      "evaluated_at": "2026-07-18 18:06:53.427799+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 74.71428571428572,
+      "reliability_percent": 90.0,
+      "final_router_score": 77.8,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/deepseek-v4-pro",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1447.0,
+      "evaluated_at": "2026-07-18 18:06:53.427844+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 58.857142857142854,
+      "reliability_percent": 90.0,
+      "final_router_score": 65.1,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/deepseek-v4-flash",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": null,
+      "evaluated_at": null,
+      "source_url": null
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 1.0,
+      "reliability_percent": 90.0,
+      "final_router_score": 18.8,
+      "penalties_applied": [
+        "no_tool_calling: -5.0",
+        "low_match_confidence: -4.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "low"
+  },
+  {
+    "canonical_model_id": "opencode_zen/glm-5.2",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1587.0,
+      "evaluated_at": "2026-07-18 18:06:53.428259+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 78.85714285714285,
+      "reliability_percent": 90.0,
+      "final_router_score": 81.1,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/glm-5.1",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1526.0,
+      "evaluated_at": "2026-07-18 18:06:53.428326+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 70.14285714285714,
+      "reliability_percent": 90.0,
+      "final_router_score": 74.1,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/glm-5",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1430.0,
+      "evaluated_at": "2026-07-18 18:06:53.428372+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 56.42857142857143,
+      "reliability_percent": 90.0,
+      "final_router_score": 63.1,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/minimax-m3",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1493.0,
+      "evaluated_at": "2026-07-18 18:06:53.428408+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 65.42857142857143,
+      "reliability_percent": 90.0,
+      "final_router_score": 70.3,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/minimax-m2.7",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1395.0,
+      "evaluated_at": "2026-07-18 18:06:53.428445+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 51.42857142857143,
+      "reliability_percent": 90.0,
+      "final_router_score": 59.1,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/minimax-m2.5",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1382.0,
+      "evaluated_at": "2026-07-18 18:06:53.428479+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 49.57142857142857,
+      "reliability_percent": 90.0,
+      "final_router_score": 57.7,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/kimi-k2.7-code",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1470.0,
+      "evaluated_at": "2026-07-18 18:06:53.428510+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 62.14285714285714,
+      "reliability_percent": 90.0,
+      "final_router_score": 67.7,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/kimi-k2.6",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1515.0,
+      "evaluated_at": "2026-07-18 18:06:53.428540+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 68.57142857142858,
+      "reliability_percent": 90.0,
+      "final_router_score": 72.9,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/kimi-k2.5",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1433.0,
+      "evaluated_at": "2026-07-18 18:06:53.428639+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 56.857142857142854,
+      "reliability_percent": 90.0,
+      "final_router_score": 63.5,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/qwen3.6-plus",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1459.0,
+      "evaluated_at": "2026-07-18 18:06:53.428675+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 60.57142857142857,
+      "reliability_percent": 90.0,
+      "final_router_score": 66.5,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/qwen3.5-plus",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": null,
+      "evaluated_at": null,
+      "source_url": null
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 1.0,
+      "reliability_percent": 90.0,
+      "final_router_score": 18.8,
+      "penalties_applied": [
+        "no_tool_calling: -5.0",
+        "low_match_confidence: -4.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "low"
+  },
+  {
+    "canonical_model_id": "opencode_zen/big-pickle",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": null,
+      "evaluated_at": null,
+      "source_url": null
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 1.0,
+      "reliability_percent": 90.0,
+      "final_router_score": 18.8,
+      "penalties_applied": [
+        "no_tool_calling: -5.0",
+        "low_match_confidence: -4.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "low"
+  },
+  {
+    "canonical_model_id": "opencode_zen/deepseek-v4-flash-free",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": null,
+      "evaluated_at": null,
+      "source_url": null
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 1.0,
+      "reliability_percent": 90.0,
+      "final_router_score": 18.8,
+      "penalties_applied": [
+        "no_tool_calling: -5.0",
+        "low_match_confidence: -4.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "low"
+  },
+  {
+    "canonical_model_id": "opencode_zen/mimo-v2.5-free",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": 1429.0,
+      "evaluated_at": "2026-07-18 18:06:53.429320+00:00",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 56.285714285714285,
+      "reliability_percent": 90.0,
+      "final_router_score": 63.0,
+      "penalties_applied": [
+        "no_tool_calling: -5.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "high"
+  },
+  {
+    "canonical_model_id": "opencode_zen/hy3-free",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": null,
+      "evaluated_at": null,
+      "source_url": null
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 1.0,
+      "reliability_percent": 90.0,
+      "final_router_score": 18.8,
+      "penalties_applied": [
+        "no_tool_calling: -5.0",
+        "low_match_confidence: -4.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "low"
+  },
+  {
+    "canonical_model_id": "opencode_zen/nemotron-3-ultra-free",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": null,
+      "evaluated_at": null,
+      "source_url": null
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 1.0,
+      "reliability_percent": 90.0,
+      "final_router_score": 18.8,
+      "penalties_applied": [
+        "no_tool_calling: -5.0",
+        "low_match_confidence: -4.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "low"
+  },
+  {
+    "canonical_model_id": "opencode_zen/north-mini-code-free",
+    "benchmark": {
+      "artificial_analysis_coding_agent_index": null,
+      "artificial_analysis_coding_index": null,
+      "terminal_bench_v2": null,
+      "deep_swe": null,
+      "swe_atlas_qna": null,
+      "intelligence_index": null,
+      "agentic_index": null,
+      "agent_harness": null,
+      "reasoning_setting": null,
+      "arena_elo": null,
+      "evaluated_at": null,
+      "source_url": null
+    },
+    "normalized_scores": {
+      "coding_quality_percent": 1.0,
+      "reliability_percent": 90.0,
+      "final_router_score": 18.8,
+      "penalties_applied": [
+        "no_tool_calling: -5.0",
+        "low_match_confidence: -4.0"
+      ]
+    },
+    "quality_band": "good",
+    "ranking_confidence": "low"
+  }
+]

@@ -10,8 +10,6 @@ import yaml
 from free_ai_model_router.models import (
     ManualOverrideList,
     ProviderConfigList,
-    ScoringConfig,
-    SourceConfigList,
 )
 
 
@@ -28,18 +26,6 @@ def load_providers(path: Path) -> ProviderConfigList:
     """Load provider registry from providers.yaml."""
     data = _load_yaml(path)
     return ProviderConfigList(**data)
-
-
-def load_sources(path: Path) -> SourceConfigList:
-    """Load data source config from sources.yaml."""
-    data = _load_yaml(path)
-    return SourceConfigList(**data)
-
-
-def load_scoring(path: Path) -> ScoringConfig:
-    """Load scoring config from scoring.yaml."""
-    data = _load_yaml(path)
-    return ScoringConfig(**data)
 
 
 def load_overrides(path: Path) -> ManualOverrideList:
@@ -68,8 +54,6 @@ class Settings:
 
         # Load configs
         self.providers = load_providers(config_dir / "providers.yaml")
-        self.sources = load_sources(config_dir / "sources.yaml")
-        self.scoring = load_scoring(config_dir / "scoring.yaml")
         self.overrides = load_overrides(config_dir / "manual-overrides.yaml")
 
     @classmethod
@@ -81,11 +65,6 @@ class Settings:
             output_dir=base_dir / "output",
             reports_dir=base_dir / "reports",
         )
-
-    def get_artificial_analysis_api_key(self) -> Optional[str]:
-        """Get AA API key from environment."""
-        import os
-        return os.environ.get("ARTIFICIAL_ANALYSIS_API_KEY")
 
     def get_provider_api_key(self, provider_id: str) -> Optional[str]:
         """Get a provider's API key from environment."""

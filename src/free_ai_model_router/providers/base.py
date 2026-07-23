@@ -9,6 +9,7 @@ from free_ai_model_router.models import (
     ApiStyle,
     FreeStatus,
     Limits,
+    Modality,
     ProviderEndpoint,
     RuntimeCheck,
     VerificationStatus,
@@ -29,7 +30,7 @@ class ProviderModel:
     free_status: FreeStatus = FreeStatus.UNKNOWN
     limits: Limits = field(default_factory=Limits)
     tool_calling: bool = False
-    vision: bool = False
+    modalities: Optional[list[Modality]] = None
     raw_data: Optional[dict] = None
 
 

@@ -1,4 +1,4 @@
-"""Pydantic data models for Free AI Model Router."""
+﻿"""Pydantic data models for Free AI Model Router."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ from typing import Any, Optional
 from pydantic import BaseModel, Field
 
 
-# ─── Enums ──────────────────────────────────────────────────────────────────
+# --- Enums ---
 
 
 class FreeStatus(str, Enum):
@@ -61,21 +61,16 @@ class VerificationStatus(str, Enum):
     NOT_TESTED = "not_tested"
 
 
-class ConfidenceLevel(str, Enum):
-    """Confidence in a rating or data point."""
+class Modality(str, Enum):
+    """Content modality supported by a model."""
 
-    HIGH = "high"
-    MEDIUM = "medium"
-    LOW = "low"
-
-
-class QualityBand(str, Enum):
-    """Quality classification band."""
-
-    EXCELLENT = "excellent"
-    GOOD = "good"
-    BELOW_THRESHOLD = "below_threshold"
-    UNRATED = "unrated"
+    TEXT = "text"
+    IMAGE_ANALYSIS = "image_analysis"
+    IMAGE_GENERATION = "image_generation"
+    AUDIO_ANALYSIS = "audio_analysis"
+    AUDIO_GENERATION = "audio_generation"
+    VIDEO_ANALYSIS = "video_analysis"
+    VIDEO_GENERATION = "video_generation"
 
 
 class SourceType(str, Enum):
@@ -91,37 +86,15 @@ class SourceType(str, Enum):
     MANUAL_OVERRIDE = "manual_override"
 
 
-class ScoringMode(str, Enum):
-    """Scoring engine computation mode."""
-
-    COMPOSITE_PRIMARY = "composite_primary"
-    COMPONENT_WEIGHTED = "component_weighted"
-
-
-# ─── Typed value wrappers ───────────────────────────────────────────────────
-
-
-class SourcedValue(BaseModel):
-    """A scalar value with provenance metadata."""
-
-    value: Any
-    source_url: Optional[str] = None
-    source_type: SourceType = SourceType.AGGREGATOR
-    observed_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
-    confidence: ConfidenceLevel = ConfidenceLevel.MEDIUM
-
-
-# ─── Canonical Model ────────────────────────────────────────────────────────
+# --- Canonical Model ---
 
 
 class Capabilities(BaseModel):
     """Capability flags for a canonical model."""
 
-    coding: bool = False
-    reasoning: bool = False
     tool_calling: bool = False
     structured_output: Optional[bool] = None
-    vision: bool = False
+    modalities: list[Modality] = Field(default_factory=lambda: [Modality.TEXT])
     context_tokens: Optional[int] = None
     max_output_tokens: Optional[int] = None
 
@@ -139,7 +112,7 @@ class CanonicalModel(BaseModel):
     aliases: list[str] = Field(default_factory=list)
 
 
-# ─── Provider Endpoint ──────────────────────────────────────────────────────
+# --- Provider Endpoint ---
 
 
 class Limits(BaseModel):
@@ -184,45 +157,7 @@ class ProviderEndpoint(BaseModel):
     source_url: Optional[str] = None
 
 
-# ─── Rating / Benchmark ─────────────────────────────────────────────────────
-
-
-class BenchmarkScores(BaseModel):
-    """Raw benchmark scores for a canonical model."""
-
-    artificial_analysis_coding_agent_index: Optional[float] = None
-    artificial_analysis_coding_index: Optional[float] = None
-    terminal_bench_v2: Optional[float] = None
-    deep_swe: Optional[float] = None
-    swe_atlas_qna: Optional[float] = None
-    intelligence_index: Optional[float] = None
-    agentic_index: Optional[float] = None
-    agent_harness: Optional[str] = None
-    reasoning_setting: Optional[str] = None
-    evaluated_at: Optional[datetime] = None
-    source_url: Optional[str] = None
-
-
-class NormalizedScores(BaseModel):
-    """Normalized / computed scores."""
-
-    coding_quality_percent: Optional[float] = None
-    reliability_percent: Optional[float] = None
-    final_router_score: Optional[float] = None
-    penalties_applied: list[str] = Field(default_factory=list)
-
-
-class ModelRating(BaseModel):
-    """Aggregated rating for a canonical model."""
-
-    canonical_model_id: str
-    benchmark: BenchmarkScores = Field(default_factory=BenchmarkScores)
-    normalized_scores: NormalizedScores = Field(default_factory=NormalizedScores)
-    quality_band: QualityBand = QualityBand.UNRATED
-    ranking_confidence: ConfidenceLevel = ConfidenceLevel.LOW
-
-
-# ─── Provider Config ────────────────────────────────────────────────────────
+# --- Provider Config ---
 
 
 class ProviderSourceUrls(BaseModel):
@@ -256,14 +191,7 @@ class ProviderConfigList(BaseModel):
     providers: list[ProviderConfig]
 
 
-# ─── Source Config ──────────────────────────────────────────────────────────
-
-
-class SourceEndpoint(BaseModel):
-    """Named API endpoint for a source."""
-
-    path: str
-    method: str = "GET"
+# --- Source Config ---
 
 
 class SourceConfig(BaseModel):
@@ -287,69 +215,7 @@ class SourceConfigList(BaseModel):
     sources: list[SourceConfig]
 
 
-# ─── Scoring Config ─────────────────────────────────────────────────────────
-
-
-class ReferenceConfig(BaseModel):
-    """Reference model for 100% score normalization."""
-
-    name: str = "ChatGPT-5.6 Sol High"
-    score_percent: float = 100.0
-    artificial_analysis_model_id: Optional[str] = None
-    manual_reference_value: Optional[float] = None
-
-
-class RoutingConfig(BaseModel):
-    """Routing preferences."""
-
-    prefer_provider_diversity: bool = True
-    disallow_shared_quota_as_independent_fallback: bool = True
-    include_temporary_free: bool = True
-    include_account_specific_free: bool = True
-
-
-class WeightsConfig(BaseModel):
-    """Weighting for scoring components."""
-
-    coding_agent_index: float = 0.50
-    coding_model_index: float = 0.20
-    terminal_bench: float = 0.10
-    repository_understanding: float = 0.08
-    tool_calling: float = 0.05
-    context_utility: float = 0.03
-    endpoint_reliability: float = 0.03
-    latency_and_speed: float = 0.01
-
-
-class PenaltiesConfig(BaseModel):
-    """Score penalties for various deficiencies."""
-
-    no_tool_calling: float = -5.0
-    unstable_structured_output: float = -3.0
-    context_below_minimum: float = -8.0
-    temporary_free: float = -2.0
-    opaque_quota: float = -3.0
-    two_consecutive_failures: float = -10.0
-    low_match_confidence: float = -4.0
-    trial_credit_only: float = -15.0
-    unsupported_litellm_adapter: float = -5.0
-
-
-class ScoringConfig(BaseModel):
-    """Root model for scoring.yaml."""
-
-    quality_threshold_percent: float = 70.0
-    excellent_threshold_percent: float = 85.0
-    low_confidence_threshold_percent: float = 75.0
-    minimum_context_tokens: int = 128000
-    reference: ReferenceConfig = Field(default_factory=ReferenceConfig)
-    routing: RoutingConfig = Field(default_factory=RoutingConfig)
-    scoring_mode: ScoringMode = ScoringMode.COMPOSITE_PRIMARY
-    weights: WeightsConfig = Field(default_factory=WeightsConfig)
-    penalties: PenaltiesConfig = Field(default_factory=PenaltiesConfig)
-
-
-# ─── Manual Override ────────────────────────────────────────────────────────
+# --- Manual Override ---
 
 
 class ManualOverride(BaseModel):
@@ -370,7 +236,7 @@ class ManualOverrideList(BaseModel):
     overrides: list[ManualOverride] = Field(default_factory=list)
 
 
-# ─── Pipeline State ─────────────────────────────────────────────────────────
+# --- Pipeline State ---
 
 
 class SourceHealth(BaseModel):
@@ -381,7 +247,7 @@ class SourceHealth(BaseModel):
     consecutive_failures: int = 0
     last_error: Optional[str] = None
     last_error_type: Optional[str] = None
-    data_freshness: Optional[str] = None  # stale / fresh / unknown
+    data_freshness: Optional[str] = None
     staleness_threshold_minutes: int = 1440
 
 
@@ -397,41 +263,40 @@ class PipelineState(BaseModel):
     source_health: dict[str, SourceHealth] = Field(default_factory=dict)
 
 
-# ─── Aggregated Output ─────────────────────────────────────────────────────
+# --- Aggregated Output ---
 
 
 class RoutedEndpoint(BaseModel):
-    """A model endpoint selected for the routing table."""
+    """A model endpoint selected for the routing table.
+
+    No score/rank - models pass through after :free filter + verification.
+    """
 
     endpoint_id: str
     provider_id: str
     provider_name: str
     canonical_model_id: str
     model_name: str
-    final_score: float
-    quality_band: QualityBand
     free_status: FreeStatus
-    rank: int
-    is_primary: bool = False
+    tool_calling: bool = False
+    modalities: list[str] = Field(default_factory=list)
 
 
 class RouterOutput(BaseModel):
-    """Output of the routing engine — the final sorted route."""
+    """Output of the router - sorted list of verified free endpoints."""
 
     generated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
-    reference_scored_at: Optional[str] = None
     endpoints: list[RoutedEndpoint] = Field(default_factory=list)
     fallback_chain: list[str] = Field(default_factory=list)
-    scoring_mode: ScoringMode = ScoringMode.COMPOSITE_PRIMARY
 
 
-# ─── Change Tracking ────────────────────────────────────────────────────────
+# --- Change Tracking ---
 
 
 class ChangeRecord(BaseModel):
     """A single detected change between runs."""
 
-    change_type: str  # new_provider, new_model, free_status_changed, rating_changed, etc.
+    change_type: str  # provider_added, model_added, model_removed
     entity_id: str
     old_value: Optional[str] = None
     new_value: Optional[str] = None

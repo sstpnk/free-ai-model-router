@@ -5,13 +5,10 @@ from datetime import datetime, timezone
 from free_ai_model_router.models import (
     CanonicalModel,
     FreeStatus,
+    Modality,
     ProviderEndpoint,
-    ModelRating,
     RouterOutput,
     RoutedEndpoint,
-    QualityBand,
-    ConfidenceLevel,
-    ScoringMode,
 )
 
 
@@ -20,7 +17,8 @@ def test_canonical_model_defaults() -> None:
     assert m.canonical_model_id == "test/model"
     assert m.name == "test"
     assert m.open_weights is False
-    assert m.capabilities.coding is False
+    assert m.capabilities.tool_calling is False
+    assert Modality.TEXT in m.capabilities.modalities
 
 
 def test_provider_endpoint_defaults() -> None:
@@ -35,12 +33,6 @@ def test_provider_endpoint_defaults() -> None:
     assert ep.runtime_check.status.value == "not_tested"
 
 
-def test_model_rating_bands() -> None:
-    r = ModelRating(canonical_model_id="test/model")
-    assert r.quality_band == QualityBand.UNRATED
-    assert r.ranking_confidence == ConfidenceLevel.LOW
-
-
 def test_router_output() -> None:
     ep = RoutedEndpoint(
         endpoint_id="test/ep",
@@ -48,24 +40,24 @@ def test_router_output() -> None:
         provider_name="Test",
         canonical_model_id="test/model",
         model_name="model-v1",
-        final_score=85.0,
-        quality_band=QualityBand.EXCELLENT,
         free_status=FreeStatus.VERIFIED_FREE,
-        rank=1,
-        is_primary=True,
+        tool_calling=True,
+        modalities=["text"],
     )
     output = RouterOutput(
         endpoints=[ep],
         fallback_chain=["test/ep"],
-        scoring_mode=ScoringMode.COMPOSITE_PRIMARY,
     )
     assert len(output.endpoints) == 1
-    assert output.endpoints[0].final_score == 85.0
-    assert output.endpoints[0].is_primary is True
+    assert output.endpoints[0].tool_calling is True
+    assert "text" in output.endpoints[0].modalities
 
 
-def test_sourced_value() -> None:
-    from free_ai_model_router.models import SourcedValue, SourceType
-    sv = SourcedValue(value=42, source_type=SourceType.OFFICIAL_API)
-    assert sv.value == 42
-    assert sv.source_type == SourceType.OFFICIAL_API
+def test_modality_enum() -> None:
+    assert Modality.TEXT.value == "text"
+    assert Modality.IMAGE_ANALYSIS.value == "image_analysis"
+    assert Modality.IMAGE_GENERATION.value == "image_generation"
+    assert Modality.AUDIO_ANALYSIS.value == "audio_analysis"
+    assert Modality.AUDIO_GENERATION.value == "audio_generation"
+    assert Modality.VIDEO_ANALYSIS.value == "video_analysis"
+    assert Modality.VIDEO_GENERATION.value == "video_generation"

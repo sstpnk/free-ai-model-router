@@ -63,16 +63,6 @@ def collect(ctx: click.Context) -> None:
 
 
 @cli.command()
-@click.pass_context
-def discover(ctx: click.Context) -> None:
-    """Discover new model candidates from Hugging Face and other sources."""
-    settings: Settings = ctx.obj["settings"]
-    base_dir: Path = ctx.obj["base_dir"]
-    orch = PipelineOrchestrator(settings, base_dir)
-    asyncio.run(orch.run_all(no_runtime_checks=True))
-
-
-@cli.command()
 @click.option("--provider", default=None, help="Specific provider to verify")
 @click.pass_context
 def verify(ctx: click.Context, provider: Optional[str]) -> None:
@@ -81,16 +71,6 @@ def verify(ctx: click.Context, provider: Optional[str]) -> None:
     base_dir: Path = ctx.obj["base_dir"]
     orch = PipelineOrchestrator(settings, base_dir)
     asyncio.run(orch.run_all(no_runtime_checks=False))
-
-
-@cli.command()
-@click.pass_context
-def rank(ctx: click.Context) -> None:
-    """Score and rank all collected models."""
-    settings: Settings = ctx.obj["settings"]
-    base_dir: Path = ctx.obj["base_dir"]
-    orch = PipelineOrchestrator(settings, base_dir)
-    asyncio.run(orch.run_all(no_runtime_checks=True))
 
 
 @cli.command()

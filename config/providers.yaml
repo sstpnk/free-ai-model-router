@@ -126,10 +126,12 @@ providers:
     website: https://cerebras.ai
     api_base: https://api.cerebras.ai/v1
     api_style: openai_compatible
-    adapter: null
+    adapter: cerebras
     discovery_priority: 100
     enabled: true
     sources:
+      models_api: https://api.cerebras.ai/v1/models
+      pricing_page: https://cerebras.ai/pricing
       docs: https://inference-docs.cerebras.ai
 
   - provider_id: sambanova

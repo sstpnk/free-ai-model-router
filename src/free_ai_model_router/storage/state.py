@@ -10,7 +10,6 @@ from typing import Any, Optional
 from free_ai_model_router.models import (
     CanonicalModel,
     ChangeRecord,
-    ModelRating,
     PipelineState,
     ProviderEndpoint,
     RouterOutput,
@@ -43,27 +42,23 @@ def save_pipeline_state(state: PipelineState, path: Path) -> None:
 def save_normalized_data(
     models: list[CanonicalModel],
     endpoints: list[ProviderEndpoint],
-    ratings: list[ModelRating],
     output_dir: Path,
 ) -> None:
     """Save normalized pipeline artifacts."""
     output_dir.mkdir(parents=True, exist_ok=True)
     save_json([m.model_dump() for m in models], output_dir / "models.json")
     save_json([e.model_dump() for e in endpoints], output_dir / "endpoints.json")
-    save_json([r.model_dump() for r in ratings], output_dir / "benchmarks.json")
 
 
 def load_normalized_data(
     output_dir: Path,
-) -> tuple[list[CanonicalModel], list[ProviderEndpoint], list[ModelRating]]:
+) -> tuple[list[CanonicalModel], list[ProviderEndpoint]]:
     """Load previously saved normalized data."""
     models_raw = load_json(output_dir / "models.json") or []
     endpoints_raw = load_json(output_dir / "endpoints.json") or []
-    ratings_raw = load_json(output_dir / "benchmarks.json") or []
     return (
         [CanonicalModel(**m) for m in models_raw],
         [ProviderEndpoint(**e) for e in endpoints_raw],
-        [ModelRating(**r) for r in ratings_raw],
     )
 
 
