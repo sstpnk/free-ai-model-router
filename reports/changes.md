@@ -1,10 +1,8 @@
-# Отчёт об изменениях
-
 *Сгенерировано: 2026-07-23 18:38:05 UTC*
 
 **Всего изменений:** 35
 
-### Модели, покинувшие маршрут (35)
+- **[model_removed]** mistral/labs-leanstral-1-5-1: Model removed from route: mistral/labs-leanstral-1-5-1
 - cloudflare/@cf/meta/llama-3.2-11b-vision-instruct
 - cloudflare/@cf/zai-org/glm-5.2
 - groq/canopylabs/orpheus-arabic-saudi
