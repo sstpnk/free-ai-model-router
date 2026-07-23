@@ -1,6 +1,18 @@
 {
-  "generated_at": "2026-07-23T18:21:36.877781Z",
+  "generated_at": "2026-07-23T18:27:30.774583Z",
   "endpoints": [
+    {
+      "endpoint_id": "openrouter/poolside/laguna-s-2.1:free",
+      "provider_id": "openrouter",
+      "provider_name": "openrouter",
+      "canonical_model_id": "openrouter/poolside/laguna-s-2.1:free",
+      "model_name": "poolside/laguna-s-2.1:free",
+      "free_status": "verified_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
     {
       "endpoint_id": "openrouter/poolside/laguna-xs-2.1:free",
       "provider_id": "openrouter",
@@ -55,6 +67,18 @@
       "provider_name": "openrouter",
       "canonical_model_id": "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
       "model_name": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "free_status": "verified_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/poolside/laguna-m.1:free",
+      "provider_id": "openrouter",
+      "provider_name": "openrouter",
+      "canonical_model_id": "openrouter/poolside/laguna-m.1:free",
+      "model_name": "poolside/laguna-m.1:free",
       "free_status": "verified_free",
       "tool_calling": true,
       "modalities": [
@@ -759,11 +783,13 @@
     }
   ],
   "fallback_chain": [
+    "openrouter/poolside/laguna-s-2.1:free",
     "openrouter/poolside/laguna-xs-2.1:free",
     "openrouter/cohere/north-mini-code:free",
     "openrouter/nvidia/nemotron-3.5-content-safety:free",
     "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
     "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+    "openrouter/poolside/laguna-m.1:free",
     "openrouter/google/gemma-4-26b-a4b-it:free",
     "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
     "openrouter/nvidia/nemotron-3-nano-30b-a3b:free",
