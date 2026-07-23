@@ -1,12 +1,12 @@
 # Отчёт по моделям — Free AI Model Router
 
-*Сгенерировано: 2026-07-23 11:58:34 UTC*
+*Сгенерировано: 2026-07-23 12:28:28 UTC*
 
 ## Бесплатные модели (:free)
 
 | # | Поставщик | Модель | Инструменты | Модальность | Лимиты | Статус API |
 |---:|:---|---:|:---:|:---:|:---:|:---:|
-| 1 | openrouter | poolside/laguna-s-2.1:free | ✓ | text | — | success |
+| 1 | openrouter | poolside/laguna-xs-2.1:free | ✓ | text | — | success |
 | 2 | openrouter | cohere/north-mini-code:free | ✓ | text | — | success |
 | 3 | openrouter | nvidia/nemotron-3.5-content-safety:free | ✓ | text | — | success |
 | 4 | openrouter | nvidia/nemotron-3-ultra-550b-a55b:free | ✓ | text | — | success |
@@ -17,32 +17,32 @@
 | 9 | openrouter | nvidia/nemotron-nano-12b-v2-vl:free | ✓ | text | — | success |
 | 10 | openrouter | nvidia/nemotron-nano-9b-v2:free | ✓ | text | — | success |
 | 11 | openrouter | openai/gpt-oss-20b:free | ✓ | text | — | success |
-| 12 | groq | groq/compound-mini | ✓ | text | — | success |
-| 13 | groq | openai/gpt-oss-120b | ✓ | text | — | success |
-| 14 | groq | groq/compound | ✓ | text | — | success |
-| 15 | groq | openai/gpt-oss-20b | ✓ | text | — | success |
-| 16 | groq | llama-3.3-70b-versatile | ✓ | text | — | success |
-| 17 | groq | allam-2-7b | ✓ | text | — | success |
-| 18 | groq | llama-3.1-8b-instant | ✓ | text | — | success |
-| 19 | groq | qwen/qwen3.6-27b | ✓ | text | — | success |
-| 20 | mistral | mistral-medium-2505 | ✓ | text | — | success |
-| 21 | mistral | mistral-medium-2508 | ✓ | text | — | success |
-| 22 | mistral | open-mistral-nemo | ✓ | text | — | success |
-| 23 | mistral | open-mistral-nemo-2407 | ✓ | text | — | success |
-| 24 | mistral | mistral-tiny-2407 | ✓ | text | — | success |
-| 25 | mistral | mistral-tiny-latest | ✓ | text | — | success |
-| 26 | mistral | codestral-2508 | ✓ | text | — | success |
-| 27 | mistral | codestral-latest | ✓ | text | — | success |
-| 28 | mistral | mistral-code-latest | ✓ | text | — | success |
-| 29 | mistral | mistral-code-fim-latest | ✓ | text | — | success |
-| 30 | mistral | devstral-2512 | ✓ | text | — | success |
-| 31 | mistral | devstral-medium-latest | ✓ | text | — | success |
-| 32 | mistral | devstral-latest | ✓ | text | — | success |
-| 33 | mistral | mistral-code-agent-latest | ✓ | text | — | success |
-| 34 | mistral | mistral-small-2603 | ✓ | text | — | success |
-| 35 | mistral | mistral-small-latest | ✓ | text | — | success |
-| 36 | mistral | mistral-vibe-cli-fast | ✓ | text | — | success |
-| 37 | mistral | magistral-small-latest | ✓ | text | — | success |
+| 12 | opencode_zen | deepseek-v4-flash-free | ✗ | text | — | success |
+| 13 | opencode_zen | mimo-v2.5-free | ✗ | text | — | success |
+| 14 | opencode_zen | nemotron-3-ultra-free | ✗ | text | — | success |
+| 15 | opencode_zen | north-mini-code-free | ✗ | text | — | success |
+| 16 | groq | groq/compound-mini | ✓ | text | — | success |
+| 17 | groq | openai/gpt-oss-120b | ✓ | text | — | success |
+| 18 | groq | groq/compound | ✓ | text | — | success |
+| 19 | groq | openai/gpt-oss-20b | ✓ | text | — | success |
+| 20 | groq | llama-3.3-70b-versatile | ✓ | text | — | success |
+| 21 | groq | allam-2-7b | ✓ | text | — | success |
+| 22 | groq | llama-3.1-8b-instant | ✓ | text | — | success |
+| 23 | groq | qwen/qwen3.6-27b | ✓ | text | — | success |
+| 24 | mistral | mistral-medium-2505 | ✓ | text | — | success |
+| 25 | mistral | mistral-medium-2508 | ✓ | text | — | success |
+| 26 | mistral | open-mistral-nemo | ✓ | text | — | success |
+| 27 | mistral | open-mistral-nemo-2407 | ✓ | text | — | success |
+| 28 | mistral | mistral-tiny-2407 | ✓ | text | — | success |
+| 29 | mistral | mistral-tiny-latest | ✓ | text | — | success |
+| 30 | mistral | codestral-2508 | ✓ | text | — | success |
+| 31 | mistral | codestral-latest | ✓ | text | — | success |
+| 32 | mistral | mistral-code-latest | ✓ | text | — | success |
+| 33 | mistral | mistral-code-fim-latest | ✓ | text | — | success |
+| 34 | mistral | devstral-2512 | ✓ | text | — | success |
+| 35 | mistral | devstral-medium-latest | ✓ | text | — | success |
+| 36 | mistral | devstral-latest | ✓ | text | — | success |
+| 37 | mistral | mistral-code-agent-latest | ✓ | text | — | success |
 | 38 | mistral | magistral-medium-2509 | ✓ | text | — | success |
 | 39 | mistral | magistral-medium-latest | ✓ | text | — | success |
 | 40 | mistral | voxtral-small-2507 | ✓ | text | — | success |
