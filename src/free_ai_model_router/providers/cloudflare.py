@@ -168,10 +168,15 @@ class CloudflareAdapter:
             logger.warning("Failed to fetch Cloudflare model catalog: %s", exc)
             return []
 
+        # DEBUG: log raw response structure
+        logger.debug("Cloudflare API response: %s", data)
+
         raw_models = self._extract_models(data)
         if not raw_models:
             logger.info("No models returned by Cloudflare API")
             return []
+
+        logger.debug("Extracted %d models from API (before filtering)", len(raw_models))
 
         results: list[ProviderModel] = []
         for m in raw_models:
@@ -179,9 +184,14 @@ class CloudflareAdapter:
             if not model_id:
                 continue
 
+            # DEBUG: log model IDs before filtering
+            logger.debug("Cloudflare model ID: %s (starts with @cf/: %s)", model_id, model_id.startswith(CLOUDFLARE_HOSTED_PREFIX))
+
             # Only Cloudflare-hosted models
             if not model_id.startswith(CLOUDFLARE_HOSTED_PREFIX):
                 continue
+
+            logger.debug("Cloudflare model passed filter: %s", model_id)
 
             # Determine task type
             task_type = self._resolve_task_type(m, model_id)
