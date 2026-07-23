@@ -4,9 +4,9 @@ from __future__ import annotations
 
 import asyncio
 import logging
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
-from typing import Any, Optional
+from typing import Any
 
 from free_ai_model_router.config_loader import Settings
 from free_ai_model_router.generation.litellm_config import generate_litellm_config_file
@@ -15,16 +15,17 @@ from free_ai_model_router.http_client.client import HttpClient
 from free_ai_model_router.models import (
     CanonicalModel,
     ChangeRecord,
+    FreeStatus,
     PipelineState,
     ProviderEndpoint,
-    RouterOutput,
     RoutedEndpoint,
+    RouterOutput,
     SourceHealth,
-    FreeStatus,
     VerificationStatus,
 )
 from free_ai_model_router.providers.base import ProviderModel
 from free_ai_model_router.providers.cerebras import CerebrasAdapter
+from free_ai_model_router.providers.cloudflare import CloudflareAdapter
 from free_ai_model_router.providers.gemini import GeminiAdapter
 from free_ai_model_router.providers.groq import GroqAdapter
 from free_ai_model_router.providers.mistral import MistralAdapter
@@ -51,7 +52,7 @@ class PipelineOrchestrator:
         self.settings = settings
         self.base_dir = base_dir
         self.state = PipelineState()
-        self.http: Optional[HttpClient] = None
+        self.http: HttpClient | None = None
         self.collected_models: list[CanonicalModel] = []
         self.collected_endpoints: list[ProviderEndpoint] = []
         self.changes: list[ChangeRecord] = []
@@ -124,7 +125,7 @@ class PipelineOrchestrator:
             save_router_output(router_output, self.settings.output_dir / "latest.json")
 
             self.state.success = True
-            self.state.completed_at = datetime.now(timezone.utc)
+            self.state.completed_at = datetime.now(UTC)
             logger.info("Pipeline run completed successfully")
 
         except Exception as e:
@@ -156,7 +157,7 @@ class PipelineOrchestrator:
                 for m in models:
                     ep = adapter.to_provider_endpoint(m)
                     self.collected_endpoints.append(ep)
-                    
+
                     # Build capabilities from provider model data
                     modalities_list = [mod.value for mod in m.modalities] if m.modalities else ["text"]
 
@@ -170,13 +171,13 @@ class PipelineOrchestrator:
                             "context_tokens": m.context_tokens,
                         },
                     )
-                    
+
                     # Only add canonical model if we haven't seen this one before
                     if ep.canonical_model_id not in seen_canonical_ids:
                         self.collected_models.append(canonical)
                         seen_canonical_ids.add(ep.canonical_model_id)
-                        
-                logger.info("  %s: discovered %d models", 
+
+                logger.info("  %s: discovered %d models",
                            adapter.provider_id, len(models))
             except Exception as e:
                 logger.warning("  %s: collection failed: %s", adapter.provider_id, e)
@@ -185,10 +186,10 @@ class PipelineOrchestrator:
         # Source health tracking
         self.source_health["provider_discovery"] = SourceHealth(
             source_id="provider_discovery",
-            last_success_at=datetime.now(timezone.utc),
+                last_success_at=datetime.now(UTC),
             consecutive_failures=0,
         )
-        logger.info("Total: %d endpoints from %d providers, %d unique canonical models", 
+        logger.info("Total: %d endpoints from %d providers, %d unique canonical models",
                    len(self.collected_endpoints), len(adapters), len(seen_canonical_ids))
 
     def _init_adapters(self) -> list:
@@ -201,6 +202,7 @@ class PipelineOrchestrator:
             "zai": ZAIAdapter,
             "groq": GroqAdapter,
             "cerebras": CerebrasAdapter,
+            "cloudflare": CloudflareAdapter,
             "gemini": GeminiAdapter,
             "mistral": MistralAdapter,
         }
@@ -258,7 +260,7 @@ class PipelineOrchestrator:
                     result = await asyncio.wait_for(adapter.verify_model(pm, api_key), timeout=20)
                     endpoint.runtime_check.checked = True
                     endpoint.runtime_check.status = result.status
-                    endpoint.runtime_check.checked_at = datetime.now(timezone.utc)
+                    endpoint.runtime_check.checked_at = datetime.now(UTC)
                     endpoint.runtime_check.latency_ms = result.latency_ms
                     endpoint.runtime_check.http_status = result.http_status
                     if result.status.value == "success":
@@ -278,7 +280,7 @@ class PipelineOrchestrator:
 
         self.source_health["api_verification"] = SourceHealth(
             source_id="api_verification",
-            last_success_at=datetime.now(timezone.utc),
+            last_success_at=datetime.now(UTC),
         )
         logger.info("  Verification complete")
 
@@ -288,7 +290,7 @@ class PipelineOrchestrator:
         """Build the router output with verified :free endpoints."""
         logger.info("Building router output...")
 
-        FREE_STATUSES = {
+        free_statuses = {
             FreeStatus.VERIFIED_FREE,
             FreeStatus.DOCUMENTED_FREE,
             FreeStatus.ACCOUNT_SPECIFIC_FREE,
@@ -297,7 +299,7 @@ class PipelineOrchestrator:
 
         routed: list[RoutedEndpoint] = []
         for ep in self.collected_endpoints:
-            if ep.free_status not in FREE_STATUSES:
+            if ep.free_status not in free_statuses:
                 continue
             # Look up capabilities from collected models
             tool_calling = False
@@ -320,7 +322,7 @@ class PipelineOrchestrator:
             ))
 
         return RouterOutput(
-            generated_at=datetime.now(timezone.utc),
+            generated_at=datetime.now(UTC),
             endpoints=routed,
             fallback_chain=[r.endpoint_id for r in routed],
         )
@@ -328,7 +330,7 @@ class PipelineOrchestrator:
     def _detect_changes(
         self,
         current: RouterOutput,
-        previous: Optional[RouterOutput],
+        previous: RouterOutput | None,
     ) -> None:
         """Compare with previous run output and record changes."""
         if not previous:
@@ -373,7 +375,7 @@ class PipelineOrchestrator:
     def _generate_reports(
         self,
         router_output: RouterOutput,
-        previous_output: Optional[RouterOutput],
+        previous_output: RouterOutput | None,
     ) -> None:
         """Generate reports (models.md and changes.md)."""
         logger.info("Generating reports...")

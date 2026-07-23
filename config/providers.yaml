@@ -102,12 +102,13 @@ providers:
     website: https://developers.cloudflare.com/workers-ai
     api_base: https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/v1
     api_style: openai_compatible
-    adapter: null
+    adapter: cloudflare
     discovery_priority: 80
     enabled: true
     sources:
       models_api: https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search
       docs: https://developers.cloudflare.com/workers-ai
+      pricing_page: https://developers.cloudflare.com/workers-ai/platform/pricing
 
   - provider_id: huggingface
     name: Hugging Face Inference Providers
