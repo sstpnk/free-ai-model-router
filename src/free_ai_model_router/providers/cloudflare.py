@@ -190,7 +190,7 @@ class CloudflareAdapter:
                 continue
 
             # Fallback: if model field is also UUID (finetune id), use id field
-            if cloudflare_model_id.startswith("00000000") and cloudflare_model_id.count("-") == 4:
+            if cloudflare_model_id.count("-") == 4:
                 cloudflare_model_id = model_id
 
             logger.info("Cloudflare model: id=%s, model=%s (starts with @cf/: %s)",
