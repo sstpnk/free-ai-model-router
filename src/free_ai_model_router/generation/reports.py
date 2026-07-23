@@ -57,15 +57,14 @@ def generate_models_report(
     lines.append("")
 
     if router_output.endpoints:
-        lines.append("| # | Поставщик | Модель | Инструменты | Модальность | Лимиты | Статус API |")
-        lines.append("|---:|:---|---:|:---:|:---:|:---:|:---:|")
+        lines.append("| # | Поставщик | Модель | Инструменты | Лимиты | Статус API |")
+        lines.append("|---:|:---|---:|:---|:---|:---|")
         for i, re in enumerate(router_output.endpoints, 1):
             ep = endpoints_map.get(re.endpoint_id)
             tools = "✓" if re.tool_calling else "✗"
-            modality = ", ".join(re.modalities) if re.modalities else "text"
             limits = _fmt_limits(ep) if ep else "—"
             api_status = (ep.runtime_check.status.value if ep and ep.runtime_check.checked else "not_tested") if ep else "—"
-            lines.append(f"| {i} | {re.provider_name} | {re.model_name} | {tools} | {modality} | {limits} | {api_status} |")
+            lines.append(f"| {i} | {re.provider_name} | {re.model_name} | {tools} | {limits} | {api_status} |")
     else:
         lines.append("_Нет моделей, прошедших проверку._")
 
@@ -103,15 +102,13 @@ def generate_changes_report(
     lines.append("")
 
     if new:
-        lines.append(f"### Новые модели ({len(new)})")
         for eid in sorted(new):
             r = next((x for x in current.endpoints if x.endpoint_id == eid), None)
             if r:
-                lines.append(f"- {r.model_name} ({r.provider_name})")
+                lines.append(f"- {r.endpoint_id}")
         lines.append("")
 
     if removed:
-        lines.append(f"### Модели, покинувшие маршрут ({len(removed)})")
         for eid in sorted(removed):
             lines.append(f"- {eid}")
         lines.append("")
