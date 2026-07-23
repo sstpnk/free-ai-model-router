@@ -54,7 +54,8 @@ class OpenCodeZenAdapter:
             if not model_id:
                 continue
 
-            is_free = m.get("free", False)
+            # API doesn't return a `free` field — free models are identified by `-free` suffix
+            is_free = m.get("free", False) or str(model_id).endswith("-free")
             free_status = FreeStatus.VERIFIED_FREE if is_free else FreeStatus.UNKNOWN
             context = m.get("context_tokens") or m.get("context_length")
 
