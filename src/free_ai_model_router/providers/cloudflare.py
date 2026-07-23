@@ -182,13 +182,15 @@ class CloudflareAdapter:
 
         results: list[ProviderModel] = []
         for m in raw_models:
+            # Log full model structure for debugging
+            logger.debug("Full model object: %s", m)
             model_id = str(m.get("id") or "")
-            if not model_id:
+            cloudflare_model_id = str(m.get("model") or model_id)
+            if not cloudflare_model_id:
                 continue
 
-            # Check the model field (not id) for @cf/ prefix
-            cloudflare_model_id = str(m.get("model") or model_id)
-            logger.info("Cloudflare model field: %s (starts with @cf/: %s)", cloudflare_model_id, cloudflare_model_id.startswith(CLOUDFLARE_HOSTED_PREFIX))
+            logger.info("Cloudflare model: id=%s, model=%s (starts with @cf/: %s)",
+                       model_id, cloudflare_model_id, cloudflare_model_id.startswith(CLOUDFLARE_HOSTED_PREFIX))
 
             # Only Cloudflare-hosted models
             if not cloudflare_model_id.startswith(CLOUDFLARE_HOSTED_PREFIX):
