@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-07-23T18:31:48.302782Z",
+  "generated_at": "2026-07-23T18:38:05.460068Z",
   "endpoints": [
     {
-      "endpoint_id": "openrouter/poolside/laguna-s-2.1:free",
+      "endpoint_id": "openrouter/poolside/laguna-xs-2.1:free",
       "provider_id": "openrouter",
       "provider_name": "openrouter",
-      "canonical_model_id": "openrouter/poolside/laguna-s-2.1:free",
-      "model_name": "poolside/laguna-s-2.1:free",
+      "canonical_model_id": "openrouter/poolside/laguna-xs-2.1:free",
+      "model_name": "poolside/laguna-xs-2.1:free",
       "free_status": "verified_free",
       "tool_calling": true,
       "modalities": [
@@ -194,30 +194,6 @@
       ]
     },
     {
-      "endpoint_id": "opencode_zen/laguna-s-2.1-free",
-      "provider_id": "opencode_zen",
-      "provider_name": "opencode_zen",
-      "canonical_model_id": "opencode_zen/laguna-s-2.1-free",
-      "model_name": "laguna-s-2.1-free",
-      "free_status": "verified_free",
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "groq/openai/gpt-oss-120b",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/openai/gpt-oss-120b",
-      "model_name": "openai/gpt-oss-120b",
-      "free_status": "documented_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
       "endpoint_id": "groq/groq/compound",
       "provider_id": "groq",
       "provider_name": "groq",
@@ -235,6 +211,42 @@
       "provider_name": "groq",
       "canonical_model_id": "groq/llama-3.3-70b-versatile",
       "model_name": "llama-3.3-70b-versatile",
+      "free_status": "documented_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/allam-2-7b",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/allam-2-7b",
+      "model_name": "allam-2-7b",
+      "free_status": "documented_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/openai/gpt-oss-20b",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/openai/gpt-oss-20b",
+      "model_name": "openai/gpt-oss-20b",
+      "free_status": "documented_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/qwen/qwen3.6-27b",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/qwen/qwen3.6-27b",
+      "model_name": "qwen/qwen3.6-27b",
       "free_status": "documented_free",
       "tool_calling": true,
       "modalities": [
@@ -266,35 +278,11 @@
       ]
     },
     {
-      "endpoint_id": "groq/qwen/qwen3.6-27b",
+      "endpoint_id": "groq/openai/gpt-oss-120b",
       "provider_id": "groq",
       "provider_name": "groq",
-      "canonical_model_id": "groq/qwen/qwen3.6-27b",
-      "model_name": "qwen/qwen3.6-27b",
-      "free_status": "documented_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "groq/openai/gpt-oss-20b",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/openai/gpt-oss-20b",
-      "model_name": "openai/gpt-oss-20b",
-      "free_status": "documented_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "groq/allam-2-7b",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/allam-2-7b",
-      "model_name": "allam-2-7b",
+      "canonical_model_id": "groq/openai/gpt-oss-120b",
+      "model_name": "openai/gpt-oss-120b",
       "free_status": "documented_free",
       "tool_calling": true,
       "modalities": [
@@ -780,10 +768,250 @@
       "modalities": [
         "text"
       ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/openai/gpt-oss-120b",
+      "provider_id": "cloudflare",
+      "provider_name": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/openai/gpt-oss-120b",
+      "model_name": "@cf/openai/gpt-oss-120b",
+      "free_status": "documented_free",
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/meta/llama-3.2-3b-instruct",
+      "provider_id": "cloudflare",
+      "provider_name": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/meta/llama-3.2-3b-instruct",
+      "model_name": "@cf/meta/llama-3.2-3b-instruct",
+      "free_status": "documented_free",
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/meta/llama-guard-3-8b",
+      "provider_id": "cloudflare",
+      "provider_name": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/meta/llama-guard-3-8b",
+      "model_name": "@cf/meta/llama-guard-3-8b",
+      "free_status": "documented_free",
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/moonshotai/kimi-k2.7-code",
+      "provider_id": "cloudflare",
+      "provider_name": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/moonshotai/kimi-k2.7-code",
+      "model_name": "@cf/moonshotai/kimi-k2.7-code",
+      "free_status": "documented_free",
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/deepseek-ai/deepseek-r1-distill-qwen-32b",
+      "provider_id": "cloudflare",
+      "provider_name": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/deepseek-ai/deepseek-r1-distill-qwen-32b",
+      "model_name": "@cf/deepseek-ai/deepseek-r1-distill-qwen-32b",
+      "free_status": "documented_free",
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/meta/llama-3.1-8b-instruct-fp8",
+      "provider_id": "cloudflare",
+      "provider_name": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/meta/llama-3.1-8b-instruct-fp8",
+      "model_name": "@cf/meta/llama-3.1-8b-instruct-fp8",
+      "free_status": "documented_free",
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/meta/llama-3.2-1b-instruct",
+      "provider_id": "cloudflare",
+      "provider_name": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/meta/llama-3.2-1b-instruct",
+      "model_name": "@cf/meta/llama-3.2-1b-instruct",
+      "free_status": "documented_free",
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/moonshotai/kimi-k2.6",
+      "provider_id": "cloudflare",
+      "provider_name": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/moonshotai/kimi-k2.6",
+      "model_name": "@cf/moonshotai/kimi-k2.6",
+      "free_status": "documented_free",
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/zai-org/glm-4.7-flash",
+      "provider_id": "cloudflare",
+      "provider_name": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/zai-org/glm-4.7-flash",
+      "model_name": "@cf/zai-org/glm-4.7-flash",
+      "free_status": "documented_free",
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+      "provider_id": "cloudflare",
+      "provider_name": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+      "model_name": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+      "free_status": "documented_free",
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/ibm-granite/granite-4.0-h-micro",
+      "provider_id": "cloudflare",
+      "provider_name": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/ibm-granite/granite-4.0-h-micro",
+      "model_name": "@cf/ibm-granite/granite-4.0-h-micro",
+      "free_status": "documented_free",
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/qwen/qwen2.5-coder-32b-instruct",
+      "provider_id": "cloudflare",
+      "provider_name": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/qwen/qwen2.5-coder-32b-instruct",
+      "model_name": "@cf/qwen/qwen2.5-coder-32b-instruct",
+      "free_status": "documented_free",
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/nvidia/nemotron-3-120b-a12b",
+      "provider_id": "cloudflare",
+      "provider_name": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/nvidia/nemotron-3-120b-a12b",
+      "model_name": "@cf/nvidia/nemotron-3-120b-a12b",
+      "free_status": "documented_free",
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/aisingapore/gemma-sea-lion-v4-27b-it",
+      "provider_id": "cloudflare",
+      "provider_name": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/aisingapore/gemma-sea-lion-v4-27b-it",
+      "model_name": "@cf/aisingapore/gemma-sea-lion-v4-27b-it",
+      "free_status": "documented_free",
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/qwen/qwen3-30b-a3b-fp8",
+      "provider_id": "cloudflare",
+      "provider_name": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/qwen/qwen3-30b-a3b-fp8",
+      "model_name": "@cf/qwen/qwen3-30b-a3b-fp8",
+      "free_status": "documented_free",
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/google/gemma-4-26b-a4b-it",
+      "provider_id": "cloudflare",
+      "provider_name": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/google/gemma-4-26b-a4b-it",
+      "model_name": "@cf/google/gemma-4-26b-a4b-it",
+      "free_status": "documented_free",
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/mistralai/mistral-small-3.1-24b-instruct",
+      "provider_id": "cloudflare",
+      "provider_name": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/mistralai/mistral-small-3.1-24b-instruct",
+      "model_name": "@cf/mistralai/mistral-small-3.1-24b-instruct",
+      "free_status": "documented_free",
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/openai/gpt-oss-20b",
+      "provider_id": "cloudflare",
+      "provider_name": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/openai/gpt-oss-20b",
+      "model_name": "@cf/openai/gpt-oss-20b",
+      "free_status": "documented_free",
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/meta/llama-4-scout-17b-16e-instruct",
+      "provider_id": "cloudflare",
+      "provider_name": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/meta/llama-4-scout-17b-16e-instruct",
+      "model_name": "@cf/meta/llama-4-scout-17b-16e-instruct",
+      "free_status": "documented_free",
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/qwen/qwq-32b",
+      "provider_id": "cloudflare",
+      "provider_name": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/qwen/qwq-32b",
+      "model_name": "@cf/qwen/qwq-32b",
+      "free_status": "documented_free",
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
     }
   ],
   "fallback_chain": [
-    "openrouter/poolside/laguna-s-2.1:free",
+    "openrouter/poolside/laguna-xs-2.1:free",
     "openrouter/cohere/north-mini-code:free",
     "openrouter/nvidia/nemotron-3.5-content-safety:free",
     "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
@@ -799,15 +1027,14 @@
     "opencode_zen/mimo-v2.5-free",
     "opencode_zen/nemotron-3-ultra-free",
     "opencode_zen/north-mini-code-free",
-    "opencode_zen/laguna-s-2.1-free",
-    "groq/openai/gpt-oss-120b",
     "groq/groq/compound",
     "groq/llama-3.3-70b-versatile",
+    "groq/allam-2-7b",
+    "groq/openai/gpt-oss-20b",
+    "groq/qwen/qwen3.6-27b",
     "groq/llama-3.1-8b-instant",
     "groq/groq/compound-mini",
-    "groq/qwen/qwen3.6-27b",
-    "groq/openai/gpt-oss-20b",
-    "groq/allam-2-7b",
+    "groq/openai/gpt-oss-120b",
     "mistral/mistral-medium-2505",
     "mistral/mistral-medium-2508",
     "mistral/open-mistral-nemo",
@@ -847,6 +1074,26 @@
     "mistral/mistral-vibe-cli-latest",
     "mistral/mistral-vibe-cli-with-tools",
     "mistral/magistral-small-2509",
-    "mistral/mistral-small-2506"
+    "mistral/mistral-small-2506",
+    "cloudflare/@cf/openai/gpt-oss-120b",
+    "cloudflare/@cf/meta/llama-3.2-3b-instruct",
+    "cloudflare/@cf/meta/llama-guard-3-8b",
+    "cloudflare/@cf/moonshotai/kimi-k2.7-code",
+    "cloudflare/@cf/deepseek-ai/deepseek-r1-distill-qwen-32b",
+    "cloudflare/@cf/meta/llama-3.1-8b-instruct-fp8",
+    "cloudflare/@cf/meta/llama-3.2-1b-instruct",
+    "cloudflare/@cf/moonshotai/kimi-k2.6",
+    "cloudflare/@cf/zai-org/glm-4.7-flash",
+    "cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+    "cloudflare/@cf/ibm-granite/granite-4.0-h-micro",
+    "cloudflare/@cf/qwen/qwen2.5-coder-32b-instruct",
+    "cloudflare/@cf/nvidia/nemotron-3-120b-a12b",
+    "cloudflare/@cf/aisingapore/gemma-sea-lion-v4-27b-it",
+    "cloudflare/@cf/qwen/qwen3-30b-a3b-fp8",
+    "cloudflare/@cf/google/gemma-4-26b-a4b-it",
+    "cloudflare/@cf/mistralai/mistral-small-3.1-24b-instruct",
+    "cloudflare/@cf/openai/gpt-oss-20b",
+    "cloudflare/@cf/meta/llama-4-scout-17b-16e-instruct",
+    "cloudflare/@cf/qwen/qwq-32b"
   ]
 }
