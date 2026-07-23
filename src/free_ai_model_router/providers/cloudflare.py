@@ -163,6 +163,7 @@ class CloudflareAdapter:
                 headers={"Authorization": f"Bearer {self.api_key}"},
                 use_cache=True,
                 cache_ttl_seconds=7200,
+                params={"format": "openrouter"},
             )
         except Exception as exc:
             logger.warning("Failed to fetch Cloudflare model catalog: %s", exc)
