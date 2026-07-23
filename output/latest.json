@@ -1,18 +1,6 @@
 {
-  "generated_at": "2026-07-23T18:04:10.525964Z",
+  "generated_at": "2026-07-23T18:12:25.937583Z",
   "endpoints": [
-    {
-      "endpoint_id": "openrouter/poolside/laguna-s-2.1:free",
-      "provider_id": "openrouter",
-      "provider_name": "openrouter",
-      "canonical_model_id": "openrouter/poolside/laguna-s-2.1:free",
-      "model_name": "poolside/laguna-s-2.1:free",
-      "free_status": "verified_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
     {
       "endpoint_id": "openrouter/poolside/laguna-xs-2.1:free",
       "provider_id": "openrouter",
@@ -187,18 +175,6 @@
       "provider_name": "opencode_zen",
       "canonical_model_id": "opencode_zen/north-mini-code-free",
       "model_name": "north-mini-code-free",
-      "free_status": "verified_free",
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "opencode_zen/laguna-s-2.1-free",
-      "provider_id": "opencode_zen",
-      "provider_name": "opencode_zen",
-      "canonical_model_id": "opencode_zen/laguna-s-2.1-free",
-      "model_name": "laguna-s-2.1-free",
       "free_status": "verified_free",
       "tool_calling": false,
       "modalities": [
@@ -427,18 +403,6 @@
       "provider_name": "mistral",
       "canonical_model_id": "mistral/devstral-2512",
       "model_name": "devstral-2512",
-      "free_status": "account_specific_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "mistral/devstral-medium-latest",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/devstral-medium-latest",
-      "model_name": "devstral-medium-latest",
       "free_status": "account_specific_free",
       "tool_calling": true,
       "modalities": [
@@ -686,18 +650,6 @@
       ]
     },
     {
-      "endpoint_id": "mistral/mistral-medium-3-5",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-medium-3-5",
-      "model_name": "mistral-medium-3-5",
-      "free_status": "account_specific_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
       "endpoint_id": "mistral/mistral-medium-3.5",
       "provider_id": "mistral",
       "provider_name": "mistral",
@@ -710,47 +662,11 @@
       ]
     },
     {
-      "endpoint_id": "mistral/mistral-medium-3",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-medium-3",
-      "model_name": "mistral-medium-3",
-      "free_status": "account_specific_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
       "endpoint_id": "mistral/mistral-medium-2604",
       "provider_id": "mistral",
       "provider_name": "mistral",
       "canonical_model_id": "mistral/mistral-medium-2604",
       "model_name": "mistral-medium-2604",
-      "free_status": "account_specific_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "mistral/mistral-vibe-cli-latest",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-vibe-cli-latest",
-      "model_name": "mistral-vibe-cli-latest",
-      "free_status": "account_specific_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "mistral/mistral-vibe-cli-with-tools",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-vibe-cli-with-tools",
-      "model_name": "mistral-vibe-cli-with-tools",
       "free_status": "account_specific_free",
       "tool_calling": true,
       "modalities": [
@@ -783,7 +699,6 @@
     }
   ],
   "fallback_chain": [
-    "openrouter/poolside/laguna-s-2.1:free",
     "openrouter/poolside/laguna-xs-2.1:free",
     "openrouter/cohere/north-mini-code:free",
     "openrouter/nvidia/nemotron-3.5-content-safety:free",
@@ -799,7 +714,6 @@
     "opencode_zen/mimo-v2.5-free",
     "opencode_zen/nemotron-3-ultra-free",
     "opencode_zen/north-mini-code-free",
-    "opencode_zen/laguna-s-2.1-free",
     "groq/openai/gpt-oss-120b",
     "groq/groq/compound",
     "groq/llama-3.3-70b-versatile",
@@ -819,7 +733,6 @@
     "mistral/mistral-code-latest",
     "mistral/mistral-code-fim-latest",
     "mistral/devstral-2512",
-    "mistral/devstral-medium-latest",
     "mistral/devstral-latest",
     "mistral/mistral-code-agent-latest",
     "mistral/mistral-small-2603",
@@ -840,12 +753,8 @@
     "mistral/ministral-14b-latest",
     "mistral/mistral-medium-latest",
     "mistral/mistral-medium",
-    "mistral/mistral-medium-3-5",
     "mistral/mistral-medium-3.5",
-    "mistral/mistral-medium-3",
     "mistral/mistral-medium-2604",
-    "mistral/mistral-vibe-cli-latest",
-    "mistral/mistral-vibe-cli-with-tools",
     "mistral/magistral-small-2509",
     "mistral/mistral-small-2506"
   ]
