@@ -135,7 +135,7 @@ class CloudflareAdapter:
         if not self.account_id:
             return None
         return (
-            f"{CLOUDFLARE_API_BASE}/accounts/{self.account_id}/ai/models/search"
+            f"{CLOUDFLARE_API_BASE}/accounts/{self.account_id}/ai/models"
         )
 
     # ------------------------------------------------------------------
