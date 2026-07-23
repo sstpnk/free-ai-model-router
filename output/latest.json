@@ -1,6 +1,30 @@
 {
-  "generated_at": "2026-07-23T17:59:24.637868Z",
+  "generated_at": "2026-07-23T18:04:10.525964Z",
   "endpoints": [
+    {
+      "endpoint_id": "openrouter/poolside/laguna-s-2.1:free",
+      "provider_id": "openrouter",
+      "provider_name": "openrouter",
+      "canonical_model_id": "openrouter/poolside/laguna-s-2.1:free",
+      "model_name": "poolside/laguna-s-2.1:free",
+      "free_status": "verified_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/poolside/laguna-xs-2.1:free",
+      "provider_id": "openrouter",
+      "provider_name": "openrouter",
+      "canonical_model_id": "openrouter/poolside/laguna-xs-2.1:free",
+      "model_name": "poolside/laguna-xs-2.1:free",
+      "free_status": "verified_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
     {
       "endpoint_id": "openrouter/cohere/north-mini-code:free",
       "provider_id": "openrouter",
@@ -163,6 +187,18 @@
       "provider_name": "opencode_zen",
       "canonical_model_id": "opencode_zen/north-mini-code-free",
       "model_name": "north-mini-code-free",
+      "free_status": "verified_free",
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "opencode_zen/laguna-s-2.1-free",
+      "provider_id": "opencode_zen",
+      "provider_name": "opencode_zen",
+      "canonical_model_id": "opencode_zen/laguna-s-2.1-free",
+      "model_name": "laguna-s-2.1-free",
       "free_status": "verified_free",
       "tool_calling": false,
       "modalities": [
@@ -747,6 +783,8 @@
     }
   ],
   "fallback_chain": [
+    "openrouter/poolside/laguna-s-2.1:free",
+    "openrouter/poolside/laguna-xs-2.1:free",
     "openrouter/cohere/north-mini-code:free",
     "openrouter/nvidia/nemotron-3.5-content-safety:free",
     "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
@@ -761,6 +799,7 @@
     "opencode_zen/mimo-v2.5-free",
     "opencode_zen/nemotron-3-ultra-free",
     "opencode_zen/north-mini-code-free",
+    "opencode_zen/laguna-s-2.1-free",
     "groq/openai/gpt-oss-120b",
     "groq/groq/compound",
     "groq/llama-3.3-70b-versatile",
