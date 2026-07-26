@@ -1,16 +1,15 @@
 # Отчёт об изменениях
 
-*Сгенерировано: 2026-07-25 07:29:23 UTC*
+*Сгенерировано: 2026-07-26 07:46:34 UTC*
 
-**Всего изменений:** 36
+**Всего изменений:** 35
 
 - cloudflare/@cf/meta/llama-3.2-11b-vision-instruct
+- cloudflare/@cf/zai-org/glm-5.2
 - groq/canopylabs/orpheus-arabic-saudi
 - groq/canopylabs/orpheus-v1-english
 - mistral/codestral-embed
 - mistral/codestral-embed-2505
-- mistral/deepseek-v4-flash
-- mistral/devstral-2512
 - mistral/labs-leanstral-1-5
 - mistral/labs-leanstral-1-5-1
 - mistral/mistral-embed
@@ -43,39 +42,38 @@
 
 ### Детальные изменения
 
-- **[model_removed]** mistral/mistral-moderation-2603: Model removed from route: mistral/mistral-moderation-2603
-- **[model_removed]** cloudflare/@cf/meta/llama-3.2-11b-vision-instruct: Model removed from route: cloudflare/@cf/meta/llama-3.2-11b-vision-instruct
-- **[model_removed]** mistral/devstral-2512: Model removed from route: mistral/devstral-2512
-- **[model_removed]** zai/glm-4.7: Model removed from route: zai/glm-4.7
 - **[model_removed]** mistral/mistral-embed: Model removed from route: mistral/mistral-embed
+- **[model_removed]** mistral/voxtral-mini-tts-latest: Model removed from route: mistral/voxtral-mini-tts-latest
+- **[model_removed]** mistral/mistral-embed-2312: Model removed from route: mistral/mistral-embed-2312
+- **[model_removed]** mistral/voxtral-mini-realtime-charente-2606-solutions: Model removed from route: mistral/voxtral-mini-realtime-charente-2606-solutions
+- **[model_removed]** groq/canopylabs/orpheus-arabic-saudi: Model removed from route: groq/canopylabs/orpheus-arabic-saudi
+- **[model_removed]** zai/glm-4.6: Model removed from route: zai/glm-4.6
+- **[model_removed]** zai/glm-5: Model removed from route: zai/glm-5
+- **[model_removed]** mistral/labs-leanstral-1-5-1: Model removed from route: mistral/labs-leanstral-1-5-1
+- **[model_removed]** groq/canopylabs/orpheus-v1-english: Model removed from route: groq/canopylabs/orpheus-v1-english
+- **[model_removed]** mistral/codestral-embed-2505: Model removed from route: mistral/codestral-embed-2505
+- **[model_removed]** zai/glm-5.2: Model removed from route: zai/glm-5.2
+- **[model_removed]** mistral/mistral-moderation-2603: Model removed from route: mistral/mistral-moderation-2603
+- **[model_removed]** cloudflare/@cf/zai-org/glm-5.2: Model removed from route: cloudflare/@cf/zai-org/glm-5.2
+- **[model_removed]** zai/glm-4.5-air: Model removed from route: zai/glm-4.5-air
+- **[model_removed]** zai/glm-4.5: Model removed from route: zai/glm-4.5
+- **[model_removed]** mistral/mistral-ocr-4: Model removed from route: mistral/mistral-ocr-4
+- **[model_removed]** openrouter/google/gemma-4-31b-it:free: Model removed from route: openrouter/google/gemma-4-31b-it:free
+- **[model_removed]** mistral/codestral-embed: Model removed from route: mistral/codestral-embed
+- **[model_removed]** mistral/voxtral-mini-latest: Model removed from route: mistral/voxtral-mini-latest
+- **[model_removed]** mistral/mistral-ocr-4-0: Model removed from route: mistral/mistral-ocr-4-0
+- **[model_removed]** mistral/voxtral-mini-2602: Model removed from route: mistral/voxtral-mini-2602
+- **[model_removed]** mistral/mistral-ocr-3-0: Model removed from route: mistral/mistral-ocr-3-0
 - **[model_removed]** mistral/labs-leanstral-1-5: Model removed from route: mistral/labs-leanstral-1-5
 - **[model_removed]** mistral/mistral-ocr-2512: Model removed from route: mistral/mistral-ocr-2512
-- **[model_removed]** zai/glm-4.6: Model removed from route: zai/glm-4.6
-- **[model_removed]** zai/glm-5.2: Model removed from route: zai/glm-5.2
-- **[model_removed]** mistral/codestral-embed-2505: Model removed from route: mistral/codestral-embed-2505
-- **[model_removed]** mistral/voxtral-mini-tts-latest: Model removed from route: mistral/voxtral-mini-tts-latest
-- **[model_removed]** mistral/mistral-ocr-3-0: Model removed from route: mistral/mistral-ocr-3-0
-- **[model_removed]** openrouter/google/gemma-4-31b-it:free: Model removed from route: openrouter/google/gemma-4-31b-it:free
-- **[model_removed]** zai/glm-4.5-air: Model removed from route: zai/glm-4.5-air
-- **[model_removed]** mistral/mistral-ocr-4: Model removed from route: mistral/mistral-ocr-4
-- **[model_removed]** mistral/voxtral-mini-realtime-latest: Model removed from route: mistral/voxtral-mini-realtime-latest
-- **[model_removed]** groq/canopylabs/orpheus-v1-english: Model removed from route: groq/canopylabs/orpheus-v1-english
-- **[model_removed]** mistral/voxtral-mini-latest: Model removed from route: mistral/voxtral-mini-latest
-- **[model_removed]** mistral/voxtral-mini-2602: Model removed from route: mistral/voxtral-mini-2602
-- **[model_removed]** groq/canopylabs/orpheus-arabic-saudi: Model removed from route: groq/canopylabs/orpheus-arabic-saudi
-- **[model_removed]** mistral/labs-leanstral-1-5-1: Model removed from route: mistral/labs-leanstral-1-5-1
-- **[model_removed]** mistral/voxtral-mini-realtime-2602: Model removed from route: mistral/voxtral-mini-realtime-2602
 - **[model_removed]** opencode_zen/laguna-s-2.1-free: Model removed from route: opencode_zen/laguna-s-2.1-free
-- **[model_removed]** mistral/voxtral-mini-tts-2603: Model removed from route: mistral/voxtral-mini-tts-2603
-- **[model_removed]** mistral/mistral-embed-2312: Model removed from route: mistral/mistral-embed-2312
-- **[model_removed]** mistral/mistral-ocr-3: Model removed from route: mistral/mistral-ocr-3
+- **[model_removed]** mistral/voxtral-mini-realtime-2602: Model removed from route: mistral/voxtral-mini-realtime-2602
 - **[model_removed]** mistral/voxtral-mini-transcribe-realtime-2602: Model removed from route: mistral/voxtral-mini-transcribe-realtime-2602
-- **[model_removed]** zai/glm-5: Model removed from route: zai/glm-5
-- **[model_removed]** mistral/codestral-embed: Model removed from route: mistral/codestral-embed
-- **[model_removed]** zai/glm-5.1: Model removed from route: zai/glm-5.1
+- **[model_removed]** cloudflare/@cf/meta/llama-3.2-11b-vision-instruct: Model removed from route: cloudflare/@cf/meta/llama-3.2-11b-vision-instruct
+- **[model_removed]** zai/glm-4.7: Model removed from route: zai/glm-4.7
+- **[model_removed]** mistral/mistral-ocr-3: Model removed from route: mistral/mistral-ocr-3
 - **[model_removed]** mistral/mistral-ocr-latest: Model removed from route: mistral/mistral-ocr-latest
-- **[model_removed]** mistral/deepseek-v4-flash: Model removed from route: mistral/deepseek-v4-flash
-- **[model_removed]** mistral/voxtral-mini-realtime-charente-2606-solutions: Model removed from route: mistral/voxtral-mini-realtime-charente-2606-solutions
-- **[model_removed]** zai/glm-4.5: Model removed from route: zai/glm-4.5
 - **[model_removed]** zai/glm-5-turbo: Model removed from route: zai/glm-5-turbo
-- **[model_removed]** mistral/mistral-ocr-4-0: Model removed from route: mistral/mistral-ocr-4-0
+- **[model_removed]** mistral/voxtral-mini-tts-2603: Model removed from route: mistral/voxtral-mini-tts-2603
+- **[model_removed]** zai/glm-5.1: Model removed from route: zai/glm-5.1
+- **[model_removed]** mistral/voxtral-mini-realtime-latest: Model removed from route: mistral/voxtral-mini-realtime-latest

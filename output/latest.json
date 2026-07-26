@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T07:29:23.896355Z",
+  "generated_at": "2026-07-26T07:46:34.969731Z",
   "endpoints": [
     {
       "endpoint_id": "openrouter/inclusionai/ling-3.0-flash:free",
@@ -230,23 +230,11 @@
       ]
     },
     {
-      "endpoint_id": "groq/llama-3.3-70b-versatile",
+      "endpoint_id": "groq/llama-3.1-8b-instant",
       "provider_id": "groq",
       "provider_name": "groq",
-      "canonical_model_id": "groq/llama-3.3-70b-versatile",
-      "model_name": "llama-3.3-70b-versatile",
-      "free_status": "documented_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "groq/allam-2-7b",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/allam-2-7b",
-      "model_name": "allam-2-7b",
+      "canonical_model_id": "groq/llama-3.1-8b-instant",
+      "model_name": "llama-3.1-8b-instant",
       "free_status": "documented_free",
       "tool_calling": true,
       "modalities": [
@@ -278,11 +266,23 @@
       ]
     },
     {
-      "endpoint_id": "groq/llama-3.1-8b-instant",
+      "endpoint_id": "groq/groq/compound-mini",
       "provider_id": "groq",
       "provider_name": "groq",
-      "canonical_model_id": "groq/llama-3.1-8b-instant",
-      "model_name": "llama-3.1-8b-instant",
+      "canonical_model_id": "groq/groq/compound-mini",
+      "model_name": "groq/compound-mini",
+      "free_status": "documented_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/openai/gpt-oss-120b",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/openai/gpt-oss-120b",
+      "model_name": "openai/gpt-oss-120b",
       "free_status": "documented_free",
       "tool_calling": true,
       "modalities": [
@@ -302,11 +302,11 @@
       ]
     },
     {
-      "endpoint_id": "groq/groq/compound-mini",
+      "endpoint_id": "groq/llama-3.3-70b-versatile",
       "provider_id": "groq",
       "provider_name": "groq",
-      "canonical_model_id": "groq/groq/compound-mini",
-      "model_name": "groq/compound-mini",
+      "canonical_model_id": "groq/llama-3.3-70b-versatile",
+      "model_name": "llama-3.3-70b-versatile",
       "free_status": "documented_free",
       "tool_calling": true,
       "modalities": [
@@ -314,11 +314,11 @@
       ]
     },
     {
-      "endpoint_id": "groq/openai/gpt-oss-120b",
+      "endpoint_id": "groq/allam-2-7b",
       "provider_id": "groq",
       "provider_name": "groq",
-      "canonical_model_id": "groq/openai/gpt-oss-120b",
-      "model_name": "openai/gpt-oss-120b",
+      "canonical_model_id": "groq/allam-2-7b",
+      "model_name": "allam-2-7b",
       "free_status": "documented_free",
       "tool_calling": true,
       "modalities": [
@@ -439,6 +439,18 @@
       "provider_name": "mistral",
       "canonical_model_id": "mistral/mistral-code-fim-latest",
       "model_name": "mistral-code-fim-latest",
+      "free_status": "account_specific_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/devstral-2512",
+      "provider_id": "mistral",
+      "provider_name": "mistral",
+      "canonical_model_id": "mistral/devstral-2512",
+      "model_name": "devstral-2512",
       "free_status": "account_specific_free",
       "tool_calling": true,
       "modalities": [
@@ -938,18 +950,6 @@
       ]
     },
     {
-      "endpoint_id": "cloudflare/@cf/zai-org/glm-5.2",
-      "provider_id": "cloudflare",
-      "provider_name": "cloudflare",
-      "canonical_model_id": "cloudflare/@cf/zai-org/glm-5.2",
-      "model_name": "@cf/zai-org/glm-5.2",
-      "free_status": "documented_free",
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
       "endpoint_id": "cloudflare/@cf/nvidia/nemotron-3-120b-a12b",
       "provider_id": "cloudflare",
       "provider_name": "cloudflare",
@@ -1066,14 +1066,14 @@
     "opencode_zen/ling-3.0-flash-free",
     "opencode_zen/nemotron-3-ultra-free",
     "opencode_zen/north-mini-code-free",
-    "groq/llama-3.3-70b-versatile",
-    "groq/allam-2-7b",
+    "groq/llama-3.1-8b-instant",
     "groq/qwen/qwen3.6-27b",
     "groq/openai/gpt-oss-20b",
-    "groq/llama-3.1-8b-instant",
-    "groq/groq/compound",
     "groq/groq/compound-mini",
     "groq/openai/gpt-oss-120b",
+    "groq/groq/compound",
+    "groq/llama-3.3-70b-versatile",
+    "groq/allam-2-7b",
     "mistral/mistral-medium-2505",
     "mistral/mistral-medium-2508",
     "mistral/open-mistral-nemo",
@@ -1084,6 +1084,7 @@
     "mistral/codestral-latest",
     "mistral/mistral-code-latest",
     "mistral/mistral-code-fim-latest",
+    "mistral/devstral-2512",
     "mistral/devstral-medium-latest",
     "mistral/devstral-latest",
     "mistral/mistral-code-agent-latest",
@@ -1125,7 +1126,6 @@
     "cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast",
     "cloudflare/@cf/ibm-granite/granite-4.0-h-micro",
     "cloudflare/@cf/qwen/qwen2.5-coder-32b-instruct",
-    "cloudflare/@cf/zai-org/glm-5.2",
     "cloudflare/@cf/nvidia/nemotron-3-120b-a12b",
     "cloudflare/@cf/aisingapore/gemma-sea-lion-v4-27b-it",
     "cloudflare/@cf/qwen/qwen3-30b-a3b-fp8",
