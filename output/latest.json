@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-04T07:49:02.491362Z",
+  "generated_at": "2026-08-05T07:50:24.242442Z",
   "endpoints": [
     {
       "endpoint_id": "openrouter/inclusionai/ling-3.0-flash:free",
@@ -218,37 +218,13 @@
       ]
     },
     {
-      "endpoint_id": "groq/openai/gpt-oss-120b",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/openai/gpt-oss-120b",
-      "model_name": "openai/gpt-oss-120b",
-      "free_status": "documented_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "groq/qwen/qwen3.6-27b",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/qwen/qwen3.6-27b",
-      "model_name": "qwen/qwen3.6-27b",
-      "free_status": "documented_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "groq/allam-2-7b",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/allam-2-7b",
-      "model_name": "allam-2-7b",
-      "free_status": "documented_free",
-      "tool_calling": true,
+      "endpoint_id": "opencode_zen/longcat-2.0-free",
+      "provider_id": "opencode_zen",
+      "provider_name": "opencode_zen",
+      "canonical_model_id": "opencode_zen/longcat-2.0-free",
+      "model_name": "longcat-2.0-free",
+      "free_status": "verified_free",
+      "tool_calling": false,
       "modalities": [
         "text"
       ]
@@ -266,11 +242,11 @@
       ]
     },
     {
-      "endpoint_id": "groq/llama-3.1-8b-instant",
+      "endpoint_id": "groq/groq/compound",
       "provider_id": "groq",
       "provider_name": "groq",
-      "canonical_model_id": "groq/llama-3.1-8b-instant",
-      "model_name": "llama-3.1-8b-instant",
+      "canonical_model_id": "groq/groq/compound",
+      "model_name": "groq/compound",
       "free_status": "documented_free",
       "tool_calling": true,
       "modalities": [
@@ -290,6 +266,30 @@
       ]
     },
     {
+      "endpoint_id": "groq/allam-2-7b",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/allam-2-7b",
+      "model_name": "allam-2-7b",
+      "free_status": "documented_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/llama-3.1-8b-instant",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/llama-3.1-8b-instant",
+      "model_name": "llama-3.1-8b-instant",
+      "free_status": "documented_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
       "endpoint_id": "groq/openai/gpt-oss-20b",
       "provider_id": "groq",
       "provider_name": "groq",
@@ -302,11 +302,23 @@
       ]
     },
     {
-      "endpoint_id": "groq/groq/compound",
+      "endpoint_id": "groq/qwen/qwen3.6-27b",
       "provider_id": "groq",
       "provider_name": "groq",
-      "canonical_model_id": "groq/groq/compound",
-      "model_name": "groq/compound",
+      "canonical_model_id": "groq/qwen/qwen3.6-27b",
+      "model_name": "qwen/qwen3.6-27b",
+      "free_status": "documented_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/openai/gpt-oss-120b",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/openai/gpt-oss-120b",
+      "model_name": "openai/gpt-oss-120b",
       "free_status": "documented_free",
       "tool_calling": true,
       "modalities": [
@@ -933,14 +945,15 @@
     "opencode_zen/nemotron-3-ultra-free",
     "opencode_zen/north-mini-code-free",
     "opencode_zen/laguna-s-2.1-free",
-    "groq/openai/gpt-oss-120b",
-    "groq/qwen/qwen3.6-27b",
-    "groq/allam-2-7b",
+    "opencode_zen/longcat-2.0-free",
     "groq/llama-3.3-70b-versatile",
-    "groq/llama-3.1-8b-instant",
-    "groq/groq/compound-mini",
-    "groq/openai/gpt-oss-20b",
     "groq/groq/compound",
+    "groq/groq/compound-mini",
+    "groq/allam-2-7b",
+    "groq/llama-3.1-8b-instant",
+    "groq/openai/gpt-oss-20b",
+    "groq/qwen/qwen3.6-27b",
+    "groq/openai/gpt-oss-120b",
     "mistral/mistral-medium-2505",
     "mistral/mistral-medium-2508",
     "mistral/codestral-2508",
