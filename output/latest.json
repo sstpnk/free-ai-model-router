@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-07T06:18:42.347813Z",
+  "generated_at": "2026-08-08T05:56:40.996990Z",
   "endpoints": [
     {
       "endpoint_id": "openrouter/poolside/laguna-s-2.1:free",
@@ -134,11 +134,47 @@
       ]
     },
     {
+      "endpoint_id": "opencode_zen/deepseek-v4-flash-free",
+      "provider_id": "opencode_zen",
+      "provider_name": "opencode_zen",
+      "canonical_model_id": "opencode_zen/deepseek-v4-flash-free",
+      "model_name": "deepseek-v4-flash-free",
+      "free_status": "verified_free",
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
       "endpoint_id": "opencode_zen/mimo-v2.5-free",
       "provider_id": "opencode_zen",
       "provider_name": "opencode_zen",
       "canonical_model_id": "opencode_zen/mimo-v2.5-free",
       "model_name": "mimo-v2.5-free",
+      "free_status": "verified_free",
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "opencode_zen/ling-3.0-flash-free",
+      "provider_id": "opencode_zen",
+      "provider_name": "opencode_zen",
+      "canonical_model_id": "opencode_zen/ling-3.0-flash-free",
+      "model_name": "ling-3.0-flash-free",
+      "free_status": "verified_free",
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "opencode_zen/ling-3.0-tiny-free",
+      "provider_id": "opencode_zen",
+      "provider_name": "opencode_zen",
+      "canonical_model_id": "opencode_zen/ling-3.0-tiny-free",
+      "model_name": "ling-3.0-tiny-free",
       "free_status": "verified_free",
       "tool_calling": false,
       "modalities": [
@@ -182,11 +218,11 @@
       ]
     },
     {
-      "endpoint_id": "groq/groq/compound",
+      "endpoint_id": "groq/qwen/qwen3.6-27b",
       "provider_id": "groq",
       "provider_name": "groq",
-      "canonical_model_id": "groq/groq/compound",
-      "model_name": "groq/compound",
+      "canonical_model_id": "groq/qwen/qwen3.6-27b",
+      "model_name": "qwen/qwen3.6-27b",
       "free_status": "documented_free",
       "tool_calling": true,
       "modalities": [
@@ -206,35 +242,11 @@
       ]
     },
     {
-      "endpoint_id": "groq/openai/gpt-oss-20b",
+      "endpoint_id": "groq/llama-3.1-8b-instant",
       "provider_id": "groq",
       "provider_name": "groq",
-      "canonical_model_id": "groq/openai/gpt-oss-20b",
-      "model_name": "openai/gpt-oss-20b",
-      "free_status": "documented_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "groq/openai/gpt-oss-120b",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/openai/gpt-oss-120b",
-      "model_name": "openai/gpt-oss-120b",
-      "free_status": "documented_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "groq/llama-3.3-70b-versatile",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/llama-3.3-70b-versatile",
-      "model_name": "llama-3.3-70b-versatile",
+      "canonical_model_id": "groq/llama-3.1-8b-instant",
+      "model_name": "llama-3.1-8b-instant",
       "free_status": "documented_free",
       "tool_calling": true,
       "modalities": [
@@ -254,11 +266,11 @@
       ]
     },
     {
-      "endpoint_id": "groq/qwen/qwen3.6-27b",
+      "endpoint_id": "groq/openai/gpt-oss-120b",
       "provider_id": "groq",
       "provider_name": "groq",
-      "canonical_model_id": "groq/qwen/qwen3.6-27b",
-      "model_name": "qwen/qwen3.6-27b",
+      "canonical_model_id": "groq/openai/gpt-oss-120b",
+      "model_name": "openai/gpt-oss-120b",
       "free_status": "documented_free",
       "tool_calling": true,
       "modalities": [
@@ -266,11 +278,35 @@
       ]
     },
     {
-      "endpoint_id": "groq/llama-3.1-8b-instant",
+      "endpoint_id": "groq/openai/gpt-oss-20b",
       "provider_id": "groq",
       "provider_name": "groq",
-      "canonical_model_id": "groq/llama-3.1-8b-instant",
-      "model_name": "llama-3.1-8b-instant",
+      "canonical_model_id": "groq/openai/gpt-oss-20b",
+      "model_name": "openai/gpt-oss-20b",
+      "free_status": "documented_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/groq/compound",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/groq/compound",
+      "model_name": "groq/compound",
+      "free_status": "documented_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/llama-3.3-70b-versatile",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/llama-3.3-70b-versatile",
+      "model_name": "llama-3.3-70b-versatile",
       "free_status": "documented_free",
       "tool_calling": true,
       "modalities": [
@@ -890,18 +926,21 @@
     "openrouter/nvidia/nemotron-3-nano-30b-a3b:free",
     "openrouter/nvidia/nemotron-nano-9b-v2:free",
     "openrouter/openai/gpt-oss-20b:free",
+    "opencode_zen/deepseek-v4-flash-free",
     "opencode_zen/mimo-v2.5-free",
+    "opencode_zen/ling-3.0-flash-free",
+    "opencode_zen/ling-3.0-tiny-free",
     "opencode_zen/nemotron-3-ultra-free",
     "opencode_zen/laguna-s-2.1-free",
     "opencode_zen/longcat-2.0-free",
-    "groq/groq/compound",
-    "groq/allam-2-7b",
-    "groq/openai/gpt-oss-20b",
-    "groq/openai/gpt-oss-120b",
-    "groq/llama-3.3-70b-versatile",
-    "groq/groq/compound-mini",
     "groq/qwen/qwen3.6-27b",
+    "groq/allam-2-7b",
     "groq/llama-3.1-8b-instant",
+    "groq/groq/compound-mini",
+    "groq/openai/gpt-oss-120b",
+    "groq/openai/gpt-oss-20b",
+    "groq/groq/compound",
+    "groq/llama-3.3-70b-versatile",
     "mistral/mistral-medium-2505",
     "mistral/mistral-medium-2508",
     "mistral/codestral-2508",
