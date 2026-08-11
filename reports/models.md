@@ -1,6 +1,6 @@
 # Отчёт по моделям — Free AI Model Router
 
-*Сгенерировано: 2026-08-10 06:23:12 UTC*
+*Сгенерировано: 2026-08-11 06:04:14 UTC*
 
 ## Бесплатные модели (:free)
 
@@ -13,21 +13,21 @@
 | 5 | openrouter | nvidia/nemotron-3-ultra-550b-a55b:free | ✓ | — | success |
 | 6 | openrouter | nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free | ✓ | — | success |
 | 7 | openrouter | google/gemma-4-26b-a4b-it:free | ✓ | — | success |
-| 8 | openrouter | nvidia/nemotron-3-super-120b-a12b:free | ✓ | — | success |
-| 9 | openrouter | nvidia/nemotron-3-nano-30b-a3b:free | ✓ | — | success |
+| 8 | openrouter | nvidia/nemotron-3-nano-30b-a3b:free | ✓ | — | success |
+| 9 | openrouter | nvidia/nemotron-nano-12b-v2-vl:free | ✓ | — | success |
 | 10 | openrouter | nvidia/nemotron-nano-9b-v2:free | ✓ | — | success |
-| 11 | opencode_zen | deepseek-v4-flash-free | ✗ | — | success |
-| 12 | opencode_zen | nemotron-3-ultra-free | ✗ | — | success |
-| 13 | opencode_zen | laguna-s-2.1-free | ✗ | — | success |
-| 14 | opencode_zen | longcat-2.0-free | ✗ | — | success |
-| 15 | groq | llama-3.3-70b-versatile | ✓ | — | success |
-| 16 | groq | allam-2-7b | ✓ | — | success |
-| 17 | groq | llama-3.1-8b-instant | ✓ | — | success |
-| 18 | groq | openai/gpt-oss-120b | ✓ | — | success |
-| 19 | groq | groq/compound-mini | ✓ | — | success |
-| 20 | groq | openai/gpt-oss-20b | ✓ | — | success |
-| 21 | groq | groq/compound | ✓ | — | success |
-| 22 | groq | qwen/qwen3.6-27b | ✓ | — | success |
+| 11 | openrouter | openai/gpt-oss-20b:free | ✓ | — | success |
+| 12 | opencode_zen | mimo-v2.5-free | ✗ | — | success |
+| 13 | opencode_zen | nemotron-3-ultra-free | ✗ | — | success |
+| 14 | opencode_zen | laguna-s-2.1-free | ✗ | — | success |
+| 15 | groq | qwen/qwen3.6-27b | ✓ | — | success |
+| 16 | groq | llama-3.1-8b-instant | ✓ | — | success |
+| 17 | groq | groq/compound | ✓ | — | success |
+| 18 | groq | llama-3.3-70b-versatile | ✓ | — | success |
+| 19 | groq | openai/gpt-oss-120b | ✓ | — | success |
+| 20 | groq | allam-2-7b | ✓ | — | success |
+| 21 | groq | groq/compound-mini | ✓ | — | success |
+| 22 | groq | openai/gpt-oss-20b | ✓ | — | success |
 | 23 | mistral | mistral-medium-2505 | ✓ | — | success |
 | 24 | mistral | mistral-medium-2508 | ✓ | — | success |
 | 25 | mistral | codestral-2508 | ✓ | — | success |
