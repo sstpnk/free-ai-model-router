@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-13T06:45:06.890548Z",
+  "generated_at": "2026-08-14T06:42:24.310534Z",
   "endpoints": [
     {
       "endpoint_id": "openrouter/liquid/lfm-2.5-2.6b:free",
@@ -19,18 +19,6 @@
       "provider_name": "openrouter",
       "canonical_model_id": "openrouter/nvidia/nemotron-3.5-lightning:free",
       "model_name": "nvidia/nemotron-3.5-lightning:free",
-      "free_status": "verified_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "openrouter/inclusionai/ling-3.0-tiny:free",
-      "provider_id": "openrouter",
-      "provider_name": "openrouter",
-      "canonical_model_id": "openrouter/inclusionai/ling-3.0-tiny:free",
-      "model_name": "inclusionai/ling-3.0-tiny:free",
       "free_status": "verified_free",
       "tool_calling": true,
       "modalities": [
@@ -79,6 +67,30 @@
       "provider_name": "openrouter",
       "canonical_model_id": "openrouter/nvidia/nemotron-3.5-content-safety:free",
       "model_name": "nvidia/nemotron-3.5-content-safety:free",
+      "free_status": "verified_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+      "provider_id": "openrouter",
+      "provider_name": "openrouter",
+      "canonical_model_id": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+      "model_name": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "free_status": "verified_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "provider_id": "openrouter",
+      "provider_name": "openrouter",
+      "canonical_model_id": "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "model_name": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
       "free_status": "verified_free",
       "tool_calling": true,
       "modalities": [
@@ -182,6 +194,18 @@
       ]
     },
     {
+      "endpoint_id": "opencode_zen/nemotron-3-ultra-free",
+      "provider_id": "opencode_zen",
+      "provider_name": "opencode_zen",
+      "canonical_model_id": "opencode_zen/nemotron-3-ultra-free",
+      "model_name": "nemotron-3-ultra-free",
+      "free_status": "verified_free",
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
       "endpoint_id": "opencode_zen/nemotron-3.5-lightning-free",
       "provider_id": "opencode_zen",
       "provider_name": "opencode_zen",
@@ -194,11 +218,11 @@
       ]
     },
     {
-      "endpoint_id": "groq/groq/compound",
+      "endpoint_id": "groq/openai/gpt-oss-20b",
       "provider_id": "groq",
       "provider_name": "groq",
-      "canonical_model_id": "groq/groq/compound",
-      "model_name": "groq/compound",
+      "canonical_model_id": "groq/openai/gpt-oss-20b",
+      "model_name": "openai/gpt-oss-20b",
       "free_status": "documented_free",
       "tool_calling": true,
       "modalities": [
@@ -230,35 +254,35 @@
       ]
     },
     {
-      "endpoint_id": "groq/llama-3.1-8b-instant",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/llama-3.1-8b-instant",
-      "model_name": "llama-3.1-8b-instant",
-      "free_status": "documented_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "groq/openai/gpt-oss-20b",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/openai/gpt-oss-20b",
-      "model_name": "openai/gpt-oss-20b",
-      "free_status": "documented_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
       "endpoint_id": "groq/allam-2-7b",
       "provider_id": "groq",
       "provider_name": "groq",
       "canonical_model_id": "groq/allam-2-7b",
       "model_name": "allam-2-7b",
+      "free_status": "documented_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/groq/compound",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/groq/compound",
+      "model_name": "groq/compound",
+      "free_status": "documented_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/llama-3.1-8b-instant",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/llama-3.1-8b-instant",
+      "model_name": "llama-3.1-8b-instant",
       "free_status": "documented_free",
       "tool_calling": true,
       "modalities": [
@@ -686,18 +710,6 @@
       ]
     },
     {
-      "endpoint_id": "mistral/zai-glm-5-2",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/zai-glm-5-2",
-      "model_name": "zai-glm-5-2",
-      "free_status": "account_specific_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
       "endpoint_id": "cloudflare/@cf/openai/gpt-oss-120b",
       "provider_id": "cloudflare",
       "provider_name": "cloudflare",
@@ -917,11 +929,12 @@
   "fallback_chain": [
     "openrouter/liquid/lfm-2.5-2.6b:free",
     "openrouter/nvidia/nemotron-3.5-lightning:free",
-    "openrouter/inclusionai/ling-3.0-tiny:free",
     "openrouter/poolside/laguna-s-2.1:free",
     "openrouter/poolside/laguna-xs-2.1:free",
     "openrouter/cohere/north-mini-code:free",
     "openrouter/nvidia/nemotron-3.5-content-safety:free",
+    "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+    "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
     "openrouter/google/gemma-4-26b-a4b-it:free",
     "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
     "openrouter/nvidia/nemotron-3-nano-30b-a3b:free",
@@ -930,13 +943,14 @@
     "opencode_zen/deepseek-v4-flash-free",
     "opencode_zen/mimo-v2.5-free",
     "opencode_zen/hy3-free",
+    "opencode_zen/nemotron-3-ultra-free",
     "opencode_zen/nemotron-3.5-lightning-free",
-    "groq/groq/compound",
+    "groq/openai/gpt-oss-20b",
     "groq/openai/gpt-oss-120b",
     "groq/qwen/qwen3.6-27b",
-    "groq/llama-3.1-8b-instant",
-    "groq/openai/gpt-oss-20b",
     "groq/allam-2-7b",
+    "groq/groq/compound",
+    "groq/llama-3.1-8b-instant",
     "groq/llama-3.3-70b-versatile",
     "groq/groq/compound-mini",
     "mistral/mistral-medium-2505",
@@ -972,7 +986,6 @@
     "mistral/mistral-vibe-cli-latest",
     "mistral/mistral-vibe-cli-with-tools",
     "mistral/glm-5-2",
-    "mistral/zai-glm-5-2",
     "cloudflare/@cf/openai/gpt-oss-120b",
     "cloudflare/@cf/meta/llama-3.2-3b-instruct",
     "cloudflare/@cf/meta/llama-guard-3-8b",
