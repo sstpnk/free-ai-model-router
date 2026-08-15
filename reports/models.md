@@ -1,6 +1,6 @@
 # Отчёт по моделям — Free AI Model Router
 
-*Сгенерировано: 2026-08-14 06:42:24 UTC*
+*Сгенерировано: 2026-08-15 05:39:38 UTC*
 
 ## Бесплатные модели (:free)
 
@@ -17,54 +17,54 @@
 | 9 | openrouter | google/gemma-4-26b-a4b-it:free | ✓ | — | success |
 | 10 | openrouter | nvidia/nemotron-3-super-120b-a12b:free | ✓ | — | success |
 | 11 | openrouter | nvidia/nemotron-3-nano-30b-a3b:free | ✓ | — | success |
-| 12 | openrouter | nvidia/nemotron-nano-9b-v2:free | ✓ | — | success |
-| 13 | openrouter | openai/gpt-oss-20b:free | ✓ | — | success |
-| 14 | opencode_zen | deepseek-v4-flash-free | ✗ | — | success |
-| 15 | opencode_zen | mimo-v2.5-free | ✗ | — | success |
-| 16 | opencode_zen | hy3-free | ✗ | — | success |
-| 17 | opencode_zen | nemotron-3-ultra-free | ✗ | — | success |
-| 18 | opencode_zen | nemotron-3.5-lightning-free | ✗ | — | success |
-| 19 | groq | openai/gpt-oss-20b | ✓ | — | success |
-| 20 | groq | openai/gpt-oss-120b | ✓ | — | success |
-| 21 | groq | qwen/qwen3.6-27b | ✓ | — | success |
-| 22 | groq | allam-2-7b | ✓ | — | success |
-| 23 | groq | groq/compound | ✓ | — | success |
+| 12 | openrouter | nvidia/nemotron-nano-12b-v2-vl:free | ✓ | — | success |
+| 13 | openrouter | nvidia/nemotron-nano-9b-v2:free | ✓ | — | success |
+| 14 | openrouter | openai/gpt-oss-20b:free | ✓ | — | success |
+| 15 | opencode_zen | deepseek-v4-flash-free | ✗ | — | success |
+| 16 | opencode_zen | mimo-v2.5-free | ✗ | — | success |
+| 17 | opencode_zen | hy3-free | ✗ | — | success |
+| 18 | opencode_zen | nemotron-3-ultra-free | ✗ | — | success |
+| 19 | opencode_zen | nemotron-3.5-lightning-free | ✗ | — | success |
+| 20 | opencode_zen | laguna-s-2.1-free | ✗ | — | success |
+| 21 | groq | openai/gpt-oss-120b | ✓ | — | success |
+| 22 | groq | qwen/qwen3.6-27b | ✓ | — | success |
+| 23 | groq | groq/compound-mini | ✓ | — | success |
 | 24 | groq | llama-3.1-8b-instant | ✓ | — | success |
-| 25 | groq | llama-3.3-70b-versatile | ✓ | — | success |
-| 26 | groq | groq/compound-mini | ✓ | — | success |
-| 27 | mistral | mistral-medium-2505 | ✓ | — | success |
-| 28 | mistral | mistral-medium-2508 | ✓ | — | success |
-| 29 | mistral | codestral-2508 | ✓ | — | success |
-| 30 | mistral | codestral-latest | ✓ | — | success |
-| 31 | mistral | mistral-code-latest | ✓ | — | success |
-| 32 | mistral | mistral-code-fim-latest | ✓ | — | success |
-| 33 | mistral | devstral-2512 | ✓ | — | success |
-| 34 | mistral | devstral-medium-latest | ✓ | — | success |
-| 35 | mistral | devstral-latest | ✓ | — | success |
-| 36 | mistral | mistral-code-agent-latest | ✓ | — | success |
-| 37 | mistral | mistral-small-2603 | ✓ | — | success |
-| 38 | mistral | mistral-small-latest | ✓ | — | success |
-| 39 | mistral | mistral-vibe-cli-fast | ✓ | — | success |
-| 40 | mistral | magistral-small-latest | ✓ | — | success |
-| 41 | mistral | voxtral-small-2507 | ✓ | — | success |
-| 42 | mistral | voxtral-small-latest | ✓ | — | success |
-| 43 | mistral | mistral-large-2512 | ✓ | — | success |
-| 44 | mistral | mistral-large-latest | ✓ | — | success |
-| 45 | mistral | ministral-3b-2512 | ✓ | — | success |
-| 46 | mistral | ministral-3b-latest | ✓ | — | success |
-| 47 | mistral | ministral-8b-2512 | ✓ | — | success |
-| 48 | mistral | ministral-8b-latest | ✓ | — | success |
-| 49 | mistral | ministral-14b-2512 | ✓ | — | success |
-| 50 | mistral | ministral-14b-latest | ✓ | — | success |
-| 51 | mistral | mistral-medium-latest | ✓ | — | success |
-| 52 | mistral | mistral-medium | ✓ | — | success |
-| 53 | mistral | mistral-medium-3-5 | ✓ | — | success |
-| 54 | mistral | mistral-medium-3.5 | ✓ | — | success |
-| 55 | mistral | mistral-medium-3 | ✓ | — | success |
-| 56 | mistral | mistral-medium-2604 | ✓ | — | success |
-| 57 | mistral | mistral-vibe-cli-latest | ✓ | — | success |
-| 58 | mistral | mistral-vibe-cli-with-tools | ✓ | — | success |
-| 59 | mistral | glm-5-2 | ✓ | — | success |
+| 25 | groq | openai/gpt-oss-20b | ✓ | — | success |
+| 26 | groq | llama-3.3-70b-versatile | ✓ | — | success |
+| 27 | groq | groq/compound | ✓ | — | success |
+| 28 | groq | allam-2-7b | ✓ | — | success |
+| 29 | mistral | mistral-medium-2505 | ✓ | — | success |
+| 30 | mistral | mistral-medium-2508 | ✓ | — | success |
+| 31 | mistral | codestral-2508 | ✓ | — | success |
+| 32 | mistral | codestral-latest | ✓ | — | success |
+| 33 | mistral | mistral-code-latest | ✓ | — | success |
+| 34 | mistral | mistral-code-fim-latest | ✓ | — | success |
+| 35 | mistral | devstral-2512 | ✓ | — | success |
+| 36 | mistral | devstral-medium-latest | ✓ | — | success |
+| 37 | mistral | devstral-latest | ✓ | — | success |
+| 38 | mistral | mistral-small-2603 | ✓ | — | success |
+| 39 | mistral | mistral-small-latest | ✓ | — | success |
+| 40 | mistral | mistral-vibe-cli-fast | ✓ | — | success |
+| 41 | mistral | magistral-small-latest | ✓ | — | success |
+| 42 | mistral | voxtral-small-2507 | ✓ | — | success |
+| 43 | mistral | voxtral-small-latest | ✓ | — | success |
+| 44 | mistral | mistral-large-2512 | ✓ | — | success |
+| 45 | mistral | mistral-large-latest | ✓ | — | success |
+| 46 | mistral | ministral-3b-2512 | ✓ | — | success |
+| 47 | mistral | ministral-3b-latest | ✓ | — | success |
+| 48 | mistral | ministral-8b-2512 | ✓ | — | success |
+| 49 | mistral | ministral-8b-latest | ✓ | — | success |
+| 50 | mistral | ministral-14b-2512 | ✓ | — | success |
+| 51 | mistral | ministral-14b-latest | ✓ | — | success |
+| 52 | mistral | mistral-medium-latest | ✓ | — | success |
+| 53 | mistral | mistral-medium | ✓ | — | success |
+| 54 | mistral | mistral-medium-3-5 | ✓ | — | success |
+| 55 | mistral | mistral-medium-3.5 | ✓ | — | success |
+| 56 | mistral | mistral-medium-3 | ✓ | — | success |
+| 57 | mistral | mistral-medium-2604 | ✓ | — | success |
+| 58 | mistral | mistral-vibe-cli-latest | ✓ | — | success |
+| 59 | mistral | mistral-vibe-cli-with-tools | ✓ | — | success |
 | 60 | cloudflare | @cf/openai/gpt-oss-120b | ✗ | 10000 req/day, 300 req/min | success |
 | 61 | cloudflare | @cf/meta/llama-3.2-3b-instruct | ✗ | 10000 req/day, 300 req/min | success |
 | 62 | cloudflare | @cf/meta/llama-guard-3-8b | ✗ | 10000 req/day, 2000 req/min | success |
