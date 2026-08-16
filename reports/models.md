@@ -1,13 +1,13 @@
 # Отчёт по моделям — Free AI Model Router
 
-*Сгенерировано: 2026-08-15 05:39:38 UTC*
+*Сгенерировано: 2026-08-16 05:42:10 UTC*
 
 ## Бесплатные модели (:free)
 
 | # | Поставщик | Модель | Инструменты | Лимиты | Статус API |
 |---:|:---|---:|:---|:---|:---|
-| 1 | openrouter | liquid/lfm-2.5-2.6b:free | ✓ | — | success |
-| 2 | openrouter | nvidia/nemotron-3.5-lightning:free | ✓ | — | success |
+| 1 | openrouter | dots-studio/dots-3-note-preview:free | ✓ | — | success |
+| 2 | openrouter | liquid/lfm-2.5-2.6b:free | ✓ | — | success |
 | 3 | openrouter | poolside/laguna-s-2.1:free | ✓ | — | success |
 | 4 | openrouter | poolside/laguna-xs-2.1:free | ✓ | — | success |
 | 5 | openrouter | cohere/north-mini-code:free | ✓ | — | success |
@@ -24,25 +24,25 @@
 | 16 | opencode_zen | mimo-v2.5-free | ✗ | — | success |
 | 17 | opencode_zen | hy3-free | ✗ | — | success |
 | 18 | opencode_zen | nemotron-3-ultra-free | ✗ | — | success |
-| 19 | opencode_zen | nemotron-3.5-lightning-free | ✗ | — | success |
-| 20 | opencode_zen | laguna-s-2.1-free | ✗ | — | success |
+| 19 | opencode_zen | laguna-s-2.1-free | ✗ | — | success |
+| 20 | groq | qwen/qwen3.6-27b | ✓ | — | success |
 | 21 | groq | openai/gpt-oss-120b | ✓ | — | success |
-| 22 | groq | qwen/qwen3.6-27b | ✓ | — | success |
-| 23 | groq | groq/compound-mini | ✓ | — | success |
-| 24 | groq | llama-3.1-8b-instant | ✓ | — | success |
-| 25 | groq | openai/gpt-oss-20b | ✓ | — | success |
-| 26 | groq | llama-3.3-70b-versatile | ✓ | — | success |
+| 22 | groq | llama-3.1-8b-instant | ✓ | — | success |
+| 23 | groq | openai/gpt-oss-20b | ✓ | — | success |
+| 24 | groq | llama-3.3-70b-versatile | ✓ | — | success |
+| 25 | groq | groq/compound-mini | ✓ | — | success |
+| 26 | groq | allam-2-7b | ✓ | — | success |
 | 27 | groq | groq/compound | ✓ | — | success |
-| 28 | groq | allam-2-7b | ✓ | — | success |
-| 29 | mistral | mistral-medium-2505 | ✓ | — | success |
-| 30 | mistral | mistral-medium-2508 | ✓ | — | success |
-| 31 | mistral | codestral-2508 | ✓ | — | success |
-| 32 | mistral | codestral-latest | ✓ | — | success |
-| 33 | mistral | mistral-code-latest | ✓ | — | success |
-| 34 | mistral | mistral-code-fim-latest | ✓ | — | success |
-| 35 | mistral | devstral-2512 | ✓ | — | success |
-| 36 | mistral | devstral-medium-latest | ✓ | — | success |
-| 37 | mistral | devstral-latest | ✓ | — | success |
+| 28 | mistral | mistral-medium-2505 | ✓ | — | success |
+| 29 | mistral | mistral-medium-2508 | ✓ | — | success |
+| 30 | mistral | codestral-2508 | ✓ | — | success |
+| 31 | mistral | codestral-latest | ✓ | — | success |
+| 32 | mistral | mistral-code-latest | ✓ | — | success |
+| 33 | mistral | mistral-code-fim-latest | ✓ | — | success |
+| 34 | mistral | devstral-2512 | ✓ | — | success |
+| 35 | mistral | devstral-medium-latest | ✓ | — | success |
+| 36 | mistral | devstral-latest | ✓ | — | success |
+| 37 | mistral | mistral-code-agent-latest | ✓ | — | success |
 | 38 | mistral | mistral-small-2603 | ✓ | — | success |
 | 39 | mistral | mistral-small-latest | ✓ | — | success |
 | 40 | mistral | mistral-vibe-cli-fast | ✓ | — | success |
