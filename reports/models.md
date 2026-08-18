@@ -1,14 +1,14 @@
 # Отчёт по моделям — Free AI Model Router
 
-*Сгенерировано: 2026-08-17 05:49:49 UTC*
+*Сгенерировано: 2026-08-18 05:44:51 UTC*
 
 ## Бесплатные модели (:free)
 
 | # | Поставщик | Модель | Инструменты | Лимиты | Статус API |
 |---:|:---|---:|:---|:---|:---|
 | 1 | openrouter | dots-studio/dots-3-note-preview:free | ✓ | — | success |
-| 2 | openrouter | liquid/lfm-2.5-2.6b:free | ✓ | — | success |
-| 3 | openrouter | nvidia/nemotron-3.5-lightning:free | ✓ | — | success |
+| 2 | openrouter | nvidia/nemotron-3.5-lightning:free | ✓ | — | success |
+| 3 | openrouter | poolside/laguna-s-2.1:free | ✓ | — | success |
 | 4 | openrouter | poolside/laguna-xs-2.1:free | ✓ | — | success |
 | 5 | openrouter | cohere/north-mini-code:free | ✓ | — | success |
 | 6 | openrouter | nvidia/nemotron-3.5-content-safety:free | ✓ | — | success |
@@ -23,15 +23,15 @@
 | 15 | opencode_zen | deepseek-v4-flash-free | ✗ | — | success |
 | 16 | opencode_zen | mimo-v2.5-free | ✗ | — | success |
 | 17 | opencode_zen | hy3-free | ✗ | — | success |
-| 18 | opencode_zen | nemotron-3.5-lightning-free | ✗ | — | success |
-| 19 | groq | llama-3.1-8b-instant | ✓ | — | success |
-| 20 | groq | openai/gpt-oss-20b | ✓ | — | success |
-| 21 | groq | qwen/qwen3.6-27b | ✓ | — | success |
-| 22 | groq | groq/compound-mini | ✓ | — | success |
-| 23 | groq | groq/compound | ✓ | — | success |
-| 24 | groq | llama-3.3-70b-versatile | ✓ | — | success |
-| 25 | groq | openai/gpt-oss-120b | ✓ | — | success |
-| 26 | groq | allam-2-7b | ✓ | — | success |
+| 18 | opencode_zen | nemotron-3-ultra-free | ✗ | — | success |
+| 19 | opencode_zen | nemotron-3.5-lightning-free | ✗ | — | success |
+| 20 | opencode_zen | laguna-s-2.1-free | ✗ | — | success |
+| 21 | groq | openai/gpt-oss-20b | ✓ | — | success |
+| 22 | groq | groq/compound | ✓ | — | success |
+| 23 | groq | allam-2-7b | ✓ | — | success |
+| 24 | groq | qwen/qwen3.6-27b | ✓ | — | success |
+| 25 | groq | groq/compound-mini | ✓ | — | success |
+| 26 | groq | openai/gpt-oss-120b | ✓ | — | success |
 | 27 | mistral | mistral-medium-2505 | ✓ | — | success |
 | 28 | mistral | mistral-medium-2508 | ✓ | — | success |
 | 29 | mistral | codestral-2508 | ✓ | — | success |
@@ -79,8 +79,9 @@
 | 71 | cloudflare | @cf/qwen/qwen3-30b-a3b-fp8 | ✗ | 10000 req/day, 300 req/min | success |
 | 72 | cloudflare | @cf/google/gemma-4-26b-a4b-it | ✗ | 10000 req/day, 300 req/min | success |
 | 73 | cloudflare | @cf/mistralai/mistral-small-3.1-24b-instruct | ✗ | 10000 req/day, 300 req/min | success |
-| 74 | cloudflare | @cf/openai/gpt-oss-20b | ✗ | 10000 req/day, 300 req/min | success |
-| 75 | cloudflare | @cf/meta/llama-4-scout-17b-16e-instruct | ✗ | 10000 req/day, 300 req/min | success |
-| 76 | cloudflare | @cf/qwen/qwq-32b | ✗ | 10000 req/day, 300 req/min | success |
+| 74 | cloudflare | @cf/qwen/qwen3.8-27b | ✗ | 10000 req/day, 300 req/min | success |
+| 75 | cloudflare | @cf/openai/gpt-oss-20b | ✗ | 10000 req/day, 300 req/min | success |
+| 76 | cloudflare | @cf/meta/llama-4-scout-17b-16e-instruct | ✗ | 10000 req/day, 300 req/min | success |
+| 77 | cloudflare | @cf/qwen/qwq-32b | ✗ | 10000 req/day, 300 req/min | success |
 
-Всего: 76 моделей
+Всего: 77 моделей
