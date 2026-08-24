@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-23T05:44:33.216534Z",
+  "generated_at": "2026-08-24T05:52:54.584455Z",
   "endpoints": [
     {
       "endpoint_id": "openrouter/dots-studio/dots-3-note-preview:free",
@@ -43,18 +43,6 @@
       "provider_name": "openrouter",
       "canonical_model_id": "openrouter/poolside/laguna-s-2.1:free",
       "model_name": "poolside/laguna-s-2.1:free",
-      "free_status": "verified_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "openrouter/poolside/laguna-xs-2.1:free",
-      "provider_id": "openrouter",
-      "provider_name": "openrouter",
-      "canonical_model_id": "openrouter/poolside/laguna-xs-2.1:free",
-      "model_name": "poolside/laguna-xs-2.1:free",
       "free_status": "verified_free",
       "tool_calling": true,
       "modalities": [
@@ -134,6 +122,18 @@
       ]
     },
     {
+      "endpoint_id": "openrouter/nvidia/nemotron-nano-12b-v2-vl:free",
+      "provider_id": "openrouter",
+      "provider_name": "openrouter",
+      "canonical_model_id": "openrouter/nvidia/nemotron-nano-12b-v2-vl:free",
+      "model_name": "nvidia/nemotron-nano-12b-v2-vl:free",
+      "free_status": "verified_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
       "endpoint_id": "openrouter/nvidia/nemotron-nano-9b-v2:free",
       "provider_id": "openrouter",
       "provider_name": "openrouter",
@@ -158,11 +158,35 @@
       ]
     },
     {
+      "endpoint_id": "opencode_zen/mimo-v2.5-free",
+      "provider_id": "opencode_zen",
+      "provider_name": "opencode_zen",
+      "canonical_model_id": "opencode_zen/mimo-v2.5-free",
+      "model_name": "mimo-v2.5-free",
+      "free_status": "verified_free",
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
       "endpoint_id": "opencode_zen/hy3-free",
       "provider_id": "opencode_zen",
       "provider_name": "opencode_zen",
       "canonical_model_id": "opencode_zen/hy3-free",
       "model_name": "hy3-free",
+      "free_status": "verified_free",
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "opencode_zen/nemotron-3-ultra-free",
+      "provider_id": "opencode_zen",
+      "provider_name": "opencode_zen",
+      "canonical_model_id": "opencode_zen/nemotron-3-ultra-free",
+      "model_name": "nemotron-3-ultra-free",
       "free_status": "verified_free",
       "tool_calling": false,
       "modalities": [
@@ -206,30 +230,6 @@
       ]
     },
     {
-      "endpoint_id": "groq/allam-2-7b",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/allam-2-7b",
-      "model_name": "allam-2-7b",
-      "free_status": "documented_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "groq/groq/compound",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/groq/compound",
-      "model_name": "groq/compound",
-      "free_status": "documented_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
       "endpoint_id": "groq/groq/compound-mini",
       "provider_id": "groq",
       "provider_name": "groq",
@@ -259,6 +259,30 @@
       "provider_name": "groq",
       "canonical_model_id": "groq/openai/gpt-oss-20b",
       "model_name": "openai/gpt-oss-20b",
+      "free_status": "documented_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/allam-2-7b",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/allam-2-7b",
+      "model_name": "allam-2-7b",
+      "free_status": "documented_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/groq/compound",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/groq/compound",
+      "model_name": "groq/compound",
       "free_status": "documented_free",
       "tool_calling": true,
       "modalities": [
@@ -451,6 +475,18 @@
       "provider_name": "mistral",
       "canonical_model_id": "mistral/voxtral-small-latest",
       "model_name": "voxtral-small-latest",
+      "free_status": "account_specific_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/mistral-large-2512",
+      "provider_id": "mistral",
+      "provider_name": "mistral",
+      "canonical_model_id": "mistral/mistral-large-2512",
+      "model_name": "mistral-large-2512",
       "free_status": "account_specific_free",
       "tool_calling": true,
       "modalities": [
@@ -883,24 +919,26 @@
     "openrouter/liquid/lfm-2.5-2.6b:free",
     "openrouter/nvidia/nemotron-3.5-lightning:free",
     "openrouter/poolside/laguna-s-2.1:free",
-    "openrouter/poolside/laguna-xs-2.1:free",
     "openrouter/cohere/north-mini-code:free",
     "openrouter/nvidia/nemotron-3.5-content-safety:free",
     "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
     "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
     "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
     "openrouter/nvidia/nemotron-3-nano-30b-a3b:free",
+    "openrouter/nvidia/nemotron-nano-12b-v2-vl:free",
     "openrouter/nvidia/nemotron-nano-9b-v2:free",
     "opencode_zen/x-preview-f-free",
+    "opencode_zen/mimo-v2.5-free",
     "opencode_zen/hy3-free",
+    "opencode_zen/nemotron-3-ultra-free",
     "opencode_zen/nemotron-3.5-lightning-free",
     "opencode_zen/laguna-s-2.1-free",
     "groq/qwen/qwen3.6-27b",
-    "groq/allam-2-7b",
-    "groq/groq/compound",
     "groq/groq/compound-mini",
     "groq/openai/gpt-oss-120b",
     "groq/openai/gpt-oss-20b",
+    "groq/allam-2-7b",
+    "groq/groq/compound",
     "mistral/mistral-medium-2505",
     "mistral/mistral-medium-2508",
     "mistral/codestral-2508",
@@ -917,6 +955,7 @@
     "mistral/magistral-small-latest",
     "mistral/voxtral-small-2507",
     "mistral/voxtral-small-latest",
+    "mistral/mistral-large-2512",
     "mistral/mistral-large-latest",
     "mistral/ministral-3b-2512",
     "mistral/ministral-3b-latest",
