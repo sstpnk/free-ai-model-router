@@ -1,12 +1,96 @@
 {
-  "generated_at": "2026-09-01T10:04:50.028050Z",
+  "generated_at": "2026-09-02T09:36:18.160696Z",
   "endpoints": [
+    {
+      "endpoint_id": "openrouter/inclusionai/ling-3.0-flash-fin:free",
+      "provider_id": "openrouter",
+      "provider_name": "openrouter",
+      "canonical_model_id": "openrouter/inclusionai/ling-3.0-flash-fin:free",
+      "model_name": "inclusionai/ling-3.0-flash-fin:free",
+      "free_status": "verified_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/dots-studio/dots-3-note-preview:free",
+      "provider_id": "openrouter",
+      "provider_name": "openrouter",
+      "canonical_model_id": "openrouter/dots-studio/dots-3-note-preview:free",
+      "model_name": "dots-studio/dots-3-note-preview:free",
+      "free_status": "verified_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/liquid/lfm-2.5-2.6b:free",
+      "provider_id": "openrouter",
+      "provider_name": "openrouter",
+      "canonical_model_id": "openrouter/liquid/lfm-2.5-2.6b:free",
+      "model_name": "liquid/lfm-2.5-2.6b:free",
+      "free_status": "verified_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/cohere/north-mini-code:free",
+      "provider_id": "openrouter",
+      "provider_name": "openrouter",
+      "canonical_model_id": "openrouter/cohere/north-mini-code:free",
+      "model_name": "cohere/north-mini-code:free",
+      "free_status": "verified_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/nvidia/nemotron-3.5-content-safety:free",
+      "provider_id": "openrouter",
+      "provider_name": "openrouter",
+      "canonical_model_id": "openrouter/nvidia/nemotron-3.5-content-safety:free",
+      "model_name": "nvidia/nemotron-3.5-content-safety:free",
+      "free_status": "verified_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
     {
       "endpoint_id": "openrouter/minimax/minimax-m3:free",
       "provider_id": "openrouter",
       "provider_name": "openrouter",
       "canonical_model_id": "openrouter/minimax/minimax-m3:free",
       "model_name": "minimax/minimax-m3:free",
+      "free_status": "verified_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "provider_id": "openrouter",
+      "provider_name": "openrouter",
+      "canonical_model_id": "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "model_name": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "free_status": "verified_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/google/gemma-4-26b-a4b-it:free",
+      "provider_id": "openrouter",
+      "provider_name": "openrouter",
+      "canonical_model_id": "openrouter/google/gemma-4-26b-a4b-it:free",
+      "model_name": "google/gemma-4-26b-a4b-it:free",
       "free_status": "verified_free",
       "tool_calling": true,
       "modalities": [
@@ -38,47 +122,11 @@
       ]
     },
     {
-      "endpoint_id": "groq/qwen/qwen3.6-27b",
+      "endpoint_id": "groq/allam-2-7b",
       "provider_id": "groq",
       "provider_name": "groq",
-      "canonical_model_id": "groq/qwen/qwen3.6-27b",
-      "model_name": "qwen/qwen3.6-27b",
-      "free_status": "documented_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "groq/groq/compound-mini",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/groq/compound-mini",
-      "model_name": "groq/compound-mini",
-      "free_status": "documented_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "groq/openai/gpt-oss-120b",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/openai/gpt-oss-120b",
-      "model_name": "openai/gpt-oss-120b",
-      "free_status": "documented_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "groq/groq/compound",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/groq/compound",
-      "model_name": "groq/compound",
+      "canonical_model_id": "groq/allam-2-7b",
+      "model_name": "allam-2-7b",
       "free_status": "documented_free",
       "tool_calling": true,
       "modalities": [
@@ -98,11 +146,11 @@
       ]
     },
     {
-      "endpoint_id": "groq/qwen/qwen3.8-27b",
+      "endpoint_id": "groq/qwen/qwen3.6-27b",
       "provider_id": "groq",
       "provider_name": "groq",
-      "canonical_model_id": "groq/qwen/qwen3.8-27b",
-      "model_name": "qwen/qwen3.8-27b",
+      "canonical_model_id": "groq/qwen/qwen3.6-27b",
+      "model_name": "qwen/qwen3.6-27b",
       "free_status": "documented_free",
       "tool_calling": true,
       "modalities": [
@@ -110,11 +158,47 @@
       ]
     },
     {
-      "endpoint_id": "groq/allam-2-7b",
+      "endpoint_id": "groq/groq/compound",
       "provider_id": "groq",
       "provider_name": "groq",
-      "canonical_model_id": "groq/allam-2-7b",
-      "model_name": "allam-2-7b",
+      "canonical_model_id": "groq/groq/compound",
+      "model_name": "groq/compound",
+      "free_status": "documented_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/openai/gpt-oss-120b",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/openai/gpt-oss-120b",
+      "model_name": "openai/gpt-oss-120b",
+      "free_status": "documented_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/groq/compound-mini",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/groq/compound-mini",
+      "model_name": "groq/compound-mini",
+      "free_status": "documented_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/qwen/qwen3.8-27b",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/qwen/qwen3.8-27b",
+      "model_name": "qwen/qwen3.8-27b",
       "free_status": "documented_free",
       "tool_calling": true,
       "modalities": [
@@ -338,6 +422,18 @@
       ]
     },
     {
+      "endpoint_id": "mistral/mistral-medium-3-5",
+      "provider_id": "mistral",
+      "provider_name": "mistral",
+      "canonical_model_id": "mistral/mistral-medium-3-5",
+      "model_name": "mistral-medium-3-5",
+      "free_status": "account_specific_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
       "endpoint_id": "mistral/mistral-medium-3.5",
       "provider_id": "mistral",
       "provider_name": "mistral",
@@ -379,6 +475,18 @@
       "provider_name": "mistral",
       "canonical_model_id": "mistral/mistral-vibe-cli-latest",
       "model_name": "mistral-vibe-cli-latest",
+      "free_status": "account_specific_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/mistral-vibe-cli-with-tools",
+      "provider_id": "mistral",
+      "provider_name": "mistral",
+      "canonical_model_id": "mistral/mistral-vibe-cli-with-tools",
+      "model_name": "mistral-vibe-cli-with-tools",
       "free_status": "account_specific_free",
       "tool_calling": true,
       "modalities": [
@@ -627,16 +735,23 @@
     }
   ],
   "fallback_chain": [
+    "openrouter/inclusionai/ling-3.0-flash-fin:free",
+    "openrouter/dots-studio/dots-3-note-preview:free",
+    "openrouter/liquid/lfm-2.5-2.6b:free",
+    "openrouter/cohere/north-mini-code:free",
+    "openrouter/nvidia/nemotron-3.5-content-safety:free",
     "openrouter/minimax/minimax-m3:free",
+    "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+    "openrouter/google/gemma-4-26b-a4b-it:free",
     "openrouter/minimax/minimax-m2.7:free",
     "opencode_zen/laguna-s-2.1-free",
-    "groq/qwen/qwen3.6-27b",
-    "groq/groq/compound-mini",
-    "groq/openai/gpt-oss-120b",
-    "groq/groq/compound",
-    "groq/openai/gpt-oss-20b",
-    "groq/qwen/qwen3.8-27b",
     "groq/allam-2-7b",
+    "groq/openai/gpt-oss-20b",
+    "groq/qwen/qwen3.6-27b",
+    "groq/groq/compound",
+    "groq/openai/gpt-oss-120b",
+    "groq/groq/compound-mini",
+    "groq/qwen/qwen3.8-27b",
     "mistral/codestral-2508",
     "mistral/codestral-latest",
     "mistral/mistral-code-latest",
@@ -655,10 +770,12 @@
     "mistral/ministral-14b-latest",
     "mistral/mistral-medium-latest",
     "mistral/mistral-medium",
+    "mistral/mistral-medium-3-5",
     "mistral/mistral-medium-3.5",
     "mistral/mistral-medium-3",
     "mistral/mistral-medium-2604",
     "mistral/mistral-vibe-cli-latest",
+    "mistral/mistral-vibe-cli-with-tools",
     "mistral/magistral-medium-latest",
     "cloudflare/@cf/openai/gpt-oss-120b",
     "cloudflare/@cf/meta/llama-3.2-3b-instruct",
