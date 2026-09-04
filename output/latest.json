@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T09:47:00.717333Z",
+  "generated_at": "2026-09-04T09:37:36.977199Z",
   "endpoints": [
     {
       "endpoint_id": "openrouter/inclusionai/ling-3.0-flash-fin:free",
@@ -98,11 +98,11 @@
       ]
     },
     {
-      "endpoint_id": "openrouter/google/gemma-4-31b-it:free",
+      "endpoint_id": "openrouter/google/gemma-4-26b-a4b-it:free",
       "provider_id": "openrouter",
       "provider_name": "openrouter",
-      "canonical_model_id": "openrouter/google/gemma-4-31b-it:free",
-      "model_name": "google/gemma-4-31b-it:free",
+      "canonical_model_id": "openrouter/google/gemma-4-26b-a4b-it:free",
+      "model_name": "google/gemma-4-26b-a4b-it:free",
       "free_status": "verified_free",
       "tool_calling": true,
       "modalities": [
@@ -134,59 +134,35 @@
       ]
     },
     {
-      "endpoint_id": "groq/groq/compound-mini",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/groq/compound-mini",
-      "model_name": "groq/compound-mini",
-      "free_status": "documented_free",
-      "tool_calling": true,
+      "endpoint_id": "opencode_zen/ling-3.0-flash-fin-free",
+      "provider_id": "opencode_zen",
+      "provider_name": "opencode_zen",
+      "canonical_model_id": "opencode_zen/ling-3.0-flash-fin-free",
+      "model_name": "ling-3.0-flash-fin-free",
+      "free_status": "verified_free",
+      "tool_calling": false,
       "modalities": [
         "text"
       ]
     },
     {
-      "endpoint_id": "groq/qwen/qwen3.8-27b",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/qwen/qwen3.8-27b",
-      "model_name": "qwen/qwen3.8-27b",
-      "free_status": "documented_free",
-      "tool_calling": true,
+      "endpoint_id": "opencode_zen/laguna-s-2.1-free",
+      "provider_id": "opencode_zen",
+      "provider_name": "opencode_zen",
+      "canonical_model_id": "opencode_zen/laguna-s-2.1-free",
+      "model_name": "laguna-s-2.1-free",
+      "free_status": "verified_free",
+      "tool_calling": false,
       "modalities": [
         "text"
       ]
     },
     {
-      "endpoint_id": "groq/openai/gpt-oss-20b",
+      "endpoint_id": "groq/openai/gpt-oss-120b",
       "provider_id": "groq",
       "provider_name": "groq",
-      "canonical_model_id": "groq/openai/gpt-oss-20b",
-      "model_name": "openai/gpt-oss-20b",
-      "free_status": "documented_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "groq/qwen/qwen3.6-27b",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/qwen/qwen3.6-27b",
-      "model_name": "qwen/qwen3.6-27b",
-      "free_status": "documented_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "groq/groq/compound",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/groq/compound",
-      "model_name": "groq/compound",
+      "canonical_model_id": "groq/openai/gpt-oss-120b",
+      "model_name": "openai/gpt-oss-120b",
       "free_status": "documented_free",
       "tool_calling": true,
       "modalities": [
@@ -206,11 +182,59 @@
       ]
     },
     {
-      "endpoint_id": "groq/openai/gpt-oss-120b",
+      "endpoint_id": "groq/qwen/qwen3.6-27b",
       "provider_id": "groq",
       "provider_name": "groq",
-      "canonical_model_id": "groq/openai/gpt-oss-120b",
-      "model_name": "openai/gpt-oss-120b",
+      "canonical_model_id": "groq/qwen/qwen3.6-27b",
+      "model_name": "qwen/qwen3.6-27b",
+      "free_status": "documented_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/qwen/qwen3.8-27b",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/qwen/qwen3.8-27b",
+      "model_name": "qwen/qwen3.8-27b",
+      "free_status": "documented_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/groq/compound-mini",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/groq/compound-mini",
+      "model_name": "groq/compound-mini",
+      "free_status": "documented_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/openai/gpt-oss-20b",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/openai/gpt-oss-20b",
+      "model_name": "openai/gpt-oss-20b",
+      "free_status": "documented_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/groq/compound",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/groq/compound",
+      "model_name": "groq/compound",
       "free_status": "documented_free",
       "tool_calling": true,
       "modalities": [
@@ -259,54 +283,6 @@
       "provider_name": "mistral",
       "canonical_model_id": "mistral/mistral-code-fim-latest",
       "model_name": "mistral-code-fim-latest",
-      "free_status": "account_specific_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "mistral/mistral-small-2603",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-small-2603",
-      "model_name": "mistral-small-2603",
-      "free_status": "account_specific_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "mistral/mistral-small-latest",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-small-latest",
-      "model_name": "mistral-small-latest",
-      "free_status": "account_specific_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "mistral/mistral-vibe-cli-fast",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-vibe-cli-fast",
-      "model_name": "mistral-vibe-cli-fast",
-      "free_status": "account_specific_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "mistral/magistral-small-latest",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/magistral-small-latest",
-      "model_name": "magistral-small-latest",
       "free_status": "account_specific_free",
       "tool_calling": true,
       "modalities": [
@@ -403,114 +379,6 @@
       "provider_name": "mistral",
       "canonical_model_id": "mistral/ministral-14b-latest",
       "model_name": "ministral-14b-latest",
-      "free_status": "account_specific_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "mistral/mistral-medium-latest",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-medium-latest",
-      "model_name": "mistral-medium-latest",
-      "free_status": "account_specific_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "mistral/mistral-medium",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-medium",
-      "model_name": "mistral-medium",
-      "free_status": "account_specific_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "mistral/mistral-medium-3-5",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-medium-3-5",
-      "model_name": "mistral-medium-3-5",
-      "free_status": "account_specific_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "mistral/mistral-medium-3.5",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-medium-3.5",
-      "model_name": "mistral-medium-3.5",
-      "free_status": "account_specific_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "mistral/mistral-medium-3",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-medium-3",
-      "model_name": "mistral-medium-3",
-      "free_status": "account_specific_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "mistral/mistral-medium-2604",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-medium-2604",
-      "model_name": "mistral-medium-2604",
-      "free_status": "account_specific_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "mistral/mistral-vibe-cli-latest",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-vibe-cli-latest",
-      "model_name": "mistral-vibe-cli-latest",
-      "free_status": "account_specific_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "mistral/mistral-vibe-cli-with-tools",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/mistral-vibe-cli-with-tools",
-      "model_name": "mistral-vibe-cli-with-tools",
-      "free_status": "account_specific_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "mistral/magistral-medium-latest",
-      "provider_id": "mistral",
-      "provider_name": "mistral",
-      "canonical_model_id": "mistral/magistral-medium-latest",
-      "model_name": "magistral-medium-latest",
       "free_status": "account_specific_free",
       "tool_calling": true,
       "modalities": [
@@ -755,24 +623,22 @@
     "openrouter/nvidia/nemotron-3.5-content-safety:free",
     "openrouter/minimax/minimax-m3:free",
     "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-    "openrouter/google/gemma-4-31b-it:free",
+    "openrouter/google/gemma-4-26b-a4b-it:free",
     "openrouter/minimax/minimax-m2.7:free",
     "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
-    "groq/groq/compound-mini",
-    "groq/qwen/qwen3.8-27b",
-    "groq/openai/gpt-oss-20b",
-    "groq/qwen/qwen3.6-27b",
-    "groq/groq/compound",
-    "groq/allam-2-7b",
+    "opencode_zen/ling-3.0-flash-fin-free",
+    "opencode_zen/laguna-s-2.1-free",
     "groq/openai/gpt-oss-120b",
+    "groq/allam-2-7b",
+    "groq/qwen/qwen3.6-27b",
+    "groq/qwen/qwen3.8-27b",
+    "groq/groq/compound-mini",
+    "groq/openai/gpt-oss-20b",
+    "groq/groq/compound",
     "mistral/codestral-2508",
     "mistral/codestral-latest",
     "mistral/mistral-code-latest",
     "mistral/mistral-code-fim-latest",
-    "mistral/mistral-small-2603",
-    "mistral/mistral-small-latest",
-    "mistral/mistral-vibe-cli-fast",
-    "mistral/magistral-small-latest",
     "mistral/voxtral-small-2507",
     "mistral/voxtral-small-latest",
     "mistral/ministral-3b-2512",
@@ -781,15 +647,6 @@
     "mistral/ministral-8b-latest",
     "mistral/ministral-14b-2512",
     "mistral/ministral-14b-latest",
-    "mistral/mistral-medium-latest",
-    "mistral/mistral-medium",
-    "mistral/mistral-medium-3-5",
-    "mistral/mistral-medium-3.5",
-    "mistral/mistral-medium-3",
-    "mistral/mistral-medium-2604",
-    "mistral/mistral-vibe-cli-latest",
-    "mistral/mistral-vibe-cli-with-tools",
-    "mistral/magistral-medium-latest",
     "cloudflare/@cf/openai/gpt-oss-120b",
     "cloudflare/@cf/meta/llama-3.2-3b-instruct",
     "cloudflare/@cf/meta/llama-guard-3-8b",
