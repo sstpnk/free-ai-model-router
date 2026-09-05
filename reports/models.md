@@ -1,31 +1,31 @@
 # Отчёт по моделям — Free AI Model Router
 
-*Сгенерировано: 2026-09-04 09:37:36 UTC*
+*Сгенерировано: 2026-09-05 09:03:54 UTC*
 
 ## Бесплатные модели (:free)
 
 | # | Поставщик | Модель | Инструменты | Лимиты | Статус API |
 |---:|:---|---:|:---|:---|:---|
-| 1 | openrouter | inclusionai/ling-3.0-flash-fin:free | ✓ | — | success |
-| 2 | openrouter | dots-studio/dots-3-note-preview:free | ✓ | — | success |
-| 3 | openrouter | liquid/lfm-2.5-2.6b:free | ✓ | — | success |
-| 4 | openrouter | nvidia/nemotron-3.5-lightning:free | ✓ | — | success |
-| 5 | openrouter | cohere/north-mini-code:free | ✓ | — | success |
-| 6 | openrouter | nvidia/nemotron-3.5-content-safety:free | ✓ | — | success |
-| 7 | openrouter | minimax/minimax-m3:free | ✓ | — | success |
-| 8 | openrouter | nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free | ✓ | — | success |
-| 9 | openrouter | google/gemma-4-26b-a4b-it:free | ✓ | — | success |
-| 10 | openrouter | minimax/minimax-m2.7:free | ✓ | — | success |
-| 11 | openrouter | nvidia/nemotron-3-super-120b-a12b:free | ✓ | — | success |
-| 12 | opencode_zen | ling-3.0-flash-fin-free | ✗ | — | success |
-| 13 | opencode_zen | laguna-s-2.1-free | ✗ | — | success |
-| 14 | groq | openai/gpt-oss-120b | ✓ | — | success |
-| 15 | groq | allam-2-7b | ✓ | — | success |
-| 16 | groq | qwen/qwen3.6-27b | ✓ | — | success |
-| 17 | groq | qwen/qwen3.8-27b | ✓ | — | success |
-| 18 | groq | groq/compound-mini | ✓ | — | success |
-| 19 | groq | openai/gpt-oss-20b | ✓ | — | success |
-| 20 | groq | groq/compound | ✓ | — | success |
+| 1 | openrouter | inclusionai/ling-3.0-flash-sante:free | ✓ | — | success |
+| 2 | openrouter | inclusionai/ling-3.0-flash-fin:free | ✓ | — | success |
+| 3 | openrouter | dots-studio/dots-3-note-preview:free | ✓ | — | success |
+| 4 | openrouter | liquid/lfm-2.5-2.6b:free | ✓ | — | success |
+| 5 | openrouter | nvidia/nemotron-3.5-lightning:free | ✓ | — | success |
+| 6 | openrouter | poolside/laguna-s-2.1:free | ✓ | — | success |
+| 7 | openrouter | cohere/north-mini-code:free | ✓ | — | success |
+| 8 | openrouter | nvidia/nemotron-3.5-content-safety:free | ✓ | — | success |
+| 9 | openrouter | minimax/minimax-m3:free | ✓ | — | success |
+| 10 | openrouter | nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free | ✓ | — | success |
+| 11 | openrouter | google/gemma-4-31b-it:free | ✓ | — | success |
+| 12 | openrouter | minimax/minimax-m2.7:free | ✓ | — | success |
+| 13 | openrouter | nvidia/nemotron-3-super-120b-a12b:free | ✓ | — | success |
+| 14 | groq | qwen/qwen3.6-27b | ✓ | — | success |
+| 15 | groq | groq/compound | ✓ | — | success |
+| 16 | groq | openai/gpt-oss-20b | ✓ | — | success |
+| 17 | groq | groq/compound-mini | ✓ | — | success |
+| 18 | groq | qwen/qwen3.8-27b | ✓ | — | success |
+| 19 | groq | openai/gpt-oss-120b | ✓ | — | success |
+| 20 | groq | allam-2-7b | ✓ | — | success |
 | 21 | mistral | codestral-2508 | ✓ | — | success |
 | 22 | mistral | codestral-latest | ✓ | — | success |
 | 23 | mistral | mistral-code-latest | ✓ | — | success |
