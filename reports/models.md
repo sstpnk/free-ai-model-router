@@ -1,6 +1,6 @@
 # Отчёт по моделям — Free AI Model Router
 
-*Сгенерировано: 2026-09-05 09:03:54 UTC*
+*Сгенерировано: 2026-09-06 09:25:45 UTC*
 
 ## Бесплатные модели (:free)
 
@@ -16,16 +16,16 @@
 | 8 | openrouter | nvidia/nemotron-3.5-content-safety:free | ✓ | — | success |
 | 9 | openrouter | minimax/minimax-m3:free | ✓ | — | success |
 | 10 | openrouter | nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free | ✓ | — | success |
-| 11 | openrouter | google/gemma-4-31b-it:free | ✓ | — | success |
+| 11 | openrouter | google/gemma-4-26b-a4b-it:free | ✓ | — | success |
 | 12 | openrouter | minimax/minimax-m2.7:free | ✓ | — | success |
 | 13 | openrouter | nvidia/nemotron-3-super-120b-a12b:free | ✓ | — | success |
 | 14 | groq | qwen/qwen3.6-27b | ✓ | — | success |
-| 15 | groq | groq/compound | ✓ | — | success |
-| 16 | groq | openai/gpt-oss-20b | ✓ | — | success |
-| 17 | groq | groq/compound-mini | ✓ | — | success |
-| 18 | groq | qwen/qwen3.8-27b | ✓ | — | success |
+| 15 | groq | qwen/qwen3.8-27b | ✓ | — | success |
+| 16 | groq | groq/compound | ✓ | — | success |
+| 17 | groq | openai/gpt-oss-20b | ✓ | — | success |
+| 18 | groq | allam-2-7b | ✓ | — | success |
 | 19 | groq | openai/gpt-oss-120b | ✓ | — | success |
-| 20 | groq | allam-2-7b | ✓ | — | success |
+| 20 | groq | groq/compound-mini | ✓ | — | success |
 | 21 | mistral | codestral-2508 | ✓ | — | success |
 | 22 | mistral | codestral-latest | ✓ | — | success |
 | 23 | mistral | mistral-code-latest | ✓ | — | success |
