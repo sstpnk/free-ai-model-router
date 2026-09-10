@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-09T09:43:31.061479Z",
+  "generated_at": "2026-09-10T09:42:14.765974Z",
   "endpoints": [
     {
       "endpoint_id": "openrouter/nex-agi/nex-n2.5-mini:free",
@@ -74,18 +74,6 @@
       ]
     },
     {
-      "endpoint_id": "openrouter/poolside/laguna-s-2.1:free",
-      "provider_id": "openrouter",
-      "provider_name": "openrouter",
-      "canonical_model_id": "openrouter/poolside/laguna-s-2.1:free",
-      "model_name": "poolside/laguna-s-2.1:free",
-      "free_status": "verified_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
       "endpoint_id": "openrouter/cohere/north-mini-code:free",
       "provider_id": "openrouter",
       "provider_name": "openrouter",
@@ -122,6 +110,18 @@
       ]
     },
     {
+      "endpoint_id": "openrouter/google/gemma-4-31b-it:free",
+      "provider_id": "openrouter",
+      "provider_name": "openrouter",
+      "canonical_model_id": "openrouter/google/gemma-4-31b-it:free",
+      "model_name": "google/gemma-4-31b-it:free",
+      "free_status": "verified_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
       "endpoint_id": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
       "provider_id": "openrouter",
       "provider_name": "openrouter",
@@ -134,11 +134,11 @@
       ]
     },
     {
-      "endpoint_id": "groq/groq/compound",
+      "endpoint_id": "groq/qwen/qwen3.6-27b",
       "provider_id": "groq",
       "provider_name": "groq",
-      "canonical_model_id": "groq/groq/compound",
-      "model_name": "groq/compound",
+      "canonical_model_id": "groq/qwen/qwen3.6-27b",
+      "model_name": "qwen/qwen3.6-27b",
       "free_status": "documented_free",
       "tool_calling": true,
       "modalities": [
@@ -158,11 +158,11 @@
       ]
     },
     {
-      "endpoint_id": "groq/allam-2-7b",
+      "endpoint_id": "groq/openai/gpt-oss-20b",
       "provider_id": "groq",
       "provider_name": "groq",
-      "canonical_model_id": "groq/allam-2-7b",
-      "model_name": "allam-2-7b",
+      "canonical_model_id": "groq/openai/gpt-oss-20b",
+      "model_name": "openai/gpt-oss-20b",
       "free_status": "documented_free",
       "tool_calling": true,
       "modalities": [
@@ -182,35 +182,35 @@
       ]
     },
     {
-      "endpoint_id": "groq/openai/gpt-oss-20b",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/openai/gpt-oss-20b",
-      "model_name": "openai/gpt-oss-20b",
-      "free_status": "documented_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "groq/qwen/qwen3.6-27b",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/qwen/qwen3.6-27b",
-      "model_name": "qwen/qwen3.6-27b",
-      "free_status": "documented_free",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
       "endpoint_id": "groq/groq/compound-mini",
       "provider_id": "groq",
       "provider_name": "groq",
       "canonical_model_id": "groq/groq/compound-mini",
       "model_name": "groq/compound-mini",
+      "free_status": "documented_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/allam-2-7b",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/allam-2-7b",
+      "model_name": "allam-2-7b",
+      "free_status": "documented_free",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/groq/compound",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/groq/compound",
+      "model_name": "groq/compound",
       "free_status": "documented_free",
       "tool_calling": true,
       "modalities": [
@@ -597,18 +597,18 @@
     "openrouter/inclusionai/ling-3.0-flash-fin:free",
     "openrouter/dots-studio/dots-3-note-preview:free",
     "openrouter/liquid/lfm-2.5-2.6b:free",
-    "openrouter/poolside/laguna-s-2.1:free",
     "openrouter/cohere/north-mini-code:free",
     "openrouter/nvidia/nemotron-3.5-content-safety:free",
     "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+    "openrouter/google/gemma-4-31b-it:free",
     "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
-    "groq/groq/compound",
-    "groq/qwen/qwen3.8-27b",
-    "groq/allam-2-7b",
-    "groq/openai/gpt-oss-120b",
-    "groq/openai/gpt-oss-20b",
     "groq/qwen/qwen3.6-27b",
+    "groq/qwen/qwen3.8-27b",
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b",
     "groq/groq/compound-mini",
+    "groq/allam-2-7b",
+    "groq/groq/compound",
     "mistral/codestral-2508",
     "mistral/codestral-latest",
     "mistral/mistral-code-latest",
