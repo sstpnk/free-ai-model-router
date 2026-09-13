@@ -61,6 +61,21 @@ class VerificationStatus(str, Enum):
     NOT_TESTED = "not_tested"
 
 
+class AccessVerdict(str, Enum):
+    """Human-facing interpretation of a runtime API check.
+
+    A non-success generation probe can still prove that the endpoint exists.
+    For example, HTTP 429 means the model is visible and access reached the
+    provider, but the account/request is currently throttled.
+    """
+
+    USABLE_NOW = "usable_now"
+    EXISTS_BUT_THROTTLED = "exists_but_throttled"
+    QUOTA_EXHAUSTED_FOR_ACCOUNT = "quota_exhausted_for_account"
+    NOT_ACCESSIBLE = "not_accessible"
+    UNKNOWN = "unknown"
+
+
 class Modality(str, Enum):
     """Content modality supported by a model."""
 
@@ -131,9 +146,12 @@ class RuntimeCheck(BaseModel):
 
     checked: bool = False
     status: VerificationStatus = VerificationStatus.NOT_TESTED
+    access_verdict: AccessVerdict = AccessVerdict.UNKNOWN
     checked_at: Optional[datetime] = None
     latency_ms: Optional[int] = None
     http_status: Optional[int] = None
+    retry_after_seconds: Optional[int] = None
+    error_message: Optional[str] = None
     consecutive_failures: int = 0
 
 
@@ -152,6 +170,7 @@ class ProviderEndpoint(BaseModel):
     limits: Limits = Field(default_factory=Limits)
     context_tokens: Optional[int] = None
     max_output_tokens: Optional[int] = None
+    listed_in_models_api: bool = True
     runtime_check: RuntimeCheck = Field(default_factory=RuntimeCheck)
     discovered_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
     source_url: Optional[str] = None
@@ -278,6 +297,10 @@ class RoutedEndpoint(BaseModel):
     canonical_model_id: str
     model_name: str
     free_status: FreeStatus
+    runtime_status: VerificationStatus = VerificationStatus.NOT_TESTED
+    access_verdict: AccessVerdict = AccessVerdict.UNKNOWN
+    latency_ms: Optional[int] = None
+    last_checked_at: Optional[datetime] = None
     tool_calling: bool = False
     modalities: list[str] = Field(default_factory=list)
 

@@ -73,6 +73,7 @@ class VerificationResult:
     status: VerificationStatus
     latency_ms: Optional[int] = None
     http_status: Optional[int] = None
+    retry_after_seconds: Optional[int] = None
     error_message: Optional[str] = None
     tool_calling_verified: bool = False
 

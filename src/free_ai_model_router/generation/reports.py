@@ -12,6 +12,7 @@ from free_ai_model_router.models import (
     ProviderEndpoint,
     RouterOutput,
 )
+from free_ai_model_router.verification.status import is_routable_status
 
 logger = logging.getLogger(__name__)
 
@@ -39,6 +40,18 @@ def _fmt_limits(endpoint: ProviderEndpoint) -> str:
     return "—"
 
 
+def _fmt_latency(endpoint: ProviderEndpoint | None) -> str:
+    if not endpoint or endpoint.runtime_check.latency_ms is None:
+        return "—"
+    return f"{endpoint.runtime_check.latency_ms} ms"
+
+
+def _fmt_retry_after(endpoint: ProviderEndpoint | None) -> str:
+    if not endpoint or endpoint.runtime_check.retry_after_seconds is None:
+        return "—"
+    return f"{endpoint.runtime_check.retry_after_seconds}s"
+
+
 def generate_models_report(
     router_output: RouterOutput,
     endpoints: list[ProviderEndpoint],
@@ -53,24 +66,49 @@ def generate_models_report(
 
     endpoints_map: dict[str, ProviderEndpoint] = {e.endpoint_id: e for e in endpoints}
 
-    lines.append("## Бесплатные модели (:free)")
+    lines.append("## Маршрутизируемые бесплатные endpoints")
     lines.append("")
 
     if router_output.endpoints:
-        lines.append("| # | Поставщик | Модель | Инструменты | Лимиты | Статус API |")
-        lines.append("|---:|:---|---:|:---|:---|:---|")
+        lines.append("| # | Поставщик | Модель | Доступ | Probe | Latency | Retry | Инструменты | Лимиты |")
+        lines.append("|---:|:---|:---|:---|:---|---:|:---|:---|:---|")
         for i, re in enumerate(router_output.endpoints, 1):
             ep = endpoints_map.get(re.endpoint_id)
             tools = "✓" if re.tool_calling else "✗"
             limits = _fmt_limits(ep) if ep else "—"
-            api_status = (ep.runtime_check.status.value if ep and ep.runtime_check.checked else "not_tested") if ep else "—"
-            lines.append(f"| {i} | {re.provider_name} | {re.model_name} | {tools} | {limits} | {api_status} |")
+            probe = (ep.runtime_check.status.value if ep and ep.runtime_check.checked else "not_tested") if ep else "—"
+            verdict = (ep.runtime_check.access_verdict.value if ep else re.access_verdict.value)
+            lines.append(
+                f"| {i} | {re.provider_name} | {re.model_name} | {verdict} | {probe} | "
+                f"{_fmt_latency(ep)} | {_fmt_retry_after(ep)} | {tools} | {limits} |"
+            )
     else:
         lines.append("_Нет моделей, прошедших проверку._")
 
     lines.append("")
     lines.append(f"Всего: {len(router_output.endpoints)} моделей")
     lines.append("")
+
+    routed_ids = {r.endpoint_id for r in router_output.endpoints}
+    excluded = [
+        ep for ep in endpoints
+        if ep.endpoint_id not in routed_ids
+        and ep.runtime_check.checked
+        and not is_routable_status(ep.runtime_check.status)
+    ]
+    if excluded:
+        lines.append("## Не включены в routing output")
+        lines.append("")
+        lines.append("| Поставщик | Модель | Доступ | Probe | HTTP | Ошибка |")
+        lines.append("|:---|:---|:---|:---|---:|:---|")
+        for ep in excluded:
+            error = _fmt(ep.runtime_check.error_message)
+            lines.append(
+                f"| {ep.provider_id} | {ep.provider_model_id} | "
+                f"{ep.runtime_check.access_verdict.value} | {ep.runtime_check.status.value} | "
+                f"{_fmt(ep.runtime_check.http_status)} | {error} |"
+            )
+        lines.append("")
 
     return "\n".join(lines)
 

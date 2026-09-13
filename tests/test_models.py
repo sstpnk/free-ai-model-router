@@ -1,14 +1,14 @@
 """Tests for data models."""
 
-from datetime import datetime, timezone
 
 from free_ai_model_router.models import (
+    AccessVerdict,
     CanonicalModel,
     FreeStatus,
     Modality,
     ProviderEndpoint,
-    RouterOutput,
     RoutedEndpoint,
+    RouterOutput,
 )
 
 
@@ -31,6 +31,8 @@ def test_provider_endpoint_defaults() -> None:
     assert ep.free_status == FreeStatus.UNKNOWN
     assert ep.runtime_check.checked is False
     assert ep.runtime_check.status.value == "not_tested"
+    assert ep.runtime_check.access_verdict == AccessVerdict.UNKNOWN
+    assert ep.listed_in_models_api is True
 
 
 def test_router_output() -> None:

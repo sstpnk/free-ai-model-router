@@ -22,6 +22,11 @@ from free_ai_model_router.providers.base import (
     ProviderModel,
     VerificationResult,
 )
+from free_ai_model_router.verification.status import (
+    classify_http_status,
+    parse_retry_after_seconds,
+    response_error_message,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -97,17 +102,16 @@ class GroqAdapter:
                     },
                 )
                 latency = int((time.monotonic() - start) * 1000)
-                if response.status_code == 200:
-                    return VerificationResult(
-                        provider_model_id=model.provider_model_id,
-                        status=VerificationStatus.SUCCESS,
-                        latency_ms=latency,
-                        http_status=200,
-                    )
+                body_text = getattr(response, "text", "")
+                headers = getattr(response, "headers", {})
+                status = classify_http_status(response.status_code, body_text)
                 return VerificationResult(
                     provider_model_id=model.provider_model_id,
-                    status=VerificationStatus.INVALID_RESPONSE,
+                    status=status,
+                    latency_ms=latency,
                     http_status=response.status_code,
+                    retry_after_seconds=parse_retry_after_seconds(headers),
+                    error_message=None if status == VerificationStatus.SUCCESS else response_error_message(body_text),
                 )
         except httpx.TimeoutException:
             return VerificationResult(provider_model_id=model.provider_model_id, status=VerificationStatus.TIMEOUT)

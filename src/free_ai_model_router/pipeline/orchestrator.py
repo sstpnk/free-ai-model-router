@@ -37,6 +37,11 @@ from free_ai_model_router.storage.state import (
     save_pipeline_state,
     save_router_output,
 )
+from free_ai_model_router.verification.status import (
+    access_verdict_for_status,
+    is_evidence_status,
+    is_routable_status,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -100,15 +105,19 @@ class PipelineOrchestrator:
             # Step 2: Verify models (if keys configured and checks not disabled)
             if not no_runtime_checks and not offline:
                 await self._verify_models()
-                # Strip failed models
-                before = len(self.collected_endpoints)
-                self.collected_endpoints = [
-                    ep for ep in self.collected_endpoints
-                    if ep.runtime_check.status == VerificationStatus.SUCCESS
-                ]
-                dropped = before - len(self.collected_endpoints)
-                if dropped:
-                    logger.info("Dropped %d endpoints that failed verification", dropped)
+                evidence_count = sum(
+                    1 for ep in self.collected_endpoints
+                    if is_evidence_status(ep.runtime_check.status)
+                )
+                hard_fail_count = sum(
+                    1 for ep in self.collected_endpoints
+                    if ep.runtime_check.checked and not is_routable_status(ep.runtime_check.status)
+                )
+                logger.info(
+                    "Verification evidence: %d endpoints; %d hard failures kept for reports",
+                    evidence_count,
+                    hard_fail_count,
+                )
 
             # Step 3: Build router output
             router_output = self._build_router()
@@ -260,10 +269,13 @@ class PipelineOrchestrator:
                     result = await asyncio.wait_for(adapter.verify_model(pm, api_key), timeout=20)
                     endpoint.runtime_check.checked = True
                     endpoint.runtime_check.status = result.status
+                    endpoint.runtime_check.access_verdict = access_verdict_for_status(result.status)
                     endpoint.runtime_check.checked_at = datetime.now(UTC)
                     endpoint.runtime_check.latency_ms = result.latency_ms
                     endpoint.runtime_check.http_status = result.http_status
-                    if result.status.value == "success":
+                    endpoint.runtime_check.retry_after_seconds = result.retry_after_seconds
+                    endpoint.runtime_check.error_message = result.error_message
+                    if is_evidence_status(result.status):
                         endpoint.runtime_check.consecutive_failures = 0
                     else:
                         endpoint.runtime_check.consecutive_failures += 1
@@ -275,6 +287,8 @@ class PipelineOrchestrator:
                                    endpoint.provider_id, endpoint.provider_model_id, e)
                     endpoint.runtime_check.checked = True
                     endpoint.runtime_check.status = VerificationStatus.PROVIDER_UNAVAILABLE
+                    endpoint.runtime_check.access_verdict = access_verdict_for_status(VerificationStatus.PROVIDER_UNAVAILABLE)
+                    endpoint.runtime_check.error_message = str(e)
 
         await asyncio.gather(*(_verify_one(ep, ad, ak) for ep, ad, ak in to_verify))
 
@@ -301,6 +315,8 @@ class PipelineOrchestrator:
         for ep in self.collected_endpoints:
             if ep.free_status not in free_statuses:
                 continue
+            if ep.runtime_check.checked and not is_routable_status(ep.runtime_check.status):
+                continue
             # Look up capabilities from collected models
             tool_calling = False
             modalities = ["text"]
@@ -317,6 +333,10 @@ class PipelineOrchestrator:
                 canonical_model_id=ep.canonical_model_id,
                 model_name=ep.provider_model_id,
                 free_status=ep.free_status,
+                runtime_status=ep.runtime_check.status,
+                access_verdict=ep.runtime_check.access_verdict,
+                latency_ms=ep.runtime_check.latency_ms,
+                last_checked_at=ep.runtime_check.checked_at,
                 tool_calling=tool_calling,
                 modalities=modalities,
             ))
