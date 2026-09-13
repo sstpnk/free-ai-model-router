@@ -59,7 +59,7 @@ All models scoring **≥70%** of the reference (ChatGPT-5.6 Sol High = 100%) are
 | ♻️ | **Provider Diversity** | Fallback chain prioritizes different providers — no single point of failure |
 | 📅 | **Daily Automation** | GitHub Actions workflow runs every day at 05:17 UTC, commits only on meaningful changes |
 | 🐳 | **Docker-Ready** | Slim Python image, ready for deployment on any server |
-| 📋 | **Four Reports** | `models.md` (ranked list), `changes.md` (diff from last run), `sources-health.md` (data freshness), `discovered-candidates.md` (new finds) |
+| 📋 | **Local Reports** | Generated markdown reports in `reports/`; useful locally, ignored by git |
 
 ---
 
@@ -242,7 +242,7 @@ free-ai-model-router/
 │
 ├── tests/                           # 🧪 20 unit tests (pytest)
 ├── output/                          # 📤 Generated LiteLLM config
-├── reports/                         # 📄 Generated reports
+├── reports/                         # 📄 Local generated reports (git-ignored)
 ├── data/                            # 🗃️ Cache, normalized data, history
 │
 ├── Dockerfile                       # 🐳 Container image
@@ -315,6 +315,9 @@ Operational status of every data source — when it last succeeded, consecutive 
 
 Models found on Hugging Face that aren't yet in the routing table — candidates for manual review.
 
+`reports/` is a local generated directory and is intentionally ignored by git.
+Use it for inspection, not as synchronized repository state.
+
 ---
 
 ## Configuration
@@ -379,7 +382,7 @@ The included workflow at `.github/workflows/daily-update.yml` runs the pipeline 
 1. Install dependencies
 2. Restore HTTP cache from previous runs
 3. Collect, discover, score, verify, generate, and report
-4. Commit only if `output/` or `reports/` changed meaningfully
+4. Commit only if synchronized `output/` artifacts changed meaningfully
 
 ---
 

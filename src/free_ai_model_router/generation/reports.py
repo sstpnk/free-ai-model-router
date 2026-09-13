@@ -54,6 +54,16 @@ def _fmt_retry_after(endpoint: ProviderEndpoint | None) -> str:
     return f"{endpoint.runtime_check.retry_after_seconds}s"
 
 
+def _fmt_models_api(endpoint: ProviderEndpoint | None) -> str:
+    if not endpoint:
+        return "—"
+    if not endpoint.listed_in_models_api:
+        return "no"
+    if endpoint.models_api_checked_at:
+        return "yes"
+    return "assumed"
+
+
 def generate_models_report(
     router_output: RouterOutput,
     endpoints: list[ProviderEndpoint],
@@ -72,8 +82,8 @@ def generate_models_report(
     lines.append("")
 
     if router_output.endpoints:
-        lines.append("| # | Поставщик | Модель | Доступ | Probe | Latency | Retry | Инструменты | Лимиты |")
-        lines.append("|---:|:---|:---|:---|:---|---:|:---|:---|:---|")
+        lines.append("| # | Поставщик | Модель | Listed | Доступ | Probe | Latency | Retry | Инструменты | Лимиты |")
+        lines.append("|---:|:---|:---|:---|:---|:---|---:|:---|:---|:---|")
         for i, re in enumerate(router_output.endpoints, 1):
             ep = endpoints_map.get(re.endpoint_id)
             tools = "✓" if re.tool_calling else "✗"
@@ -81,7 +91,7 @@ def generate_models_report(
             probe = (ep.runtime_check.status.value if ep and ep.runtime_check.checked else "not_tested") if ep else "—"
             verdict = (ep.runtime_check.access_verdict.value if ep else re.access_verdict.value)
             lines.append(
-                f"| {i} | {re.provider_name} | {re.model_name} | {verdict} | {probe} | "
+                f"| {i} | {re.provider_name} | {re.model_name} | {_fmt_models_api(ep)} | {verdict} | {probe} | "
                 f"{_fmt_latency(ep)} | {_fmt_retry_after(ep)} | {tools} | {limits} |"
             )
     else:
@@ -101,12 +111,12 @@ def generate_models_report(
     if excluded:
         lines.append("## Не включены в routing output")
         lines.append("")
-        lines.append("| Поставщик | Модель | Доступ | Probe | HTTP | Ошибка |")
-        lines.append("|:---|:---|:---|:---|---:|:---|")
+        lines.append("| Поставщик | Модель | Listed | Доступ | Probe | HTTP | Ошибка |")
+        lines.append("|:---|:---|:---|:---|:---|---:|:---|")
         for ep in excluded:
             error = _fmt(ep.runtime_check.error_message)
             lines.append(
-                f"| {ep.provider_id} | {ep.provider_model_id} | "
+                f"| {ep.provider_id} | {ep.provider_model_id} | {_fmt_models_api(ep)} | "
                 f"{ep.runtime_check.access_verdict.value} | {ep.runtime_check.status.value} | "
                 f"{_fmt(ep.runtime_check.http_status)} | {error} |"
             )

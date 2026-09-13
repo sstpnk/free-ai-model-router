@@ -190,10 +190,18 @@ class PipelineOrchestrator:
 
         for adapter in adapters:
             try:
+                collected_at = datetime.now(UTC)
                 models = await adapter.discover_models()
                 all_models.extend(models)
                 for m in models:
                     ep = adapter.to_provider_endpoint(m)
+                    ep.listed_in_models_api = True
+                    ep.models_api_checked_at = collected_at
+                    ep.models_api_source_url = (
+                        ep.models_api_source_url
+                        or ep.source_url
+                        or self._models_api_source_url(adapter.provider_id)
+                    )
                     self.collected_endpoints.append(ep)
 
                     # Build capabilities from provider model data
@@ -230,6 +238,19 @@ class PipelineOrchestrator:
         )
         logger.info("Total: %d endpoints from %d providers, %d unique canonical models",
                    len(self.collected_endpoints), len(adapters), len(seen_canonical_ids))
+
+    def _models_api_source_url(self, provider_id: str) -> str | None:
+        provider = next(
+            (item for item in self.settings.providers.providers if item.provider_id == provider_id),
+            None,
+        )
+        if provider is None:
+            return None
+        if provider.sources.models_api:
+            return provider.sources.models_api
+        if provider.api_base:
+            return f"{provider.api_base.rstrip('/')}/models"
+        return None
 
     def _init_adapters(self, provider_ids: set[str] | None = None) -> list:
         """Initialize provider adapters based on config, passing API keys if available."""

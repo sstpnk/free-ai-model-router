@@ -50,6 +50,8 @@ def test_models_report_generated() -> None:
     report = generate_models_report(output, [endpoint])
     assert "TestProvider" in report
     assert "test-v1:free" in report
+    assert "Listed" in report
+    assert "assumed" in report
     assert "Free AI Model Router" in report
     assert "✓" in report  # tool_calling indicator
 

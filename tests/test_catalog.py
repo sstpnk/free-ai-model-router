@@ -28,6 +28,8 @@ def test_generate_runtime_catalog_includes_verification_metadata() -> None:
         free_status=FreeStatus.VERIFIED_FREE,
     )
     endpoint.runtime_check.retry_after_seconds = 7
+    endpoint.models_api_checked_at = checked_at
+    endpoint.models_api_source_url = "https://api.test/v1/models"
 
     output = RouterOutput(
         generated_at=checked_at,
@@ -66,6 +68,9 @@ def test_generate_runtime_catalog_includes_verification_metadata() -> None:
     assert catalog["fallback_chain"] == ["test/model"]
     assert catalog["endpoints"][0]["access_verdict"] == "exists_but_throttled"
     assert catalog["endpoints"][0]["runtime_status"] == "rate_limited"
+    assert catalog["endpoints"][0]["models_api"]["listed"] is True
+    assert catalog["endpoints"][0]["models_api"]["checked_at"] == "2026-01-02T03:04:05+00:00"
+    assert catalog["endpoints"][0]["models_api"]["source_url"] == "https://api.test/v1/models"
     assert catalog["endpoints"][0]["retry_after_seconds"] == 7
     assert catalog["endpoints"][0]["api_base"] == "https://api.test/v1"
     assert catalog["endpoints"][0]["reliability"]["attempts"] == 3

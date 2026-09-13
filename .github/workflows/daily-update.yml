@@ -74,7 +74,7 @@ jobs:
         run: |
           git config user.name "free-ai-model-router[bot]"
           git config user.email "bot@free-ai-model-router.example.com"
-          git add -A output/ reports/
+          git add -A output/
           if git diff --cached --quiet; then
             echo "No new changes generated — skipping commit"
           else
@@ -88,7 +88,7 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "- **Date:** $(date +'%Y-%m-%d')" >> $GITHUB_STEP_SUMMARY
           echo "- **Config:** \`output/litellm-config-sample.yaml\`" >> $GITHUB_STEP_SUMMARY
-          echo "- **Reports:** \`reports/\`" >> $GITHUB_STEP_SUMMARY
+          echo "- **Reports:** generated locally in \`reports/\` and ignored by git" >> $GITHUB_STEP_SUMMARY
           if [ -f reports/models.md ]; then
             echo "- Models in route: \`$(grep -c '| ✓ |' reports/models.md || echo 0)\`" >> $GITHUB_STEP_SUMMARY
           fi

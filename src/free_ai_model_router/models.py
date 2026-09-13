@@ -170,6 +170,8 @@ class VerificationHistoryRecord(BaseModel):
     latency_ms: Optional[int] = None
     retry_after_seconds: Optional[int] = None
     error_message: Optional[str] = None
+    models_api_checked_at: Optional[datetime] = None
+    models_api_source_url: Optional[str] = None
 
 
 class VerificationStats(BaseModel):
@@ -204,6 +206,8 @@ class ProviderEndpoint(BaseModel):
     context_tokens: Optional[int] = None
     max_output_tokens: Optional[int] = None
     listed_in_models_api: bool = True
+    models_api_checked_at: Optional[datetime] = None
+    models_api_source_url: Optional[str] = None
     runtime_check: RuntimeCheck = Field(default_factory=RuntimeCheck)
     discovered_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
     source_url: Optional[str] = None

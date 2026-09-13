@@ -101,6 +101,8 @@ def append_verification_history(
                 canonical_model_id=endpoint.canonical_model_id,
                 provider_model_id=endpoint.provider_model_id,
                 listed_in_models_api=endpoint.listed_in_models_api,
+                models_api_checked_at=endpoint.models_api_checked_at,
+                models_api_source_url=endpoint.models_api_source_url,
                 status=check.status,
                 access_verdict=check.access_verdict,
                 http_status=check.http_status,

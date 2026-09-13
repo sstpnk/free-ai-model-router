@@ -32,6 +32,19 @@ def generate_runtime_catalog(
                 "free_status": routed.free_status.value,
                 "runtime_status": routed.runtime_status.value,
                 "access_verdict": routed.access_verdict.value,
+                "models_api": (
+                    {
+                        "listed": endpoint.listed_in_models_api,
+                        "checked_at": (
+                            endpoint.models_api_checked_at.isoformat()
+                            if endpoint.models_api_checked_at
+                            else None
+                        ),
+                        "source_url": endpoint.models_api_source_url,
+                    }
+                    if endpoint
+                    else None
+                ),
                 "latency_ms": routed.latency_ms,
                 "last_checked_at": routed.last_checked_at.isoformat() if routed.last_checked_at else None,
                 "retry_after_seconds": (

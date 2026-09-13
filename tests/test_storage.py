@@ -1,6 +1,7 @@
 """Tests for persisted pipeline artifacts."""
 
 import json
+from datetime import datetime
 
 from free_ai_model_router.models import AccessVerdict, ProviderEndpoint, VerificationStatus
 from free_ai_model_router.storage.state import (
@@ -23,6 +24,8 @@ def test_append_verification_history_writes_checked_records(tmp_path) -> None:
     endpoint.runtime_check.http_status = 429
     endpoint.runtime_check.retry_after_seconds = 30
     endpoint.runtime_check.checked_at = endpoint.discovered_at
+    endpoint.models_api_checked_at = endpoint.discovered_at
+    endpoint.models_api_source_url = "https://api.test/v1/models"
 
     unchecked = ProviderEndpoint(
         endpoint_id="test/unchecked",
@@ -47,6 +50,8 @@ def test_append_verification_history_writes_checked_records(tmp_path) -> None:
     assert record["status"] == "rate_limited"
     assert record["access_verdict"] == "exists_but_throttled"
     assert record["retry_after_seconds"] == 30
+    assert datetime.fromisoformat(record["models_api_checked_at"]) == endpoint.discovered_at
+    assert record["models_api_source_url"] == "https://api.test/v1/models"
 
 
 def test_append_verification_history_filters_old_records(tmp_path) -> None:
