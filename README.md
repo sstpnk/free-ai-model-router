@@ -140,11 +140,20 @@ python -m free_ai_model_router rank
 # 4. Verify API access (needs API keys)
 python -m free_ai_model_router verify
 
+# Verify one provider without spending quota elsewhere
+python -m free_ai_model_router verify --provider groq
+
+# Increase or lower the probe budget for a targeted run
+python -m free_ai_model_router verify --provider groq --max-probes 1
+
 # 5. Generate LiteLLM config
 python -m free_ai_model_router generate
 
 # 6. Generate reports
 python -m free_ai_model_router report
+
+# Show local provider/key/history status without network calls
+python -m free_ai_model_router providers
 ```
 
 ### Offline / Cache-Only Mode
@@ -163,6 +172,7 @@ python -m free_ai_model_router run-all --offline
 | `collect` | Fetch model lists from all configured provider APIs |
 | `discover` | Find new model candidates on Hugging Face Hub |
 | `verify` | Run runtime API checks against verified endpoints |
+| `providers` | Show local provider/key/history status without network calls |
 | `rank` | Fetch benchmarks and compute final scores |
 | `generate` | Produce `output/litellm-config-sample.yaml` |
 | `report` | Generate all reports in `reports/` |
@@ -177,6 +187,9 @@ python -m free_ai_model_router run-all --offline
 | `--offline` | Skip all network requests |
 | `--no-runtime-checks` | Skip API verification probes |
 | `--use-cache` | Use cached data when fresh (default: enabled) |
+
+`verify` also accepts `--provider <provider_id>` for quota-safe targeted checks.
+Targeted provider checks default to 2 runtime probes; override with `--max-probes`.
 
 ---
 

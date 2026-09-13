@@ -6,12 +6,17 @@ import asyncio
 import logging
 import sys
 from pathlib import Path
-from typing import Optional
 
 import click
 
 from free_ai_model_router.config_loader import Settings
+from free_ai_model_router.models import ProviderConfig, VerificationStatus
 from free_ai_model_router.pipeline.orchestrator import PipelineOrchestrator
+from free_ai_model_router.storage.state import (
+    load_json,
+    load_latest_verification_records,
+    load_normalized_data,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -38,12 +43,90 @@ def _get_base_dir() -> Path:
     return cwd
 
 
+def _print_state_and_exit(state) -> None:
+    if state.success:
+        click.echo("[OK] Pipeline completed successfully")
+        return
+    if state.partial_success:
+        click.echo("[WARN] Pipeline completed with errors:")
+        for err in state.errors:
+            click.echo(f"  - {err}")
+        return
+
+    click.echo("[FAIL] Pipeline failed:")
+    for err in state.errors:
+        click.echo(f"  - {err}")
+    sys.exit(1)
+
+
+def _get_provider_or_fail(settings: Settings, provider_id: str) -> ProviderConfig:
+    provider = next(
+        (item for item in settings.providers.providers if item.provider_id == provider_id),
+        None,
+    )
+    if provider is None:
+        known = ", ".join(p.provider_id for p in settings.providers.providers)
+        raise click.ClickException(f"Unknown provider '{provider_id}'. Known providers: {known}")
+    return provider
+
+
+def _setup_stdout() -> None:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
+
+
+def _fmt_dt(value) -> str:
+    if value is None:
+        return "-"
+    return value.strftime("%Y-%m-%d %H:%M:%S")
+
+
+def _provider_errors_from_state(errors: list[str]) -> dict[str, str]:
+    provider_errors: dict[str, str] = {}
+    for error in errors:
+        if not error.startswith("Provider ") or ": " not in error:
+            continue
+        provider_id, message = error.removeprefix("Provider ").split(": ", 1)
+        provider_errors[provider_id] = message
+    return provider_errors
+
+
+def _provider_doctor_status(
+    provider: ProviderConfig,
+    *,
+    key_present: bool,
+    statuses: list[VerificationStatus],
+    endpoint_count: int,
+    provider_error: str | None = None,
+) -> str:
+    if not provider.enabled:
+        return "отключен"
+    if provider.api_key_required and not key_present:
+        return "ключ не добавлен"
+    if not provider.api_key_required:
+        return "ключ не требуется"
+    if provider_error:
+        return "ошибка доступа/ключа"
+    if VerificationStatus.SUCCESS in statuses:
+        return "подключен и работает"
+    if VerificationStatus.AUTHENTICATION_FAILED in statuses:
+        return "ошибка доступа/ключа"
+    if any(status in {VerificationStatus.RATE_LIMITED, VerificationStatus.QUOTA_EXHAUSTED} for status in statuses):
+        return "подключен, но лимит"
+    if statuses:
+        return "проверен, без успеха"
+    if endpoint_count == 0:
+        return "модели не найдены"
+    return "не проверялось"
+
+
 @click.group()
 @click.option("--log-level", default="INFO", help="Logging level")
 @click.option("--base-dir", default=None, help="Repository base directory")
 @click.pass_context
-def cli(ctx: click.Context, log_level: str, base_dir: Optional[str]) -> None:
+def cli(ctx: click.Context, log_level: str, base_dir: str | None) -> None:
     """Free AI Model Router — daily ETL for free AI coding models."""
+    _setup_stdout()
     _setup_logging(log_level)
     base_path = Path(base_dir) if base_dir else _get_base_dir()
     settings = Settings.from_base_dir(base_path)
@@ -64,19 +147,84 @@ def collect(ctx: click.Context) -> None:
 
 @cli.command()
 @click.option("--provider", default=None, help="Specific provider to verify")
+@click.option(
+    "--max-probes",
+    type=int,
+    default=None,
+    help="Maximum runtime probes to run; defaults to 2 when --provider is set",
+)
 @click.pass_context
-def verify(ctx: click.Context, provider: Optional[str]) -> None:
+def verify(ctx: click.Context, provider: str | None, max_probes: int | None) -> None:
     """Run API verification checks for configured providers."""
     settings: Settings = ctx.obj["settings"]
     base_dir: Path = ctx.obj["base_dir"]
+    provider_ids = None
+    if provider:
+        provider_config = _get_provider_or_fail(settings, provider)
+        if not provider_config.enabled:
+            raise click.ClickException(f"Provider '{provider}' is disabled in config/providers.yaml")
+        provider_ids = {provider}
+        if max_probes is None:
+            max_probes = 2
+
     orch = PipelineOrchestrator(settings, base_dir)
-    asyncio.run(orch.run_all(no_runtime_checks=False))
+    state = asyncio.run(orch.run_all(
+        no_runtime_checks=False,
+        provider_ids=provider_ids,
+        max_verification_probes=max_probes,
+    ))
+    _print_state_and_exit(state)
+
+
+@cli.command("providers")
+@click.pass_context
+def providers_status(ctx: click.Context) -> None:
+    """Show provider key and latest verification status without network calls."""
+    settings: Settings = ctx.obj["settings"]
+    _, endpoints = load_normalized_data(settings.normalized_dir)
+    latest_records = load_latest_verification_records(settings.history_dir / "verification.jsonl")
+    pipeline_state = load_json(settings.data_dir / "pipeline-state.json") or {}
+    provider_errors = _provider_errors_from_state(pipeline_state.get("errors", []))
+
+    endpoints_by_provider: dict[str, list] = {}
+    for endpoint in endpoints:
+        endpoints_by_provider.setdefault(endpoint.provider_id, []).append(endpoint)
+
+    records_by_provider: dict[str, list] = {}
+    for record in latest_records.values():
+        records_by_provider.setdefault(record.provider_id, []).append(record)
+
+    click.echo("Provider status")
+    click.echo("provider | status | key | models | last success | last checked")
+    click.echo("--- | --- | --- | ---: | --- | ---")
+    for provider in sorted(settings.providers.providers, key=lambda item: item.discovery_priority):
+        key_present = bool(settings.get_provider_api_key(provider.provider_id))
+        records = records_by_provider.get(provider.provider_id, [])
+        statuses = [record.status for record in records]
+        endpoint_count = len(endpoints_by_provider.get(provider.provider_id, []))
+        status = _provider_doctor_status(
+            provider,
+            key_present=key_present,
+            statuses=statuses,
+            endpoint_count=endpoint_count,
+            provider_error=provider_errors.get(provider.provider_id),
+        )
+        key_state = "yes" if key_present else ("not required" if not provider.api_key_required else "missing")
+        success_dates = [
+            record.checked_at for record in records
+            if record.status == VerificationStatus.SUCCESS
+        ]
+        checked_dates = [record.checked_at for record in records]
+        click.echo(
+            f"{provider.provider_id} | {status} | {key_state} | {endpoint_count} | "
+            f"{_fmt_dt(max(success_dates, default=None))} | {_fmt_dt(max(checked_dates, default=None))}"
+        )
 
 
 @cli.command()
 @click.option("--output-dir", default=None, help="Output directory for generated config")
 @click.pass_context
-def generate(ctx: click.Context, output_dir: Optional[str]) -> None:
+def generate(ctx: click.Context, output_dir: str | None) -> None:
     """Generate LiteLLM config sample from current data."""
     settings: Settings = ctx.obj["settings"]
     base_dir: Path = ctx.obj["base_dir"]
@@ -117,18 +265,7 @@ def run_all(
         no_runtime_checks=no_runtime_checks,
         offline=offline,
     ))
-
-    if state.success:
-        click.echo("[OK] Pipeline completed successfully")
-    elif state.partial_success:
-        click.echo("[WARN] Pipeline completed with errors:")
-        for err in state.errors:
-            click.echo(f"  - {err}")
-    else:
-        click.echo("[FAIL] Pipeline failed:")
-        for err in state.errors:
-            click.echo(f"  - {err}")
-        sys.exit(1)
+    _print_state_and_exit(state)
 
 
 if __name__ == "__main__":

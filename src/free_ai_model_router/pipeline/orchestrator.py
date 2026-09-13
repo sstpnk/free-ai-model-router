@@ -73,6 +73,7 @@ class PipelineOrchestrator:
         self.changes: list[ChangeRecord] = []
         self.source_health: dict[str, SourceHealth] = {}
         self.verification_stats = {}
+        self.provider_errors: dict[str, str] = {}
 
     async def run_all(
         self,
@@ -80,9 +81,13 @@ class PipelineOrchestrator:
         use_cache: bool = True,
         no_runtime_checks: bool = False,
         offline: bool = False,
+        provider_ids: set[str] | None = None,
+        max_verification_probes: int | None = None,
     ) -> PipelineState:
         """Run the complete pipeline: collect → verify → generate → report."""
         logger.info("Starting full pipeline run")
+        if provider_ids:
+            logger.info("Provider filter active: %s", ", ".join(sorted(provider_ids)))
         self.state = PipelineState()
 
         try:
@@ -109,13 +114,13 @@ class PipelineOrchestrator:
 
             # Step 1: Collect from providers
             if not offline:
-                await self._collect_providers()
+                await self._collect_providers(provider_ids)
             else:
                 logger.info("Offline mode: skipping provider collection")
 
             # Step 2: Verify models (if keys configured and checks not disabled)
             if not no_runtime_checks and not offline:
-                await self._verify_models()
+                await self._verify_models(provider_ids, max_verification_probes)
                 evidence_count = sum(
                     1 for ep in self.collected_endpoints
                     if is_evidence_status(ep.runtime_check.status)
@@ -137,8 +142,14 @@ class PipelineOrchestrator:
                 )
                 logger.info("Appended %d verification history records", history_count)
 
-            # Step 3: Build router output
             self.verification_stats = load_verification_stats(self.settings.history_dir / "verification.jsonl")
+
+            if provider_ids:
+                self._generate_provider_status_reports()
+                self._complete_state()
+                return self.state
+
+            # Step 3: Build router output
             router_output = self._build_router()
 
             # Step 4: Generate LiteLLM config
@@ -153,9 +164,7 @@ class PipelineOrchestrator:
             # Step 6: Save state
             save_router_output(router_output, self.settings.output_dir / "latest.json")
 
-            self.state.success = True
-            self.state.completed_at = datetime.now(UTC)
-            logger.info("Pipeline run completed successfully")
+            self._complete_state()
 
         except Exception as e:
             self.state.success = False
@@ -169,10 +178,10 @@ class PipelineOrchestrator:
 
         return self.state
 
-    async def _collect_providers(self) -> None:
+    async def _collect_providers(self, provider_ids: set[str] | None = None) -> None:
         """Discover models from configured providers."""
         assert self.http is not None
-        adapters = self._init_adapters()
+        adapters = self._init_adapters(provider_ids)
         all_models: list[ProviderModel] = []
         logger.info("Collecting models from %d providers...", len(adapters))
 
@@ -210,6 +219,7 @@ class PipelineOrchestrator:
                            adapter.provider_id, len(models))
             except Exception as e:
                 logger.warning("  %s: collection failed: %s", adapter.provider_id, e)
+                self.provider_errors[adapter.provider_id] = str(e)
                 self.state.errors.append(f"Provider {adapter.provider_id}: {e}")
 
         # Source health tracking
@@ -221,7 +231,7 @@ class PipelineOrchestrator:
         logger.info("Total: %d endpoints from %d providers, %d unique canonical models",
                    len(self.collected_endpoints), len(adapters), len(seen_canonical_ids))
 
-    def _init_adapters(self) -> list:
+    def _init_adapters(self, provider_ids: set[str] | None = None) -> list:
         """Initialize provider adapters based on config, passing API keys if available."""
         assert self.http is not None
         adapters = []
@@ -236,6 +246,8 @@ class PipelineOrchestrator:
             "mistral": MistralAdapter,
         }
         for provider in self.settings.providers.providers:
+            if provider_ids and provider.provider_id not in provider_ids:
+                continue
             if not provider.enabled:
                 continue
             adapter_cls = adapter_map.get(provider.provider_id)
@@ -256,12 +268,16 @@ class PipelineOrchestrator:
 
 
 
-    async def _verify_models(self) -> None:
+    async def _verify_models(
+        self,
+        provider_ids: set[str] | None = None,
+        max_probes: int | None = None,
+    ) -> None:
         """Verify endpoints with actual API calls where keys are available."""
         assert self.http is not None
         logger.info("Verifying models with API calls...")
 
-        adapters = self._init_adapters()
+        adapters = self._init_adapters(provider_ids)
         adapter_by_id = {a.provider_id: a for a in adapters}
         latest_history = load_latest_verification_records(self.settings.history_dir / "verification.jsonl")
         now = datetime.now(UTC)
@@ -271,6 +287,8 @@ class PipelineOrchestrator:
         to_verify: list[tuple[ProviderEndpoint, Any, str]] = []
         for endpoint in self.collected_endpoints:
             provider_id = endpoint.provider_id
+            if provider_ids and provider_id not in provider_ids:
+                continue
             api_key = self.settings.get_provider_api_key(provider_id)
 
             if not api_key:
@@ -299,6 +317,9 @@ class PipelineOrchestrator:
             if not adapter:
                 continue
             to_verify.append((endpoint, adapter, api_key))
+
+        if max_probes is not None:
+            to_verify = to_verify[:max_probes]
 
         provider_semaphores = defaultdict(lambda: asyncio.Semaphore(DEFAULT_PROVIDER_VERIFY_CONCURRENCY))
         provider_cooldowns: dict[str, datetime] = {}
@@ -490,6 +511,8 @@ class PipelineOrchestrator:
         self,
         router_output: RouterOutput,
         previous_output: RouterOutput | None,
+        *,
+        write_routing_reports: bool = True,
     ) -> None:
         """Generate reports (models.md and changes.md)."""
         logger.info("Generating reports...")
@@ -505,4 +528,24 @@ class PipelineOrchestrator:
                 for provider in self.settings.providers.providers
             },
             verification_stats=self.verification_stats,
+            provider_errors=self.provider_errors,
+            write_routing_reports=write_routing_reports,
         )
+
+    def _generate_provider_status_reports(self) -> None:
+        """Generate reports that are safe for provider-scoped verification."""
+        logger.info("Generating provider status reports...")
+        self._generate_reports(
+            RouterOutput(),
+            None,
+            write_routing_reports=False,
+        )
+
+    def _complete_state(self) -> None:
+        self.state.success = not self.state.errors
+        self.state.partial_success = bool(self.state.errors)
+        self.state.completed_at = datetime.now(UTC)
+        if self.state.success:
+            logger.info("Pipeline run completed successfully")
+        else:
+            logger.warning("Pipeline run completed with %d errors", len(self.state.errors))

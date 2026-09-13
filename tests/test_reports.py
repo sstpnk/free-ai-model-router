@@ -1,6 +1,7 @@
 """Tests for report generation."""
 
 from free_ai_model_router.generation.reports import (
+    generate_and_write_reports,
     generate_changes_report,
     generate_history_summary_report,
     generate_models_report,
@@ -157,12 +158,14 @@ def test_provider_access_report_shows_key_and_working_statuses() -> None:
         providers=providers,
         endpoints=[working, badkey],
         api_key_presence={"working": True, "badkey": True},
+        provider_errors={"badkey": "HTTP 403 Forbidden"},
     )
 
     assert "подключен и работает" in report
     assert "ключ не добавлен" in report
     assert "ключ не требуется" in report
     assert "ошибка доступа/ключа" in report
+    assert "HTTP 403 Forbidden" in report
 
 
 def test_history_summary_report_includes_reliability_metrics() -> None:
@@ -190,3 +193,21 @@ def test_history_summary_report_includes_reliability_metrics() -> None:
     assert "75%" in report
     assert "| test | model | 4 |" in report
     assert "| 1 | 0 | 0 | 100 | 250 |" in report
+
+
+def test_status_reports_can_skip_routing_reports(tmp_path) -> None:
+    output = _sample_router_output()
+
+    generate_and_write_reports(
+        router_output=output,
+        endpoints=[],
+        changes=[],
+        previous_output=None,
+        reports_dir=tmp_path,
+        providers=[],
+        write_routing_reports=False,
+    )
+
+    assert not (tmp_path / "models.md").exists()
+    assert not (tmp_path / "changes.md").exists()
+    assert (tmp_path / "provider-health.md").exists()

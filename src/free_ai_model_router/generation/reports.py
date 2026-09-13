@@ -253,6 +253,7 @@ def _provider_access_status(
     provider: ProviderConfig,
     endpoints: list[ProviderEndpoint],
     api_key_present: bool,
+    provider_error: str | None = None,
 ) -> tuple[str, str]:
     """Classify provider connection/key status for humans."""
     if not provider.enabled:
@@ -261,6 +262,8 @@ def _provider_access_status(
         return "ключ не требуется", "В конфиге указано, что API ключ не требуется."
     if not api_key_present:
         return "ключ не добавлен", "API ключ пока не настроен в окружении."
+    if provider_error:
+        return "ошибка доступа/ключа", provider_error
 
     checked = [ep for ep in endpoints if ep.runtime_check.checked]
     if any(ep.runtime_check.status == VerificationStatus.SUCCESS for ep in checked):
@@ -284,8 +287,10 @@ def generate_provider_access_report(
     providers: list[ProviderConfig],
     endpoints: list[ProviderEndpoint],
     api_key_presence: dict[str, bool],
+    provider_errors: dict[str, str] | None = None,
 ) -> str:
     """Generate provider/key readiness report for all configured providers."""
+    provider_errors = provider_errors or {}
     lines = [
         "# Provider Access",
         "",
@@ -313,6 +318,7 @@ def generate_provider_access_report(
             provider=provider,
             endpoints=provider_endpoints,
             api_key_present=key_present,
+            provider_error=provider_errors.get(provider.provider_id),
         )
         if not provider.enabled:
             key_state = "отключен"
@@ -383,15 +389,18 @@ def generate_and_write_reports(
     providers: list[ProviderConfig] | None = None,
     api_key_presence: dict[str, bool] | None = None,
     verification_stats: dict[str, VerificationStats] | None = None,
+    provider_errors: dict[str, str] | None = None,
+    write_routing_reports: bool = True,
 ) -> None:
     """Write markdown report files."""
     reports_dir.mkdir(parents=True, exist_ok=True)
 
-    models_report = generate_models_report(router_output, endpoints)
-    (reports_dir / "models.md").write_text(models_report, encoding="utf-8")
+    if write_routing_reports:
+        models_report = generate_models_report(router_output, endpoints)
+        (reports_dir / "models.md").write_text(models_report, encoding="utf-8")
 
-    changes_report = generate_changes_report(router_output, previous_output, changes)
-    (reports_dir / "changes.md").write_text(changes_report, encoding="utf-8")
+        changes_report = generate_changes_report(router_output, previous_output, changes)
+        (reports_dir / "changes.md").write_text(changes_report, encoding="utf-8")
 
     provider_health_report = generate_provider_health_report(endpoints)
     (reports_dir / "provider-health.md").write_text(provider_health_report, encoding="utf-8")
@@ -404,6 +413,7 @@ def generate_and_write_reports(
             providers=providers,
             endpoints=endpoints,
             api_key_presence=api_key_presence or {},
+            provider_errors=provider_errors,
         )
         (reports_dir / "provider-access.md").write_text(provider_access_report, encoding="utf-8")
 
