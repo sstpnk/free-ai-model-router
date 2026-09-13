@@ -3,14 +3,14 @@
 from __future__ import annotations
 
 import logging
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
-from typing import Optional
 
 from free_ai_model_router.models import (
     ChangeRecord,
     ProviderEndpoint,
     RouterOutput,
+    VerificationStatus,
 )
 from free_ai_model_router.verification.status import is_routable_status
 
@@ -115,14 +115,14 @@ def generate_models_report(
 
 def generate_changes_report(
     current: RouterOutput,
-    previous: Optional[RouterOutput],
+    previous: RouterOutput | None,
     changes: list[ChangeRecord],
 ) -> str:
     """Generate changes.md report showing diff from previous run."""
     lines = [
         "# Отчёт об изменениях",
         "",
-        f"*Сгенерировано: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')}*",
+        f"*Сгенерировано: {datetime.now(UTC).strftime('%Y-%m-%d %H:%M:%S UTC')}*",
         "",
     ]
 
@@ -160,14 +160,100 @@ def generate_changes_report(
     return "\n".join(lines)
 
 
+def generate_provider_health_report(endpoints: list[ProviderEndpoint]) -> str:
+    """Generate provider-level verification status summary."""
+    lines = [
+        "# Provider Health",
+        "",
+        f"*Generated: {datetime.now(UTC).strftime('%Y-%m-%d %H:%M:%S UTC')}*",
+        "",
+    ]
+
+    by_provider: dict[str, list[ProviderEndpoint]] = {}
+    for endpoint in endpoints:
+        by_provider.setdefault(endpoint.provider_id, []).append(endpoint)
+
+    if not by_provider:
+        lines.append("_No provider data._")
+        return "\n".join(lines)
+
+    lines.append("| Provider | Total | Checked | Usable | Throttled | Quota | Not tested | Hard fail | Avg latency |")
+    lines.append("|:---|---:|---:|---:|---:|---:|---:|---:|---:|")
+    for provider_id in sorted(by_provider):
+        provider_endpoints = by_provider[provider_id]
+        checked = [ep for ep in provider_endpoints if ep.runtime_check.checked]
+        usable = [ep for ep in checked if ep.runtime_check.status == VerificationStatus.SUCCESS]
+        throttled = [ep for ep in checked if ep.runtime_check.status == VerificationStatus.RATE_LIMITED]
+        quota = [ep for ep in checked if ep.runtime_check.status == VerificationStatus.QUOTA_EXHAUSTED]
+        not_tested = [
+            ep for ep in provider_endpoints
+            if not ep.runtime_check.checked or ep.runtime_check.status == VerificationStatus.NOT_TESTED
+        ]
+        hard_fail = [
+            ep for ep in checked
+            if ep.runtime_check.status not in {
+                VerificationStatus.SUCCESS,
+                VerificationStatus.RATE_LIMITED,
+                VerificationStatus.QUOTA_EXHAUSTED,
+                VerificationStatus.NOT_TESTED,
+            }
+        ]
+        latencies = [ep.runtime_check.latency_ms for ep in checked if ep.runtime_check.latency_ms is not None]
+        avg_latency = f"{round(sum(latencies) / len(latencies))} ms" if latencies else "—"
+        lines.append(
+            f"| {provider_id} | {len(provider_endpoints)} | {len(checked)} | {len(usable)} | "
+            f"{len(throttled)} | {len(quota)} | {len(not_tested)} | {len(hard_fail)} | {avg_latency} |"
+        )
+
+    return "\n".join(lines)
+
+
+def generate_throttled_report(endpoints: list[ProviderEndpoint]) -> str:
+    """Generate report for endpoints blocked by rate limits or quota."""
+    lines = [
+        "# Throttled Endpoints",
+        "",
+        f"*Generated: {datetime.now(UTC).strftime('%Y-%m-%d %H:%M:%S UTC')}*",
+        "",
+    ]
+    throttled_statuses = {
+        VerificationStatus.RATE_LIMITED,
+        VerificationStatus.QUOTA_EXHAUSTED,
+    }
+    throttled = [
+        ep for ep in endpoints
+        if ep.runtime_check.checked and ep.runtime_check.status in throttled_statuses
+    ]
+
+    if not throttled:
+        lines.append("_No throttled endpoints._")
+        return "\n".join(lines)
+
+    lines.append("| Provider | Model | Verdict | Probe | HTTP | Retry | Last checked |")
+    lines.append("|:---|:---|:---|:---|---:|:---|:---|")
+    for ep in sorted(throttled, key=lambda item: (item.provider_id, item.provider_model_id)):
+        checked_at = (
+            ep.runtime_check.checked_at.strftime("%Y-%m-%d %H:%M:%S UTC")
+            if ep.runtime_check.checked_at
+            else "—"
+        )
+        lines.append(
+            f"| {ep.provider_id} | {ep.provider_model_id} | {ep.runtime_check.access_verdict.value} | "
+            f"{ep.runtime_check.status.value} | {_fmt(ep.runtime_check.http_status)} | "
+            f"{_fmt_retry_after(ep)} | {checked_at} |"
+        )
+
+    return "\n".join(lines)
+
+
 def generate_and_write_reports(
     router_output: RouterOutput,
     endpoints: list[ProviderEndpoint],
     changes: list[ChangeRecord],
-    previous_output: Optional[RouterOutput],
+    previous_output: RouterOutput | None,
     reports_dir: Path,
 ) -> None:
-    """Write models.md and changes.md report files."""
+    """Write markdown report files."""
     reports_dir.mkdir(parents=True, exist_ok=True)
 
     models_report = generate_models_report(router_output, endpoints)
@@ -175,5 +261,11 @@ def generate_and_write_reports(
 
     changes_report = generate_changes_report(router_output, previous_output, changes)
     (reports_dir / "changes.md").write_text(changes_report, encoding="utf-8")
+
+    provider_health_report = generate_provider_health_report(endpoints)
+    (reports_dir / "provider-health.md").write_text(provider_health_report, encoding="utf-8")
+
+    throttled_report = generate_throttled_report(endpoints)
+    (reports_dir / "throttled.md").write_text(throttled_report, encoding="utf-8")
 
     logger.info("Reports written to %s", reports_dir)

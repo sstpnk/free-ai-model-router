@@ -1,14 +1,18 @@
 """Tests for report generation."""
 
+from free_ai_model_router.generation.reports import (
+    generate_changes_report,
+    generate_models_report,
+    generate_provider_health_report,
+    generate_throttled_report,
+)
 from free_ai_model_router.models import (
+    AccessVerdict,
     FreeStatus,
     ProviderEndpoint,
-    RouterOutput,
     RoutedEndpoint,
-)
-from free_ai_model_router.generation.reports import (
-    generate_models_report,
-    generate_changes_report,
+    RouterOutput,
+    VerificationStatus,
 )
 
 
@@ -48,3 +52,52 @@ def test_changes_report_no_changes() -> None:
     output = _sample_router_output()
     report = generate_changes_report(output, output, [])
     assert "Изменений" in report
+
+
+def test_provider_health_report_counts_statuses() -> None:
+    usable = ProviderEndpoint(
+        endpoint_id="test/usable",
+        provider_id="test",
+        canonical_model_id="test/usable",
+        provider_model_id="usable",
+    )
+    usable.runtime_check.checked = True
+    usable.runtime_check.status = VerificationStatus.SUCCESS
+    usable.runtime_check.access_verdict = AccessVerdict.USABLE_NOW
+    usable.runtime_check.latency_ms = 100
+
+    throttled = ProviderEndpoint(
+        endpoint_id="test/throttled",
+        provider_id="test",
+        canonical_model_id="test/throttled",
+        provider_model_id="throttled",
+    )
+    throttled.runtime_check.checked = True
+    throttled.runtime_check.status = VerificationStatus.RATE_LIMITED
+    throttled.runtime_check.access_verdict = AccessVerdict.EXISTS_BUT_THROTTLED
+    throttled.runtime_check.latency_ms = 300
+
+    report = generate_provider_health_report([usable, throttled])
+
+    assert "| test | 2 | 2 | 1 | 1 | 0 | 0 | 0 | 200 ms |" in report
+
+
+def test_throttled_report_lists_rate_limited_and_quota() -> None:
+    endpoint = ProviderEndpoint(
+        endpoint_id="test/throttled",
+        provider_id="test",
+        canonical_model_id="test/throttled",
+        provider_model_id="throttled",
+    )
+    endpoint.runtime_check.checked = True
+    endpoint.runtime_check.status = VerificationStatus.RATE_LIMITED
+    endpoint.runtime_check.access_verdict = AccessVerdict.EXISTS_BUT_THROTTLED
+    endpoint.runtime_check.http_status = 429
+    endpoint.runtime_check.retry_after_seconds = 9
+    endpoint.runtime_check.checked_at = endpoint.discovered_at
+
+    report = generate_throttled_report([endpoint])
+
+    assert "throttled" in report
+    assert "exists_but_throttled" in report
+    assert "9s" in report

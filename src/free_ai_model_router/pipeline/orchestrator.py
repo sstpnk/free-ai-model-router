@@ -446,6 +446,22 @@ class PipelineOrchestrator:
                 description=f"Model removed from route: {eid}",
             ))
 
+        current_by_id = {r.endpoint_id: r for r in current.endpoints}
+        previous_by_id = {r.endpoint_id: r for r in previous.endpoints}
+        for eid in sorted(current_ids & previous_ids):
+            current_endpoint = current_by_id[eid]
+            previous_endpoint = previous_by_id[eid]
+            current_state = f"{current_endpoint.runtime_status.value}/{current_endpoint.access_verdict.value}"
+            previous_state = f"{previous_endpoint.runtime_status.value}/{previous_endpoint.access_verdict.value}"
+            if current_state != previous_state:
+                self.changes.append(ChangeRecord(
+                    change_type="verification_status_changed",
+                    entity_id=eid,
+                    old_value=previous_state,
+                    new_value=current_state,
+                    description=f"Verification changed: {previous_state} -> {current_state}",
+                ))
+
     def _generate_config(self, router_output: RouterOutput) -> None:
         """Generate LiteLLM config YAML."""
         logger.info("Generating LiteLLM config...")
