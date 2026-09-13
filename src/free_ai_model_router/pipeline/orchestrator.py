@@ -40,6 +40,7 @@ from free_ai_model_router.storage.state import (
     append_verification_history,
     load_latest_verification_records,
     load_previous_output,
+    load_verification_stats,
     save_pipeline_state,
     save_router_output,
 )
@@ -71,6 +72,7 @@ class PipelineOrchestrator:
         self.collected_endpoints: list[ProviderEndpoint] = []
         self.changes: list[ChangeRecord] = []
         self.source_health: dict[str, SourceHealth] = {}
+        self.verification_stats = {}
 
     async def run_all(
         self,
@@ -136,6 +138,7 @@ class PipelineOrchestrator:
                 logger.info("Appended %d verification history records", history_count)
 
             # Step 3: Build router output
+            self.verification_stats = load_verification_stats(self.settings.history_dir / "verification.jsonl")
             router_output = self._build_router()
 
             # Step 4: Generate LiteLLM config
@@ -480,6 +483,7 @@ class PipelineOrchestrator:
             router_output,
             self.collected_endpoints,
             self.settings.output_dir / "free-router-catalog.json",
+            self.verification_stats,
         )
 
     def _generate_reports(
@@ -500,4 +504,5 @@ class PipelineOrchestrator:
                 provider.provider_id: bool(self.settings.get_provider_api_key(provider.provider_id))
                 for provider in self.settings.providers.providers
             },
+            verification_stats=self.verification_stats,
         )

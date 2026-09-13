@@ -9,7 +9,6 @@ from typing import Any, Optional
 
 from pydantic import BaseModel, Field
 
-
 # --- Enums ---
 
 
@@ -171,6 +170,22 @@ class VerificationHistoryRecord(BaseModel):
     latency_ms: Optional[int] = None
     retry_after_seconds: Optional[int] = None
     error_message: Optional[str] = None
+
+
+class VerificationStats(BaseModel):
+    """Aggregated verification history for one endpoint."""
+
+    endpoint_id: str
+    attempts: int = 0
+    success_count: int = 0
+    rate_limited_count: int = 0
+    quota_exhausted_count: int = 0
+    hard_failure_count: int = 0
+    success_rate: float = 0.0
+    last_checked_at: Optional[datetime] = None
+    last_success_at: Optional[datetime] = None
+    p50_latency_ms: Optional[int] = None
+    p95_latency_ms: Optional[int] = None
 
 
 class ProviderEndpoint(BaseModel):

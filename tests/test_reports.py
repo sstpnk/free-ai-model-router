@@ -2,6 +2,7 @@
 
 from free_ai_model_router.generation.reports import (
     generate_changes_report,
+    generate_history_summary_report,
     generate_models_report,
     generate_provider_access_report,
     generate_provider_health_report,
@@ -15,6 +16,7 @@ from free_ai_model_router.models import (
     ProviderEndpoint,
     RoutedEndpoint,
     RouterOutput,
+    VerificationStats,
     VerificationStatus,
 )
 
@@ -161,3 +163,30 @@ def test_provider_access_report_shows_key_and_working_statuses() -> None:
     assert "ключ не добавлен" in report
     assert "ключ не требуется" in report
     assert "ошибка доступа/ключа" in report
+
+
+def test_history_summary_report_includes_reliability_metrics() -> None:
+    endpoint = ProviderEndpoint(
+        endpoint_id="test/model",
+        provider_id="test",
+        canonical_model_id="test/model",
+        provider_model_id="model",
+    )
+    stats = VerificationStats(
+        endpoint_id="test/model",
+        attempts=4,
+        success_count=3,
+        success_rate=0.75,
+        rate_limited_count=1,
+        p50_latency_ms=100,
+        p95_latency_ms=250,
+    )
+
+    report = generate_history_summary_report(
+        endpoints=[endpoint],
+        verification_stats={"test/model": stats},
+    )
+
+    assert "75%" in report
+    assert "| test | model | 4 |" in report
+    assert "| 1 | 0 | 0 | 100 | 250 |" in report

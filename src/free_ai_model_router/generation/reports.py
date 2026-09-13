@@ -11,6 +11,7 @@ from free_ai_model_router.models import (
     ProviderConfig,
     ProviderEndpoint,
     RouterOutput,
+    VerificationStats,
     VerificationStatus,
 )
 from free_ai_model_router.verification.status import is_routable_status
@@ -330,6 +331,49 @@ def generate_provider_access_report(
     return "\n".join(lines)
 
 
+def _fmt_datetime(value: datetime | None) -> str:
+    if value is None:
+        return "—"
+    return value.strftime("%Y-%m-%d %H:%M:%S UTC")
+
+
+def generate_history_summary_report(
+    *,
+    endpoints: list[ProviderEndpoint],
+    verification_stats: dict[str, VerificationStats],
+) -> str:
+    """Generate endpoint reliability summary from verification history."""
+    lines = [
+        "# Verification History Summary",
+        "",
+        f"*Generated: {datetime.now(UTC).strftime('%Y-%m-%d %H:%M:%S UTC')}*",
+        "",
+    ]
+    if not verification_stats:
+        lines.append("_No verification history yet._")
+        return "\n".join(lines)
+
+    endpoint_lookup = {endpoint.endpoint_id: endpoint for endpoint in endpoints}
+    lines.append(
+        "| Provider | Model | Attempts | Success rate | Last success | Last checked | "
+        "Rate limits | Quota | Hard failures | p50 | p95 |"
+    )
+    lines.append("|:---|:---|---:|---:|:---|:---|---:|---:|---:|---:|---:|")
+    for endpoint_id in sorted(verification_stats):
+        stats = verification_stats[endpoint_id]
+        endpoint = endpoint_lookup.get(endpoint_id)
+        provider_id = endpoint.provider_id if endpoint else endpoint_id.split("/", 1)[0]
+        model = endpoint.provider_model_id if endpoint else endpoint_id
+        lines.append(
+            f"| {provider_id} | {model} | {stats.attempts} | {stats.success_rate:.0%} | "
+            f"{_fmt_datetime(stats.last_success_at)} | {_fmt_datetime(stats.last_checked_at)} | "
+            f"{stats.rate_limited_count} | {stats.quota_exhausted_count} | {stats.hard_failure_count} | "
+            f"{_fmt(stats.p50_latency_ms)} | {_fmt(stats.p95_latency_ms)} |"
+        )
+
+    return "\n".join(lines)
+
+
 def generate_and_write_reports(
     router_output: RouterOutput,
     endpoints: list[ProviderEndpoint],
@@ -338,6 +382,7 @@ def generate_and_write_reports(
     reports_dir: Path,
     providers: list[ProviderConfig] | None = None,
     api_key_presence: dict[str, bool] | None = None,
+    verification_stats: dict[str, VerificationStats] | None = None,
 ) -> None:
     """Write markdown report files."""
     reports_dir.mkdir(parents=True, exist_ok=True)
@@ -361,5 +406,12 @@ def generate_and_write_reports(
             api_key_presence=api_key_presence or {},
         )
         (reports_dir / "provider-access.md").write_text(provider_access_report, encoding="utf-8")
+
+    if verification_stats is not None:
+        history_summary = generate_history_summary_report(
+            endpoints=endpoints,
+            verification_stats=verification_stats,
+        )
+        (reports_dir / "history-summary.md").write_text(history_summary, encoding="utf-8")
 
     logger.info("Reports written to %s", reports_dir)

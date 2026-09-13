@@ -14,6 +14,8 @@ from free_ai_model_router.models import (
     ProviderEndpoint,
     RouterOutput,
     VerificationHistoryRecord,
+    VerificationStats,
+    VerificationStatus,
 )
 
 
@@ -135,6 +137,62 @@ def load_latest_verification_records(path: Path) -> dict[str, VerificationHistor
         if previous is None or record.checked_at > previous.checked_at:
             latest[record.endpoint_id] = record
     return latest
+
+
+def _percentile(values: list[int], percentile: float) -> int | None:
+    """Return nearest-rank percentile for a non-empty integer list."""
+    if not values:
+        return None
+    sorted_values = sorted(values)
+    index = round((len(sorted_values) - 1) * percentile)
+    return sorted_values[index]
+
+
+def load_verification_stats(path: Path) -> dict[str, VerificationStats]:
+    """Aggregate verification history records by endpoint."""
+    if not path.exists():
+        return {}
+
+    records_by_endpoint: dict[str, list[VerificationHistoryRecord]] = {}
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        try:
+            record = VerificationHistoryRecord(**json.loads(line))
+        except (json.JSONDecodeError, ValueError):
+            continue
+        records_by_endpoint.setdefault(record.endpoint_id, []).append(record)
+
+    stats: dict[str, VerificationStats] = {}
+    for endpoint_id, records in records_by_endpoint.items():
+        attempts = len(records)
+        success_records = [record for record in records if record.status == VerificationStatus.SUCCESS]
+        rate_limited = [record for record in records if record.status == VerificationStatus.RATE_LIMITED]
+        quota_exhausted = [record for record in records if record.status == VerificationStatus.QUOTA_EXHAUSTED]
+        hard_failures = [
+            record for record in records
+            if record.status not in {
+                VerificationStatus.SUCCESS,
+                VerificationStatus.RATE_LIMITED,
+                VerificationStatus.QUOTA_EXHAUSTED,
+                VerificationStatus.NOT_TESTED,
+            }
+        ]
+        latencies = [record.latency_ms for record in records if record.latency_ms is not None]
+        stats[endpoint_id] = VerificationStats(
+            endpoint_id=endpoint_id,
+            attempts=attempts,
+            success_count=len(success_records),
+            rate_limited_count=len(rate_limited),
+            quota_exhausted_count=len(quota_exhausted),
+            hard_failure_count=len(hard_failures),
+            success_rate=round(len(success_records) / attempts, 4) if attempts else 0.0,
+            last_checked_at=max((record.checked_at for record in records), default=None),
+            last_success_at=max((record.checked_at for record in success_records), default=None),
+            p50_latency_ms=_percentile(latencies, 0.50),
+            p95_latency_ms=_percentile(latencies, 0.95),
+        )
+    return stats
 
 
 def load_previous_output(path: Path) -> Optional[RouterOutput]:

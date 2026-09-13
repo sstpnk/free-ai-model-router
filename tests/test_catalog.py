@@ -10,6 +10,7 @@ from free_ai_model_router.models import (
     ProviderEndpoint,
     RoutedEndpoint,
     RouterOutput,
+    VerificationStats,
     VerificationStatus,
 )
 
@@ -49,7 +50,16 @@ def test_generate_runtime_catalog_includes_verification_metadata() -> None:
         fallback_chain=["test/model"],
     )
 
-    catalog = generate_runtime_catalog(output, {"test/model": endpoint})
+    stats = VerificationStats(
+        endpoint_id="test/model",
+        attempts=3,
+        success_count=2,
+        success_rate=0.6667,
+        p50_latency_ms=123,
+        p95_latency_ms=456,
+    )
+
+    catalog = generate_runtime_catalog(output, {"test/model": endpoint}, {"test/model": stats})
 
     assert catalog["schema_version"] == 1
     assert catalog["endpoint_count"] == 1
@@ -58,3 +68,5 @@ def test_generate_runtime_catalog_includes_verification_metadata() -> None:
     assert catalog["endpoints"][0]["runtime_status"] == "rate_limited"
     assert catalog["endpoints"][0]["retry_after_seconds"] == 7
     assert catalog["endpoints"][0]["api_base"] == "https://api.test/v1"
+    assert catalog["endpoints"][0]["reliability"]["attempts"] == 3
+    assert catalog["endpoints"][0]["reliability"]["p95_latency_ms"] == 456
