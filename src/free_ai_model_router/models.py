@@ -155,6 +155,24 @@ class RuntimeCheck(BaseModel):
     consecutive_failures: int = 0
 
 
+class VerificationHistoryRecord(BaseModel):
+    """Append-only evidence record for one runtime verification probe."""
+
+    run_id: str
+    checked_at: datetime
+    endpoint_id: str
+    provider_id: str
+    canonical_model_id: str
+    provider_model_id: str
+    listed_in_models_api: bool = True
+    status: VerificationStatus
+    access_verdict: AccessVerdict
+    http_status: Optional[int] = None
+    latency_ms: Optional[int] = None
+    retry_after_seconds: Optional[int] = None
+    error_message: Optional[str] = None
+
+
 class ProviderEndpoint(BaseModel):
     """A specific model endpoint at a provider."""
 

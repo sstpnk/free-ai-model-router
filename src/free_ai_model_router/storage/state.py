@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import json
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Optional
 
@@ -13,7 +12,7 @@ from free_ai_model_router.models import (
     PipelineState,
     ProviderEndpoint,
     RouterOutput,
-    SourceHealth,
+    VerificationHistoryRecord,
 )
 
 
@@ -72,6 +71,47 @@ def save_changes(changes: list[ChangeRecord], path: Path) -> None:
     """Persist detected changes."""
     path.parent.mkdir(parents=True, exist_ok=True)
     save_json([c.model_dump() for c in changes], path)
+
+
+def append_verification_history(
+    *,
+    endpoints: list[ProviderEndpoint],
+    run_id: str,
+    path: Path,
+) -> int:
+    """Append checked endpoint verification evidence as JSONL records."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    records: list[VerificationHistoryRecord] = []
+    for endpoint in endpoints:
+        check = endpoint.runtime_check
+        if not check.checked or check.checked_at is None:
+            continue
+        records.append(
+            VerificationHistoryRecord(
+                run_id=run_id,
+                checked_at=check.checked_at,
+                endpoint_id=endpoint.endpoint_id,
+                provider_id=endpoint.provider_id,
+                canonical_model_id=endpoint.canonical_model_id,
+                provider_model_id=endpoint.provider_model_id,
+                listed_in_models_api=endpoint.listed_in_models_api,
+                status=check.status,
+                access_verdict=check.access_verdict,
+                http_status=check.http_status,
+                latency_ms=check.latency_ms,
+                retry_after_seconds=check.retry_after_seconds,
+                error_message=check.error_message,
+            )
+        )
+
+    if not records:
+        return 0
+
+    with path.open("a", encoding="utf-8", newline="\n") as f:
+        for record in records:
+            f.write(record.model_dump_json())
+            f.write("\n")
+    return len(records)
 
 
 def load_previous_output(path: Path) -> Optional[RouterOutput]:

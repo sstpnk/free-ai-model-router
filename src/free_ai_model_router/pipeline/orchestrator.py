@@ -33,6 +33,7 @@ from free_ai_model_router.providers.opencode_zen import OpenCodeZenAdapter
 from free_ai_model_router.providers.openrouter import OpenRouterAdapter
 from free_ai_model_router.providers.zai import ZAIAdapter
 from free_ai_model_router.storage.state import (
+    append_verification_history,
     load_previous_output,
     save_pipeline_state,
     save_router_output,
@@ -118,6 +119,12 @@ class PipelineOrchestrator:
                     evidence_count,
                     hard_fail_count,
                 )
+                history_count = append_verification_history(
+                    endpoints=self.collected_endpoints,
+                    run_id=self.state.run_id,
+                    path=self.settings.history_dir / "verification.jsonl",
+                )
+                logger.info("Appended %d verification history records", history_count)
 
             # Step 3: Build router output
             router_output = self._build_router()
@@ -287,7 +294,9 @@ class PipelineOrchestrator:
                                    endpoint.provider_id, endpoint.provider_model_id, e)
                     endpoint.runtime_check.checked = True
                     endpoint.runtime_check.status = VerificationStatus.PROVIDER_UNAVAILABLE
-                    endpoint.runtime_check.access_verdict = access_verdict_for_status(VerificationStatus.PROVIDER_UNAVAILABLE)
+                    endpoint.runtime_check.access_verdict = access_verdict_for_status(
+                        VerificationStatus.PROVIDER_UNAVAILABLE
+                    )
                     endpoint.runtime_check.error_message = str(e)
 
         await asyncio.gather(*(_verify_one(ep, ad, ak) for ep, ad, ak in to_verify))
