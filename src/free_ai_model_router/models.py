@@ -219,6 +219,7 @@ class ProviderConfig(BaseModel):
     adapter: Optional[str] = None
     discovery_priority: int = 100
     enabled: bool = True
+    api_key_required: bool = True
     sources: ProviderSourceUrls = Field(default_factory=ProviderSourceUrls)
 
 

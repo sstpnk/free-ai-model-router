@@ -3,12 +3,15 @@
 from free_ai_model_router.generation.reports import (
     generate_changes_report,
     generate_models_report,
+    generate_provider_access_report,
     generate_provider_health_report,
     generate_throttled_report,
 )
 from free_ai_model_router.models import (
     AccessVerdict,
+    ApiStyle,
     FreeStatus,
+    ProviderConfig,
     ProviderEndpoint,
     RoutedEndpoint,
     RouterOutput,
@@ -101,3 +104,60 @@ def test_throttled_report_lists_rate_limited_and_quota() -> None:
     assert "throttled" in report
     assert "exists_but_throttled" in report
     assert "9s" in report
+
+
+def test_provider_access_report_shows_key_and_working_statuses() -> None:
+    providers = [
+        ProviderConfig(
+            provider_id="working",
+            name="Working Provider",
+            api_style=ApiStyle.OPENAI_COMPATIBLE,
+            discovery_priority=1,
+        ),
+        ProviderConfig(
+            provider_id="missing",
+            name="Missing Key Provider",
+            api_style=ApiStyle.OPENAI_COMPATIBLE,
+            discovery_priority=2,
+        ),
+        ProviderConfig(
+            provider_id="keyless",
+            name="Keyless Provider",
+            api_style=ApiStyle.OPENAI_COMPATIBLE,
+            api_key_required=False,
+            discovery_priority=3,
+        ),
+        ProviderConfig(
+            provider_id="badkey",
+            name="Bad Key Provider",
+            api_style=ApiStyle.OPENAI_COMPATIBLE,
+            discovery_priority=4,
+        ),
+    ]
+    working = ProviderEndpoint(
+        endpoint_id="working/model",
+        provider_id="working",
+        canonical_model_id="working/model",
+        provider_model_id="model",
+    )
+    working.runtime_check.checked = True
+    working.runtime_check.status = VerificationStatus.SUCCESS
+    badkey = ProviderEndpoint(
+        endpoint_id="badkey/model",
+        provider_id="badkey",
+        canonical_model_id="badkey/model",
+        provider_model_id="model",
+    )
+    badkey.runtime_check.checked = True
+    badkey.runtime_check.status = VerificationStatus.AUTHENTICATION_FAILED
+
+    report = generate_provider_access_report(
+        providers=providers,
+        endpoints=[working, badkey],
+        api_key_presence={"working": True, "badkey": True},
+    )
+
+    assert "подключен и работает" in report
+    assert "ключ не добавлен" in report
+    assert "ключ не требуется" in report
+    assert "ошибка доступа/ключа" in report

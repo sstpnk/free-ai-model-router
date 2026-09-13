@@ -8,6 +8,7 @@ from pathlib import Path
 
 from free_ai_model_router.models import (
     ChangeRecord,
+    ProviderConfig,
     ProviderEndpoint,
     RouterOutput,
     VerificationStatus,
@@ -246,12 +247,97 @@ def generate_throttled_report(endpoints: list[ProviderEndpoint]) -> str:
     return "\n".join(lines)
 
 
+def _provider_access_status(
+    *,
+    provider: ProviderConfig,
+    endpoints: list[ProviderEndpoint],
+    api_key_present: bool,
+) -> tuple[str, str]:
+    """Classify provider connection/key status for humans."""
+    if not provider.enabled:
+        return "отключен", "Провайдер отключен в config/providers.yaml."
+    if not provider.api_key_required:
+        return "ключ не требуется", "В конфиге указано, что API ключ не требуется."
+    if not api_key_present:
+        return "ключ не добавлен", "API ключ пока не настроен в окружении."
+
+    checked = [ep for ep in endpoints if ep.runtime_check.checked]
+    if any(ep.runtime_check.status == VerificationStatus.SUCCESS for ep in checked):
+        return "подключен и работает", "Хотя бы один endpoint успешно ответил на generation probe."
+    if any(ep.runtime_check.status == VerificationStatus.AUTHENTICATION_FAILED for ep in checked):
+        return "ошибка доступа/ключа", "Runtime probe получил ошибку аутентификации."
+    if any(
+        ep.runtime_check.status in {VerificationStatus.RATE_LIMITED, VerificationStatus.QUOTA_EXHAUSTED}
+        for ep in checked
+    ):
+        return "подключен, но лимит", "Провайдер достижим, но генерация уперлась в rate limit или quota."
+    if checked:
+        return "проверен, без успеха", "Runtime probes выполнялись, но не дали usable/throttled evidence."
+    if endpoints:
+        return "не проверялось", "Модели найдены, но runtime probes не запускались."
+    return "модели не найдены", "Для провайдера не найдено моделей."
+
+
+def generate_provider_access_report(
+    *,
+    providers: list[ProviderConfig],
+    endpoints: list[ProviderEndpoint],
+    api_key_presence: dict[str, bool],
+) -> str:
+    """Generate provider/key readiness report for all configured providers."""
+    lines = [
+        "# Provider Access",
+        "",
+        f"*Generated: {datetime.now(UTC).strftime('%Y-%m-%d %H:%M:%S UTC')}*",
+        "",
+        "| Provider | Name | Status | Key | Checked | Success | Auth errors | Limited | Env var | Notes |",
+        "|:---|:---|:---|:---|---:|---:|---:|---:|:---|:---|",
+    ]
+
+    endpoints_by_provider: dict[str, list[ProviderEndpoint]] = {}
+    for endpoint in endpoints:
+        endpoints_by_provider.setdefault(endpoint.provider_id, []).append(endpoint)
+
+    for provider in sorted(providers, key=lambda item: item.discovery_priority):
+        provider_endpoints = endpoints_by_provider.get(provider.provider_id, [])
+        checked = [ep for ep in provider_endpoints if ep.runtime_check.checked]
+        success = [ep for ep in checked if ep.runtime_check.status == VerificationStatus.SUCCESS]
+        auth_errors = [ep for ep in checked if ep.runtime_check.status == VerificationStatus.AUTHENTICATION_FAILED]
+        limited = [
+            ep for ep in checked
+            if ep.runtime_check.status in {VerificationStatus.RATE_LIMITED, VerificationStatus.QUOTA_EXHAUSTED}
+        ]
+        key_present = api_key_presence.get(provider.provider_id, False)
+        status, notes = _provider_access_status(
+            provider=provider,
+            endpoints=provider_endpoints,
+            api_key_present=key_present,
+        )
+        if not provider.enabled:
+            key_state = "отключен"
+        elif not provider.api_key_required:
+            key_state = "не требуется"
+        elif key_present:
+            key_state = "добавлен"
+        else:
+            key_state = "не добавлен"
+        env_var = f"{provider.provider_id.upper()}_API_KEY"
+        lines.append(
+            f"| {provider.provider_id} | {provider.name} | {status} | {key_state} | "
+            f"{len(checked)} | {len(success)} | {len(auth_errors)} | {len(limited)} | {env_var} | {notes} |"
+        )
+
+    return "\n".join(lines)
+
+
 def generate_and_write_reports(
     router_output: RouterOutput,
     endpoints: list[ProviderEndpoint],
     changes: list[ChangeRecord],
     previous_output: RouterOutput | None,
     reports_dir: Path,
+    providers: list[ProviderConfig] | None = None,
+    api_key_presence: dict[str, bool] | None = None,
 ) -> None:
     """Write markdown report files."""
     reports_dir.mkdir(parents=True, exist_ok=True)
@@ -267,5 +353,13 @@ def generate_and_write_reports(
 
     throttled_report = generate_throttled_report(endpoints)
     (reports_dir / "throttled.md").write_text(throttled_report, encoding="utf-8")
+
+    if providers is not None:
+        provider_access_report = generate_provider_access_report(
+            providers=providers,
+            endpoints=endpoints,
+            api_key_presence=api_key_presence or {},
+        )
+        (reports_dir / "provider-access.md").write_text(provider_access_report, encoding="utf-8")
 
     logger.info("Reports written to %s", reports_dir)

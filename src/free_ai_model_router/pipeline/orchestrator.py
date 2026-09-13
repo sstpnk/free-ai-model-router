@@ -495,4 +495,9 @@ class PipelineOrchestrator:
             changes=self.changes,
             previous_output=previous_output,
             reports_dir=self.settings.reports_dir,
+            providers=self.settings.providers.providers,
+            api_key_presence={
+                provider.provider_id: bool(self.settings.get_provider_api_key(provider.provider_id))
+                for provider in self.settings.providers.providers
+            },
         )
