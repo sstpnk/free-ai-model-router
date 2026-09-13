@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Optional
 
@@ -78,6 +79,7 @@ def append_verification_history(
     endpoints: list[ProviderEndpoint],
     run_id: str,
     path: Path,
+    checked_after: datetime | None = None,
 ) -> int:
     """Append checked endpoint verification evidence as JSONL records."""
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -85,6 +87,8 @@ def append_verification_history(
     for endpoint in endpoints:
         check = endpoint.runtime_check
         if not check.checked or check.checked_at is None:
+            continue
+        if checked_after and check.checked_at < checked_after:
             continue
         records.append(
             VerificationHistoryRecord(
@@ -112,6 +116,25 @@ def append_verification_history(
             f.write(record.model_dump_json())
             f.write("\n")
     return len(records)
+
+
+def load_latest_verification_records(path: Path) -> dict[str, VerificationHistoryRecord]:
+    """Load latest verification history record per endpoint from JSONL."""
+    if not path.exists():
+        return {}
+
+    latest: dict[str, VerificationHistoryRecord] = {}
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        try:
+            record = VerificationHistoryRecord(**json.loads(line))
+        except (json.JSONDecodeError, ValueError):
+            continue
+        previous = latest.get(record.endpoint_id)
+        if previous is None or record.checked_at > previous.checked_at:
+            latest[record.endpoint_id] = record
+    return latest
 
 
 def load_previous_output(path: Path) -> Optional[RouterOutput]:

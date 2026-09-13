@@ -4,7 +4,8 @@ from __future__ import annotations
 
 import asyncio
 import logging
-from datetime import UTC, datetime
+from collections import defaultdict
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from typing import Any
 
@@ -13,6 +14,7 @@ from free_ai_model_router.generation.litellm_config import generate_litellm_conf
 from free_ai_model_router.generation.reports import generate_and_write_reports
 from free_ai_model_router.http_client.client import HttpClient
 from free_ai_model_router.models import (
+    ApiStyle,
     CanonicalModel,
     ChangeRecord,
     FreeStatus,
@@ -29,12 +31,13 @@ from free_ai_model_router.providers.cloudflare import CloudflareAdapter
 from free_ai_model_router.providers.gemini import GeminiAdapter
 from free_ai_model_router.providers.groq import GroqAdapter
 from free_ai_model_router.providers.mistral import MistralAdapter
-from free_ai_model_router.providers.opencode_zen import OpenCodeZenAdapter
 from free_ai_model_router.providers.openai_compatible import GenericOpenAICompatibleAdapter
+from free_ai_model_router.providers.opencode_zen import OpenCodeZenAdapter
 from free_ai_model_router.providers.openrouter import OpenRouterAdapter
 from free_ai_model_router.providers.zai import ZAIAdapter
 from free_ai_model_router.storage.state import (
     append_verification_history,
+    load_latest_verification_records,
     load_previous_output,
     save_pipeline_state,
     save_router_output,
@@ -46,6 +49,9 @@ from free_ai_model_router.verification.status import (
 )
 
 logger = logging.getLogger(__name__)
+
+RECENT_SUCCESS_TTL = timedelta(hours=12)
+DEFAULT_PROVIDER_VERIFY_CONCURRENCY = 1
 
 
 class PipelineOrchestrator:
@@ -124,6 +130,7 @@ class PipelineOrchestrator:
                     endpoints=self.collected_endpoints,
                     run_id=self.state.run_id,
                     path=self.settings.history_dir / "verification.jsonl",
+                    checked_after=self.state.started_at,
                 )
                 logger.info("Appended %d verification history records", history_count)
 
@@ -251,6 +258,9 @@ class PipelineOrchestrator:
 
         adapters = self._init_adapters()
         adapter_by_id = {a.provider_id: a for a in adapters}
+        latest_history = load_latest_verification_records(self.settings.history_dir / "verification.jsonl")
+        now = datetime.now(UTC)
+        skipped_recent = 0
 
         # Build list of (endpoint, adapter, api_key) triples to verify
         to_verify: list[tuple[ProviderEndpoint, Any, str]] = []
@@ -263,20 +273,44 @@ class PipelineOrchestrator:
                 endpoint.runtime_check.status = VerificationStatus.NOT_TESTED
                 continue
 
+            historical = latest_history.get(endpoint.endpoint_id)
+            if (
+                historical
+                and historical.status == VerificationStatus.SUCCESS
+                and now - historical.checked_at <= RECENT_SUCCESS_TTL
+            ):
+                endpoint.runtime_check.checked = True
+                endpoint.runtime_check.status = historical.status
+                endpoint.runtime_check.access_verdict = historical.access_verdict
+                endpoint.runtime_check.checked_at = historical.checked_at
+                endpoint.runtime_check.latency_ms = historical.latency_ms
+                endpoint.runtime_check.http_status = historical.http_status
+                endpoint.runtime_check.retry_after_seconds = historical.retry_after_seconds
+                endpoint.runtime_check.error_message = historical.error_message
+                skipped_recent += 1
+                continue
+
             adapter = adapter_by_id.get(provider_id)
             if not adapter:
                 continue
             to_verify.append((endpoint, adapter, api_key))
 
-        # Verify in parallel with concurrency limit
-        sem = asyncio.Semaphore(10)
+        provider_semaphores = defaultdict(lambda: asyncio.Semaphore(DEFAULT_PROVIDER_VERIFY_CONCURRENCY))
+        provider_cooldowns: dict[str, datetime] = {}
 
         async def _verify_one(
             endpoint: ProviderEndpoint,
             adapter: Any,
             api_key: str,
         ) -> None:
-            async with sem:
+            async with provider_semaphores[endpoint.provider_id]:
+                cooldown_until = provider_cooldowns.get(endpoint.provider_id)
+                if cooldown_until:
+                    delay = (cooldown_until - datetime.now(UTC)).total_seconds()
+                    if delay > 0:
+                        logger.info("  %s: cooling down for %.1fs", endpoint.provider_id, delay)
+                        await asyncio.sleep(delay)
+
                 pm = ProviderModel(
                     provider_model_id=endpoint.provider_model_id,
                     api_base=endpoint.api_base,
@@ -291,6 +325,13 @@ class PipelineOrchestrator:
                     endpoint.runtime_check.http_status = result.http_status
                     endpoint.runtime_check.retry_after_seconds = result.retry_after_seconds
                     endpoint.runtime_check.error_message = result.error_message
+                    if result.retry_after_seconds and result.status in {
+                        VerificationStatus.RATE_LIMITED,
+                        VerificationStatus.QUOTA_EXHAUSTED,
+                    }:
+                        provider_cooldowns[endpoint.provider_id] = datetime.now(UTC) + timedelta(
+                            seconds=result.retry_after_seconds
+                        )
                     if is_evidence_status(result.status):
                         endpoint.runtime_check.consecutive_failures = 0
                     else:
@@ -314,7 +355,11 @@ class PipelineOrchestrator:
             source_id="api_verification",
             last_success_at=datetime.now(UTC),
         )
-        logger.info("  Verification complete")
+        logger.info(
+            "  Verification complete: %d probed, %d reused from recent history",
+            len(to_verify),
+            skipped_recent,
+        )
 
 
 
