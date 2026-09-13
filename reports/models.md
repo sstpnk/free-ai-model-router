@@ -1,6 +1,6 @@
 # Отчёт по моделям — Free AI Model Router
 
-*Сгенерировано: 2026-09-12 09:19:08 UTC*
+*Сгенерировано: 2026-09-13 10:15:20 UTC*
 
 ## Бесплатные модели (:free)
 
@@ -13,19 +13,19 @@
 | 5 | openrouter | inclusionai/ling-3.0-flash-fin:free | ✓ | — | success |
 | 6 | openrouter | dots-studio/dots-3-note-preview:free | ✓ | — | success |
 | 7 | openrouter | liquid/lfm-2.5-2.6b:free | ✓ | — | success |
-| 8 | openrouter | nvidia/nemotron-3.5-lightning:free | ✓ | — | success |
-| 9 | openrouter | poolside/laguna-xs-2.1:free | ✓ | — | success |
-| 10 | openrouter | cohere/north-mini-code:free | ✓ | — | success |
-| 11 | openrouter | nvidia/nemotron-3.5-content-safety:free | ✓ | — | success |
-| 12 | openrouter | nvidia/nemotron-3-ultra-550b-a55b:free | ✓ | — | success |
-| 13 | openrouter | nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free | ✓ | — | success |
+| 8 | openrouter | poolside/laguna-xs-2.1:free | ✓ | — | success |
+| 9 | openrouter | cohere/north-mini-code:free | ✓ | — | success |
+| 10 | openrouter | nvidia/nemotron-3.5-content-safety:free | ✓ | — | success |
+| 11 | openrouter | nvidia/nemotron-3-ultra-550b-a55b:free | ✓ | — | success |
+| 12 | openrouter | nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free | ✓ | — | success |
+| 13 | openrouter | google/gemma-4-31b-it:free | ✓ | — | success |
 | 14 | openrouter | nvidia/nemotron-3-super-120b-a12b:free | ✓ | — | success |
-| 15 | groq | groq/compound-mini | ✓ | — | success |
-| 16 | groq | groq/compound | ✓ | — | success |
-| 17 | groq | qwen/qwen3.6-27b | ✓ | — | success |
+| 15 | groq | qwen/qwen3.6-27b | ✓ | — | success |
+| 16 | groq | qwen/qwen3.8-27b | ✓ | — | success |
+| 17 | groq | groq/compound-mini | ✓ | — | success |
 | 18 | groq | allam-2-7b | ✓ | — | success |
 | 19 | groq | openai/gpt-oss-20b | ✓ | — | success |
-| 20 | groq | qwen/qwen3.8-27b | ✓ | — | success |
+| 20 | groq | groq/compound | ✓ | — | success |
 | 21 | groq | openai/gpt-oss-120b | ✓ | — | success |
 | 22 | mistral | codestral-2508 | ✓ | — | success |
 | 23 | mistral | codestral-latest | ✓ | — | success |
