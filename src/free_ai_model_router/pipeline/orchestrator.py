@@ -30,6 +30,7 @@ from free_ai_model_router.providers.gemini import GeminiAdapter
 from free_ai_model_router.providers.groq import GroqAdapter
 from free_ai_model_router.providers.mistral import MistralAdapter
 from free_ai_model_router.providers.opencode_zen import OpenCodeZenAdapter
+from free_ai_model_router.providers.openai_compatible import GenericOpenAICompatibleAdapter
 from free_ai_model_router.providers.openrouter import OpenRouterAdapter
 from free_ai_model_router.providers.zai import ZAIAdapter
 from free_ai_model_router.storage.state import (
@@ -230,6 +231,14 @@ class PipelineOrchestrator:
                 api_key = self.settings.get_provider_api_key(provider.provider_id)
                 adapters.append(adapter_cls(self.http, api_key=api_key))
                 logger.info("  Initialized adapter: %s (key=%s)", provider.provider_id, "yes" if api_key else "no")
+            elif provider.api_style == ApiStyle.OPENAI_COMPATIBLE:
+                api_key = self.settings.get_provider_api_key(provider.provider_id)
+                adapters.append(GenericOpenAICompatibleAdapter(self.http, provider, api_key=api_key))
+                logger.info(
+                    "  Initialized generic OpenAI-compatible adapter: %s (key=%s)",
+                    provider.provider_id,
+                    "yes" if api_key else "no",
+                )
 
         return adapters
 

@@ -6,7 +6,7 @@ from unittest.mock import patch
 
 import pytest
 
-from free_ai_model_router.models import ApiStyle, FreeStatus, Modality, VerificationStatus
+from free_ai_model_router.models import ApiStyle, FreeStatus, Modality, ProviderConfig, VerificationStatus
 from free_ai_model_router.providers.base import PricingRecord, ProviderModel, VerificationResult
 from free_ai_model_router.providers.cerebras import CerebrasAdapter
 from free_ai_model_router.providers.cloudflare import (
@@ -14,6 +14,7 @@ from free_ai_model_router.providers.cloudflare import (
     _get_modalities,
     _infer_task_type,
 )
+from free_ai_model_router.providers.openai_compatible import GenericOpenAICompatibleAdapter
 
 
 def test_provider_model_defaults() -> None:
@@ -307,3 +308,67 @@ async def test_cloudflare_fetch_pricing_and_limits() -> None:
     limits = await adapter.fetch_limits()
     assert len(limits) == 1
     assert limits[0].requests_per_day == 10_000
+
+
+# ─── Generic OpenAI-Compatible Adapter ───────────────────────────────────────
+
+
+def _generic_provider_config() -> ProviderConfig:
+    return ProviderConfig(
+        provider_id="generic",
+        name="Generic",
+        api_base="https://api.generic.test/v1",
+        api_style=ApiStyle.OPENAI_COMPATIBLE,
+        sources={"models_api": "https://api.generic.test/v1/models"},
+    )
+
+
+@pytest.mark.asyncio
+async def test_generic_openai_compatible_discover_models() -> None:
+    class FakeHttp:
+        async def fetch_json(self, *_args, **_kwargs):
+            return {
+                "data": [
+                    {"id": "chat-free:free", "context_length": 8192, "tool_calling": True},
+                    {"id": "text-embedding-3-small"},
+                ]
+            }
+
+    adapter = GenericOpenAICompatibleAdapter(FakeHttp(), _generic_provider_config())
+
+    models = await adapter.discover_models()
+
+    assert [m.provider_model_id for m in models] == ["chat-free:free"]
+    assert models[0].free_status == FreeStatus.VERIFIED_FREE
+    assert models[0].tool_calling is True
+    assert models[0].context_tokens == 8192
+
+
+@pytest.mark.asyncio
+async def test_generic_openai_compatible_verify_rate_limited(monkeypatch: pytest.MonkeyPatch) -> None:
+    class FakeResponse:
+        status_code = 429
+        text = '{"error":"rate limit exceeded"}'
+        headers = {"Retry-After": "12"}
+
+    class FakeHttpxClient:
+        async def __aenter__(self):
+            return self
+
+        async def __aexit__(self, *args):
+            return None
+
+        async def post(self, *_args, **_kwargs):
+            return FakeResponse()
+
+    monkeypatch.setattr("httpx.AsyncClient", lambda timeout=None, **_kw: FakeHttpxClient())
+
+    adapter = GenericOpenAICompatibleAdapter(SimpleNamespace(), _generic_provider_config())
+    result = await adapter.verify_model(
+        ProviderModel(provider_model_id="chat-free:free", api_base="https://api.generic.test/v1"),
+        api_key="key",
+    )
+
+    assert result.status == VerificationStatus.RATE_LIMITED
+    assert result.http_status == 429
+    assert result.retry_after_seconds == 12
