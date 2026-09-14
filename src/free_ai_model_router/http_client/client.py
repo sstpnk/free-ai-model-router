@@ -96,7 +96,10 @@ class HttpClient:
         if use_cache:
             cached = self._read_cache(url, params_hash)
             if cached:
-                age_seconds = (datetime.now(timezone.utc) - datetime.fromisoformat(cached.get("_fetched_at", "2000-01-01T00:00:00+00:00"))).total_seconds()
+                fetched_at = datetime.fromisoformat(
+                    cached.get("_fetched_at", "2000-01-01T00:00:00+00:00")
+                )
+                age_seconds = (datetime.now(timezone.utc) - fetched_at).total_seconds()
                 if age_seconds < cache_ttl_seconds:
                     return cached["data"]
 
@@ -149,7 +152,13 @@ class HttpClient:
 
             except httpx.HTTPStatusError as e:
                 last_error = e
-                logger.warning("HTTP %s for %s (attempt %d/%d)", e.response.status_code, url, attempt + 1, self.max_retries)
+                logger.warning(
+                    "HTTP %s for %s (attempt %d/%d)",
+                    e.response.status_code,
+                    url,
+                    attempt + 1,
+                    self.max_retries,
+                )
                 if e.response.status_code in (401, 403, 404):
                     break  # Don't retry auth / not-found errors
             except (httpx.TimeoutException, httpx.ConnectError) as e:
@@ -161,7 +170,10 @@ class HttpClient:
                     logger.info("Retrying in %ds...", wait)
                     await asyncio.sleep(wait)
 
-        raise RuntimeError(f"Failed to fetch {url} after {self.max_retries} attempts") from last_error
+        status_hint = ""
+        if isinstance(last_error, httpx.HTTPStatusError):
+            status_hint = f" (HTTP {last_error.response.status_code})"
+        raise RuntimeError(f"Failed to fetch {url} after {self.max_retries} attempts{status_hint}") from last_error
 
     async def fetch_text(
         self,

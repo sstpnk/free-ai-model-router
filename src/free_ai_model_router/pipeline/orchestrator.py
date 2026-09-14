@@ -20,6 +20,7 @@ from free_ai_model_router.models import (
     ChangeRecord,
     FreeStatus,
     PipelineState,
+    ProviderAccessRecord,
     ProviderEndpoint,
     RoutedEndpoint,
     RouterOutput,
@@ -37,7 +38,9 @@ from free_ai_model_router.providers.opencode_zen import OpenCodeZenAdapter
 from free_ai_model_router.providers.openrouter import OpenRouterAdapter
 from free_ai_model_router.providers.zai import ZAIAdapter
 from free_ai_model_router.storage.state import (
+    append_provider_access_history,
     append_verification_history,
+    load_latest_provider_access_records,
     load_latest_verification_records,
     load_previous_output,
     load_verification_stats,
@@ -74,6 +77,7 @@ class PipelineOrchestrator:
         self.source_health: dict[str, SourceHealth] = {}
         self.verification_stats = {}
         self.provider_errors: dict[str, str] = {}
+        self.provider_access_records: list[ProviderAccessRecord] = []
 
     async def run_all(
         self,
@@ -106,6 +110,7 @@ class PipelineOrchestrator:
                 "api.hyperbolic.xyz", "api.replicate.com",
                 "api.cohere.com", "api.deepseek.com",
                 "api.z.ai",
+                "huggingface.co",
             ]
             self.http = HttpClient(
                 cache_dir=self.settings.cache_dir,
@@ -141,6 +146,12 @@ class PipelineOrchestrator:
                     checked_after=self.state.started_at,
                 )
                 logger.info("Appended %d verification history records", history_count)
+
+            access_history_count = append_provider_access_history(
+                records=self.provider_access_records,
+                path=self.settings.history_dir / "provider-access.jsonl",
+            )
+            logger.info("Appended %d provider access history records", access_history_count)
 
             self.verification_stats = load_verification_stats(self.settings.history_dir / "verification.jsonl")
 
@@ -192,6 +203,19 @@ class PipelineOrchestrator:
             try:
                 collected_at = datetime.now(UTC)
                 models = await adapter.discover_models()
+                models_api_source_url = self._models_api_source_url(adapter.provider_id)
+                self.provider_access_records.append(
+                    ProviderAccessRecord(
+                        run_id=self.state.run_id,
+                        checked_at=collected_at,
+                        provider_id=adapter.provider_id,
+                        api_key_present=bool(self.settings.get_provider_api_key(adapter.provider_id)),
+                        models_api_checked=True,
+                        models_api_status=VerificationStatus.SUCCESS,
+                        models_found=len(models),
+                        models_api_source_url=models_api_source_url,
+                    )
+                )
                 all_models.extend(models)
                 for m in models:
                     ep = adapter.to_provider_endpoint(m)
@@ -200,7 +224,7 @@ class PipelineOrchestrator:
                     ep.models_api_source_url = (
                         ep.models_api_source_url
                         or ep.source_url
-                        or self._models_api_source_url(adapter.provider_id)
+                        or models_api_source_url
                     )
                     self.collected_endpoints.append(ep)
 
@@ -228,6 +252,19 @@ class PipelineOrchestrator:
             except Exception as e:
                 logger.warning("  %s: collection failed: %s", adapter.provider_id, e)
                 self.provider_errors[adapter.provider_id] = str(e)
+                self.provider_access_records.append(
+                    ProviderAccessRecord(
+                        run_id=self.state.run_id,
+                        checked_at=datetime.now(UTC),
+                        provider_id=adapter.provider_id,
+                        api_key_present=bool(self.settings.get_provider_api_key(adapter.provider_id)),
+                        models_api_checked=True,
+                        models_api_status=self._provider_access_status_for_error(str(e)),
+                        models_found=0,
+                        models_api_source_url=self._models_api_source_url(adapter.provider_id),
+                        error_message=str(e),
+                    )
+                )
                 self.state.errors.append(f"Provider {adapter.provider_id}: {e}")
 
         # Source health tracking
@@ -251,6 +288,18 @@ class PipelineOrchestrator:
         if provider.api_base:
             return f"{provider.api_base.rstrip('/')}/models"
         return None
+
+    def _provider_access_status_for_error(self, error_message: str) -> VerificationStatus:
+        lower = error_message.lower()
+        if "401" in lower or "403" in lower or "unauthorized" in lower or "forbidden" in lower:
+            return VerificationStatus.AUTHENTICATION_FAILED
+        if "429" in lower or "rate limit" in lower:
+            return VerificationStatus.RATE_LIMITED
+        if "404" in lower or "not found" in lower:
+            return VerificationStatus.MODEL_NOT_FOUND
+        if "timeout" in lower:
+            return VerificationStatus.TIMEOUT
+        return VerificationStatus.PROVIDER_UNAVAILABLE
 
     def _init_adapters(self, provider_ids: set[str] | None = None) -> list:
         """Initialize provider adapters based on config, passing API keys if available."""
@@ -550,6 +599,10 @@ class PipelineOrchestrator:
             },
             verification_stats=self.verification_stats,
             provider_errors=self.provider_errors,
+            provider_access_records=load_latest_provider_access_records(
+                self.settings.history_dir / "provider-access.jsonl"
+            ),
+            provider_runtime_statuses=self._provider_runtime_statuses(),
             write_routing_reports=write_routing_reports,
         )
 
@@ -561,6 +614,13 @@ class PipelineOrchestrator:
             None,
             write_routing_reports=False,
         )
+
+    def _provider_runtime_statuses(self) -> dict[str, list[VerificationStatus]]:
+        latest_records = load_latest_verification_records(self.settings.history_dir / "verification.jsonl")
+        statuses: dict[str, list[VerificationStatus]] = {}
+        for record in latest_records.values():
+            statuses.setdefault(record.provider_id, []).append(record.status)
+        return statuses
 
     def _complete_state(self) -> None:
         self.state.success = not self.state.errors

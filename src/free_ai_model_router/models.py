@@ -174,6 +174,20 @@ class VerificationHistoryRecord(BaseModel):
     models_api_source_url: Optional[str] = None
 
 
+class ProviderAccessRecord(BaseModel):
+    """Append-only evidence record for provider-level model listing access."""
+
+    run_id: str
+    checked_at: datetime
+    provider_id: str
+    api_key_present: bool
+    models_api_checked: bool = False
+    models_api_status: VerificationStatus = VerificationStatus.NOT_TESTED
+    models_found: int = 0
+    models_api_source_url: Optional[str] = None
+    error_message: Optional[str] = None
+
+
 class VerificationStats(BaseModel):
     """Aggregated verification history for one endpoint."""
 

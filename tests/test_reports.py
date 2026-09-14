@@ -13,6 +13,7 @@ from free_ai_model_router.models import (
     AccessVerdict,
     ApiStyle,
     FreeStatus,
+    ProviderAccessRecord,
     ProviderConfig,
     ProviderEndpoint,
     RoutedEndpoint,
@@ -161,9 +162,21 @@ def test_provider_access_report_shows_key_and_working_statuses() -> None:
         endpoints=[working, badkey],
         api_key_presence={"working": True, "badkey": True},
         provider_errors={"badkey": "HTTP 403 Forbidden"},
+        provider_access_records={
+            "working": ProviderAccessRecord(
+                run_id="run-1",
+                checked_at=working.discovered_at,
+                provider_id="working",
+                api_key_present=True,
+                models_api_checked=True,
+                models_api_status=VerificationStatus.SUCCESS,
+                models_found=2,
+            )
+        },
     )
 
     assert "подключен и работает" in report
+    assert "success (2)" in report
     assert "ключ не добавлен" in report
     assert "ключ не требуется" in report
     assert "ошибка доступа/ключа" in report
@@ -195,6 +208,24 @@ def test_history_summary_report_includes_reliability_metrics() -> None:
     assert "75%" in report
     assert "| test | model | 4 |" in report
     assert "| 1 | 0 | 0 | 100 | 250 |" in report
+
+
+def test_provider_access_report_uses_historical_runtime_statuses() -> None:
+    provider = ProviderConfig(
+        provider_id="limited",
+        name="Limited Provider",
+        api_style=ApiStyle.OPENAI_COMPATIBLE,
+    )
+
+    report = generate_provider_access_report(
+        providers=[provider],
+        endpoints=[],
+        api_key_presence={"limited": True},
+        provider_runtime_statuses={"limited": [VerificationStatus.RATE_LIMITED]},
+    )
+
+    assert "подключен, но лимит" in report
+    assert "| limited | Limited Provider | подключен, но лимит | добавлен | — | 1 | 0 | 0 | 1 |" in report
 
 
 def test_status_reports_can_skip_routing_reports(tmp_path) -> None:

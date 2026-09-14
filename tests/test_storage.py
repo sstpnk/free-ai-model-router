@@ -3,9 +3,16 @@
 import json
 from datetime import datetime
 
-from free_ai_model_router.models import AccessVerdict, ProviderEndpoint, VerificationStatus
+from free_ai_model_router.models import (
+    AccessVerdict,
+    ProviderAccessRecord,
+    ProviderEndpoint,
+    VerificationStatus,
+)
 from free_ai_model_router.storage.state import (
+    append_provider_access_history,
     append_verification_history,
+    load_latest_provider_access_records,
     load_latest_verification_records,
     load_verification_stats,
 )
@@ -109,6 +116,36 @@ def test_load_latest_verification_records_uses_newest_record(tmp_path) -> None:
 
     assert latest["test/model"].run_id == "run-2"
     assert latest["test/model"].status == VerificationStatus.SUCCESS
+
+
+def test_provider_access_history_keeps_latest_record(tmp_path) -> None:
+    path = tmp_path / "history" / "provider-access.jsonl"
+    first = ProviderAccessRecord(
+        run_id="run-1",
+        checked_at=datetime.fromisoformat("2026-01-01T00:00:00+00:00"),
+        provider_id="test",
+        api_key_present=True,
+        models_api_checked=True,
+        models_api_status=VerificationStatus.AUTHENTICATION_FAILED,
+        error_message="HTTP 403",
+    )
+    second = ProviderAccessRecord(
+        run_id="run-2",
+        checked_at=datetime.fromisoformat("2026-01-02T00:00:00+00:00"),
+        provider_id="test",
+        api_key_present=True,
+        models_api_checked=True,
+        models_api_status=VerificationStatus.SUCCESS,
+        models_found=2,
+    )
+
+    assert append_provider_access_history(records=[first, second], path=path) == 2
+
+    latest = load_latest_provider_access_records(path)
+
+    assert latest["test"].run_id == "run-2"
+    assert latest["test"].models_api_status == VerificationStatus.SUCCESS
+    assert latest["test"].models_found == 2
 
 
 def test_load_verification_stats_aggregates_endpoint_history(tmp_path) -> None:

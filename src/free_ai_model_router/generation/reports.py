@@ -8,6 +8,7 @@ from pathlib import Path
 
 from free_ai_model_router.models import (
     ChangeRecord,
+    ProviderAccessRecord,
     ProviderConfig,
     ProviderEndpoint,
     RouterOutput,
@@ -264,6 +265,8 @@ def _provider_access_status(
     endpoints: list[ProviderEndpoint],
     api_key_present: bool,
     provider_error: str | None = None,
+    provider_access_record: ProviderAccessRecord | None = None,
+    runtime_statuses: list[VerificationStatus] | None = None,
 ) -> tuple[str, str]:
     """Classify provider connection/key status for humans."""
     if not provider.enabled:
@@ -274,21 +277,27 @@ def _provider_access_status(
         return "ключ не добавлен", "API ключ пока не настроен в окружении."
     if provider_error:
         return "ошибка доступа/ключа", provider_error
+    if provider_access_record and provider_access_record.models_api_status == VerificationStatus.AUTHENTICATION_FAILED:
+        return "ошибка доступа/ключа", provider_access_record.error_message or "/models вернул ошибку доступа."
+    if provider_access_record and provider_access_record.models_api_status == VerificationStatus.RATE_LIMITED:
+        return "подключен, но лимит", provider_access_record.error_message or "/models уперся в rate limit."
 
     checked = [ep for ep in endpoints if ep.runtime_check.checked]
-    if any(ep.runtime_check.status == VerificationStatus.SUCCESS for ep in checked):
+    statuses = runtime_statuses or [ep.runtime_check.status for ep in checked]
+    if VerificationStatus.SUCCESS in statuses:
         return "подключен и работает", "Хотя бы один endpoint успешно ответил на generation probe."
-    if any(ep.runtime_check.status == VerificationStatus.AUTHENTICATION_FAILED for ep in checked):
+    if VerificationStatus.AUTHENTICATION_FAILED in statuses:
         return "ошибка доступа/ключа", "Runtime probe получил ошибку аутентификации."
-    if any(
-        ep.runtime_check.status in {VerificationStatus.RATE_LIMITED, VerificationStatus.QUOTA_EXHAUSTED}
-        for ep in checked
-    ):
+    if any(status in {VerificationStatus.RATE_LIMITED, VerificationStatus.QUOTA_EXHAUSTED} for status in statuses):
         return "подключен, но лимит", "Провайдер достижим, но генерация уперлась в rate limit или quota."
-    if checked:
+    if statuses:
         return "проверен, без успеха", "Runtime probes выполнялись, но не дали usable/throttled evidence."
     if endpoints:
         return "не проверялось", "Модели найдены, но runtime probes не запускались."
+    if provider_access_record and provider_access_record.models_api_status == VerificationStatus.SUCCESS:
+        return "не проверялось", f"/models доступен, найдено моделей: {provider_access_record.models_found}."
+    if provider_access_record and provider_access_record.models_api_checked:
+        return "проверен, без успеха", provider_access_record.error_message or "/models не вернул usable evidence."
     return "модели не найдены", "Для провайдера не найдено моделей."
 
 
@@ -298,16 +307,20 @@ def generate_provider_access_report(
     endpoints: list[ProviderEndpoint],
     api_key_presence: dict[str, bool],
     provider_errors: dict[str, str] | None = None,
+    provider_access_records: dict[str, ProviderAccessRecord] | None = None,
+    provider_runtime_statuses: dict[str, list[VerificationStatus]] | None = None,
 ) -> str:
     """Generate provider/key readiness report for all configured providers."""
     provider_errors = provider_errors or {}
+    provider_access_records = provider_access_records or {}
+    provider_runtime_statuses = provider_runtime_statuses or {}
     lines = [
         "# Provider Access",
         "",
         f"*Generated: {datetime.now(UTC).strftime('%Y-%m-%d %H:%M:%S UTC')}*",
         "",
-        "| Provider | Name | Status | Key | Checked | Success | Auth errors | Limited | Env var | Notes |",
-        "|:---|:---|:---|:---|---:|---:|---:|---:|:---|:---|",
+        "| Provider | Name | Status | Key | Models API | Checked | Success | Auth errors | Limited | Env var | Notes |",
+        "|:---|:---|:---|:---|:---|---:|---:|---:|---:|:---|:---|",
     ]
 
     endpoints_by_provider: dict[str, list[ProviderEndpoint]] = {}
@@ -317,18 +330,30 @@ def generate_provider_access_report(
     for provider in sorted(providers, key=lambda item: item.discovery_priority):
         provider_endpoints = endpoints_by_provider.get(provider.provider_id, [])
         checked = [ep for ep in provider_endpoints if ep.runtime_check.checked]
-        success = [ep for ep in checked if ep.runtime_check.status == VerificationStatus.SUCCESS]
-        auth_errors = [ep for ep in checked if ep.runtime_check.status == VerificationStatus.AUTHENTICATION_FAILED]
-        limited = [
-            ep for ep in checked
-            if ep.runtime_check.status in {VerificationStatus.RATE_LIMITED, VerificationStatus.QUOTA_EXHAUSTED}
-        ]
-        key_present = api_key_presence.get(provider.provider_id, False)
+        historical_statuses = provider_runtime_statuses.get(provider.provider_id, [])
+        statuses = [ep.runtime_check.status for ep in checked] or historical_statuses
+        success_count = statuses.count(VerificationStatus.SUCCESS)
+        auth_error_count = statuses.count(VerificationStatus.AUTHENTICATION_FAILED)
+        limited_count = sum(
+            1 for status in statuses
+            if status in {VerificationStatus.RATE_LIMITED, VerificationStatus.QUOTA_EXHAUSTED}
+        )
+        provider_access_record = provider_access_records.get(provider.provider_id)
+        key_present = api_key_presence.get(provider.provider_id, False) or (
+            provider_access_record.api_key_present if provider_access_record else False
+        )
         status, notes = _provider_access_status(
             provider=provider,
             endpoints=provider_endpoints,
             api_key_present=key_present,
             provider_error=provider_errors.get(provider.provider_id),
+            provider_access_record=provider_access_record,
+            runtime_statuses=statuses,
+        )
+        models_api = (
+            f"{provider_access_record.models_api_status.value} ({provider_access_record.models_found})"
+            if provider_access_record
+            else "—"
         )
         if not provider.enabled:
             key_state = "отключен"
@@ -341,7 +366,8 @@ def generate_provider_access_report(
         env_var = f"{provider.provider_id.upper()}_API_KEY"
         lines.append(
             f"| {provider.provider_id} | {provider.name} | {status} | {key_state} | "
-            f"{len(checked)} | {len(success)} | {len(auth_errors)} | {len(limited)} | {env_var} | {notes} |"
+            f"{models_api} | {len(statuses)} | {success_count} | {auth_error_count} | {limited_count} | "
+            f"{env_var} | {notes} |"
         )
 
     return "\n".join(lines)
@@ -400,6 +426,8 @@ def generate_and_write_reports(
     api_key_presence: dict[str, bool] | None = None,
     verification_stats: dict[str, VerificationStats] | None = None,
     provider_errors: dict[str, str] | None = None,
+    provider_access_records: dict[str, ProviderAccessRecord] | None = None,
+    provider_runtime_statuses: dict[str, list[VerificationStatus]] | None = None,
     write_routing_reports: bool = True,
 ) -> None:
     """Write markdown report files."""
@@ -424,6 +452,8 @@ def generate_and_write_reports(
             endpoints=endpoints,
             api_key_presence=api_key_presence or {},
             provider_errors=provider_errors,
+            provider_access_records=provider_access_records,
+            provider_runtime_statuses=provider_runtime_statuses,
         )
         (reports_dir / "provider-access.md").write_text(provider_access_report, encoding="utf-8")
 

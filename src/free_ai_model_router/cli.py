@@ -14,6 +14,7 @@ from free_ai_model_router.models import ProviderConfig, VerificationStatus
 from free_ai_model_router.pipeline.orchestrator import PipelineOrchestrator
 from free_ai_model_router.storage.state import (
     load_json,
+    load_latest_provider_access_records,
     load_latest_verification_records,
     load_normalized_data,
 )
@@ -98,6 +99,7 @@ def _provider_doctor_status(
     statuses: list[VerificationStatus],
     endpoint_count: int,
     provider_error: str | None = None,
+    models_api_status: VerificationStatus | None = None,
 ) -> str:
     if not provider.enabled:
         return "отключен"
@@ -107,6 +109,10 @@ def _provider_doctor_status(
         return "ключ не требуется"
     if provider_error:
         return "ошибка доступа/ключа"
+    if models_api_status == VerificationStatus.AUTHENTICATION_FAILED:
+        return "ошибка доступа/ключа"
+    if models_api_status == VerificationStatus.RATE_LIMITED:
+        return "подключен, но лимит"
     if VerificationStatus.SUCCESS in statuses:
         return "подключен и работает"
     if VerificationStatus.AUTHENTICATION_FAILED in statuses:
@@ -183,6 +189,7 @@ def providers_status(ctx: click.Context) -> None:
     settings: Settings = ctx.obj["settings"]
     _, endpoints = load_normalized_data(settings.normalized_dir)
     latest_records = load_latest_verification_records(settings.history_dir / "verification.jsonl")
+    latest_provider_access = load_latest_provider_access_records(settings.history_dir / "provider-access.jsonl")
     pipeline_state = load_json(settings.data_dir / "pipeline-state.json") or {}
     provider_errors = _provider_errors_from_state(pipeline_state.get("errors", []))
 
@@ -195,28 +202,38 @@ def providers_status(ctx: click.Context) -> None:
         records_by_provider.setdefault(record.provider_id, []).append(record)
 
     click.echo("Provider status")
-    click.echo("provider | status | key | models | last success | last checked")
-    click.echo("--- | --- | --- | ---: | --- | ---")
+    click.echo("provider | status | key | models api | models | last success | last checked")
+    click.echo("--- | --- | --- | --- | ---: | --- | ---")
     for provider in sorted(settings.providers.providers, key=lambda item: item.discovery_priority):
-        key_present = bool(settings.get_provider_api_key(provider.provider_id))
+        provider_access = latest_provider_access.get(provider.provider_id)
+        key_present = bool(settings.get_provider_api_key(provider.provider_id)) or (
+            provider_access.api_key_present if provider_access else False
+        )
         records = records_by_provider.get(provider.provider_id, [])
         statuses = [record.status for record in records]
-        endpoint_count = len(endpoints_by_provider.get(provider.provider_id, []))
+        endpoint_count = max(
+            len(endpoints_by_provider.get(provider.provider_id, [])),
+            provider_access.models_found if provider_access else 0,
+        )
         status = _provider_doctor_status(
             provider,
             key_present=key_present,
             statuses=statuses,
             endpoint_count=endpoint_count,
             provider_error=provider_errors.get(provider.provider_id),
+            models_api_status=provider_access.models_api_status if provider_access else None,
         )
         key_state = "yes" if key_present else ("not required" if not provider.api_key_required else "missing")
+        models_api = provider_access.models_api_status.value if provider_access else "-"
         success_dates = [
             record.checked_at for record in records
             if record.status == VerificationStatus.SUCCESS
         ]
         checked_dates = [record.checked_at for record in records]
+        if provider_access:
+            checked_dates.append(provider_access.checked_at)
         click.echo(
-            f"{provider.provider_id} | {status} | {key_state} | {endpoint_count} | "
+            f"{provider.provider_id} | {status} | {key_state} | {models_api} | {endpoint_count} | "
             f"{_fmt_dt(max(success_dates, default=None))} | {_fmt_dt(max(checked_dates, default=None))}"
         )
 

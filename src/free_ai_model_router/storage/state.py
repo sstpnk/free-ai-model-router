@@ -11,6 +11,7 @@ from free_ai_model_router.models import (
     CanonicalModel,
     ChangeRecord,
     PipelineState,
+    ProviderAccessRecord,
     ProviderEndpoint,
     RouterOutput,
     VerificationHistoryRecord,
@@ -120,6 +121,42 @@ def append_verification_history(
             f.write(record.model_dump_json())
             f.write("\n")
     return len(records)
+
+
+def append_provider_access_history(
+    *,
+    records: list[ProviderAccessRecord],
+    path: Path,
+) -> int:
+    """Append provider-level access evidence as JSONL records."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if not records:
+        return 0
+
+    with path.open("a", encoding="utf-8", newline="\n") as f:
+        for record in records:
+            f.write(record.model_dump_json())
+            f.write("\n")
+    return len(records)
+
+
+def load_latest_provider_access_records(path: Path) -> dict[str, ProviderAccessRecord]:
+    """Load latest provider access history record per provider from JSONL."""
+    if not path.exists():
+        return {}
+
+    latest: dict[str, ProviderAccessRecord] = {}
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        try:
+            record = ProviderAccessRecord(**json.loads(line))
+        except (json.JSONDecodeError, ValueError):
+            continue
+        previous = latest.get(record.provider_id)
+        if previous is None or record.checked_at > previous.checked_at:
+            latest[record.provider_id] = record
+    return latest
 
 
 def load_latest_verification_records(path: Path) -> dict[str, VerificationHistoryRecord]:
