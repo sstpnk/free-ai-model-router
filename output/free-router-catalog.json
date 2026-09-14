@@ -1,0 +1,3413 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-14T10:46:04.029131+00:00",
+  "endpoint_count": 74,
+  "fallback_chain": [
+    "openrouter/inclusionai/ling-3.0-flash-vl:free",
+    "openrouter/nex-agi/nex-n2.5-mini:free",
+    "openrouter/inclusionai/ling-3.0-flash-sante:free",
+    "openrouter/inclusionai/ling-3.0-flash-fin:free",
+    "openrouter/dots-studio/dots-3-note-preview:free",
+    "openrouter/liquid/lfm-2.5-2.6b:free",
+    "openrouter/poolside/laguna-s-2.1:free",
+    "openrouter/poolside/laguna-xs-2.1:free",
+    "openrouter/cohere/north-mini-code:free",
+    "openrouter/nvidia/nemotron-3.5-content-safety:free",
+    "openrouter/google/gemma-4-26b-a4b-it:free",
+    "openrouter/google/gemma-4-31b-it:free",
+    "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+    "zai/glm-4.5",
+    "zai/glm-4.5-air",
+    "zai/glm-4.6",
+    "zai/glm-4.7",
+    "zai/glm-5",
+    "zai/glm-5-turbo",
+    "zai/glm-5.1",
+    "zai/glm-5.2",
+    "zai/glm-5.3",
+    "zai/glm-5.3-flash",
+    "groq/allam-2-7b",
+    "groq/openai/gpt-oss-20b",
+    "groq/qwen/qwen3.6-27b",
+    "groq/groq/compound",
+    "groq/openai/gpt-oss-120b",
+    "groq/qwen/qwen3.8-27b",
+    "groq/groq/compound-mini",
+    "mistral/codestral-2508",
+    "mistral/codestral-latest",
+    "mistral/mistral-code-latest",
+    "mistral/mistral-code-fim-latest",
+    "mistral/mistral-small-2603",
+    "mistral/mistral-small-latest",
+    "mistral/mistral-vibe-cli-fast",
+    "mistral/magistral-small-latest",
+    "mistral/voxtral-small-2507",
+    "mistral/voxtral-small-latest",
+    "mistral/ministral-3b-2512",
+    "mistral/ministral-3b-latest",
+    "mistral/ministral-8b-2512",
+    "mistral/ministral-8b-latest",
+    "mistral/ministral-14b-2512",
+    "mistral/ministral-14b-latest",
+    "mistral/mistral-medium-latest",
+    "mistral/mistral-medium",
+    "mistral/mistral-medium-3-5",
+    "mistral/mistral-medium-3.5",
+    "mistral/mistral-medium-3",
+    "mistral/mistral-medium-2604",
+    "mistral/mistral-vibe-cli-latest",
+    "mistral/mistral-vibe-cli-with-tools",
+    "mistral/magistral-medium-latest",
+    "cloudflare/@cf/openai/gpt-oss-120b",
+    "cloudflare/@cf/meta/llama-3.2-3b-instruct",
+    "cloudflare/@cf/meta/llama-guard-3-8b",
+    "cloudflare/@cf/deepseek-ai/deepseek-r1-distill-qwen-32b",
+    "cloudflare/@cf/meta/llama-3.1-8b-instruct-fp8",
+    "cloudflare/@cf/meta/llama-3.2-1b-instruct",
+    "cloudflare/@cf/zai-org/glm-4.7-flash",
+    "cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+    "cloudflare/@cf/ibm-granite/granite-4.0-h-micro",
+    "cloudflare/@cf/qwen/qwen2.5-coder-32b-instruct",
+    "cloudflare/@cf/nvidia/nemotron-3-120b-a12b",
+    "cloudflare/@cf/aisingapore/gemma-sea-lion-v4-27b-it",
+    "cloudflare/@cf/qwen/qwen3-30b-a3b-fp8",
+    "cloudflare/@cf/google/gemma-4-26b-a4b-it",
+    "cloudflare/@cf/mistralai/mistral-small-3.1-24b-instruct",
+    "cloudflare/@cf/qwen/qwen3.8-27b",
+    "cloudflare/@cf/openai/gpt-oss-20b",
+    "cloudflare/@cf/meta/llama-4-scout-17b-16e-instruct",
+    "cloudflare/@cf/qwen/qwq-32b"
+  ],
+  "endpoints": [
+    {
+      "endpoint_id": "openrouter/inclusionai/ling-3.0-flash-vl:free",
+      "provider_id": "openrouter",
+      "canonical_model_id": "openrouter/inclusionai/ling-3.0-flash-vl:free",
+      "model": "inclusionai/ling-3.0-flash-vl:free",
+      "litellm_model": "openrouter/inclusionai/ling-3.0-flash-vl:free",
+      "api_base": "https://openrouter.ai/api/v1",
+      "api_style": "openai_compatible",
+      "free_status": "verified_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.251318+00:00",
+        "source_url": "https://openrouter.ai/api/v1/models"
+      },
+      "latency_ms": 754,
+      "last_checked_at": "2026-09-14T10:36:44.072185+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "openrouter/inclusionai/ling-3.0-flash-vl:free",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:44.072185Z",
+        "last_success_at": "2026-09-14T10:36:44.072185Z",
+        "p50_latency_ms": 754,
+        "p95_latency_ms": 754
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/nex-agi/nex-n2.5-mini:free",
+      "provider_id": "openrouter",
+      "canonical_model_id": "openrouter/nex-agi/nex-n2.5-mini:free",
+      "model": "nex-agi/nex-n2.5-mini:free",
+      "litellm_model": "openrouter/nex-agi/nex-n2.5-mini:free",
+      "api_base": "https://openrouter.ai/api/v1",
+      "api_style": "openai_compatible",
+      "free_status": "verified_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.251318+00:00",
+        "source_url": "https://openrouter.ai/api/v1/models"
+      },
+      "latency_ms": 951,
+      "last_checked_at": "2026-09-14T10:36:48.210280+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "openrouter/nex-agi/nex-n2.5-mini:free",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:48.210280Z",
+        "last_success_at": "2026-09-14T10:36:48.210280Z",
+        "p50_latency_ms": 951,
+        "p95_latency_ms": 951
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/inclusionai/ling-3.0-flash-sante:free",
+      "provider_id": "openrouter",
+      "canonical_model_id": "openrouter/inclusionai/ling-3.0-flash-sante:free",
+      "model": "inclusionai/ling-3.0-flash-sante:free",
+      "litellm_model": "openrouter/inclusionai/ling-3.0-flash-sante:free",
+      "api_base": "https://openrouter.ai/api/v1",
+      "api_style": "openai_compatible",
+      "free_status": "verified_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.251318+00:00",
+        "source_url": "https://openrouter.ai/api/v1/models"
+      },
+      "latency_ms": 737,
+      "last_checked_at": "2026-09-14T10:37:08.068442+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "openrouter/inclusionai/ling-3.0-flash-sante:free",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:37:08.068442Z",
+        "last_success_at": "2026-09-14T10:37:08.068442Z",
+        "p50_latency_ms": 737,
+        "p95_latency_ms": 737
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/inclusionai/ling-3.0-flash-fin:free",
+      "provider_id": "openrouter",
+      "canonical_model_id": "openrouter/inclusionai/ling-3.0-flash-fin:free",
+      "model": "inclusionai/ling-3.0-flash-fin:free",
+      "litellm_model": "openrouter/inclusionai/ling-3.0-flash-fin:free",
+      "api_base": "https://openrouter.ai/api/v1",
+      "api_style": "openai_compatible",
+      "free_status": "verified_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.251318+00:00",
+        "source_url": "https://openrouter.ai/api/v1/models"
+      },
+      "latency_ms": 570,
+      "last_checked_at": "2026-09-14T10:37:17.999554+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "openrouter/inclusionai/ling-3.0-flash-fin:free",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:37:17.999554Z",
+        "last_success_at": "2026-09-14T10:37:17.999554Z",
+        "p50_latency_ms": 570,
+        "p95_latency_ms": 570
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/dots-studio/dots-3-note-preview:free",
+      "provider_id": "openrouter",
+      "canonical_model_id": "openrouter/dots-studio/dots-3-note-preview:free",
+      "model": "dots-studio/dots-3-note-preview:free",
+      "litellm_model": "openrouter/dots-studio/dots-3-note-preview:free",
+      "api_base": "https://openrouter.ai/api/v1",
+      "api_style": "openai_compatible",
+      "free_status": "verified_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.251318+00:00",
+        "source_url": "https://openrouter.ai/api/v1/models"
+      },
+      "latency_ms": 1416,
+      "last_checked_at": "2026-09-14T10:37:31.054793+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "openrouter/dots-studio/dots-3-note-preview:free",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:37:31.054793Z",
+        "last_success_at": "2026-09-14T10:37:31.054793Z",
+        "p50_latency_ms": 1416,
+        "p95_latency_ms": 1416
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/liquid/lfm-2.5-2.6b:free",
+      "provider_id": "openrouter",
+      "canonical_model_id": "openrouter/liquid/lfm-2.5-2.6b:free",
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "litellm_model": "openrouter/liquid/lfm-2.5-2.6b:free",
+      "api_base": "https://openrouter.ai/api/v1",
+      "api_style": "openai_compatible",
+      "free_status": "verified_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.251318+00:00",
+        "source_url": "https://openrouter.ai/api/v1/models"
+      },
+      "latency_ms": 727,
+      "last_checked_at": "2026-09-14T10:37:42.708751+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "openrouter/liquid/lfm-2.5-2.6b:free",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:37:42.708751Z",
+        "last_success_at": "2026-09-14T10:37:42.708751Z",
+        "p50_latency_ms": 727,
+        "p95_latency_ms": 727
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/poolside/laguna-s-2.1:free",
+      "provider_id": "openrouter",
+      "canonical_model_id": "openrouter/poolside/laguna-s-2.1:free",
+      "model": "poolside/laguna-s-2.1:free",
+      "litellm_model": "openrouter/poolside/laguna-s-2.1:free",
+      "api_base": "https://openrouter.ai/api/v1",
+      "api_style": "openai_compatible",
+      "free_status": "verified_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.251318+00:00",
+        "source_url": "https://openrouter.ai/api/v1/models"
+      },
+      "latency_ms": 535,
+      "last_checked_at": "2026-09-14T10:38:07.837682+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "openrouter/poolside/laguna-s-2.1:free",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:38:07.837682Z",
+        "last_success_at": "2026-09-14T10:38:07.837682Z",
+        "p50_latency_ms": 535,
+        "p95_latency_ms": 535
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/poolside/laguna-xs-2.1:free",
+      "provider_id": "openrouter",
+      "canonical_model_id": "openrouter/poolside/laguna-xs-2.1:free",
+      "model": "poolside/laguna-xs-2.1:free",
+      "litellm_model": "openrouter/poolside/laguna-xs-2.1:free",
+      "api_base": "https://openrouter.ai/api/v1",
+      "api_style": "openai_compatible",
+      "free_status": "verified_free",
+      "runtime_status": "rate_limited",
+      "access_verdict": "exists_but_throttled",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.251318+00:00",
+        "source_url": "https://openrouter.ai/api/v1/models"
+      },
+      "latency_ms": 107,
+      "last_checked_at": "2026-09-14T10:38:31.261291+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "openrouter/poolside/laguna-xs-2.1:free",
+        "attempts": 1,
+        "success_count": 0,
+        "rate_limited_count": 1,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 0.0,
+        "last_checked_at": "2026-09-14T10:38:31.261291Z",
+        "last_success_at": null,
+        "p50_latency_ms": 107,
+        "p95_latency_ms": 107
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/cohere/north-mini-code:free",
+      "provider_id": "openrouter",
+      "canonical_model_id": "openrouter/cohere/north-mini-code:free",
+      "model": "cohere/north-mini-code:free",
+      "litellm_model": "openrouter/cohere/north-mini-code:free",
+      "api_base": "https://openrouter.ai/api/v1",
+      "api_style": "openai_compatible",
+      "free_status": "verified_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.251318+00:00",
+        "source_url": "https://openrouter.ai/api/v1/models"
+      },
+      "latency_ms": 180,
+      "last_checked_at": "2026-09-14T10:38:37.694090+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "openrouter/cohere/north-mini-code:free",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:38:37.694090Z",
+        "last_success_at": "2026-09-14T10:38:37.694090Z",
+        "p50_latency_ms": 180,
+        "p95_latency_ms": 180
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/nvidia/nemotron-3.5-content-safety:free",
+      "provider_id": "openrouter",
+      "canonical_model_id": "openrouter/nvidia/nemotron-3.5-content-safety:free",
+      "model": "nvidia/nemotron-3.5-content-safety:free",
+      "litellm_model": "openrouter/nvidia/nemotron-3.5-content-safety:free",
+      "api_base": "https://openrouter.ai/api/v1",
+      "api_style": "openai_compatible",
+      "free_status": "verified_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.251318+00:00",
+        "source_url": "https://openrouter.ai/api/v1/models"
+      },
+      "latency_ms": 264,
+      "last_checked_at": "2026-09-14T10:38:49.478218+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "openrouter/nvidia/nemotron-3.5-content-safety:free",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:38:49.478218Z",
+        "last_success_at": "2026-09-14T10:38:49.478218Z",
+        "p50_latency_ms": 264,
+        "p95_latency_ms": 264
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/google/gemma-4-26b-a4b-it:free",
+      "provider_id": "openrouter",
+      "canonical_model_id": "openrouter/google/gemma-4-26b-a4b-it:free",
+      "model": "google/gemma-4-26b-a4b-it:free",
+      "litellm_model": "openrouter/google/gemma-4-26b-a4b-it:free",
+      "api_base": "https://openrouter.ai/api/v1",
+      "api_style": "openai_compatible",
+      "free_status": "verified_free",
+      "runtime_status": "rate_limited",
+      "access_verdict": "exists_but_throttled",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.251318+00:00",
+        "source_url": "https://openrouter.ai/api/v1/models"
+      },
+      "latency_ms": 125,
+      "last_checked_at": "2026-09-14T10:40:09.664681+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "openrouter/google/gemma-4-26b-a4b-it:free",
+        "attempts": 1,
+        "success_count": 0,
+        "rate_limited_count": 1,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 0.0,
+        "last_checked_at": "2026-09-14T10:40:09.664681Z",
+        "last_success_at": null,
+        "p50_latency_ms": 125,
+        "p95_latency_ms": 125
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/google/gemma-4-31b-it:free",
+      "provider_id": "openrouter",
+      "canonical_model_id": "openrouter/google/gemma-4-31b-it:free",
+      "model": "google/gemma-4-31b-it:free",
+      "litellm_model": "openrouter/google/gemma-4-31b-it:free",
+      "api_base": "https://openrouter.ai/api/v1",
+      "api_style": "openai_compatible",
+      "free_status": "verified_free",
+      "runtime_status": "rate_limited",
+      "access_verdict": "exists_but_throttled",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.251318+00:00",
+        "source_url": "https://openrouter.ai/api/v1/models"
+      },
+      "latency_ms": 148,
+      "last_checked_at": "2026-09-14T10:40:10.241033+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "openrouter/google/gemma-4-31b-it:free",
+        "attempts": 1,
+        "success_count": 0,
+        "rate_limited_count": 1,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 0.0,
+        "last_checked_at": "2026-09-14T10:40:10.241033Z",
+        "last_success_at": null,
+        "p50_latency_ms": 148,
+        "p95_latency_ms": 148
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+      "provider_id": "openrouter",
+      "canonical_model_id": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+      "model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "litellm_model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+      "api_base": "https://openrouter.ai/api/v1",
+      "api_style": "openai_compatible",
+      "free_status": "verified_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.251318+00:00",
+        "source_url": "https://openrouter.ai/api/v1/models"
+      },
+      "latency_ms": 1034,
+      "last_checked_at": "2026-09-14T10:40:43.696535+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:40:43.696535Z",
+        "last_success_at": "2026-09-14T10:40:43.696535Z",
+        "p50_latency_ms": 1034,
+        "p95_latency_ms": 1034
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "zai/glm-4.5",
+      "provider_id": "zai",
+      "canonical_model_id": "zai/glm-4.5",
+      "model": "glm-4.5",
+      "litellm_model": "openai/glm-4.5",
+      "api_base": "https://api.z.ai/api/paas/v4",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "quota_exhausted",
+      "access_verdict": "quota_exhausted_for_account",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.269409+00:00",
+        "source_url": "https://api.z.ai/api/paas/v4/models"
+      },
+      "latency_ms": 725,
+      "last_checked_at": "2026-09-14T10:36:36.750917+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "zai/glm-4.5",
+        "attempts": 1,
+        "success_count": 0,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 1,
+        "hard_failure_count": 0,
+        "success_rate": 0.0,
+        "last_checked_at": "2026-09-14T10:36:36.750917Z",
+        "last_success_at": null,
+        "p50_latency_ms": 725,
+        "p95_latency_ms": 725
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "zai/glm-4.5-air",
+      "provider_id": "zai",
+      "canonical_model_id": "zai/glm-4.5-air",
+      "model": "glm-4.5-air",
+      "litellm_model": "openai/glm-4.5-air",
+      "api_base": "https://api.z.ai/api/paas/v4",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "quota_exhausted",
+      "access_verdict": "quota_exhausted_for_account",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.269409+00:00",
+        "source_url": "https://api.z.ai/api/paas/v4/models"
+      },
+      "latency_ms": 487,
+      "last_checked_at": "2026-09-14T10:36:37.238279+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "zai/glm-4.5-air",
+        "attempts": 1,
+        "success_count": 0,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 1,
+        "hard_failure_count": 0,
+        "success_rate": 0.0,
+        "last_checked_at": "2026-09-14T10:36:37.238279Z",
+        "last_success_at": null,
+        "p50_latency_ms": 487,
+        "p95_latency_ms": 487
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "zai/glm-4.6",
+      "provider_id": "zai",
+      "canonical_model_id": "zai/glm-4.6",
+      "model": "glm-4.6",
+      "litellm_model": "openai/glm-4.6",
+      "api_base": "https://api.z.ai/api/paas/v4",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "quota_exhausted",
+      "access_verdict": "quota_exhausted_for_account",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.269409+00:00",
+        "source_url": "https://api.z.ai/api/paas/v4/models"
+      },
+      "latency_ms": 512,
+      "last_checked_at": "2026-09-14T10:36:37.751655+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "zai/glm-4.6",
+        "attempts": 1,
+        "success_count": 0,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 1,
+        "hard_failure_count": 0,
+        "success_rate": 0.0,
+        "last_checked_at": "2026-09-14T10:36:37.751655Z",
+        "last_success_at": null,
+        "p50_latency_ms": 512,
+        "p95_latency_ms": 512
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "zai/glm-4.7",
+      "provider_id": "zai",
+      "canonical_model_id": "zai/glm-4.7",
+      "model": "glm-4.7",
+      "litellm_model": "openai/glm-4.7",
+      "api_base": "https://api.z.ai/api/paas/v4",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "quota_exhausted",
+      "access_verdict": "quota_exhausted_for_account",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.269409+00:00",
+        "source_url": "https://api.z.ai/api/paas/v4/models"
+      },
+      "latency_ms": 650,
+      "last_checked_at": "2026-09-14T10:36:38.402453+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "zai/glm-4.7",
+        "attempts": 1,
+        "success_count": 0,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 1,
+        "hard_failure_count": 0,
+        "success_rate": 0.0,
+        "last_checked_at": "2026-09-14T10:36:38.402453Z",
+        "last_success_at": null,
+        "p50_latency_ms": 650,
+        "p95_latency_ms": 650
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "zai/glm-5",
+      "provider_id": "zai",
+      "canonical_model_id": "zai/glm-5",
+      "model": "glm-5",
+      "litellm_model": "openai/glm-5",
+      "api_base": "https://api.z.ai/api/paas/v4",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "quota_exhausted",
+      "access_verdict": "quota_exhausted_for_account",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.269409+00:00",
+        "source_url": "https://api.z.ai/api/paas/v4/models"
+      },
+      "latency_ms": 452,
+      "last_checked_at": "2026-09-14T10:36:38.854936+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "zai/glm-5",
+        "attempts": 1,
+        "success_count": 0,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 1,
+        "hard_failure_count": 0,
+        "success_rate": 0.0,
+        "last_checked_at": "2026-09-14T10:36:38.854936Z",
+        "last_success_at": null,
+        "p50_latency_ms": 452,
+        "p95_latency_ms": 452
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "zai/glm-5-turbo",
+      "provider_id": "zai",
+      "canonical_model_id": "zai/glm-5-turbo",
+      "model": "glm-5-turbo",
+      "litellm_model": "openai/glm-5-turbo",
+      "api_base": "https://api.z.ai/api/paas/v4",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "quota_exhausted",
+      "access_verdict": "quota_exhausted_for_account",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.269409+00:00",
+        "source_url": "https://api.z.ai/api/paas/v4/models"
+      },
+      "latency_ms": 445,
+      "last_checked_at": "2026-09-14T10:36:39.300284+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "zai/glm-5-turbo",
+        "attempts": 1,
+        "success_count": 0,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 1,
+        "hard_failure_count": 0,
+        "success_rate": 0.0,
+        "last_checked_at": "2026-09-14T10:36:39.300284Z",
+        "last_success_at": null,
+        "p50_latency_ms": 445,
+        "p95_latency_ms": 445
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "zai/glm-5.1",
+      "provider_id": "zai",
+      "canonical_model_id": "zai/glm-5.1",
+      "model": "glm-5.1",
+      "litellm_model": "openai/glm-5.1",
+      "api_base": "https://api.z.ai/api/paas/v4",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "quota_exhausted",
+      "access_verdict": "quota_exhausted_for_account",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.269409+00:00",
+        "source_url": "https://api.z.ai/api/paas/v4/models"
+      },
+      "latency_ms": 460,
+      "last_checked_at": "2026-09-14T10:36:39.761160+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "zai/glm-5.1",
+        "attempts": 1,
+        "success_count": 0,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 1,
+        "hard_failure_count": 0,
+        "success_rate": 0.0,
+        "last_checked_at": "2026-09-14T10:36:39.761160Z",
+        "last_success_at": null,
+        "p50_latency_ms": 460,
+        "p95_latency_ms": 460
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "zai/glm-5.2",
+      "provider_id": "zai",
+      "canonical_model_id": "zai/glm-5.2",
+      "model": "glm-5.2",
+      "litellm_model": "openai/glm-5.2",
+      "api_base": "https://api.z.ai/api/paas/v4",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "quota_exhausted",
+      "access_verdict": "quota_exhausted_for_account",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.269409+00:00",
+        "source_url": "https://api.z.ai/api/paas/v4/models"
+      },
+      "latency_ms": 681,
+      "last_checked_at": "2026-09-14T10:36:40.443052+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "zai/glm-5.2",
+        "attempts": 1,
+        "success_count": 0,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 1,
+        "hard_failure_count": 0,
+        "success_rate": 0.0,
+        "last_checked_at": "2026-09-14T10:36:40.443052Z",
+        "last_success_at": null,
+        "p50_latency_ms": 681,
+        "p95_latency_ms": 681
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "zai/glm-5.3",
+      "provider_id": "zai",
+      "canonical_model_id": "zai/glm-5.3",
+      "model": "glm-5.3",
+      "litellm_model": "openai/glm-5.3",
+      "api_base": "https://api.z.ai/api/paas/v4",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "quota_exhausted",
+      "access_verdict": "quota_exhausted_for_account",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.269409+00:00",
+        "source_url": "https://api.z.ai/api/paas/v4/models"
+      },
+      "latency_ms": 516,
+      "last_checked_at": "2026-09-14T10:36:40.959838+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "zai/glm-5.3",
+        "attempts": 1,
+        "success_count": 0,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 1,
+        "hard_failure_count": 0,
+        "success_rate": 0.0,
+        "last_checked_at": "2026-09-14T10:36:40.959838Z",
+        "last_success_at": null,
+        "p50_latency_ms": 516,
+        "p95_latency_ms": 516
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "zai/glm-5.3-flash",
+      "provider_id": "zai",
+      "canonical_model_id": "zai/glm-5.3-flash",
+      "model": "glm-5.3-flash",
+      "litellm_model": "openai/glm-5.3-flash",
+      "api_base": "https://api.z.ai/api/paas/v4",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "quota_exhausted",
+      "access_verdict": "quota_exhausted_for_account",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.269409+00:00",
+        "source_url": "https://api.z.ai/api/paas/v4/models"
+      },
+      "latency_ms": 487,
+      "last_checked_at": "2026-09-14T10:36:41.447965+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "zai/glm-5.3-flash",
+        "attempts": 1,
+        "success_count": 0,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 1,
+        "hard_failure_count": 0,
+        "success_rate": 0.0,
+        "last_checked_at": "2026-09-14T10:36:41.447965Z",
+        "last_success_at": null,
+        "p50_latency_ms": 487,
+        "p95_latency_ms": 487
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/allam-2-7b",
+      "provider_id": "groq",
+      "canonical_model_id": "groq/allam-2-7b",
+      "model": "allam-2-7b",
+      "litellm_model": "groq/allam-2-7b",
+      "api_base": "https://api.groq.com/openai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.269913+00:00",
+        "source_url": "https://api.groq.com/openai/v1/models"
+      },
+      "latency_ms": 417,
+      "last_checked_at": "2026-09-14T10:36:36.460858+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "groq/allam-2-7b",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:36.460858Z",
+        "last_success_at": "2026-09-14T10:36:36.460858Z",
+        "p50_latency_ms": 417,
+        "p95_latency_ms": 417
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/openai/gpt-oss-20b",
+      "provider_id": "groq",
+      "canonical_model_id": "groq/openai/gpt-oss-20b",
+      "model": "openai/gpt-oss-20b",
+      "litellm_model": "groq/openai/gpt-oss-20b",
+      "api_base": "https://api.groq.com/openai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.269913+00:00",
+        "source_url": "https://api.groq.com/openai/v1/models"
+      },
+      "latency_ms": 242,
+      "last_checked_at": "2026-09-14T10:36:36.704088+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "groq/openai/gpt-oss-20b",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:36.704088Z",
+        "last_success_at": "2026-09-14T10:36:36.704088Z",
+        "p50_latency_ms": 242,
+        "p95_latency_ms": 242
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/qwen/qwen3.6-27b",
+      "provider_id": "groq",
+      "canonical_model_id": "groq/qwen/qwen3.6-27b",
+      "model": "qwen/qwen3.6-27b",
+      "litellm_model": "groq/qwen/qwen3.6-27b",
+      "api_base": "https://api.groq.com/openai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.269913+00:00",
+        "source_url": "https://api.groq.com/openai/v1/models"
+      },
+      "latency_ms": 221,
+      "last_checked_at": "2026-09-14T10:36:36.926292+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "groq/qwen/qwen3.6-27b",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:36.926292Z",
+        "last_success_at": "2026-09-14T10:36:36.926292Z",
+        "p50_latency_ms": 221,
+        "p95_latency_ms": 221
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/groq/compound",
+      "provider_id": "groq",
+      "canonical_model_id": "groq/groq/compound",
+      "model": "groq/compound",
+      "litellm_model": "groq/groq/compound",
+      "api_base": "https://api.groq.com/openai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.269913+00:00",
+        "source_url": "https://api.groq.com/openai/v1/models"
+      },
+      "latency_ms": 459,
+      "last_checked_at": "2026-09-14T10:36:37.386022+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "groq/groq/compound",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:37.386022Z",
+        "last_success_at": "2026-09-14T10:36:37.386022Z",
+        "p50_latency_ms": 459,
+        "p95_latency_ms": 459
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/openai/gpt-oss-120b",
+      "provider_id": "groq",
+      "canonical_model_id": "groq/openai/gpt-oss-120b",
+      "model": "openai/gpt-oss-120b",
+      "litellm_model": "groq/openai/gpt-oss-120b",
+      "api_base": "https://api.groq.com/openai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.269913+00:00",
+        "source_url": "https://api.groq.com/openai/v1/models"
+      },
+      "latency_ms": 344,
+      "last_checked_at": "2026-09-14T10:36:37.731244+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "groq/openai/gpt-oss-120b",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:37.731244Z",
+        "last_success_at": "2026-09-14T10:36:37.731244Z",
+        "p50_latency_ms": 344,
+        "p95_latency_ms": 344
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/qwen/qwen3.8-27b",
+      "provider_id": "groq",
+      "canonical_model_id": "groq/qwen/qwen3.8-27b",
+      "model": "qwen/qwen3.8-27b",
+      "litellm_model": "groq/qwen/qwen3.8-27b",
+      "api_base": "https://api.groq.com/openai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.269913+00:00",
+        "source_url": "https://api.groq.com/openai/v1/models"
+      },
+      "latency_ms": 215,
+      "last_checked_at": "2026-09-14T10:36:37.947001+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "groq/qwen/qwen3.8-27b",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:37.947001Z",
+        "last_success_at": "2026-09-14T10:36:37.947001Z",
+        "p50_latency_ms": 215,
+        "p95_latency_ms": 215
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/groq/compound-mini",
+      "provider_id": "groq",
+      "canonical_model_id": "groq/groq/compound-mini",
+      "model": "groq/compound-mini",
+      "litellm_model": "groq/groq/compound-mini",
+      "api_base": "https://api.groq.com/openai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.269913+00:00",
+        "source_url": "https://api.groq.com/openai/v1/models"
+      },
+      "latency_ms": 517,
+      "last_checked_at": "2026-09-14T10:36:38.740823+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "groq/groq/compound-mini",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:38.740823Z",
+        "last_success_at": "2026-09-14T10:36:38.740823Z",
+        "p50_latency_ms": 517,
+        "p95_latency_ms": 517
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/codestral-2508",
+      "provider_id": "mistral",
+      "canonical_model_id": "mistral/codestral-2508",
+      "model": "codestral-2508",
+      "litellm_model": "mistral/codestral-2508",
+      "api_base": "https://api.mistral.ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "source_url": "https://api.mistral.ai/v1/models"
+      },
+      "latency_ms": 423,
+      "last_checked_at": "2026-09-14T10:36:36.485710+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "mistral/codestral-2508",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:36.485710Z",
+        "last_success_at": "2026-09-14T10:36:36.485710Z",
+        "p50_latency_ms": 423,
+        "p95_latency_ms": 423
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/codestral-latest",
+      "provider_id": "mistral",
+      "canonical_model_id": "mistral/codestral-latest",
+      "model": "codestral-latest",
+      "litellm_model": "mistral/codestral-latest",
+      "api_base": "https://api.mistral.ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "source_url": "https://api.mistral.ai/v1/models"
+      },
+      "latency_ms": 389,
+      "last_checked_at": "2026-09-14T10:36:36.875178+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "mistral/codestral-latest",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:36.875178Z",
+        "last_success_at": "2026-09-14T10:36:36.875178Z",
+        "p50_latency_ms": 389,
+        "p95_latency_ms": 389
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/mistral-code-latest",
+      "provider_id": "mistral",
+      "canonical_model_id": "mistral/mistral-code-latest",
+      "model": "mistral-code-latest",
+      "litellm_model": "mistral/mistral-code-latest",
+      "api_base": "https://api.mistral.ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "source_url": "https://api.mistral.ai/v1/models"
+      },
+      "latency_ms": 826,
+      "last_checked_at": "2026-09-14T10:36:37.702051+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "mistral/mistral-code-latest",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:37.702051Z",
+        "last_success_at": "2026-09-14T10:36:37.702051Z",
+        "p50_latency_ms": 826,
+        "p95_latency_ms": 826
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/mistral-code-fim-latest",
+      "provider_id": "mistral",
+      "canonical_model_id": "mistral/mistral-code-fim-latest",
+      "model": "mistral-code-fim-latest",
+      "litellm_model": "mistral/mistral-code-fim-latest",
+      "api_base": "https://api.mistral.ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "source_url": "https://api.mistral.ai/v1/models"
+      },
+      "latency_ms": 562,
+      "last_checked_at": "2026-09-14T10:36:38.264927+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "mistral/mistral-code-fim-latest",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:38.264927Z",
+        "last_success_at": "2026-09-14T10:36:38.264927Z",
+        "p50_latency_ms": 562,
+        "p95_latency_ms": 562
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/mistral-small-2603",
+      "provider_id": "mistral",
+      "canonical_model_id": "mistral/mistral-small-2603",
+      "model": "mistral-small-2603",
+      "litellm_model": "mistral/mistral-small-2603",
+      "api_base": "https://api.mistral.ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "rate_limited",
+      "access_verdict": "exists_but_throttled",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "source_url": "https://api.mistral.ai/v1/models"
+      },
+      "latency_ms": 392,
+      "last_checked_at": "2026-09-14T10:36:38.657936+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "mistral/mistral-small-2603",
+        "attempts": 1,
+        "success_count": 0,
+        "rate_limited_count": 1,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 0.0,
+        "last_checked_at": "2026-09-14T10:36:38.657936Z",
+        "last_success_at": null,
+        "p50_latency_ms": 392,
+        "p95_latency_ms": 392
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/mistral-small-latest",
+      "provider_id": "mistral",
+      "canonical_model_id": "mistral/mistral-small-latest",
+      "model": "mistral-small-latest",
+      "litellm_model": "mistral/mistral-small-latest",
+      "api_base": "https://api.mistral.ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "rate_limited",
+      "access_verdict": "exists_but_throttled",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "source_url": "https://api.mistral.ai/v1/models"
+      },
+      "latency_ms": 333,
+      "last_checked_at": "2026-09-14T10:36:38.991602+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "mistral/mistral-small-latest",
+        "attempts": 1,
+        "success_count": 0,
+        "rate_limited_count": 1,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 0.0,
+        "last_checked_at": "2026-09-14T10:36:38.991602Z",
+        "last_success_at": null,
+        "p50_latency_ms": 333,
+        "p95_latency_ms": 333
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/mistral-vibe-cli-fast",
+      "provider_id": "mistral",
+      "canonical_model_id": "mistral/mistral-vibe-cli-fast",
+      "model": "mistral-vibe-cli-fast",
+      "litellm_model": "mistral/mistral-vibe-cli-fast",
+      "api_base": "https://api.mistral.ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "rate_limited",
+      "access_verdict": "exists_but_throttled",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "source_url": "https://api.mistral.ai/v1/models"
+      },
+      "latency_ms": 277,
+      "last_checked_at": "2026-09-14T10:36:39.269626+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "mistral/mistral-vibe-cli-fast",
+        "attempts": 1,
+        "success_count": 0,
+        "rate_limited_count": 1,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 0.0,
+        "last_checked_at": "2026-09-14T10:36:39.269626Z",
+        "last_success_at": null,
+        "p50_latency_ms": 277,
+        "p95_latency_ms": 277
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/magistral-small-latest",
+      "provider_id": "mistral",
+      "canonical_model_id": "mistral/magistral-small-latest",
+      "model": "magistral-small-latest",
+      "litellm_model": "mistral/magistral-small-latest",
+      "api_base": "https://api.mistral.ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "rate_limited",
+      "access_verdict": "exists_but_throttled",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "source_url": "https://api.mistral.ai/v1/models"
+      },
+      "latency_ms": 279,
+      "last_checked_at": "2026-09-14T10:36:39.549593+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "mistral/magistral-small-latest",
+        "attempts": 1,
+        "success_count": 0,
+        "rate_limited_count": 1,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 0.0,
+        "last_checked_at": "2026-09-14T10:36:39.549593Z",
+        "last_success_at": null,
+        "p50_latency_ms": 279,
+        "p95_latency_ms": 279
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/voxtral-small-2507",
+      "provider_id": "mistral",
+      "canonical_model_id": "mistral/voxtral-small-2507",
+      "model": "voxtral-small-2507",
+      "litellm_model": "mistral/voxtral-small-2507",
+      "api_base": "https://api.mistral.ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "source_url": "https://api.mistral.ai/v1/models"
+      },
+      "latency_ms": 447,
+      "last_checked_at": "2026-09-14T10:36:39.997831+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "mistral/voxtral-small-2507",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:39.997831Z",
+        "last_success_at": "2026-09-14T10:36:39.997831Z",
+        "p50_latency_ms": 447,
+        "p95_latency_ms": 447
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/voxtral-small-latest",
+      "provider_id": "mistral",
+      "canonical_model_id": "mistral/voxtral-small-latest",
+      "model": "voxtral-small-latest",
+      "litellm_model": "mistral/voxtral-small-latest",
+      "api_base": "https://api.mistral.ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "source_url": "https://api.mistral.ai/v1/models"
+      },
+      "latency_ms": 425,
+      "last_checked_at": "2026-09-14T10:36:40.423776+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "mistral/voxtral-small-latest",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:40.423776Z",
+        "last_success_at": "2026-09-14T10:36:40.423776Z",
+        "p50_latency_ms": 425,
+        "p95_latency_ms": 425
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/ministral-3b-2512",
+      "provider_id": "mistral",
+      "canonical_model_id": "mistral/ministral-3b-2512",
+      "model": "ministral-3b-2512",
+      "litellm_model": "mistral/ministral-3b-2512",
+      "api_base": "https://api.mistral.ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "source_url": "https://api.mistral.ai/v1/models"
+      },
+      "latency_ms": 421,
+      "last_checked_at": "2026-09-14T10:36:41.363295+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "mistral/ministral-3b-2512",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:41.363295Z",
+        "last_success_at": "2026-09-14T10:36:41.363295Z",
+        "p50_latency_ms": 421,
+        "p95_latency_ms": 421
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/ministral-3b-latest",
+      "provider_id": "mistral",
+      "canonical_model_id": "mistral/ministral-3b-latest",
+      "model": "ministral-3b-latest",
+      "litellm_model": "mistral/ministral-3b-latest",
+      "api_base": "https://api.mistral.ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "source_url": "https://api.mistral.ai/v1/models"
+      },
+      "latency_ms": 580,
+      "last_checked_at": "2026-09-14T10:36:41.943853+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "mistral/ministral-3b-latest",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:41.943853Z",
+        "last_success_at": "2026-09-14T10:36:41.943853Z",
+        "p50_latency_ms": 580,
+        "p95_latency_ms": 580
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/ministral-8b-2512",
+      "provider_id": "mistral",
+      "canonical_model_id": "mistral/ministral-8b-2512",
+      "model": "ministral-8b-2512",
+      "litellm_model": "mistral/ministral-8b-2512",
+      "api_base": "https://api.mistral.ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "source_url": "https://api.mistral.ai/v1/models"
+      },
+      "latency_ms": 438,
+      "last_checked_at": "2026-09-14T10:36:42.382841+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "mistral/ministral-8b-2512",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:42.382841Z",
+        "last_success_at": "2026-09-14T10:36:42.382841Z",
+        "p50_latency_ms": 438,
+        "p95_latency_ms": 438
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/ministral-8b-latest",
+      "provider_id": "mistral",
+      "canonical_model_id": "mistral/ministral-8b-latest",
+      "model": "ministral-8b-latest",
+      "litellm_model": "mistral/ministral-8b-latest",
+      "api_base": "https://api.mistral.ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "source_url": "https://api.mistral.ai/v1/models"
+      },
+      "latency_ms": 446,
+      "last_checked_at": "2026-09-14T10:36:42.829907+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "mistral/ministral-8b-latest",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:42.829907Z",
+        "last_success_at": "2026-09-14T10:36:42.829907Z",
+        "p50_latency_ms": 446,
+        "p95_latency_ms": 446
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/ministral-14b-2512",
+      "provider_id": "mistral",
+      "canonical_model_id": "mistral/ministral-14b-2512",
+      "model": "ministral-14b-2512",
+      "litellm_model": "mistral/ministral-14b-2512",
+      "api_base": "https://api.mistral.ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "source_url": "https://api.mistral.ai/v1/models"
+      },
+      "latency_ms": 597,
+      "last_checked_at": "2026-09-14T10:36:43.427928+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "mistral/ministral-14b-2512",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:43.427928Z",
+        "last_success_at": "2026-09-14T10:36:43.427928Z",
+        "p50_latency_ms": 597,
+        "p95_latency_ms": 597
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/ministral-14b-latest",
+      "provider_id": "mistral",
+      "canonical_model_id": "mistral/ministral-14b-latest",
+      "model": "ministral-14b-latest",
+      "litellm_model": "mistral/ministral-14b-latest",
+      "api_base": "https://api.mistral.ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "source_url": "https://api.mistral.ai/v1/models"
+      },
+      "latency_ms": 740,
+      "last_checked_at": "2026-09-14T10:36:44.168310+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "mistral/ministral-14b-latest",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:44.168310Z",
+        "last_success_at": "2026-09-14T10:36:44.168310Z",
+        "p50_latency_ms": 740,
+        "p95_latency_ms": 740
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/mistral-medium-latest",
+      "provider_id": "mistral",
+      "canonical_model_id": "mistral/mistral-medium-latest",
+      "model": "mistral-medium-latest",
+      "litellm_model": "mistral/mistral-medium-latest",
+      "api_base": "https://api.mistral.ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "rate_limited",
+      "access_verdict": "exists_but_throttled",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "source_url": "https://api.mistral.ai/v1/models"
+      },
+      "latency_ms": 277,
+      "last_checked_at": "2026-09-14T10:36:44.446287+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "mistral/mistral-medium-latest",
+        "attempts": 1,
+        "success_count": 0,
+        "rate_limited_count": 1,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 0.0,
+        "last_checked_at": "2026-09-14T10:36:44.446287Z",
+        "last_success_at": null,
+        "p50_latency_ms": 277,
+        "p95_latency_ms": 277
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/mistral-medium",
+      "provider_id": "mistral",
+      "canonical_model_id": "mistral/mistral-medium",
+      "model": "mistral-medium",
+      "litellm_model": "mistral/mistral-medium",
+      "api_base": "https://api.mistral.ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "rate_limited",
+      "access_verdict": "exists_but_throttled",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "source_url": "https://api.mistral.ai/v1/models"
+      },
+      "latency_ms": 269,
+      "last_checked_at": "2026-09-14T10:36:44.716169+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "mistral/mistral-medium",
+        "attempts": 1,
+        "success_count": 0,
+        "rate_limited_count": 1,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 0.0,
+        "last_checked_at": "2026-09-14T10:36:44.716169Z",
+        "last_success_at": null,
+        "p50_latency_ms": 269,
+        "p95_latency_ms": 269
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/mistral-medium-3-5",
+      "provider_id": "mistral",
+      "canonical_model_id": "mistral/mistral-medium-3-5",
+      "model": "mistral-medium-3-5",
+      "litellm_model": "mistral/mistral-medium-3-5",
+      "api_base": "https://api.mistral.ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "rate_limited",
+      "access_verdict": "exists_but_throttled",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "source_url": "https://api.mistral.ai/v1/models"
+      },
+      "latency_ms": 253,
+      "last_checked_at": "2026-09-14T10:36:44.969648+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "mistral/mistral-medium-3-5",
+        "attempts": 1,
+        "success_count": 0,
+        "rate_limited_count": 1,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 0.0,
+        "last_checked_at": "2026-09-14T10:36:44.969648Z",
+        "last_success_at": null,
+        "p50_latency_ms": 253,
+        "p95_latency_ms": 253
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/mistral-medium-3.5",
+      "provider_id": "mistral",
+      "canonical_model_id": "mistral/mistral-medium-3.5",
+      "model": "mistral-medium-3.5",
+      "litellm_model": "mistral/mistral-medium-3.5",
+      "api_base": "https://api.mistral.ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "rate_limited",
+      "access_verdict": "exists_but_throttled",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "source_url": "https://api.mistral.ai/v1/models"
+      },
+      "latency_ms": 259,
+      "last_checked_at": "2026-09-14T10:36:45.229077+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "mistral/mistral-medium-3.5",
+        "attempts": 1,
+        "success_count": 0,
+        "rate_limited_count": 1,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 0.0,
+        "last_checked_at": "2026-09-14T10:36:45.229077Z",
+        "last_success_at": null,
+        "p50_latency_ms": 259,
+        "p95_latency_ms": 259
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/mistral-medium-3",
+      "provider_id": "mistral",
+      "canonical_model_id": "mistral/mistral-medium-3",
+      "model": "mistral-medium-3",
+      "litellm_model": "mistral/mistral-medium-3",
+      "api_base": "https://api.mistral.ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "rate_limited",
+      "access_verdict": "exists_but_throttled",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "source_url": "https://api.mistral.ai/v1/models"
+      },
+      "latency_ms": 321,
+      "last_checked_at": "2026-09-14T10:36:45.551006+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "mistral/mistral-medium-3",
+        "attempts": 1,
+        "success_count": 0,
+        "rate_limited_count": 1,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 0.0,
+        "last_checked_at": "2026-09-14T10:36:45.551006Z",
+        "last_success_at": null,
+        "p50_latency_ms": 321,
+        "p95_latency_ms": 321
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/mistral-medium-2604",
+      "provider_id": "mistral",
+      "canonical_model_id": "mistral/mistral-medium-2604",
+      "model": "mistral-medium-2604",
+      "litellm_model": "mistral/mistral-medium-2604",
+      "api_base": "https://api.mistral.ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "rate_limited",
+      "access_verdict": "exists_but_throttled",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "source_url": "https://api.mistral.ai/v1/models"
+      },
+      "latency_ms": 310,
+      "last_checked_at": "2026-09-14T10:36:45.862089+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "mistral/mistral-medium-2604",
+        "attempts": 1,
+        "success_count": 0,
+        "rate_limited_count": 1,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 0.0,
+        "last_checked_at": "2026-09-14T10:36:45.862089Z",
+        "last_success_at": null,
+        "p50_latency_ms": 310,
+        "p95_latency_ms": 310
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/mistral-vibe-cli-latest",
+      "provider_id": "mistral",
+      "canonical_model_id": "mistral/mistral-vibe-cli-latest",
+      "model": "mistral-vibe-cli-latest",
+      "litellm_model": "mistral/mistral-vibe-cli-latest",
+      "api_base": "https://api.mistral.ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "rate_limited",
+      "access_verdict": "exists_but_throttled",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "source_url": "https://api.mistral.ai/v1/models"
+      },
+      "latency_ms": 255,
+      "last_checked_at": "2026-09-14T10:36:46.117444+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "mistral/mistral-vibe-cli-latest",
+        "attempts": 1,
+        "success_count": 0,
+        "rate_limited_count": 1,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 0.0,
+        "last_checked_at": "2026-09-14T10:36:46.117444Z",
+        "last_success_at": null,
+        "p50_latency_ms": 255,
+        "p95_latency_ms": 255
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/mistral-vibe-cli-with-tools",
+      "provider_id": "mistral",
+      "canonical_model_id": "mistral/mistral-vibe-cli-with-tools",
+      "model": "mistral-vibe-cli-with-tools",
+      "litellm_model": "mistral/mistral-vibe-cli-with-tools",
+      "api_base": "https://api.mistral.ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "rate_limited",
+      "access_verdict": "exists_but_throttled",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "source_url": "https://api.mistral.ai/v1/models"
+      },
+      "latency_ms": 264,
+      "last_checked_at": "2026-09-14T10:36:46.382614+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "mistral/mistral-vibe-cli-with-tools",
+        "attempts": 1,
+        "success_count": 0,
+        "rate_limited_count": 1,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 0.0,
+        "last_checked_at": "2026-09-14T10:36:46.382614Z",
+        "last_success_at": null,
+        "p50_latency_ms": 264,
+        "p95_latency_ms": 264
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "mistral/magistral-medium-latest",
+      "provider_id": "mistral",
+      "canonical_model_id": "mistral/magistral-medium-latest",
+      "model": "magistral-medium-latest",
+      "litellm_model": "mistral/magistral-medium-latest",
+      "api_base": "https://api.mistral.ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "account_specific_free",
+      "runtime_status": "rate_limited",
+      "access_verdict": "exists_but_throttled",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "source_url": "https://api.mistral.ai/v1/models"
+      },
+      "latency_ms": 265,
+      "last_checked_at": "2026-09-14T10:36:46.648010+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "mistral/magistral-medium-latest",
+        "attempts": 1,
+        "success_count": 0,
+        "rate_limited_count": 1,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 0.0,
+        "last_checked_at": "2026-09-14T10:36:46.648010Z",
+        "last_success_at": null,
+        "p50_latency_ms": 265,
+        "p95_latency_ms": 265
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/openai/gpt-oss-120b",
+      "provider_id": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/openai/gpt-oss-120b",
+      "model": "@cf/openai/gpt-oss-120b",
+      "litellm_model": "cloudflare/@cf/openai/gpt-oss-120b",
+      "api_base": "https://api.cloudflare.com/client/v4/accounts/1ae907087b044bef0ad45de2d93e9086/ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
+      },
+      "latency_ms": 523,
+      "last_checked_at": "2026-09-14T10:36:36.603862+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": 300,
+        "requests_per_day": 10000,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "cloudflare/@cf/openai/gpt-oss-120b",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:36.603862Z",
+        "last_success_at": "2026-09-14T10:36:36.603862Z",
+        "p50_latency_ms": 523,
+        "p95_latency_ms": 523
+      },
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/meta/llama-3.2-3b-instruct",
+      "provider_id": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/meta/llama-3.2-3b-instruct",
+      "model": "@cf/meta/llama-3.2-3b-instruct",
+      "litellm_model": "cloudflare/@cf/meta/llama-3.2-3b-instruct",
+      "api_base": "https://api.cloudflare.com/client/v4/accounts/1ae907087b044bef0ad45de2d93e9086/ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
+      },
+      "latency_ms": 525,
+      "last_checked_at": "2026-09-14T10:36:37.129412+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": 300,
+        "requests_per_day": 10000,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "cloudflare/@cf/meta/llama-3.2-3b-instruct",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:37.129412Z",
+        "last_success_at": "2026-09-14T10:36:37.129412Z",
+        "p50_latency_ms": 525,
+        "p95_latency_ms": 525
+      },
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/meta/llama-guard-3-8b",
+      "provider_id": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/meta/llama-guard-3-8b",
+      "model": "@cf/meta/llama-guard-3-8b",
+      "litellm_model": "cloudflare/@cf/meta/llama-guard-3-8b",
+      "api_base": "https://api.cloudflare.com/client/v4/accounts/1ae907087b044bef0ad45de2d93e9086/ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
+      },
+      "latency_ms": 335,
+      "last_checked_at": "2026-09-14T10:36:37.465064+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": 2000,
+        "requests_per_day": 10000,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "cloudflare/@cf/meta/llama-guard-3-8b",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:37.465064Z",
+        "last_success_at": "2026-09-14T10:36:37.465064Z",
+        "p50_latency_ms": 335,
+        "p95_latency_ms": 335
+      },
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/deepseek-ai/deepseek-r1-distill-qwen-32b",
+      "provider_id": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/deepseek-ai/deepseek-r1-distill-qwen-32b",
+      "model": "@cf/deepseek-ai/deepseek-r1-distill-qwen-32b",
+      "litellm_model": "cloudflare/@cf/deepseek-ai/deepseek-r1-distill-qwen-32b",
+      "api_base": "https://api.cloudflare.com/client/v4/accounts/1ae907087b044bef0ad45de2d93e9086/ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
+      },
+      "latency_ms": 397,
+      "last_checked_at": "2026-09-14T10:36:38.172529+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": 300,
+        "requests_per_day": 10000,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "cloudflare/@cf/deepseek-ai/deepseek-r1-distill-qwen-32b",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:38.172529Z",
+        "last_success_at": "2026-09-14T10:36:38.172529Z",
+        "p50_latency_ms": 397,
+        "p95_latency_ms": 397
+      },
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/meta/llama-3.1-8b-instruct-fp8",
+      "provider_id": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/meta/llama-3.1-8b-instruct-fp8",
+      "model": "@cf/meta/llama-3.1-8b-instruct-fp8",
+      "litellm_model": "cloudflare/@cf/meta/llama-3.1-8b-instruct-fp8",
+      "api_base": "https://api.cloudflare.com/client/v4/accounts/1ae907087b044bef0ad45de2d93e9086/ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
+      },
+      "latency_ms": 504,
+      "last_checked_at": "2026-09-14T10:36:38.677430+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": 300,
+        "requests_per_day": 10000,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "cloudflare/@cf/meta/llama-3.1-8b-instruct-fp8",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:38.677430Z",
+        "last_success_at": "2026-09-14T10:36:38.677430Z",
+        "p50_latency_ms": 504,
+        "p95_latency_ms": 504
+      },
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/meta/llama-3.2-1b-instruct",
+      "provider_id": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/meta/llama-3.2-1b-instruct",
+      "model": "@cf/meta/llama-3.2-1b-instruct",
+      "litellm_model": "cloudflare/@cf/meta/llama-3.2-1b-instruct",
+      "api_base": "https://api.cloudflare.com/client/v4/accounts/1ae907087b044bef0ad45de2d93e9086/ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
+      },
+      "latency_ms": 354,
+      "last_checked_at": "2026-09-14T10:36:39.504251+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": 300,
+        "requests_per_day": 10000,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "cloudflare/@cf/meta/llama-3.2-1b-instruct",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:39.504251Z",
+        "last_success_at": "2026-09-14T10:36:39.504251Z",
+        "p50_latency_ms": 354,
+        "p95_latency_ms": 354
+      },
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/zai-org/glm-4.7-flash",
+      "provider_id": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/zai-org/glm-4.7-flash",
+      "model": "@cf/zai-org/glm-4.7-flash",
+      "litellm_model": "cloudflare/@cf/zai-org/glm-4.7-flash",
+      "api_base": "https://api.cloudflare.com/client/v4/accounts/1ae907087b044bef0ad45de2d93e9086/ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
+      },
+      "latency_ms": 383,
+      "last_checked_at": "2026-09-14T10:36:40.028057+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": 300,
+        "requests_per_day": 10000,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "cloudflare/@cf/zai-org/glm-4.7-flash",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:40.028057Z",
+        "last_success_at": "2026-09-14T10:36:40.028057Z",
+        "p50_latency_ms": 383,
+        "p95_latency_ms": 383
+      },
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+      "provider_id": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+      "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+      "litellm_model": "cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+      "api_base": "https://api.cloudflare.com/client/v4/accounts/1ae907087b044bef0ad45de2d93e9086/ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
+      },
+      "latency_ms": 874,
+      "last_checked_at": "2026-09-14T10:36:40.902881+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": 300,
+        "requests_per_day": 10000,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:40.902881Z",
+        "last_success_at": "2026-09-14T10:36:40.902881Z",
+        "p50_latency_ms": 874,
+        "p95_latency_ms": 874
+      },
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/ibm-granite/granite-4.0-h-micro",
+      "provider_id": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/ibm-granite/granite-4.0-h-micro",
+      "model": "@cf/ibm-granite/granite-4.0-h-micro",
+      "litellm_model": "cloudflare/@cf/ibm-granite/granite-4.0-h-micro",
+      "api_base": "https://api.cloudflare.com/client/v4/accounts/1ae907087b044bef0ad45de2d93e9086/ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
+      },
+      "latency_ms": 291,
+      "last_checked_at": "2026-09-14T10:36:41.194859+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": 300,
+        "requests_per_day": 10000,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "cloudflare/@cf/ibm-granite/granite-4.0-h-micro",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:41.194859Z",
+        "last_success_at": "2026-09-14T10:36:41.194859Z",
+        "p50_latency_ms": 291,
+        "p95_latency_ms": 291
+      },
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/qwen/qwen2.5-coder-32b-instruct",
+      "provider_id": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/qwen/qwen2.5-coder-32b-instruct",
+      "model": "@cf/qwen/qwen2.5-coder-32b-instruct",
+      "litellm_model": "cloudflare/@cf/qwen/qwen2.5-coder-32b-instruct",
+      "api_base": "https://api.cloudflare.com/client/v4/accounts/1ae907087b044bef0ad45de2d93e9086/ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
+      },
+      "latency_ms": 385,
+      "last_checked_at": "2026-09-14T10:36:41.814454+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": 300,
+        "requests_per_day": 10000,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "cloudflare/@cf/qwen/qwen2.5-coder-32b-instruct",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:41.814454Z",
+        "last_success_at": "2026-09-14T10:36:41.814454Z",
+        "p50_latency_ms": 385,
+        "p95_latency_ms": 385
+      },
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/nvidia/nemotron-3-120b-a12b",
+      "provider_id": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/nvidia/nemotron-3-120b-a12b",
+      "model": "@cf/nvidia/nemotron-3-120b-a12b",
+      "litellm_model": "cloudflare/@cf/nvidia/nemotron-3-120b-a12b",
+      "api_base": "https://api.cloudflare.com/client/v4/accounts/1ae907087b044bef0ad45de2d93e9086/ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
+      },
+      "latency_ms": 397,
+      "last_checked_at": "2026-09-14T10:36:42.362698+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": 300,
+        "requests_per_day": 10000,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "cloudflare/@cf/nvidia/nemotron-3-120b-a12b",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:42.362698Z",
+        "last_success_at": "2026-09-14T10:36:42.362698Z",
+        "p50_latency_ms": 397,
+        "p95_latency_ms": 397
+      },
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/aisingapore/gemma-sea-lion-v4-27b-it",
+      "provider_id": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/aisingapore/gemma-sea-lion-v4-27b-it",
+      "model": "@cf/aisingapore/gemma-sea-lion-v4-27b-it",
+      "litellm_model": "cloudflare/@cf/aisingapore/gemma-sea-lion-v4-27b-it",
+      "api_base": "https://api.cloudflare.com/client/v4/accounts/1ae907087b044bef0ad45de2d93e9086/ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
+      },
+      "latency_ms": 274,
+      "last_checked_at": "2026-09-14T10:36:42.637924+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": 300,
+        "requests_per_day": 10000,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "cloudflare/@cf/aisingapore/gemma-sea-lion-v4-27b-it",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:42.637924Z",
+        "last_success_at": "2026-09-14T10:36:42.637924Z",
+        "p50_latency_ms": 274,
+        "p95_latency_ms": 274
+      },
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/qwen/qwen3-30b-a3b-fp8",
+      "provider_id": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/qwen/qwen3-30b-a3b-fp8",
+      "model": "@cf/qwen/qwen3-30b-a3b-fp8",
+      "litellm_model": "cloudflare/@cf/qwen/qwen3-30b-a3b-fp8",
+      "api_base": "https://api.cloudflare.com/client/v4/accounts/1ae907087b044bef0ad45de2d93e9086/ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
+      },
+      "latency_ms": 313,
+      "last_checked_at": "2026-09-14T10:36:42.951322+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": 300,
+        "requests_per_day": 10000,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "cloudflare/@cf/qwen/qwen3-30b-a3b-fp8",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:42.951322Z",
+        "last_success_at": "2026-09-14T10:36:42.951322Z",
+        "p50_latency_ms": 313,
+        "p95_latency_ms": 313
+      },
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/google/gemma-4-26b-a4b-it",
+      "provider_id": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/google/gemma-4-26b-a4b-it",
+      "model": "@cf/google/gemma-4-26b-a4b-it",
+      "litellm_model": "cloudflare/@cf/google/gemma-4-26b-a4b-it",
+      "api_base": "https://api.cloudflare.com/client/v4/accounts/1ae907087b044bef0ad45de2d93e9086/ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
+      },
+      "latency_ms": 452,
+      "last_checked_at": "2026-09-14T10:36:43.404527+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": 300,
+        "requests_per_day": 10000,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "cloudflare/@cf/google/gemma-4-26b-a4b-it",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:43.404527Z",
+        "last_success_at": "2026-09-14T10:36:43.404527Z",
+        "p50_latency_ms": 452,
+        "p95_latency_ms": 452
+      },
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/mistralai/mistral-small-3.1-24b-instruct",
+      "provider_id": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/mistralai/mistral-small-3.1-24b-instruct",
+      "model": "@cf/mistralai/mistral-small-3.1-24b-instruct",
+      "litellm_model": "cloudflare/@cf/mistralai/mistral-small-3.1-24b-instruct",
+      "api_base": "https://api.cloudflare.com/client/v4/accounts/1ae907087b044bef0ad45de2d93e9086/ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
+      },
+      "latency_ms": 458,
+      "last_checked_at": "2026-09-14T10:36:43.863129+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": 300,
+        "requests_per_day": 10000,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "cloudflare/@cf/mistralai/mistral-small-3.1-24b-instruct",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:43.863129Z",
+        "last_success_at": "2026-09-14T10:36:43.863129Z",
+        "p50_latency_ms": 458,
+        "p95_latency_ms": 458
+      },
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/qwen/qwen3.8-27b",
+      "provider_id": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/qwen/qwen3.8-27b",
+      "model": "@cf/qwen/qwen3.8-27b",
+      "litellm_model": "cloudflare/@cf/qwen/qwen3.8-27b",
+      "api_base": "https://api.cloudflare.com/client/v4/accounts/1ae907087b044bef0ad45de2d93e9086/ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
+      },
+      "latency_ms": 425,
+      "last_checked_at": "2026-09-14T10:36:44.613305+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": 300,
+        "requests_per_day": 10000,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "cloudflare/@cf/qwen/qwen3.8-27b",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:44.613305Z",
+        "last_success_at": "2026-09-14T10:36:44.613305Z",
+        "p50_latency_ms": 425,
+        "p95_latency_ms": 425
+      },
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/openai/gpt-oss-20b",
+      "provider_id": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/openai/gpt-oss-20b",
+      "model": "@cf/openai/gpt-oss-20b",
+      "litellm_model": "cloudflare/@cf/openai/gpt-oss-20b",
+      "api_base": "https://api.cloudflare.com/client/v4/accounts/1ae907087b044bef0ad45de2d93e9086/ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
+      },
+      "latency_ms": 219,
+      "last_checked_at": "2026-09-14T10:36:44.832949+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": 300,
+        "requests_per_day": 10000,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "cloudflare/@cf/openai/gpt-oss-20b",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:44.832949Z",
+        "last_success_at": "2026-09-14T10:36:44.832949Z",
+        "p50_latency_ms": 219,
+        "p95_latency_ms": 219
+      },
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/meta/llama-4-scout-17b-16e-instruct",
+      "provider_id": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/meta/llama-4-scout-17b-16e-instruct",
+      "model": "@cf/meta/llama-4-scout-17b-16e-instruct",
+      "litellm_model": "cloudflare/@cf/meta/llama-4-scout-17b-16e-instruct",
+      "api_base": "https://api.cloudflare.com/client/v4/accounts/1ae907087b044bef0ad45de2d93e9086/ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
+      },
+      "latency_ms": 468,
+      "last_checked_at": "2026-09-14T10:36:45.301433+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": 300,
+        "requests_per_day": 10000,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "cloudflare/@cf/meta/llama-4-scout-17b-16e-instruct",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:45.301433Z",
+        "last_success_at": "2026-09-14T10:36:45.301433Z",
+        "p50_latency_ms": 468,
+        "p95_latency_ms": 468
+      },
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "cloudflare/@cf/qwen/qwq-32b",
+      "provider_id": "cloudflare",
+      "canonical_model_id": "cloudflare/@cf/qwen/qwq-32b",
+      "model": "@cf/qwen/qwq-32b",
+      "litellm_model": "cloudflare/@cf/qwen/qwq-32b",
+      "api_base": "https://api.cloudflare.com/client/v4/accounts/1ae907087b044bef0ad45de2d93e9086/ai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
+      },
+      "latency_ms": 437,
+      "last_checked_at": "2026-09-14T10:36:45.738858+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": 300,
+        "requests_per_day": 10000,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "cloudflare/@cf/qwen/qwq-32b",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-14T10:36:45.738858Z",
+        "last_success_at": "2026-09-14T10:36:45.738858Z",
+        "p50_latency_ms": 437,
+        "p95_latency_ms": 437
+      },
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    }
+  ]
+}
