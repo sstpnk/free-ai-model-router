@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-14T10:46:04.029131Z",
+  "generated_at": "2026-09-15T10:11:55.286107Z",
   "endpoints": [
     {
       "endpoint_id": "openrouter/inclusionai/ling-3.0-flash-vl:free",
@@ -10,8 +10,8 @@
       "free_status": "verified_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 754,
-      "last_checked_at": "2026-09-14T10:36:44.072185Z",
+      "latency_ms": 2881,
+      "last_checked_at": "2026-09-15T10:03:27.204828Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -26,8 +26,24 @@
       "free_status": "verified_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 951,
-      "last_checked_at": "2026-09-14T10:36:48.210280Z",
+      "latency_ms": 451,
+      "last_checked_at": "2026-09-15T10:03:38.854099Z",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/nex-agi/nex-n2.5-pro:free",
+      "provider_id": "openrouter",
+      "provider_name": "openrouter",
+      "canonical_model_id": "openrouter/nex-agi/nex-n2.5-pro:free",
+      "model_name": "nex-agi/nex-n2.5-pro:free",
+      "free_status": "verified_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "latency_ms": 4957,
+      "last_checked_at": "2026-09-15T10:03:43.829746Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -42,8 +58,8 @@
       "free_status": "verified_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 737,
-      "last_checked_at": "2026-09-14T10:37:08.068442Z",
+      "latency_ms": 1363,
+      "last_checked_at": "2026-09-15T10:03:49.990961Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -58,8 +74,8 @@
       "free_status": "verified_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 570,
-      "last_checked_at": "2026-09-14T10:37:17.999554Z",
+      "latency_ms": 611,
+      "last_checked_at": "2026-09-15T10:04:00.023197Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -74,8 +90,8 @@
       "free_status": "verified_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 1416,
-      "last_checked_at": "2026-09-14T10:37:31.054793Z",
+      "latency_ms": 709,
+      "last_checked_at": "2026-09-15T10:04:31.423806Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -90,8 +106,24 @@
       "free_status": "verified_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 727,
-      "last_checked_at": "2026-09-14T10:37:42.708751Z",
+      "latency_ms": 618,
+      "last_checked_at": "2026-09-15T10:04:40.582455Z",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/nvidia/nemotron-3.5-lightning:free",
+      "provider_id": "openrouter",
+      "provider_name": "openrouter",
+      "canonical_model_id": "openrouter/nvidia/nemotron-3.5-lightning:free",
+      "model_name": "nvidia/nemotron-3.5-lightning:free",
+      "free_status": "verified_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "latency_ms": 660,
+      "last_checked_at": "2026-09-15T10:04:41.987358Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -104,10 +136,10 @@
       "canonical_model_id": "openrouter/poolside/laguna-s-2.1:free",
       "model_name": "poolside/laguna-s-2.1:free",
       "free_status": "verified_free",
-      "runtime_status": "success",
-      "access_verdict": "usable_now",
-      "latency_ms": 535,
-      "last_checked_at": "2026-09-14T10:38:07.837682Z",
+      "runtime_status": "rate_limited",
+      "access_verdict": "exists_but_throttled",
+      "latency_ms": 327,
+      "last_checked_at": "2026-09-15T10:04:52.582793Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -122,8 +154,8 @@
       "free_status": "verified_free",
       "runtime_status": "rate_limited",
       "access_verdict": "exists_but_throttled",
-      "latency_ms": 107,
-      "last_checked_at": "2026-09-14T10:38:31.261291Z",
+      "latency_ms": 129,
+      "last_checked_at": "2026-09-15T10:05:23.975392Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -138,8 +170,8 @@
       "free_status": "verified_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 180,
-      "last_checked_at": "2026-09-14T10:38:37.694090Z",
+      "latency_ms": 246,
+      "last_checked_at": "2026-09-15T10:05:30.407542Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -154,8 +186,40 @@
       "free_status": "verified_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 264,
-      "last_checked_at": "2026-09-14T10:38:49.478218Z",
+      "latency_ms": 318,
+      "last_checked_at": "2026-09-15T10:05:40.769791Z",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+      "provider_id": "openrouter",
+      "provider_name": "openrouter",
+      "canonical_model_id": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+      "model_name": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "free_status": "verified_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "latency_ms": 3016,
+      "last_checked_at": "2026-09-15T10:05:47.141137Z",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "provider_id": "openrouter",
+      "provider_name": "openrouter",
+      "canonical_model_id": "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "model_name": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "free_status": "verified_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "latency_ms": 256,
+      "last_checked_at": "2026-09-15T10:06:09.382231Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -170,8 +234,8 @@
       "free_status": "verified_free",
       "runtime_status": "rate_limited",
       "access_verdict": "exists_but_throttled",
-      "latency_ms": 125,
-      "last_checked_at": "2026-09-14T10:40:09.664681Z",
+      "latency_ms": 136,
+      "last_checked_at": "2026-09-15T10:06:57.312016Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -186,8 +250,8 @@
       "free_status": "verified_free",
       "runtime_status": "rate_limited",
       "access_verdict": "exists_but_throttled",
-      "latency_ms": 148,
-      "last_checked_at": "2026-09-14T10:40:10.241033Z",
+      "latency_ms": 110,
+      "last_checked_at": "2026-09-15T10:06:57.825619Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -202,8 +266,8 @@
       "free_status": "verified_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 1034,
-      "last_checked_at": "2026-09-14T10:40:43.696535Z",
+      "latency_ms": 901,
+      "last_checked_at": "2026-09-15T10:07:28.954371Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -218,8 +282,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "quota_exhausted",
       "access_verdict": "quota_exhausted_for_account",
-      "latency_ms": 725,
-      "last_checked_at": "2026-09-14T10:36:36.750917Z",
+      "latency_ms": 712,
+      "last_checked_at": "2026-09-15T10:03:14.697596Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -234,8 +298,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "quota_exhausted",
       "access_verdict": "quota_exhausted_for_account",
-      "latency_ms": 487,
-      "last_checked_at": "2026-09-14T10:36:37.238279Z",
+      "latency_ms": 494,
+      "last_checked_at": "2026-09-15T10:03:15.192866Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -250,8 +314,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "quota_exhausted",
       "access_verdict": "quota_exhausted_for_account",
-      "latency_ms": 512,
-      "last_checked_at": "2026-09-14T10:36:37.751655Z",
+      "latency_ms": 463,
+      "last_checked_at": "2026-09-15T10:03:15.656411Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -266,8 +330,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "quota_exhausted",
       "access_verdict": "quota_exhausted_for_account",
-      "latency_ms": 650,
-      "last_checked_at": "2026-09-14T10:36:38.402453Z",
+      "latency_ms": 472,
+      "last_checked_at": "2026-09-15T10:03:16.129210Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -282,8 +346,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "quota_exhausted",
       "access_verdict": "quota_exhausted_for_account",
-      "latency_ms": 452,
-      "last_checked_at": "2026-09-14T10:36:38.854936Z",
+      "latency_ms": 425,
+      "last_checked_at": "2026-09-15T10:03:16.555102Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -298,8 +362,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "quota_exhausted",
       "access_verdict": "quota_exhausted_for_account",
-      "latency_ms": 445,
-      "last_checked_at": "2026-09-14T10:36:39.300284Z",
+      "latency_ms": 414,
+      "last_checked_at": "2026-09-15T10:03:16.969894Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -314,8 +378,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "quota_exhausted",
       "access_verdict": "quota_exhausted_for_account",
-      "latency_ms": 460,
-      "last_checked_at": "2026-09-14T10:36:39.761160Z",
+      "latency_ms": 457,
+      "last_checked_at": "2026-09-15T10:03:17.427557Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -330,8 +394,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "quota_exhausted",
       "access_verdict": "quota_exhausted_for_account",
-      "latency_ms": 681,
-      "last_checked_at": "2026-09-14T10:36:40.443052Z",
+      "latency_ms": 487,
+      "last_checked_at": "2026-09-15T10:03:17.915631Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -346,8 +410,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "quota_exhausted",
       "access_verdict": "quota_exhausted_for_account",
-      "latency_ms": 516,
-      "last_checked_at": "2026-09-14T10:36:40.959838Z",
+      "latency_ms": 432,
+      "last_checked_at": "2026-09-15T10:03:18.348534Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -362,8 +426,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "quota_exhausted",
       "access_verdict": "quota_exhausted_for_account",
-      "latency_ms": 487,
-      "last_checked_at": "2026-09-14T10:36:41.447965Z",
+      "latency_ms": 480,
+      "last_checked_at": "2026-09-15T10:03:18.829463Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -378,56 +442,8 @@
       "free_status": "documented_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 417,
-      "last_checked_at": "2026-09-14T10:36:36.460858Z",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "groq/openai/gpt-oss-20b",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/openai/gpt-oss-20b",
-      "model_name": "openai/gpt-oss-20b",
-      "free_status": "documented_free",
-      "runtime_status": "success",
-      "access_verdict": "usable_now",
-      "latency_ms": 242,
-      "last_checked_at": "2026-09-14T10:36:36.704088Z",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "groq/qwen/qwen3.6-27b",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/qwen/qwen3.6-27b",
-      "model_name": "qwen/qwen3.6-27b",
-      "free_status": "documented_free",
-      "runtime_status": "success",
-      "access_verdict": "usable_now",
-      "latency_ms": 221,
-      "last_checked_at": "2026-09-14T10:36:36.926292Z",
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "groq/groq/compound",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/groq/compound",
-      "model_name": "groq/compound",
-      "free_status": "documented_free",
-      "runtime_status": "success",
-      "access_verdict": "usable_now",
-      "latency_ms": 459,
-      "last_checked_at": "2026-09-14T10:36:37.386022Z",
+      "latency_ms": 376,
+      "last_checked_at": "2026-09-15T10:03:14.379986Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -442,8 +458,8 @@
       "free_status": "documented_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 344,
-      "last_checked_at": "2026-09-14T10:36:37.731244Z",
+      "latency_ms": 176,
+      "last_checked_at": "2026-09-15T10:03:14.557212Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -458,8 +474,24 @@
       "free_status": "documented_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 215,
-      "last_checked_at": "2026-09-14T10:36:37.947001Z",
+      "latency_ms": 160,
+      "last_checked_at": "2026-09-15T10:03:14.718366Z",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/openai/gpt-oss-20b",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/openai/gpt-oss-20b",
+      "model_name": "openai/gpt-oss-20b",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "latency_ms": 177,
+      "last_checked_at": "2026-09-15T10:03:15.034649Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -474,8 +506,24 @@
       "free_status": "documented_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 517,
-      "last_checked_at": "2026-09-14T10:36:38.740823Z",
+      "latency_ms": 341,
+      "last_checked_at": "2026-09-15T10:03:15.486426Z",
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/groq/compound",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/groq/compound",
+      "model_name": "groq/compound",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "latency_ms": 407,
+      "last_checked_at": "2026-09-15T10:03:15.894083Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -490,8 +538,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 423,
-      "last_checked_at": "2026-09-14T10:36:36.485710Z",
+      "latency_ms": 695,
+      "last_checked_at": "2026-09-15T10:03:14.718217Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -506,8 +554,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 389,
-      "last_checked_at": "2026-09-14T10:36:36.875178Z",
+      "latency_ms": 533,
+      "last_checked_at": "2026-09-15T10:03:15.252019Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -522,8 +570,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 826,
-      "last_checked_at": "2026-09-14T10:36:37.702051Z",
+      "latency_ms": 432,
+      "last_checked_at": "2026-09-15T10:03:15.684694Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -538,8 +586,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 562,
-      "last_checked_at": "2026-09-14T10:36:38.264927Z",
+      "latency_ms": 1236,
+      "last_checked_at": "2026-09-15T10:03:16.921409Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -554,8 +602,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "rate_limited",
       "access_verdict": "exists_but_throttled",
-      "latency_ms": 392,
-      "last_checked_at": "2026-09-14T10:36:38.657936Z",
+      "latency_ms": 319,
+      "last_checked_at": "2026-09-15T10:03:17.241135Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -570,8 +618,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "rate_limited",
       "access_verdict": "exists_but_throttled",
-      "latency_ms": 333,
-      "last_checked_at": "2026-09-14T10:36:38.991602Z",
+      "latency_ms": 288,
+      "last_checked_at": "2026-09-15T10:03:17.529782Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -586,8 +634,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "rate_limited",
       "access_verdict": "exists_but_throttled",
-      "latency_ms": 277,
-      "last_checked_at": "2026-09-14T10:36:39.269626Z",
+      "latency_ms": 268,
+      "last_checked_at": "2026-09-15T10:03:17.798918Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -602,8 +650,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "rate_limited",
       "access_verdict": "exists_but_throttled",
-      "latency_ms": 279,
-      "last_checked_at": "2026-09-14T10:36:39.549593Z",
+      "latency_ms": 260,
+      "last_checked_at": "2026-09-15T10:03:18.059620Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -618,8 +666,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 447,
-      "last_checked_at": "2026-09-14T10:36:39.997831Z",
+      "latency_ms": 430,
+      "last_checked_at": "2026-09-15T10:03:18.490206Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -634,8 +682,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 425,
-      "last_checked_at": "2026-09-14T10:36:40.423776Z",
+      "latency_ms": 387,
+      "last_checked_at": "2026-09-15T10:03:18.878235Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -650,8 +698,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 421,
-      "last_checked_at": "2026-09-14T10:36:41.363295Z",
+      "latency_ms": 744,
+      "last_checked_at": "2026-09-15T10:03:20.107875Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -666,8 +714,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 580,
-      "last_checked_at": "2026-09-14T10:36:41.943853Z",
+      "latency_ms": 424,
+      "last_checked_at": "2026-09-15T10:03:20.532237Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -682,8 +730,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 438,
-      "last_checked_at": "2026-09-14T10:36:42.382841Z",
+      "latency_ms": 441,
+      "last_checked_at": "2026-09-15T10:03:20.973509Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -698,8 +746,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 446,
-      "last_checked_at": "2026-09-14T10:36:42.829907Z",
+      "latency_ms": 762,
+      "last_checked_at": "2026-09-15T10:03:21.736213Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -714,8 +762,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 597,
-      "last_checked_at": "2026-09-14T10:36:43.427928Z",
+      "latency_ms": 425,
+      "last_checked_at": "2026-09-15T10:03:22.161583Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -730,8 +778,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 740,
-      "last_checked_at": "2026-09-14T10:36:44.168310Z",
+      "latency_ms": 414,
+      "last_checked_at": "2026-09-15T10:03:22.576742Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -746,8 +794,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "rate_limited",
       "access_verdict": "exists_but_throttled",
-      "latency_ms": 277,
-      "last_checked_at": "2026-09-14T10:36:44.446287Z",
+      "latency_ms": 253,
+      "last_checked_at": "2026-09-15T10:03:22.830796Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -763,7 +811,7 @@
       "runtime_status": "rate_limited",
       "access_verdict": "exists_but_throttled",
       "latency_ms": 269,
-      "last_checked_at": "2026-09-14T10:36:44.716169Z",
+      "last_checked_at": "2026-09-15T10:03:23.100242Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -778,8 +826,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "rate_limited",
       "access_verdict": "exists_but_throttled",
-      "latency_ms": 253,
-      "last_checked_at": "2026-09-14T10:36:44.969648Z",
+      "latency_ms": 271,
+      "last_checked_at": "2026-09-15T10:03:23.372041Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -794,8 +842,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "rate_limited",
       "access_verdict": "exists_but_throttled",
-      "latency_ms": 259,
-      "last_checked_at": "2026-09-14T10:36:45.229077Z",
+      "latency_ms": 254,
+      "last_checked_at": "2026-09-15T10:03:23.626341Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -810,8 +858,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "rate_limited",
       "access_verdict": "exists_but_throttled",
-      "latency_ms": 321,
-      "last_checked_at": "2026-09-14T10:36:45.551006Z",
+      "latency_ms": 275,
+      "last_checked_at": "2026-09-15T10:03:23.902158Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -826,8 +874,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "rate_limited",
       "access_verdict": "exists_but_throttled",
-      "latency_ms": 310,
-      "last_checked_at": "2026-09-14T10:36:45.862089Z",
+      "latency_ms": 342,
+      "last_checked_at": "2026-09-15T10:03:24.244761Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -842,8 +890,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "rate_limited",
       "access_verdict": "exists_but_throttled",
-      "latency_ms": 255,
-      "last_checked_at": "2026-09-14T10:36:46.117444Z",
+      "latency_ms": 293,
+      "last_checked_at": "2026-09-15T10:03:24.538181Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -858,8 +906,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "rate_limited",
       "access_verdict": "exists_but_throttled",
-      "latency_ms": 264,
-      "last_checked_at": "2026-09-14T10:36:46.382614Z",
+      "latency_ms": 346,
+      "last_checked_at": "2026-09-15T10:03:24.884940Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -874,8 +922,8 @@
       "free_status": "account_specific_free",
       "runtime_status": "rate_limited",
       "access_verdict": "exists_but_throttled",
-      "latency_ms": 265,
-      "last_checked_at": "2026-09-14T10:36:46.648010Z",
+      "latency_ms": 252,
+      "last_checked_at": "2026-09-15T10:03:25.137316Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -890,8 +938,8 @@
       "free_status": "documented_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 523,
-      "last_checked_at": "2026-09-14T10:36:36.603862Z",
+      "latency_ms": 3958,
+      "last_checked_at": "2026-09-15T10:03:17.999470Z",
       "tool_calling": false,
       "modalities": [
         "text"
@@ -906,8 +954,8 @@
       "free_status": "documented_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 525,
-      "last_checked_at": "2026-09-14T10:36:37.129412Z",
+      "latency_ms": 228,
+      "last_checked_at": "2026-09-15T10:03:18.228053Z",
       "tool_calling": false,
       "modalities": [
         "text"
@@ -922,8 +970,8 @@
       "free_status": "documented_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 335,
-      "last_checked_at": "2026-09-14T10:36:37.465064Z",
+      "latency_ms": 305,
+      "last_checked_at": "2026-09-15T10:03:18.533996Z",
       "tool_calling": false,
       "modalities": [
         "text"
@@ -938,8 +986,8 @@
       "free_status": "documented_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 397,
-      "last_checked_at": "2026-09-14T10:36:38.172529Z",
+      "latency_ms": 661,
+      "last_checked_at": "2026-09-15T10:03:19.466864Z",
       "tool_calling": false,
       "modalities": [
         "text"
@@ -954,8 +1002,8 @@
       "free_status": "documented_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 504,
-      "last_checked_at": "2026-09-14T10:36:38.677430Z",
+      "latency_ms": 673,
+      "last_checked_at": "2026-09-15T10:03:20.141003Z",
       "tool_calling": false,
       "modalities": [
         "text"
@@ -970,8 +1018,8 @@
       "free_status": "documented_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 354,
-      "last_checked_at": "2026-09-14T10:36:39.504251Z",
+      "latency_ms": 381,
+      "last_checked_at": "2026-09-15T10:03:20.644364Z",
       "tool_calling": false,
       "modalities": [
         "text"
@@ -986,8 +1034,8 @@
       "free_status": "documented_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 383,
-      "last_checked_at": "2026-09-14T10:36:40.028057Z",
+      "latency_ms": 483,
+      "last_checked_at": "2026-09-15T10:03:21.422676Z",
       "tool_calling": false,
       "modalities": [
         "text"
@@ -1002,8 +1050,8 @@
       "free_status": "documented_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 874,
-      "last_checked_at": "2026-09-14T10:36:40.902881Z",
+      "latency_ms": 12796,
+      "last_checked_at": "2026-09-15T10:03:34.219047Z",
       "tool_calling": false,
       "modalities": [
         "text"
@@ -1018,8 +1066,8 @@
       "free_status": "documented_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 291,
-      "last_checked_at": "2026-09-14T10:36:41.194859Z",
+      "latency_ms": 309,
+      "last_checked_at": "2026-09-15T10:03:34.528616Z",
       "tool_calling": false,
       "modalities": [
         "text"
@@ -1034,8 +1082,8 @@
       "free_status": "documented_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 385,
-      "last_checked_at": "2026-09-14T10:36:41.814454Z",
+      "latency_ms": 1145,
+      "last_checked_at": "2026-09-15T10:03:35.761022Z",
       "tool_calling": false,
       "modalities": [
         "text"
@@ -1050,8 +1098,8 @@
       "free_status": "documented_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 397,
-      "last_checked_at": "2026-09-14T10:36:42.362698Z",
+      "latency_ms": 764,
+      "last_checked_at": "2026-09-15T10:03:36.626970Z",
       "tool_calling": false,
       "modalities": [
         "text"
@@ -1066,8 +1114,8 @@
       "free_status": "documented_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 274,
-      "last_checked_at": "2026-09-14T10:36:42.637924Z",
+      "latency_ms": 269,
+      "last_checked_at": "2026-09-15T10:03:36.896503Z",
       "tool_calling": false,
       "modalities": [
         "text"
@@ -1082,8 +1130,8 @@
       "free_status": "documented_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 313,
-      "last_checked_at": "2026-09-14T10:36:42.951322Z",
+      "latency_ms": 144,
+      "last_checked_at": "2026-09-15T10:03:37.040975Z",
       "tool_calling": false,
       "modalities": [
         "text"
@@ -1098,8 +1146,8 @@
       "free_status": "documented_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 452,
-      "last_checked_at": "2026-09-14T10:36:43.404527Z",
+      "latency_ms": 295,
+      "last_checked_at": "2026-09-15T10:03:37.336701Z",
       "tool_calling": false,
       "modalities": [
         "text"
@@ -1114,8 +1162,8 @@
       "free_status": "documented_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 458,
-      "last_checked_at": "2026-09-14T10:36:43.863129Z",
+      "latency_ms": 396,
+      "last_checked_at": "2026-09-15T10:03:37.733277Z",
       "tool_calling": false,
       "modalities": [
         "text"
@@ -1130,8 +1178,8 @@
       "free_status": "documented_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 425,
-      "last_checked_at": "2026-09-14T10:36:44.613305Z",
+      "latency_ms": 417,
+      "last_checked_at": "2026-09-15T10:03:38.548810Z",
       "tool_calling": false,
       "modalities": [
         "text"
@@ -1146,8 +1194,8 @@
       "free_status": "documented_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 219,
-      "last_checked_at": "2026-09-14T10:36:44.832949Z",
+      "latency_ms": 273,
+      "last_checked_at": "2026-09-15T10:03:38.822224Z",
       "tool_calling": false,
       "modalities": [
         "text"
@@ -1162,8 +1210,8 @@
       "free_status": "documented_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 468,
-      "last_checked_at": "2026-09-14T10:36:45.301433Z",
+      "latency_ms": 365,
+      "last_checked_at": "2026-09-15T10:03:39.188460Z",
       "tool_calling": false,
       "modalities": [
         "text"
@@ -1178,8 +1226,8 @@
       "free_status": "documented_free",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 437,
-      "last_checked_at": "2026-09-14T10:36:45.738858Z",
+      "latency_ms": 452,
+      "last_checked_at": "2026-09-15T10:03:39.641347Z",
       "tool_calling": false,
       "modalities": [
         "text"
@@ -1189,14 +1237,18 @@
   "fallback_chain": [
     "openrouter/inclusionai/ling-3.0-flash-vl:free",
     "openrouter/nex-agi/nex-n2.5-mini:free",
+    "openrouter/nex-agi/nex-n2.5-pro:free",
     "openrouter/inclusionai/ling-3.0-flash-sante:free",
     "openrouter/inclusionai/ling-3.0-flash-fin:free",
     "openrouter/dots-studio/dots-3-note-preview:free",
     "openrouter/liquid/lfm-2.5-2.6b:free",
+    "openrouter/nvidia/nemotron-3.5-lightning:free",
     "openrouter/poolside/laguna-s-2.1:free",
     "openrouter/poolside/laguna-xs-2.1:free",
     "openrouter/cohere/north-mini-code:free",
     "openrouter/nvidia/nemotron-3.5-content-safety:free",
+    "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+    "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
     "openrouter/google/gemma-4-26b-a4b-it:free",
     "openrouter/google/gemma-4-31b-it:free",
     "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
@@ -1211,12 +1263,11 @@
     "zai/glm-5.3",
     "zai/glm-5.3-flash",
     "groq/allam-2-7b",
-    "groq/openai/gpt-oss-20b",
-    "groq/qwen/qwen3.6-27b",
-    "groq/groq/compound",
     "groq/openai/gpt-oss-120b",
     "groq/qwen/qwen3.8-27b",
+    "groq/openai/gpt-oss-20b",
     "groq/groq/compound-mini",
+    "groq/groq/compound",
     "mistral/codestral-2508",
     "mistral/codestral-latest",
     "mistral/mistral-code-latest",

@@ -1,18 +1,22 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-14T10:46:04.029131+00:00",
-  "endpoint_count": 74,
+  "generated_at": "2026-09-15T10:11:55.286107+00:00",
+  "endpoint_count": 77,
   "fallback_chain": [
     "openrouter/inclusionai/ling-3.0-flash-vl:free",
     "openrouter/nex-agi/nex-n2.5-mini:free",
+    "openrouter/nex-agi/nex-n2.5-pro:free",
     "openrouter/inclusionai/ling-3.0-flash-sante:free",
     "openrouter/inclusionai/ling-3.0-flash-fin:free",
     "openrouter/dots-studio/dots-3-note-preview:free",
     "openrouter/liquid/lfm-2.5-2.6b:free",
+    "openrouter/nvidia/nemotron-3.5-lightning:free",
     "openrouter/poolside/laguna-s-2.1:free",
     "openrouter/poolside/laguna-xs-2.1:free",
     "openrouter/cohere/north-mini-code:free",
     "openrouter/nvidia/nemotron-3.5-content-safety:free",
+    "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+    "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
     "openrouter/google/gemma-4-26b-a4b-it:free",
     "openrouter/google/gemma-4-31b-it:free",
     "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
@@ -27,12 +31,11 @@
     "zai/glm-5.3",
     "zai/glm-5.3-flash",
     "groq/allam-2-7b",
-    "groq/openai/gpt-oss-20b",
-    "groq/qwen/qwen3.6-27b",
-    "groq/groq/compound",
     "groq/openai/gpt-oss-120b",
     "groq/qwen/qwen3.8-27b",
+    "groq/openai/gpt-oss-20b",
     "groq/groq/compound-mini",
+    "groq/groq/compound",
     "mistral/codestral-2508",
     "mistral/codestral-latest",
     "mistral/mistral-code-latest",
@@ -92,11 +95,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.251318+00:00",
+        "checked_at": "2026-09-15T10:03:08.632524+00:00",
         "source_url": "https://openrouter.ai/api/v1/models"
       },
-      "latency_ms": 754,
-      "last_checked_at": "2026-09-14T10:36:44.072185+00:00",
+      "latency_ms": 2881,
+      "last_checked_at": "2026-09-15T10:03:27.204828+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -114,10 +117,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:44.072185Z",
-        "last_success_at": "2026-09-14T10:36:44.072185Z",
-        "p50_latency_ms": 754,
-        "p95_latency_ms": 754
+        "last_checked_at": "2026-09-15T10:03:27.204828Z",
+        "last_success_at": "2026-09-15T10:03:27.204828Z",
+        "p50_latency_ms": 2881,
+        "p95_latency_ms": 2881
       },
       "tool_calling": true,
       "modalities": [
@@ -137,11 +140,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.251318+00:00",
+        "checked_at": "2026-09-15T10:03:08.632524+00:00",
         "source_url": "https://openrouter.ai/api/v1/models"
       },
-      "latency_ms": 951,
-      "last_checked_at": "2026-09-14T10:36:48.210280+00:00",
+      "latency_ms": 451,
+      "last_checked_at": "2026-09-15T10:03:38.854099+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -159,10 +162,55 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:48.210280Z",
-        "last_success_at": "2026-09-14T10:36:48.210280Z",
-        "p50_latency_ms": 951,
-        "p95_latency_ms": 951
+        "last_checked_at": "2026-09-15T10:03:38.854099Z",
+        "last_success_at": "2026-09-15T10:03:38.854099Z",
+        "p50_latency_ms": 451,
+        "p95_latency_ms": 451
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/nex-agi/nex-n2.5-pro:free",
+      "provider_id": "openrouter",
+      "canonical_model_id": "openrouter/nex-agi/nex-n2.5-pro:free",
+      "model": "nex-agi/nex-n2.5-pro:free",
+      "litellm_model": "openrouter/nex-agi/nex-n2.5-pro:free",
+      "api_base": "https://openrouter.ai/api/v1",
+      "api_style": "openai_compatible",
+      "free_status": "verified_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-15T10:03:08.632524+00:00",
+        "source_url": "https://openrouter.ai/api/v1/models"
+      },
+      "latency_ms": 4957,
+      "last_checked_at": "2026-09-15T10:03:43.829746+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "openrouter/nex-agi/nex-n2.5-pro:free",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-15T10:03:43.829746Z",
+        "last_success_at": "2026-09-15T10:03:43.829746Z",
+        "p50_latency_ms": 4957,
+        "p95_latency_ms": 4957
       },
       "tool_calling": true,
       "modalities": [
@@ -182,11 +230,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.251318+00:00",
+        "checked_at": "2026-09-15T10:03:08.632524+00:00",
         "source_url": "https://openrouter.ai/api/v1/models"
       },
-      "latency_ms": 737,
-      "last_checked_at": "2026-09-14T10:37:08.068442+00:00",
+      "latency_ms": 1363,
+      "last_checked_at": "2026-09-15T10:03:49.990961+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -204,10 +252,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:37:08.068442Z",
-        "last_success_at": "2026-09-14T10:37:08.068442Z",
-        "p50_latency_ms": 737,
-        "p95_latency_ms": 737
+        "last_checked_at": "2026-09-15T10:03:49.990961Z",
+        "last_success_at": "2026-09-15T10:03:49.990961Z",
+        "p50_latency_ms": 1363,
+        "p95_latency_ms": 1363
       },
       "tool_calling": true,
       "modalities": [
@@ -227,11 +275,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.251318+00:00",
+        "checked_at": "2026-09-15T10:03:08.632524+00:00",
         "source_url": "https://openrouter.ai/api/v1/models"
       },
-      "latency_ms": 570,
-      "last_checked_at": "2026-09-14T10:37:17.999554+00:00",
+      "latency_ms": 611,
+      "last_checked_at": "2026-09-15T10:04:00.023197+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -249,10 +297,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:37:17.999554Z",
-        "last_success_at": "2026-09-14T10:37:17.999554Z",
-        "p50_latency_ms": 570,
-        "p95_latency_ms": 570
+        "last_checked_at": "2026-09-15T10:04:00.023197Z",
+        "last_success_at": "2026-09-15T10:04:00.023197Z",
+        "p50_latency_ms": 611,
+        "p95_latency_ms": 611
       },
       "tool_calling": true,
       "modalities": [
@@ -272,11 +320,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.251318+00:00",
+        "checked_at": "2026-09-15T10:03:08.632524+00:00",
         "source_url": "https://openrouter.ai/api/v1/models"
       },
-      "latency_ms": 1416,
-      "last_checked_at": "2026-09-14T10:37:31.054793+00:00",
+      "latency_ms": 709,
+      "last_checked_at": "2026-09-15T10:04:31.423806+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -294,10 +342,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:37:31.054793Z",
-        "last_success_at": "2026-09-14T10:37:31.054793Z",
-        "p50_latency_ms": 1416,
-        "p95_latency_ms": 1416
+        "last_checked_at": "2026-09-15T10:04:31.423806Z",
+        "last_success_at": "2026-09-15T10:04:31.423806Z",
+        "p50_latency_ms": 709,
+        "p95_latency_ms": 709
       },
       "tool_calling": true,
       "modalities": [
@@ -317,11 +365,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.251318+00:00",
+        "checked_at": "2026-09-15T10:03:08.632524+00:00",
         "source_url": "https://openrouter.ai/api/v1/models"
       },
-      "latency_ms": 727,
-      "last_checked_at": "2026-09-14T10:37:42.708751+00:00",
+      "latency_ms": 618,
+      "last_checked_at": "2026-09-15T10:04:40.582455+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -339,10 +387,55 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:37:42.708751Z",
-        "last_success_at": "2026-09-14T10:37:42.708751Z",
-        "p50_latency_ms": 727,
-        "p95_latency_ms": 727
+        "last_checked_at": "2026-09-15T10:04:40.582455Z",
+        "last_success_at": "2026-09-15T10:04:40.582455Z",
+        "p50_latency_ms": 618,
+        "p95_latency_ms": 618
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/nvidia/nemotron-3.5-lightning:free",
+      "provider_id": "openrouter",
+      "canonical_model_id": "openrouter/nvidia/nemotron-3.5-lightning:free",
+      "model": "nvidia/nemotron-3.5-lightning:free",
+      "litellm_model": "openrouter/nvidia/nemotron-3.5-lightning:free",
+      "api_base": "https://openrouter.ai/api/v1",
+      "api_style": "openai_compatible",
+      "free_status": "verified_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-15T10:03:08.632524+00:00",
+        "source_url": "https://openrouter.ai/api/v1/models"
+      },
+      "latency_ms": 660,
+      "last_checked_at": "2026-09-15T10:04:41.987358+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "openrouter/nvidia/nemotron-3.5-lightning:free",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-15T10:04:41.987358Z",
+        "last_success_at": "2026-09-15T10:04:41.987358Z",
+        "p50_latency_ms": 660,
+        "p95_latency_ms": 660
       },
       "tool_calling": true,
       "modalities": [
@@ -358,15 +451,15 @@
       "api_base": "https://openrouter.ai/api/v1",
       "api_style": "openai_compatible",
       "free_status": "verified_free",
-      "runtime_status": "success",
-      "access_verdict": "usable_now",
+      "runtime_status": "rate_limited",
+      "access_verdict": "exists_but_throttled",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.251318+00:00",
+        "checked_at": "2026-09-15T10:03:08.632524+00:00",
         "source_url": "https://openrouter.ai/api/v1/models"
       },
-      "latency_ms": 535,
-      "last_checked_at": "2026-09-14T10:38:07.837682+00:00",
+      "latency_ms": 327,
+      "last_checked_at": "2026-09-15T10:04:52.582793+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -379,15 +472,15 @@
       "reliability": {
         "endpoint_id": "openrouter/poolside/laguna-s-2.1:free",
         "attempts": 1,
-        "success_count": 1,
-        "rate_limited_count": 0,
+        "success_count": 0,
+        "rate_limited_count": 1,
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
-        "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:38:07.837682Z",
-        "last_success_at": "2026-09-14T10:38:07.837682Z",
-        "p50_latency_ms": 535,
-        "p95_latency_ms": 535
+        "success_rate": 0.0,
+        "last_checked_at": "2026-09-15T10:04:52.582793Z",
+        "last_success_at": null,
+        "p50_latency_ms": 327,
+        "p95_latency_ms": 327
       },
       "tool_calling": true,
       "modalities": [
@@ -407,11 +500,11 @@
       "access_verdict": "exists_but_throttled",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.251318+00:00",
+        "checked_at": "2026-09-15T10:03:08.632524+00:00",
         "source_url": "https://openrouter.ai/api/v1/models"
       },
-      "latency_ms": 107,
-      "last_checked_at": "2026-09-14T10:38:31.261291+00:00",
+      "latency_ms": 129,
+      "last_checked_at": "2026-09-15T10:05:23.975392+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -429,10 +522,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 0.0,
-        "last_checked_at": "2026-09-14T10:38:31.261291Z",
+        "last_checked_at": "2026-09-15T10:05:23.975392Z",
         "last_success_at": null,
-        "p50_latency_ms": 107,
-        "p95_latency_ms": 107
+        "p50_latency_ms": 129,
+        "p95_latency_ms": 129
       },
       "tool_calling": true,
       "modalities": [
@@ -452,11 +545,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.251318+00:00",
+        "checked_at": "2026-09-15T10:03:08.632524+00:00",
         "source_url": "https://openrouter.ai/api/v1/models"
       },
-      "latency_ms": 180,
-      "last_checked_at": "2026-09-14T10:38:37.694090+00:00",
+      "latency_ms": 246,
+      "last_checked_at": "2026-09-15T10:05:30.407542+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -474,10 +567,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:38:37.694090Z",
-        "last_success_at": "2026-09-14T10:38:37.694090Z",
-        "p50_latency_ms": 180,
-        "p95_latency_ms": 180
+        "last_checked_at": "2026-09-15T10:05:30.407542Z",
+        "last_success_at": "2026-09-15T10:05:30.407542Z",
+        "p50_latency_ms": 246,
+        "p95_latency_ms": 246
       },
       "tool_calling": true,
       "modalities": [
@@ -497,11 +590,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.251318+00:00",
+        "checked_at": "2026-09-15T10:03:08.632524+00:00",
         "source_url": "https://openrouter.ai/api/v1/models"
       },
-      "latency_ms": 264,
-      "last_checked_at": "2026-09-14T10:38:49.478218+00:00",
+      "latency_ms": 318,
+      "last_checked_at": "2026-09-15T10:05:40.769791+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -519,10 +612,100 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:38:49.478218Z",
-        "last_success_at": "2026-09-14T10:38:49.478218Z",
-        "p50_latency_ms": 264,
-        "p95_latency_ms": 264
+        "last_checked_at": "2026-09-15T10:05:40.769791Z",
+        "last_success_at": "2026-09-15T10:05:40.769791Z",
+        "p50_latency_ms": 318,
+        "p95_latency_ms": 318
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+      "provider_id": "openrouter",
+      "canonical_model_id": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "litellm_model": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+      "api_base": "https://openrouter.ai/api/v1",
+      "api_style": "openai_compatible",
+      "free_status": "verified_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-15T10:03:08.632524+00:00",
+        "source_url": "https://openrouter.ai/api/v1/models"
+      },
+      "latency_ms": 3016,
+      "last_checked_at": "2026-09-15T10:05:47.141137+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-15T10:05:47.141137Z",
+        "last_success_at": "2026-09-15T10:05:47.141137Z",
+        "p50_latency_ms": 3016,
+        "p95_latency_ms": 3016
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "provider_id": "openrouter",
+      "canonical_model_id": "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "litellm_model": "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "api_base": "https://openrouter.ai/api/v1",
+      "api_style": "openai_compatible",
+      "free_status": "verified_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-15T10:03:08.632524+00:00",
+        "source_url": "https://openrouter.ai/api/v1/models"
+      },
+      "latency_ms": 256,
+      "last_checked_at": "2026-09-15T10:06:09.382231+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-15T10:06:09.382231Z",
+        "last_success_at": "2026-09-15T10:06:09.382231Z",
+        "p50_latency_ms": 256,
+        "p95_latency_ms": 256
       },
       "tool_calling": true,
       "modalities": [
@@ -542,11 +725,11 @@
       "access_verdict": "exists_but_throttled",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.251318+00:00",
+        "checked_at": "2026-09-15T10:03:08.632524+00:00",
         "source_url": "https://openrouter.ai/api/v1/models"
       },
-      "latency_ms": 125,
-      "last_checked_at": "2026-09-14T10:40:09.664681+00:00",
+      "latency_ms": 136,
+      "last_checked_at": "2026-09-15T10:06:57.312016+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -564,10 +747,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 0.0,
-        "last_checked_at": "2026-09-14T10:40:09.664681Z",
+        "last_checked_at": "2026-09-15T10:06:57.312016Z",
         "last_success_at": null,
-        "p50_latency_ms": 125,
-        "p95_latency_ms": 125
+        "p50_latency_ms": 136,
+        "p95_latency_ms": 136
       },
       "tool_calling": true,
       "modalities": [
@@ -587,11 +770,11 @@
       "access_verdict": "exists_but_throttled",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.251318+00:00",
+        "checked_at": "2026-09-15T10:03:08.632524+00:00",
         "source_url": "https://openrouter.ai/api/v1/models"
       },
-      "latency_ms": 148,
-      "last_checked_at": "2026-09-14T10:40:10.241033+00:00",
+      "latency_ms": 110,
+      "last_checked_at": "2026-09-15T10:06:57.825619+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -609,10 +792,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 0.0,
-        "last_checked_at": "2026-09-14T10:40:10.241033Z",
+        "last_checked_at": "2026-09-15T10:06:57.825619Z",
         "last_success_at": null,
-        "p50_latency_ms": 148,
-        "p95_latency_ms": 148
+        "p50_latency_ms": 110,
+        "p95_latency_ms": 110
       },
       "tool_calling": true,
       "modalities": [
@@ -632,11 +815,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.251318+00:00",
+        "checked_at": "2026-09-15T10:03:08.632524+00:00",
         "source_url": "https://openrouter.ai/api/v1/models"
       },
-      "latency_ms": 1034,
-      "last_checked_at": "2026-09-14T10:40:43.696535+00:00",
+      "latency_ms": 901,
+      "last_checked_at": "2026-09-15T10:07:28.954371+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -654,10 +837,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:40:43.696535Z",
-        "last_success_at": "2026-09-14T10:40:43.696535Z",
-        "p50_latency_ms": 1034,
-        "p95_latency_ms": 1034
+        "last_checked_at": "2026-09-15T10:07:28.954371Z",
+        "last_success_at": "2026-09-15T10:07:28.954371Z",
+        "p50_latency_ms": 901,
+        "p95_latency_ms": 901
       },
       "tool_calling": true,
       "modalities": [
@@ -677,11 +860,11 @@
       "access_verdict": "quota_exhausted_for_account",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.269409+00:00",
+        "checked_at": "2026-09-15T10:03:08.651309+00:00",
         "source_url": "https://api.z.ai/api/paas/v4/models"
       },
-      "latency_ms": 725,
-      "last_checked_at": "2026-09-14T10:36:36.750917+00:00",
+      "latency_ms": 712,
+      "last_checked_at": "2026-09-15T10:03:14.697596+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -699,10 +882,10 @@
         "quota_exhausted_count": 1,
         "hard_failure_count": 0,
         "success_rate": 0.0,
-        "last_checked_at": "2026-09-14T10:36:36.750917Z",
+        "last_checked_at": "2026-09-15T10:03:14.697596Z",
         "last_success_at": null,
-        "p50_latency_ms": 725,
-        "p95_latency_ms": 725
+        "p50_latency_ms": 712,
+        "p95_latency_ms": 712
       },
       "tool_calling": true,
       "modalities": [
@@ -722,11 +905,11 @@
       "access_verdict": "quota_exhausted_for_account",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.269409+00:00",
+        "checked_at": "2026-09-15T10:03:08.651309+00:00",
         "source_url": "https://api.z.ai/api/paas/v4/models"
       },
-      "latency_ms": 487,
-      "last_checked_at": "2026-09-14T10:36:37.238279+00:00",
+      "latency_ms": 494,
+      "last_checked_at": "2026-09-15T10:03:15.192866+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -744,10 +927,10 @@
         "quota_exhausted_count": 1,
         "hard_failure_count": 0,
         "success_rate": 0.0,
-        "last_checked_at": "2026-09-14T10:36:37.238279Z",
+        "last_checked_at": "2026-09-15T10:03:15.192866Z",
         "last_success_at": null,
-        "p50_latency_ms": 487,
-        "p95_latency_ms": 487
+        "p50_latency_ms": 494,
+        "p95_latency_ms": 494
       },
       "tool_calling": true,
       "modalities": [
@@ -767,11 +950,11 @@
       "access_verdict": "quota_exhausted_for_account",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.269409+00:00",
+        "checked_at": "2026-09-15T10:03:08.651309+00:00",
         "source_url": "https://api.z.ai/api/paas/v4/models"
       },
-      "latency_ms": 512,
-      "last_checked_at": "2026-09-14T10:36:37.751655+00:00",
+      "latency_ms": 463,
+      "last_checked_at": "2026-09-15T10:03:15.656411+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -789,10 +972,10 @@
         "quota_exhausted_count": 1,
         "hard_failure_count": 0,
         "success_rate": 0.0,
-        "last_checked_at": "2026-09-14T10:36:37.751655Z",
+        "last_checked_at": "2026-09-15T10:03:15.656411Z",
         "last_success_at": null,
-        "p50_latency_ms": 512,
-        "p95_latency_ms": 512
+        "p50_latency_ms": 463,
+        "p95_latency_ms": 463
       },
       "tool_calling": true,
       "modalities": [
@@ -812,11 +995,11 @@
       "access_verdict": "quota_exhausted_for_account",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.269409+00:00",
+        "checked_at": "2026-09-15T10:03:08.651309+00:00",
         "source_url": "https://api.z.ai/api/paas/v4/models"
       },
-      "latency_ms": 650,
-      "last_checked_at": "2026-09-14T10:36:38.402453+00:00",
+      "latency_ms": 472,
+      "last_checked_at": "2026-09-15T10:03:16.129210+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -834,10 +1017,10 @@
         "quota_exhausted_count": 1,
         "hard_failure_count": 0,
         "success_rate": 0.0,
-        "last_checked_at": "2026-09-14T10:36:38.402453Z",
+        "last_checked_at": "2026-09-15T10:03:16.129210Z",
         "last_success_at": null,
-        "p50_latency_ms": 650,
-        "p95_latency_ms": 650
+        "p50_latency_ms": 472,
+        "p95_latency_ms": 472
       },
       "tool_calling": true,
       "modalities": [
@@ -857,11 +1040,11 @@
       "access_verdict": "quota_exhausted_for_account",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.269409+00:00",
+        "checked_at": "2026-09-15T10:03:08.651309+00:00",
         "source_url": "https://api.z.ai/api/paas/v4/models"
       },
-      "latency_ms": 452,
-      "last_checked_at": "2026-09-14T10:36:38.854936+00:00",
+      "latency_ms": 425,
+      "last_checked_at": "2026-09-15T10:03:16.555102+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -879,10 +1062,10 @@
         "quota_exhausted_count": 1,
         "hard_failure_count": 0,
         "success_rate": 0.0,
-        "last_checked_at": "2026-09-14T10:36:38.854936Z",
+        "last_checked_at": "2026-09-15T10:03:16.555102Z",
         "last_success_at": null,
-        "p50_latency_ms": 452,
-        "p95_latency_ms": 452
+        "p50_latency_ms": 425,
+        "p95_latency_ms": 425
       },
       "tool_calling": true,
       "modalities": [
@@ -902,11 +1085,11 @@
       "access_verdict": "quota_exhausted_for_account",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.269409+00:00",
+        "checked_at": "2026-09-15T10:03:08.651309+00:00",
         "source_url": "https://api.z.ai/api/paas/v4/models"
       },
-      "latency_ms": 445,
-      "last_checked_at": "2026-09-14T10:36:39.300284+00:00",
+      "latency_ms": 414,
+      "last_checked_at": "2026-09-15T10:03:16.969894+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -924,10 +1107,10 @@
         "quota_exhausted_count": 1,
         "hard_failure_count": 0,
         "success_rate": 0.0,
-        "last_checked_at": "2026-09-14T10:36:39.300284Z",
+        "last_checked_at": "2026-09-15T10:03:16.969894Z",
         "last_success_at": null,
-        "p50_latency_ms": 445,
-        "p95_latency_ms": 445
+        "p50_latency_ms": 414,
+        "p95_latency_ms": 414
       },
       "tool_calling": true,
       "modalities": [
@@ -947,11 +1130,11 @@
       "access_verdict": "quota_exhausted_for_account",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.269409+00:00",
+        "checked_at": "2026-09-15T10:03:08.651309+00:00",
         "source_url": "https://api.z.ai/api/paas/v4/models"
       },
-      "latency_ms": 460,
-      "last_checked_at": "2026-09-14T10:36:39.761160+00:00",
+      "latency_ms": 457,
+      "last_checked_at": "2026-09-15T10:03:17.427557+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -969,10 +1152,10 @@
         "quota_exhausted_count": 1,
         "hard_failure_count": 0,
         "success_rate": 0.0,
-        "last_checked_at": "2026-09-14T10:36:39.761160Z",
+        "last_checked_at": "2026-09-15T10:03:17.427557Z",
         "last_success_at": null,
-        "p50_latency_ms": 460,
-        "p95_latency_ms": 460
+        "p50_latency_ms": 457,
+        "p95_latency_ms": 457
       },
       "tool_calling": true,
       "modalities": [
@@ -992,11 +1175,11 @@
       "access_verdict": "quota_exhausted_for_account",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.269409+00:00",
+        "checked_at": "2026-09-15T10:03:08.651309+00:00",
         "source_url": "https://api.z.ai/api/paas/v4/models"
       },
-      "latency_ms": 681,
-      "last_checked_at": "2026-09-14T10:36:40.443052+00:00",
+      "latency_ms": 487,
+      "last_checked_at": "2026-09-15T10:03:17.915631+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -1014,10 +1197,10 @@
         "quota_exhausted_count": 1,
         "hard_failure_count": 0,
         "success_rate": 0.0,
-        "last_checked_at": "2026-09-14T10:36:40.443052Z",
+        "last_checked_at": "2026-09-15T10:03:17.915631Z",
         "last_success_at": null,
-        "p50_latency_ms": 681,
-        "p95_latency_ms": 681
+        "p50_latency_ms": 487,
+        "p95_latency_ms": 487
       },
       "tool_calling": true,
       "modalities": [
@@ -1037,11 +1220,11 @@
       "access_verdict": "quota_exhausted_for_account",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.269409+00:00",
+        "checked_at": "2026-09-15T10:03:08.651309+00:00",
         "source_url": "https://api.z.ai/api/paas/v4/models"
       },
-      "latency_ms": 516,
-      "last_checked_at": "2026-09-14T10:36:40.959838+00:00",
+      "latency_ms": 432,
+      "last_checked_at": "2026-09-15T10:03:18.348534+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -1059,10 +1242,10 @@
         "quota_exhausted_count": 1,
         "hard_failure_count": 0,
         "success_rate": 0.0,
-        "last_checked_at": "2026-09-14T10:36:40.959838Z",
+        "last_checked_at": "2026-09-15T10:03:18.348534Z",
         "last_success_at": null,
-        "p50_latency_ms": 516,
-        "p95_latency_ms": 516
+        "p50_latency_ms": 432,
+        "p95_latency_ms": 432
       },
       "tool_calling": true,
       "modalities": [
@@ -1082,11 +1265,11 @@
       "access_verdict": "quota_exhausted_for_account",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.269409+00:00",
+        "checked_at": "2026-09-15T10:03:08.651309+00:00",
         "source_url": "https://api.z.ai/api/paas/v4/models"
       },
-      "latency_ms": 487,
-      "last_checked_at": "2026-09-14T10:36:41.447965+00:00",
+      "latency_ms": 480,
+      "last_checked_at": "2026-09-15T10:03:18.829463+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -1104,10 +1287,10 @@
         "quota_exhausted_count": 1,
         "hard_failure_count": 0,
         "success_rate": 0.0,
-        "last_checked_at": "2026-09-14T10:36:41.447965Z",
+        "last_checked_at": "2026-09-15T10:03:18.829463Z",
         "last_success_at": null,
-        "p50_latency_ms": 487,
-        "p95_latency_ms": 487
+        "p50_latency_ms": 480,
+        "p95_latency_ms": 480
       },
       "tool_calling": true,
       "modalities": [
@@ -1127,11 +1310,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.269913+00:00",
+        "checked_at": "2026-09-15T10:03:08.651855+00:00",
         "source_url": "https://api.groq.com/openai/v1/models"
       },
-      "latency_ms": 417,
-      "last_checked_at": "2026-09-14T10:36:36.460858+00:00",
+      "latency_ms": 376,
+      "last_checked_at": "2026-09-15T10:03:14.379986+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -1149,145 +1332,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:36.460858Z",
-        "last_success_at": "2026-09-14T10:36:36.460858Z",
-        "p50_latency_ms": 417,
-        "p95_latency_ms": 417
-      },
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "groq/openai/gpt-oss-20b",
-      "provider_id": "groq",
-      "canonical_model_id": "groq/openai/gpt-oss-20b",
-      "model": "openai/gpt-oss-20b",
-      "litellm_model": "groq/openai/gpt-oss-20b",
-      "api_base": "https://api.groq.com/openai/v1",
-      "api_style": "openai_compatible",
-      "free_status": "documented_free",
-      "runtime_status": "success",
-      "access_verdict": "usable_now",
-      "models_api": {
-        "listed": true,
-        "checked_at": "2026-09-14T10:36:30.269913+00:00",
-        "source_url": "https://api.groq.com/openai/v1/models"
-      },
-      "latency_ms": 242,
-      "last_checked_at": "2026-09-14T10:36:36.704088+00:00",
-      "retry_after_seconds": null,
-      "limits": {
-        "requests_per_minute": null,
-        "requests_per_day": null,
-        "tokens_per_minute": null,
-        "tokens_per_day": null,
-        "concurrent_requests": null,
-        "shared_quota_group": null
-      },
-      "reliability": {
-        "endpoint_id": "groq/openai/gpt-oss-20b",
-        "attempts": 1,
-        "success_count": 1,
-        "rate_limited_count": 0,
-        "quota_exhausted_count": 0,
-        "hard_failure_count": 0,
-        "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:36.704088Z",
-        "last_success_at": "2026-09-14T10:36:36.704088Z",
-        "p50_latency_ms": 242,
-        "p95_latency_ms": 242
-      },
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "groq/qwen/qwen3.6-27b",
-      "provider_id": "groq",
-      "canonical_model_id": "groq/qwen/qwen3.6-27b",
-      "model": "qwen/qwen3.6-27b",
-      "litellm_model": "groq/qwen/qwen3.6-27b",
-      "api_base": "https://api.groq.com/openai/v1",
-      "api_style": "openai_compatible",
-      "free_status": "documented_free",
-      "runtime_status": "success",
-      "access_verdict": "usable_now",
-      "models_api": {
-        "listed": true,
-        "checked_at": "2026-09-14T10:36:30.269913+00:00",
-        "source_url": "https://api.groq.com/openai/v1/models"
-      },
-      "latency_ms": 221,
-      "last_checked_at": "2026-09-14T10:36:36.926292+00:00",
-      "retry_after_seconds": null,
-      "limits": {
-        "requests_per_minute": null,
-        "requests_per_day": null,
-        "tokens_per_minute": null,
-        "tokens_per_day": null,
-        "concurrent_requests": null,
-        "shared_quota_group": null
-      },
-      "reliability": {
-        "endpoint_id": "groq/qwen/qwen3.6-27b",
-        "attempts": 1,
-        "success_count": 1,
-        "rate_limited_count": 0,
-        "quota_exhausted_count": 0,
-        "hard_failure_count": 0,
-        "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:36.926292Z",
-        "last_success_at": "2026-09-14T10:36:36.926292Z",
-        "p50_latency_ms": 221,
-        "p95_latency_ms": 221
-      },
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "groq/groq/compound",
-      "provider_id": "groq",
-      "canonical_model_id": "groq/groq/compound",
-      "model": "groq/compound",
-      "litellm_model": "groq/groq/compound",
-      "api_base": "https://api.groq.com/openai/v1",
-      "api_style": "openai_compatible",
-      "free_status": "documented_free",
-      "runtime_status": "success",
-      "access_verdict": "usable_now",
-      "models_api": {
-        "listed": true,
-        "checked_at": "2026-09-14T10:36:30.269913+00:00",
-        "source_url": "https://api.groq.com/openai/v1/models"
-      },
-      "latency_ms": 459,
-      "last_checked_at": "2026-09-14T10:36:37.386022+00:00",
-      "retry_after_seconds": null,
-      "limits": {
-        "requests_per_minute": null,
-        "requests_per_day": null,
-        "tokens_per_minute": null,
-        "tokens_per_day": null,
-        "concurrent_requests": null,
-        "shared_quota_group": null
-      },
-      "reliability": {
-        "endpoint_id": "groq/groq/compound",
-        "attempts": 1,
-        "success_count": 1,
-        "rate_limited_count": 0,
-        "quota_exhausted_count": 0,
-        "hard_failure_count": 0,
-        "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:37.386022Z",
-        "last_success_at": "2026-09-14T10:36:37.386022Z",
-        "p50_latency_ms": 459,
-        "p95_latency_ms": 459
+        "last_checked_at": "2026-09-15T10:03:14.379986Z",
+        "last_success_at": "2026-09-15T10:03:14.379986Z",
+        "p50_latency_ms": 376,
+        "p95_latency_ms": 376
       },
       "tool_calling": true,
       "modalities": [
@@ -1307,11 +1355,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.269913+00:00",
+        "checked_at": "2026-09-15T10:03:08.651855+00:00",
         "source_url": "https://api.groq.com/openai/v1/models"
       },
-      "latency_ms": 344,
-      "last_checked_at": "2026-09-14T10:36:37.731244+00:00",
+      "latency_ms": 176,
+      "last_checked_at": "2026-09-15T10:03:14.557212+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -1329,10 +1377,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:37.731244Z",
-        "last_success_at": "2026-09-14T10:36:37.731244Z",
-        "p50_latency_ms": 344,
-        "p95_latency_ms": 344
+        "last_checked_at": "2026-09-15T10:03:14.557212Z",
+        "last_success_at": "2026-09-15T10:03:14.557212Z",
+        "p50_latency_ms": 176,
+        "p95_latency_ms": 176
       },
       "tool_calling": true,
       "modalities": [
@@ -1352,11 +1400,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.269913+00:00",
+        "checked_at": "2026-09-15T10:03:08.651855+00:00",
         "source_url": "https://api.groq.com/openai/v1/models"
       },
-      "latency_ms": 215,
-      "last_checked_at": "2026-09-14T10:36:37.947001+00:00",
+      "latency_ms": 160,
+      "last_checked_at": "2026-09-15T10:03:14.718366+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -1374,10 +1422,55 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:37.947001Z",
-        "last_success_at": "2026-09-14T10:36:37.947001Z",
-        "p50_latency_ms": 215,
-        "p95_latency_ms": 215
+        "last_checked_at": "2026-09-15T10:03:14.718366Z",
+        "last_success_at": "2026-09-15T10:03:14.718366Z",
+        "p50_latency_ms": 160,
+        "p95_latency_ms": 160
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/openai/gpt-oss-20b",
+      "provider_id": "groq",
+      "canonical_model_id": "groq/openai/gpt-oss-20b",
+      "model": "openai/gpt-oss-20b",
+      "litellm_model": "groq/openai/gpt-oss-20b",
+      "api_base": "https://api.groq.com/openai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-15T10:03:08.651855+00:00",
+        "source_url": "https://api.groq.com/openai/v1/models"
+      },
+      "latency_ms": 177,
+      "last_checked_at": "2026-09-15T10:03:15.034649+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "groq/openai/gpt-oss-20b",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-15T10:03:15.034649Z",
+        "last_success_at": "2026-09-15T10:03:15.034649Z",
+        "p50_latency_ms": 177,
+        "p95_latency_ms": 177
       },
       "tool_calling": true,
       "modalities": [
@@ -1397,11 +1490,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.269913+00:00",
+        "checked_at": "2026-09-15T10:03:08.651855+00:00",
         "source_url": "https://api.groq.com/openai/v1/models"
       },
-      "latency_ms": 517,
-      "last_checked_at": "2026-09-14T10:36:38.740823+00:00",
+      "latency_ms": 341,
+      "last_checked_at": "2026-09-15T10:03:15.486426+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -1419,10 +1512,55 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:38.740823Z",
-        "last_success_at": "2026-09-14T10:36:38.740823Z",
-        "p50_latency_ms": 517,
-        "p95_latency_ms": 517
+        "last_checked_at": "2026-09-15T10:03:15.486426Z",
+        "last_success_at": "2026-09-15T10:03:15.486426Z",
+        "p50_latency_ms": 341,
+        "p95_latency_ms": 341
+      },
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/groq/compound",
+      "provider_id": "groq",
+      "canonical_model_id": "groq/groq/compound",
+      "model": "groq/compound",
+      "litellm_model": "groq/groq/compound",
+      "api_base": "https://api.groq.com/openai/v1",
+      "api_style": "openai_compatible",
+      "free_status": "documented_free",
+      "runtime_status": "success",
+      "access_verdict": "usable_now",
+      "models_api": {
+        "listed": true,
+        "checked_at": "2026-09-15T10:03:08.651855+00:00",
+        "source_url": "https://api.groq.com/openai/v1/models"
+      },
+      "latency_ms": 407,
+      "last_checked_at": "2026-09-15T10:03:15.894083+00:00",
+      "retry_after_seconds": null,
+      "limits": {
+        "requests_per_minute": null,
+        "requests_per_day": null,
+        "tokens_per_minute": null,
+        "tokens_per_day": null,
+        "concurrent_requests": null,
+        "shared_quota_group": null
+      },
+      "reliability": {
+        "endpoint_id": "groq/groq/compound",
+        "attempts": 1,
+        "success_count": 1,
+        "rate_limited_count": 0,
+        "quota_exhausted_count": 0,
+        "hard_failure_count": 0,
+        "success_rate": 1.0,
+        "last_checked_at": "2026-09-15T10:03:15.894083Z",
+        "last_success_at": "2026-09-15T10:03:15.894083Z",
+        "p50_latency_ms": 407,
+        "p95_latency_ms": 407
       },
       "tool_calling": true,
       "modalities": [
@@ -1442,11 +1580,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "checked_at": "2026-09-15T10:03:08.721890+00:00",
         "source_url": "https://api.mistral.ai/v1/models"
       },
-      "latency_ms": 423,
-      "last_checked_at": "2026-09-14T10:36:36.485710+00:00",
+      "latency_ms": 695,
+      "last_checked_at": "2026-09-15T10:03:14.718217+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -1464,10 +1602,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:36.485710Z",
-        "last_success_at": "2026-09-14T10:36:36.485710Z",
-        "p50_latency_ms": 423,
-        "p95_latency_ms": 423
+        "last_checked_at": "2026-09-15T10:03:14.718217Z",
+        "last_success_at": "2026-09-15T10:03:14.718217Z",
+        "p50_latency_ms": 695,
+        "p95_latency_ms": 695
       },
       "tool_calling": true,
       "modalities": [
@@ -1487,11 +1625,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "checked_at": "2026-09-15T10:03:08.721890+00:00",
         "source_url": "https://api.mistral.ai/v1/models"
       },
-      "latency_ms": 389,
-      "last_checked_at": "2026-09-14T10:36:36.875178+00:00",
+      "latency_ms": 533,
+      "last_checked_at": "2026-09-15T10:03:15.252019+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -1509,10 +1647,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:36.875178Z",
-        "last_success_at": "2026-09-14T10:36:36.875178Z",
-        "p50_latency_ms": 389,
-        "p95_latency_ms": 389
+        "last_checked_at": "2026-09-15T10:03:15.252019Z",
+        "last_success_at": "2026-09-15T10:03:15.252019Z",
+        "p50_latency_ms": 533,
+        "p95_latency_ms": 533
       },
       "tool_calling": true,
       "modalities": [
@@ -1532,11 +1670,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "checked_at": "2026-09-15T10:03:08.721890+00:00",
         "source_url": "https://api.mistral.ai/v1/models"
       },
-      "latency_ms": 826,
-      "last_checked_at": "2026-09-14T10:36:37.702051+00:00",
+      "latency_ms": 432,
+      "last_checked_at": "2026-09-15T10:03:15.684694+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -1554,10 +1692,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:37.702051Z",
-        "last_success_at": "2026-09-14T10:36:37.702051Z",
-        "p50_latency_ms": 826,
-        "p95_latency_ms": 826
+        "last_checked_at": "2026-09-15T10:03:15.684694Z",
+        "last_success_at": "2026-09-15T10:03:15.684694Z",
+        "p50_latency_ms": 432,
+        "p95_latency_ms": 432
       },
       "tool_calling": true,
       "modalities": [
@@ -1577,11 +1715,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "checked_at": "2026-09-15T10:03:08.721890+00:00",
         "source_url": "https://api.mistral.ai/v1/models"
       },
-      "latency_ms": 562,
-      "last_checked_at": "2026-09-14T10:36:38.264927+00:00",
+      "latency_ms": 1236,
+      "last_checked_at": "2026-09-15T10:03:16.921409+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -1599,10 +1737,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:38.264927Z",
-        "last_success_at": "2026-09-14T10:36:38.264927Z",
-        "p50_latency_ms": 562,
-        "p95_latency_ms": 562
+        "last_checked_at": "2026-09-15T10:03:16.921409Z",
+        "last_success_at": "2026-09-15T10:03:16.921409Z",
+        "p50_latency_ms": 1236,
+        "p95_latency_ms": 1236
       },
       "tool_calling": true,
       "modalities": [
@@ -1622,11 +1760,11 @@
       "access_verdict": "exists_but_throttled",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "checked_at": "2026-09-15T10:03:08.721890+00:00",
         "source_url": "https://api.mistral.ai/v1/models"
       },
-      "latency_ms": 392,
-      "last_checked_at": "2026-09-14T10:36:38.657936+00:00",
+      "latency_ms": 319,
+      "last_checked_at": "2026-09-15T10:03:17.241135+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -1644,10 +1782,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 0.0,
-        "last_checked_at": "2026-09-14T10:36:38.657936Z",
+        "last_checked_at": "2026-09-15T10:03:17.241135Z",
         "last_success_at": null,
-        "p50_latency_ms": 392,
-        "p95_latency_ms": 392
+        "p50_latency_ms": 319,
+        "p95_latency_ms": 319
       },
       "tool_calling": true,
       "modalities": [
@@ -1667,11 +1805,11 @@
       "access_verdict": "exists_but_throttled",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "checked_at": "2026-09-15T10:03:08.721890+00:00",
         "source_url": "https://api.mistral.ai/v1/models"
       },
-      "latency_ms": 333,
-      "last_checked_at": "2026-09-14T10:36:38.991602+00:00",
+      "latency_ms": 288,
+      "last_checked_at": "2026-09-15T10:03:17.529782+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -1689,10 +1827,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 0.0,
-        "last_checked_at": "2026-09-14T10:36:38.991602Z",
+        "last_checked_at": "2026-09-15T10:03:17.529782Z",
         "last_success_at": null,
-        "p50_latency_ms": 333,
-        "p95_latency_ms": 333
+        "p50_latency_ms": 288,
+        "p95_latency_ms": 288
       },
       "tool_calling": true,
       "modalities": [
@@ -1712,11 +1850,11 @@
       "access_verdict": "exists_but_throttled",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "checked_at": "2026-09-15T10:03:08.721890+00:00",
         "source_url": "https://api.mistral.ai/v1/models"
       },
-      "latency_ms": 277,
-      "last_checked_at": "2026-09-14T10:36:39.269626+00:00",
+      "latency_ms": 268,
+      "last_checked_at": "2026-09-15T10:03:17.798918+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -1734,10 +1872,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 0.0,
-        "last_checked_at": "2026-09-14T10:36:39.269626Z",
+        "last_checked_at": "2026-09-15T10:03:17.798918Z",
         "last_success_at": null,
-        "p50_latency_ms": 277,
-        "p95_latency_ms": 277
+        "p50_latency_ms": 268,
+        "p95_latency_ms": 268
       },
       "tool_calling": true,
       "modalities": [
@@ -1757,11 +1895,11 @@
       "access_verdict": "exists_but_throttled",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "checked_at": "2026-09-15T10:03:08.721890+00:00",
         "source_url": "https://api.mistral.ai/v1/models"
       },
-      "latency_ms": 279,
-      "last_checked_at": "2026-09-14T10:36:39.549593+00:00",
+      "latency_ms": 260,
+      "last_checked_at": "2026-09-15T10:03:18.059620+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -1779,10 +1917,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 0.0,
-        "last_checked_at": "2026-09-14T10:36:39.549593Z",
+        "last_checked_at": "2026-09-15T10:03:18.059620Z",
         "last_success_at": null,
-        "p50_latency_ms": 279,
-        "p95_latency_ms": 279
+        "p50_latency_ms": 260,
+        "p95_latency_ms": 260
       },
       "tool_calling": true,
       "modalities": [
@@ -1802,11 +1940,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "checked_at": "2026-09-15T10:03:08.721890+00:00",
         "source_url": "https://api.mistral.ai/v1/models"
       },
-      "latency_ms": 447,
-      "last_checked_at": "2026-09-14T10:36:39.997831+00:00",
+      "latency_ms": 430,
+      "last_checked_at": "2026-09-15T10:03:18.490206+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -1824,10 +1962,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:39.997831Z",
-        "last_success_at": "2026-09-14T10:36:39.997831Z",
-        "p50_latency_ms": 447,
-        "p95_latency_ms": 447
+        "last_checked_at": "2026-09-15T10:03:18.490206Z",
+        "last_success_at": "2026-09-15T10:03:18.490206Z",
+        "p50_latency_ms": 430,
+        "p95_latency_ms": 430
       },
       "tool_calling": true,
       "modalities": [
@@ -1847,11 +1985,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "checked_at": "2026-09-15T10:03:08.721890+00:00",
         "source_url": "https://api.mistral.ai/v1/models"
       },
-      "latency_ms": 425,
-      "last_checked_at": "2026-09-14T10:36:40.423776+00:00",
+      "latency_ms": 387,
+      "last_checked_at": "2026-09-15T10:03:18.878235+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -1869,10 +2007,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:40.423776Z",
-        "last_success_at": "2026-09-14T10:36:40.423776Z",
-        "p50_latency_ms": 425,
-        "p95_latency_ms": 425
+        "last_checked_at": "2026-09-15T10:03:18.878235Z",
+        "last_success_at": "2026-09-15T10:03:18.878235Z",
+        "p50_latency_ms": 387,
+        "p95_latency_ms": 387
       },
       "tool_calling": true,
       "modalities": [
@@ -1892,11 +2030,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "checked_at": "2026-09-15T10:03:08.721890+00:00",
         "source_url": "https://api.mistral.ai/v1/models"
       },
-      "latency_ms": 421,
-      "last_checked_at": "2026-09-14T10:36:41.363295+00:00",
+      "latency_ms": 744,
+      "last_checked_at": "2026-09-15T10:03:20.107875+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -1914,10 +2052,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:41.363295Z",
-        "last_success_at": "2026-09-14T10:36:41.363295Z",
-        "p50_latency_ms": 421,
-        "p95_latency_ms": 421
+        "last_checked_at": "2026-09-15T10:03:20.107875Z",
+        "last_success_at": "2026-09-15T10:03:20.107875Z",
+        "p50_latency_ms": 744,
+        "p95_latency_ms": 744
       },
       "tool_calling": true,
       "modalities": [
@@ -1937,11 +2075,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "checked_at": "2026-09-15T10:03:08.721890+00:00",
         "source_url": "https://api.mistral.ai/v1/models"
       },
-      "latency_ms": 580,
-      "last_checked_at": "2026-09-14T10:36:41.943853+00:00",
+      "latency_ms": 424,
+      "last_checked_at": "2026-09-15T10:03:20.532237+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -1959,10 +2097,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:41.943853Z",
-        "last_success_at": "2026-09-14T10:36:41.943853Z",
-        "p50_latency_ms": 580,
-        "p95_latency_ms": 580
+        "last_checked_at": "2026-09-15T10:03:20.532237Z",
+        "last_success_at": "2026-09-15T10:03:20.532237Z",
+        "p50_latency_ms": 424,
+        "p95_latency_ms": 424
       },
       "tool_calling": true,
       "modalities": [
@@ -1982,11 +2120,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "checked_at": "2026-09-15T10:03:08.721890+00:00",
         "source_url": "https://api.mistral.ai/v1/models"
       },
-      "latency_ms": 438,
-      "last_checked_at": "2026-09-14T10:36:42.382841+00:00",
+      "latency_ms": 441,
+      "last_checked_at": "2026-09-15T10:03:20.973509+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -2004,10 +2142,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:42.382841Z",
-        "last_success_at": "2026-09-14T10:36:42.382841Z",
-        "p50_latency_ms": 438,
-        "p95_latency_ms": 438
+        "last_checked_at": "2026-09-15T10:03:20.973509Z",
+        "last_success_at": "2026-09-15T10:03:20.973509Z",
+        "p50_latency_ms": 441,
+        "p95_latency_ms": 441
       },
       "tool_calling": true,
       "modalities": [
@@ -2027,11 +2165,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "checked_at": "2026-09-15T10:03:08.721890+00:00",
         "source_url": "https://api.mistral.ai/v1/models"
       },
-      "latency_ms": 446,
-      "last_checked_at": "2026-09-14T10:36:42.829907+00:00",
+      "latency_ms": 762,
+      "last_checked_at": "2026-09-15T10:03:21.736213+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -2049,10 +2187,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:42.829907Z",
-        "last_success_at": "2026-09-14T10:36:42.829907Z",
-        "p50_latency_ms": 446,
-        "p95_latency_ms": 446
+        "last_checked_at": "2026-09-15T10:03:21.736213Z",
+        "last_success_at": "2026-09-15T10:03:21.736213Z",
+        "p50_latency_ms": 762,
+        "p95_latency_ms": 762
       },
       "tool_calling": true,
       "modalities": [
@@ -2072,11 +2210,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "checked_at": "2026-09-15T10:03:08.721890+00:00",
         "source_url": "https://api.mistral.ai/v1/models"
       },
-      "latency_ms": 597,
-      "last_checked_at": "2026-09-14T10:36:43.427928+00:00",
+      "latency_ms": 425,
+      "last_checked_at": "2026-09-15T10:03:22.161583+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -2094,10 +2232,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:43.427928Z",
-        "last_success_at": "2026-09-14T10:36:43.427928Z",
-        "p50_latency_ms": 597,
-        "p95_latency_ms": 597
+        "last_checked_at": "2026-09-15T10:03:22.161583Z",
+        "last_success_at": "2026-09-15T10:03:22.161583Z",
+        "p50_latency_ms": 425,
+        "p95_latency_ms": 425
       },
       "tool_calling": true,
       "modalities": [
@@ -2117,11 +2255,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "checked_at": "2026-09-15T10:03:08.721890+00:00",
         "source_url": "https://api.mistral.ai/v1/models"
       },
-      "latency_ms": 740,
-      "last_checked_at": "2026-09-14T10:36:44.168310+00:00",
+      "latency_ms": 414,
+      "last_checked_at": "2026-09-15T10:03:22.576742+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -2139,10 +2277,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:44.168310Z",
-        "last_success_at": "2026-09-14T10:36:44.168310Z",
-        "p50_latency_ms": 740,
-        "p95_latency_ms": 740
+        "last_checked_at": "2026-09-15T10:03:22.576742Z",
+        "last_success_at": "2026-09-15T10:03:22.576742Z",
+        "p50_latency_ms": 414,
+        "p95_latency_ms": 414
       },
       "tool_calling": true,
       "modalities": [
@@ -2162,11 +2300,11 @@
       "access_verdict": "exists_but_throttled",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "checked_at": "2026-09-15T10:03:08.721890+00:00",
         "source_url": "https://api.mistral.ai/v1/models"
       },
-      "latency_ms": 277,
-      "last_checked_at": "2026-09-14T10:36:44.446287+00:00",
+      "latency_ms": 253,
+      "last_checked_at": "2026-09-15T10:03:22.830796+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -2184,10 +2322,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 0.0,
-        "last_checked_at": "2026-09-14T10:36:44.446287Z",
+        "last_checked_at": "2026-09-15T10:03:22.830796Z",
         "last_success_at": null,
-        "p50_latency_ms": 277,
-        "p95_latency_ms": 277
+        "p50_latency_ms": 253,
+        "p95_latency_ms": 253
       },
       "tool_calling": true,
       "modalities": [
@@ -2207,11 +2345,11 @@
       "access_verdict": "exists_but_throttled",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "checked_at": "2026-09-15T10:03:08.721890+00:00",
         "source_url": "https://api.mistral.ai/v1/models"
       },
       "latency_ms": 269,
-      "last_checked_at": "2026-09-14T10:36:44.716169+00:00",
+      "last_checked_at": "2026-09-15T10:03:23.100242+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -2229,7 +2367,7 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 0.0,
-        "last_checked_at": "2026-09-14T10:36:44.716169Z",
+        "last_checked_at": "2026-09-15T10:03:23.100242Z",
         "last_success_at": null,
         "p50_latency_ms": 269,
         "p95_latency_ms": 269
@@ -2252,11 +2390,11 @@
       "access_verdict": "exists_but_throttled",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "checked_at": "2026-09-15T10:03:08.721890+00:00",
         "source_url": "https://api.mistral.ai/v1/models"
       },
-      "latency_ms": 253,
-      "last_checked_at": "2026-09-14T10:36:44.969648+00:00",
+      "latency_ms": 271,
+      "last_checked_at": "2026-09-15T10:03:23.372041+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -2274,10 +2412,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 0.0,
-        "last_checked_at": "2026-09-14T10:36:44.969648Z",
+        "last_checked_at": "2026-09-15T10:03:23.372041Z",
         "last_success_at": null,
-        "p50_latency_ms": 253,
-        "p95_latency_ms": 253
+        "p50_latency_ms": 271,
+        "p95_latency_ms": 271
       },
       "tool_calling": true,
       "modalities": [
@@ -2297,11 +2435,11 @@
       "access_verdict": "exists_but_throttled",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "checked_at": "2026-09-15T10:03:08.721890+00:00",
         "source_url": "https://api.mistral.ai/v1/models"
       },
-      "latency_ms": 259,
-      "last_checked_at": "2026-09-14T10:36:45.229077+00:00",
+      "latency_ms": 254,
+      "last_checked_at": "2026-09-15T10:03:23.626341+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -2319,10 +2457,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 0.0,
-        "last_checked_at": "2026-09-14T10:36:45.229077Z",
+        "last_checked_at": "2026-09-15T10:03:23.626341Z",
         "last_success_at": null,
-        "p50_latency_ms": 259,
-        "p95_latency_ms": 259
+        "p50_latency_ms": 254,
+        "p95_latency_ms": 254
       },
       "tool_calling": true,
       "modalities": [
@@ -2342,11 +2480,11 @@
       "access_verdict": "exists_but_throttled",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "checked_at": "2026-09-15T10:03:08.721890+00:00",
         "source_url": "https://api.mistral.ai/v1/models"
       },
-      "latency_ms": 321,
-      "last_checked_at": "2026-09-14T10:36:45.551006+00:00",
+      "latency_ms": 275,
+      "last_checked_at": "2026-09-15T10:03:23.902158+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -2364,10 +2502,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 0.0,
-        "last_checked_at": "2026-09-14T10:36:45.551006Z",
+        "last_checked_at": "2026-09-15T10:03:23.902158Z",
         "last_success_at": null,
-        "p50_latency_ms": 321,
-        "p95_latency_ms": 321
+        "p50_latency_ms": 275,
+        "p95_latency_ms": 275
       },
       "tool_calling": true,
       "modalities": [
@@ -2387,11 +2525,11 @@
       "access_verdict": "exists_but_throttled",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "checked_at": "2026-09-15T10:03:08.721890+00:00",
         "source_url": "https://api.mistral.ai/v1/models"
       },
-      "latency_ms": 310,
-      "last_checked_at": "2026-09-14T10:36:45.862089+00:00",
+      "latency_ms": 342,
+      "last_checked_at": "2026-09-15T10:03:24.244761+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -2409,10 +2547,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 0.0,
-        "last_checked_at": "2026-09-14T10:36:45.862089Z",
+        "last_checked_at": "2026-09-15T10:03:24.244761Z",
         "last_success_at": null,
-        "p50_latency_ms": 310,
-        "p95_latency_ms": 310
+        "p50_latency_ms": 342,
+        "p95_latency_ms": 342
       },
       "tool_calling": true,
       "modalities": [
@@ -2432,11 +2570,11 @@
       "access_verdict": "exists_but_throttled",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "checked_at": "2026-09-15T10:03:08.721890+00:00",
         "source_url": "https://api.mistral.ai/v1/models"
       },
-      "latency_ms": 255,
-      "last_checked_at": "2026-09-14T10:36:46.117444+00:00",
+      "latency_ms": 293,
+      "last_checked_at": "2026-09-15T10:03:24.538181+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -2454,10 +2592,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 0.0,
-        "last_checked_at": "2026-09-14T10:36:46.117444Z",
+        "last_checked_at": "2026-09-15T10:03:24.538181Z",
         "last_success_at": null,
-        "p50_latency_ms": 255,
-        "p95_latency_ms": 255
+        "p50_latency_ms": 293,
+        "p95_latency_ms": 293
       },
       "tool_calling": true,
       "modalities": [
@@ -2477,11 +2615,11 @@
       "access_verdict": "exists_but_throttled",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "checked_at": "2026-09-15T10:03:08.721890+00:00",
         "source_url": "https://api.mistral.ai/v1/models"
       },
-      "latency_ms": 264,
-      "last_checked_at": "2026-09-14T10:36:46.382614+00:00",
+      "latency_ms": 346,
+      "last_checked_at": "2026-09-15T10:03:24.884940+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -2499,10 +2637,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 0.0,
-        "last_checked_at": "2026-09-14T10:36:46.382614Z",
+        "last_checked_at": "2026-09-15T10:03:24.884940Z",
         "last_success_at": null,
-        "p50_latency_ms": 264,
-        "p95_latency_ms": 264
+        "p50_latency_ms": 346,
+        "p95_latency_ms": 346
       },
       "tool_calling": true,
       "modalities": [
@@ -2522,11 +2660,11 @@
       "access_verdict": "exists_but_throttled",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:30.368046+00:00",
+        "checked_at": "2026-09-15T10:03:08.721890+00:00",
         "source_url": "https://api.mistral.ai/v1/models"
       },
-      "latency_ms": 265,
-      "last_checked_at": "2026-09-14T10:36:46.648010+00:00",
+      "latency_ms": 252,
+      "last_checked_at": "2026-09-15T10:03:25.137316+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": null,
@@ -2544,10 +2682,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 0.0,
-        "last_checked_at": "2026-09-14T10:36:46.648010Z",
+        "last_checked_at": "2026-09-15T10:03:25.137316Z",
         "last_success_at": null,
-        "p50_latency_ms": 265,
-        "p95_latency_ms": 265
+        "p50_latency_ms": 252,
+        "p95_latency_ms": 252
       },
       "tool_calling": true,
       "modalities": [
@@ -2567,11 +2705,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "checked_at": "2026-09-15T10:03:11.751727+00:00",
         "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
       },
-      "latency_ms": 523,
-      "last_checked_at": "2026-09-14T10:36:36.603862+00:00",
+      "latency_ms": 3958,
+      "last_checked_at": "2026-09-15T10:03:17.999470+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": 300,
@@ -2589,10 +2727,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:36.603862Z",
-        "last_success_at": "2026-09-14T10:36:36.603862Z",
-        "p50_latency_ms": 523,
-        "p95_latency_ms": 523
+        "last_checked_at": "2026-09-15T10:03:17.999470Z",
+        "last_success_at": "2026-09-15T10:03:17.999470Z",
+        "p50_latency_ms": 3958,
+        "p95_latency_ms": 3958
       },
       "tool_calling": false,
       "modalities": [
@@ -2612,11 +2750,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "checked_at": "2026-09-15T10:03:11.751727+00:00",
         "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
       },
-      "latency_ms": 525,
-      "last_checked_at": "2026-09-14T10:36:37.129412+00:00",
+      "latency_ms": 228,
+      "last_checked_at": "2026-09-15T10:03:18.228053+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": 300,
@@ -2634,10 +2772,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:37.129412Z",
-        "last_success_at": "2026-09-14T10:36:37.129412Z",
-        "p50_latency_ms": 525,
-        "p95_latency_ms": 525
+        "last_checked_at": "2026-09-15T10:03:18.228053Z",
+        "last_success_at": "2026-09-15T10:03:18.228053Z",
+        "p50_latency_ms": 228,
+        "p95_latency_ms": 228
       },
       "tool_calling": false,
       "modalities": [
@@ -2657,11 +2795,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "checked_at": "2026-09-15T10:03:11.751727+00:00",
         "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
       },
-      "latency_ms": 335,
-      "last_checked_at": "2026-09-14T10:36:37.465064+00:00",
+      "latency_ms": 305,
+      "last_checked_at": "2026-09-15T10:03:18.533996+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": 2000,
@@ -2679,10 +2817,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:37.465064Z",
-        "last_success_at": "2026-09-14T10:36:37.465064Z",
-        "p50_latency_ms": 335,
-        "p95_latency_ms": 335
+        "last_checked_at": "2026-09-15T10:03:18.533996Z",
+        "last_success_at": "2026-09-15T10:03:18.533996Z",
+        "p50_latency_ms": 305,
+        "p95_latency_ms": 305
       },
       "tool_calling": false,
       "modalities": [
@@ -2702,11 +2840,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "checked_at": "2026-09-15T10:03:11.751727+00:00",
         "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
       },
-      "latency_ms": 397,
-      "last_checked_at": "2026-09-14T10:36:38.172529+00:00",
+      "latency_ms": 661,
+      "last_checked_at": "2026-09-15T10:03:19.466864+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": 300,
@@ -2724,10 +2862,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:38.172529Z",
-        "last_success_at": "2026-09-14T10:36:38.172529Z",
-        "p50_latency_ms": 397,
-        "p95_latency_ms": 397
+        "last_checked_at": "2026-09-15T10:03:19.466864Z",
+        "last_success_at": "2026-09-15T10:03:19.466864Z",
+        "p50_latency_ms": 661,
+        "p95_latency_ms": 661
       },
       "tool_calling": false,
       "modalities": [
@@ -2747,11 +2885,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "checked_at": "2026-09-15T10:03:11.751727+00:00",
         "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
       },
-      "latency_ms": 504,
-      "last_checked_at": "2026-09-14T10:36:38.677430+00:00",
+      "latency_ms": 673,
+      "last_checked_at": "2026-09-15T10:03:20.141003+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": 300,
@@ -2769,10 +2907,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:38.677430Z",
-        "last_success_at": "2026-09-14T10:36:38.677430Z",
-        "p50_latency_ms": 504,
-        "p95_latency_ms": 504
+        "last_checked_at": "2026-09-15T10:03:20.141003Z",
+        "last_success_at": "2026-09-15T10:03:20.141003Z",
+        "p50_latency_ms": 673,
+        "p95_latency_ms": 673
       },
       "tool_calling": false,
       "modalities": [
@@ -2792,11 +2930,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "checked_at": "2026-09-15T10:03:11.751727+00:00",
         "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
       },
-      "latency_ms": 354,
-      "last_checked_at": "2026-09-14T10:36:39.504251+00:00",
+      "latency_ms": 381,
+      "last_checked_at": "2026-09-15T10:03:20.644364+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": 300,
@@ -2814,10 +2952,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:39.504251Z",
-        "last_success_at": "2026-09-14T10:36:39.504251Z",
-        "p50_latency_ms": 354,
-        "p95_latency_ms": 354
+        "last_checked_at": "2026-09-15T10:03:20.644364Z",
+        "last_success_at": "2026-09-15T10:03:20.644364Z",
+        "p50_latency_ms": 381,
+        "p95_latency_ms": 381
       },
       "tool_calling": false,
       "modalities": [
@@ -2837,11 +2975,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "checked_at": "2026-09-15T10:03:11.751727+00:00",
         "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
       },
-      "latency_ms": 383,
-      "last_checked_at": "2026-09-14T10:36:40.028057+00:00",
+      "latency_ms": 483,
+      "last_checked_at": "2026-09-15T10:03:21.422676+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": 300,
@@ -2859,10 +2997,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:40.028057Z",
-        "last_success_at": "2026-09-14T10:36:40.028057Z",
-        "p50_latency_ms": 383,
-        "p95_latency_ms": 383
+        "last_checked_at": "2026-09-15T10:03:21.422676Z",
+        "last_success_at": "2026-09-15T10:03:21.422676Z",
+        "p50_latency_ms": 483,
+        "p95_latency_ms": 483
       },
       "tool_calling": false,
       "modalities": [
@@ -2882,11 +3020,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "checked_at": "2026-09-15T10:03:11.751727+00:00",
         "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
       },
-      "latency_ms": 874,
-      "last_checked_at": "2026-09-14T10:36:40.902881+00:00",
+      "latency_ms": 12796,
+      "last_checked_at": "2026-09-15T10:03:34.219047+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": 300,
@@ -2904,10 +3042,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:40.902881Z",
-        "last_success_at": "2026-09-14T10:36:40.902881Z",
-        "p50_latency_ms": 874,
-        "p95_latency_ms": 874
+        "last_checked_at": "2026-09-15T10:03:34.219047Z",
+        "last_success_at": "2026-09-15T10:03:34.219047Z",
+        "p50_latency_ms": 12796,
+        "p95_latency_ms": 12796
       },
       "tool_calling": false,
       "modalities": [
@@ -2927,11 +3065,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "checked_at": "2026-09-15T10:03:11.751727+00:00",
         "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
       },
-      "latency_ms": 291,
-      "last_checked_at": "2026-09-14T10:36:41.194859+00:00",
+      "latency_ms": 309,
+      "last_checked_at": "2026-09-15T10:03:34.528616+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": 300,
@@ -2949,10 +3087,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:41.194859Z",
-        "last_success_at": "2026-09-14T10:36:41.194859Z",
-        "p50_latency_ms": 291,
-        "p95_latency_ms": 291
+        "last_checked_at": "2026-09-15T10:03:34.528616Z",
+        "last_success_at": "2026-09-15T10:03:34.528616Z",
+        "p50_latency_ms": 309,
+        "p95_latency_ms": 309
       },
       "tool_calling": false,
       "modalities": [
@@ -2972,11 +3110,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "checked_at": "2026-09-15T10:03:11.751727+00:00",
         "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
       },
-      "latency_ms": 385,
-      "last_checked_at": "2026-09-14T10:36:41.814454+00:00",
+      "latency_ms": 1145,
+      "last_checked_at": "2026-09-15T10:03:35.761022+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": 300,
@@ -2994,10 +3132,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:41.814454Z",
-        "last_success_at": "2026-09-14T10:36:41.814454Z",
-        "p50_latency_ms": 385,
-        "p95_latency_ms": 385
+        "last_checked_at": "2026-09-15T10:03:35.761022Z",
+        "last_success_at": "2026-09-15T10:03:35.761022Z",
+        "p50_latency_ms": 1145,
+        "p95_latency_ms": 1145
       },
       "tool_calling": false,
       "modalities": [
@@ -3017,11 +3155,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "checked_at": "2026-09-15T10:03:11.751727+00:00",
         "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
       },
-      "latency_ms": 397,
-      "last_checked_at": "2026-09-14T10:36:42.362698+00:00",
+      "latency_ms": 764,
+      "last_checked_at": "2026-09-15T10:03:36.626970+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": 300,
@@ -3039,10 +3177,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:42.362698Z",
-        "last_success_at": "2026-09-14T10:36:42.362698Z",
-        "p50_latency_ms": 397,
-        "p95_latency_ms": 397
+        "last_checked_at": "2026-09-15T10:03:36.626970Z",
+        "last_success_at": "2026-09-15T10:03:36.626970Z",
+        "p50_latency_ms": 764,
+        "p95_latency_ms": 764
       },
       "tool_calling": false,
       "modalities": [
@@ -3062,11 +3200,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "checked_at": "2026-09-15T10:03:11.751727+00:00",
         "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
       },
-      "latency_ms": 274,
-      "last_checked_at": "2026-09-14T10:36:42.637924+00:00",
+      "latency_ms": 269,
+      "last_checked_at": "2026-09-15T10:03:36.896503+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": 300,
@@ -3084,10 +3222,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:42.637924Z",
-        "last_success_at": "2026-09-14T10:36:42.637924Z",
-        "p50_latency_ms": 274,
-        "p95_latency_ms": 274
+        "last_checked_at": "2026-09-15T10:03:36.896503Z",
+        "last_success_at": "2026-09-15T10:03:36.896503Z",
+        "p50_latency_ms": 269,
+        "p95_latency_ms": 269
       },
       "tool_calling": false,
       "modalities": [
@@ -3107,11 +3245,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "checked_at": "2026-09-15T10:03:11.751727+00:00",
         "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
       },
-      "latency_ms": 313,
-      "last_checked_at": "2026-09-14T10:36:42.951322+00:00",
+      "latency_ms": 144,
+      "last_checked_at": "2026-09-15T10:03:37.040975+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": 300,
@@ -3129,10 +3267,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:42.951322Z",
-        "last_success_at": "2026-09-14T10:36:42.951322Z",
-        "p50_latency_ms": 313,
-        "p95_latency_ms": 313
+        "last_checked_at": "2026-09-15T10:03:37.040975Z",
+        "last_success_at": "2026-09-15T10:03:37.040975Z",
+        "p50_latency_ms": 144,
+        "p95_latency_ms": 144
       },
       "tool_calling": false,
       "modalities": [
@@ -3152,11 +3290,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "checked_at": "2026-09-15T10:03:11.751727+00:00",
         "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
       },
-      "latency_ms": 452,
-      "last_checked_at": "2026-09-14T10:36:43.404527+00:00",
+      "latency_ms": 295,
+      "last_checked_at": "2026-09-15T10:03:37.336701+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": 300,
@@ -3174,10 +3312,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:43.404527Z",
-        "last_success_at": "2026-09-14T10:36:43.404527Z",
-        "p50_latency_ms": 452,
-        "p95_latency_ms": 452
+        "last_checked_at": "2026-09-15T10:03:37.336701Z",
+        "last_success_at": "2026-09-15T10:03:37.336701Z",
+        "p50_latency_ms": 295,
+        "p95_latency_ms": 295
       },
       "tool_calling": false,
       "modalities": [
@@ -3197,11 +3335,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "checked_at": "2026-09-15T10:03:11.751727+00:00",
         "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
       },
-      "latency_ms": 458,
-      "last_checked_at": "2026-09-14T10:36:43.863129+00:00",
+      "latency_ms": 396,
+      "last_checked_at": "2026-09-15T10:03:37.733277+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": 300,
@@ -3219,10 +3357,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:43.863129Z",
-        "last_success_at": "2026-09-14T10:36:43.863129Z",
-        "p50_latency_ms": 458,
-        "p95_latency_ms": 458
+        "last_checked_at": "2026-09-15T10:03:37.733277Z",
+        "last_success_at": "2026-09-15T10:03:37.733277Z",
+        "p50_latency_ms": 396,
+        "p95_latency_ms": 396
       },
       "tool_calling": false,
       "modalities": [
@@ -3242,11 +3380,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "checked_at": "2026-09-15T10:03:11.751727+00:00",
         "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
       },
-      "latency_ms": 425,
-      "last_checked_at": "2026-09-14T10:36:44.613305+00:00",
+      "latency_ms": 417,
+      "last_checked_at": "2026-09-15T10:03:38.548810+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": 300,
@@ -3264,10 +3402,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:44.613305Z",
-        "last_success_at": "2026-09-14T10:36:44.613305Z",
-        "p50_latency_ms": 425,
-        "p95_latency_ms": 425
+        "last_checked_at": "2026-09-15T10:03:38.548810Z",
+        "last_success_at": "2026-09-15T10:03:38.548810Z",
+        "p50_latency_ms": 417,
+        "p95_latency_ms": 417
       },
       "tool_calling": false,
       "modalities": [
@@ -3287,11 +3425,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "checked_at": "2026-09-15T10:03:11.751727+00:00",
         "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
       },
-      "latency_ms": 219,
-      "last_checked_at": "2026-09-14T10:36:44.832949+00:00",
+      "latency_ms": 273,
+      "last_checked_at": "2026-09-15T10:03:38.822224+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": 300,
@@ -3309,10 +3447,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:44.832949Z",
-        "last_success_at": "2026-09-14T10:36:44.832949Z",
-        "p50_latency_ms": 219,
-        "p95_latency_ms": 219
+        "last_checked_at": "2026-09-15T10:03:38.822224Z",
+        "last_success_at": "2026-09-15T10:03:38.822224Z",
+        "p50_latency_ms": 273,
+        "p95_latency_ms": 273
       },
       "tool_calling": false,
       "modalities": [
@@ -3332,11 +3470,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "checked_at": "2026-09-15T10:03:11.751727+00:00",
         "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
       },
-      "latency_ms": 468,
-      "last_checked_at": "2026-09-14T10:36:45.301433+00:00",
+      "latency_ms": 365,
+      "last_checked_at": "2026-09-15T10:03:39.188460+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": 300,
@@ -3354,10 +3492,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:45.301433Z",
-        "last_success_at": "2026-09-14T10:36:45.301433Z",
-        "p50_latency_ms": 468,
-        "p95_latency_ms": 468
+        "last_checked_at": "2026-09-15T10:03:39.188460Z",
+        "last_success_at": "2026-09-15T10:03:39.188460Z",
+        "p50_latency_ms": 365,
+        "p95_latency_ms": 365
       },
       "tool_calling": false,
       "modalities": [
@@ -3377,11 +3515,11 @@
       "access_verdict": "usable_now",
       "models_api": {
         "listed": true,
-        "checked_at": "2026-09-14T10:36:33.407068+00:00",
+        "checked_at": "2026-09-15T10:03:11.751727+00:00",
         "source_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/models/search"
       },
-      "latency_ms": 437,
-      "last_checked_at": "2026-09-14T10:36:45.738858+00:00",
+      "latency_ms": 452,
+      "last_checked_at": "2026-09-15T10:03:39.641347+00:00",
       "retry_after_seconds": null,
       "limits": {
         "requests_per_minute": 300,
@@ -3399,10 +3537,10 @@
         "quota_exhausted_count": 0,
         "hard_failure_count": 0,
         "success_rate": 1.0,
-        "last_checked_at": "2026-09-14T10:36:45.738858Z",
-        "last_success_at": "2026-09-14T10:36:45.738858Z",
-        "p50_latency_ms": 437,
-        "p95_latency_ms": 437
+        "last_checked_at": "2026-09-15T10:03:39.641347Z",
+        "last_success_at": "2026-09-15T10:03:39.641347Z",
+        "p50_latency_ms": 452,
+        "p95_latency_ms": 452
       },
       "tool_calling": false,
       "modalities": [
