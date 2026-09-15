@@ -175,10 +175,11 @@ providers:
     website: https://deepinfra.com
     api_base: https://api.deepinfra.com/v1/openai
     api_style: openai_compatible
-    adapter: null
+    adapter: deepinfra
     discovery_priority: 140
     enabled: true
     sources:
+      models_api: https://api.deepinfra.com/models/list
       models_page: https://deepinfra.com/models
       docs: https://deepinfra.com/docs
 

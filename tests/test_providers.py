@@ -14,6 +14,7 @@ from free_ai_model_router.providers.cloudflare import (
     _get_modalities,
     _infer_task_type,
 )
+from free_ai_model_router.providers.deepinfra import DeepInfraAdapter, _extract_json_array_objects
 from free_ai_model_router.providers.openai_compatible import GenericOpenAICompatibleAdapter
 
 
@@ -84,6 +85,59 @@ def test_cerebras_endpoint_and_litellm_string() -> None:
     assert endpoint.endpoint_id == "cerebras/gpt-oss-120b"
     assert endpoint.provider_id == "cerebras"
     assert adapter.to_litellm_model_string(model) == "cerebras/gpt-oss-120b"
+
+
+@pytest.mark.asyncio
+async def test_deepinfra_discover_models_from_catalog_list() -> None:
+    class FakeDeepInfraAdapter(DeepInfraAdapter):
+        async def _fetch_catalog(self, _headers):
+            return [
+                {
+                    "model_name": "deepseek-ai/DeepSeek-V3",
+                    "reported_type": "text-generation",
+                    "max_tokens": 163840,
+                },
+                {
+                    "model_name": "BAAI/bge-large-en-v1.5",
+                    "reported_type": "sentence-similarity",
+                },
+                {
+                    "model_name": "black-forest-labs/FLUX-1-schnell",
+                    "reported_type": "text-to-image",
+                },
+            ]
+
+    adapter = FakeDeepInfraAdapter(SimpleNamespace(), api_key="key")
+
+    models = await adapter.discover_models()
+
+    assert [m.provider_model_id for m in models] == ["deepseek-ai/DeepSeek-V3"]
+    assert models[0].api_base == "https://api.deepinfra.com/v1/openai"
+    assert models[0].context_tokens == 163840
+
+
+def test_deepinfra_endpoint_and_litellm_string() -> None:
+    adapter = DeepInfraAdapter(SimpleNamespace())
+    model = ProviderModel(provider_model_id="deepseek-ai/DeepSeek-V3")
+
+    endpoint = adapter.to_provider_endpoint(model)
+
+    assert endpoint.endpoint_id == "deepinfra/deepseek-ai/DeepSeek-V3"
+    assert endpoint.provider_id == "deepinfra"
+    assert endpoint.source_url == "https://api.deepinfra.com/models/list"
+    assert adapter.to_litellm_model_string(model) == "deepinfra/deepseek-ai/DeepSeek-V3"
+
+
+def test_deepinfra_extracts_objects_from_partial_catalog_stream() -> None:
+    chunks = [
+        b'[{"model_name":"a","reported_type":"text-generation"},',
+        b'{"model_name":"b","reported_type":"text-generation"},',
+        b'{"model_name":"unfinished","reported_type":"text',
+    ]
+
+    parsed = _extract_json_array_objects(chunks, max_objects=10)
+
+    assert [item["model_name"] for item in parsed] == ["a", "b"]
 
 
 @pytest.mark.asyncio

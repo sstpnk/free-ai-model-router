@@ -30,6 +30,7 @@ from free_ai_model_router.models import (
 from free_ai_model_router.providers.base import ProviderModel
 from free_ai_model_router.providers.cerebras import CerebrasAdapter
 from free_ai_model_router.providers.cloudflare import CloudflareAdapter
+from free_ai_model_router.providers.deepinfra import DeepInfraAdapter
 from free_ai_model_router.providers.gemini import GeminiAdapter
 from free_ai_model_router.providers.groq import GroqAdapter
 from free_ai_model_router.providers.mistral import MistralAdapter
@@ -312,6 +313,7 @@ class PipelineOrchestrator:
             "groq": GroqAdapter,
             "cerebras": CerebrasAdapter,
             "cloudflare": CloudflareAdapter,
+            "deepinfra": DeepInfraAdapter,
             "gemini": GeminiAdapter,
             "mistral": MistralAdapter,
         }
