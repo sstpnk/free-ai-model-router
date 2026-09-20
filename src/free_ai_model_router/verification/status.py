@@ -17,7 +17,6 @@ EVIDENCE_STATUSES = {
 ROUTABLE_VERIFICATION_STATUSES = {
     VerificationStatus.SUCCESS,
     VerificationStatus.RATE_LIMITED,
-    VerificationStatus.QUOTA_EXHAUSTED,
     VerificationStatus.NOT_TESTED,
 }
 

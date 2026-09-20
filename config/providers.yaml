@@ -92,7 +92,8 @@ providers:
     api_style: openai_compatible
     adapter: null
     discovery_priority: 70
-    enabled: true
+    # Retired by GitHub on 2026-07-30: playground, catalog, inference API, and BYOK are unavailable.
+    enabled: false
     sources:
       models_page: https://github.com/marketplace/models
       docs: https://docs.github.com/en/github-models
@@ -220,10 +221,11 @@ providers:
     name: Replicate
     website: https://replicate.com
     api_base: https://api.replicate.com/v1
-    api_style: openai_compatible
+    api_style: custom
     adapter: null
     discovery_priority: 180
-    enabled: true
+    # Native predictions API, not OpenAI-compatible /models + /chat/completions for this router.
+    enabled: false
     sources:
       models_page: https://replicate.com/explore
       docs: https://replicate.com/docs

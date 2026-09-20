@@ -228,6 +228,24 @@ def test_provider_access_report_uses_historical_runtime_statuses() -> None:
     assert "| limited | Limited Provider | подключен, но лимит | добавлен | — | 1 | 0 | 0 | 1 |" in report
 
 
+def test_provider_access_report_distinguishes_quota_from_rate_limit() -> None:
+    provider = ProviderConfig(
+        provider_id="quota",
+        name="Quota Provider",
+        api_style=ApiStyle.OPENAI_COMPATIBLE,
+    )
+
+    report = generate_provider_access_report(
+        providers=[provider],
+        endpoints=[],
+        api_key_presence={"quota": True},
+        provider_runtime_statuses={"quota": [VerificationStatus.QUOTA_EXHAUSTED]},
+    )
+
+    assert "требуется баланс/квота" in report
+    assert "генерация требует баланс" in report
+
+
 def test_status_reports_can_skip_routing_reports(tmp_path) -> None:
     output = _sample_router_output()
 

@@ -288,8 +288,13 @@ def _provider_access_status(
         return "подключен и работает", "Хотя бы один endpoint успешно ответил на generation probe."
     if VerificationStatus.AUTHENTICATION_FAILED in statuses:
         return "ошибка доступа/ключа", "Runtime probe получил ошибку аутентификации."
-    if any(status in {VerificationStatus.RATE_LIMITED, VerificationStatus.QUOTA_EXHAUSTED} for status in statuses):
-        return "подключен, но лимит", "Провайдер достижим, но генерация уперлась в rate limit или quota."
+    if VerificationStatus.QUOTA_EXHAUSTED in statuses:
+        return (
+            "требуется баланс/квота",
+            "Провайдер достижим, но генерация требует баланс, квоту или ресурсный пакет.",
+        )
+    if VerificationStatus.RATE_LIMITED in statuses:
+        return "подключен, но лимит", "Провайдер достижим, но генерация уперлась в rate limit."
     if statuses:
         return "проверен, без успеха", "Runtime probes выполнялись, но не дали usable/throttled evidence."
     if endpoints:

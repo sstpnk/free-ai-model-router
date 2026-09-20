@@ -117,7 +117,9 @@ def _provider_doctor_status(
         return "подключен и работает"
     if VerificationStatus.AUTHENTICATION_FAILED in statuses:
         return "ошибка доступа/ключа"
-    if any(status in {VerificationStatus.RATE_LIMITED, VerificationStatus.QUOTA_EXHAUSTED} for status in statuses):
+    if VerificationStatus.QUOTA_EXHAUSTED in statuses:
+        return "требуется баланс/квота"
+    if VerificationStatus.RATE_LIMITED in statuses:
         return "подключен, но лимит"
     if statuses:
         return "проверен, без успеха"

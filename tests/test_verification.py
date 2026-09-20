@@ -35,6 +35,7 @@ def test_quota_exhaustion_has_account_specific_verdict() -> None:
     assert status == VerificationStatus.QUOTA_EXHAUSTED
     assert access_verdict_for_status(status) == AccessVerdict.QUOTA_EXHAUSTED_FOR_ACCOUNT
     assert is_evidence_status(status) is True
+    assert is_routable_status(status) is False
 
 
 def test_model_not_found_is_not_routable() -> None:
