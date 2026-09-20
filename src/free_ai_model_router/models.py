@@ -54,6 +54,7 @@ class VerificationStatus(str, Enum):
     QUOTA_EXHAUSTED = "quota_exhausted"
     MODEL_NOT_FOUND = "model_not_found"
     REGION_BLOCKED = "region_blocked"
+    CLIENT_RESTRICTED = "client_restricted"
     PROVIDER_UNAVAILABLE = "provider_unavailable"
     TIMEOUT = "timeout"
     INVALID_RESPONSE = "invalid_response"

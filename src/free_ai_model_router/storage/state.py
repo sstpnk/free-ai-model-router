@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Any, Optional
 
 from free_ai_model_router.models import (
+    AccessVerdict,
     CanonicalModel,
     ChangeRecord,
     PipelineState,
@@ -18,6 +19,7 @@ from free_ai_model_router.models import (
     VerificationStats,
     VerificationStatus,
 )
+from free_ai_model_router.verification.status import normalize_verification_status
 
 
 def save_json(data: Any, path: Path) -> None:
@@ -172,6 +174,9 @@ def load_latest_verification_records(path: Path) -> dict[str, VerificationHistor
             record = VerificationHistoryRecord(**json.loads(line))
         except (json.JSONDecodeError, ValueError):
             continue
+        record.status = normalize_verification_status(record.status, record.error_message)
+        if record.status == VerificationStatus.CLIENT_RESTRICTED:
+            record.access_verdict = AccessVerdict.NOT_ACCESSIBLE
         previous = latest.get(record.endpoint_id)
         if previous is None or record.checked_at > previous.checked_at:
             latest[record.endpoint_id] = record
@@ -200,6 +205,9 @@ def load_verification_stats(path: Path) -> dict[str, VerificationStats]:
             record = VerificationHistoryRecord(**json.loads(line))
         except (json.JSONDecodeError, ValueError):
             continue
+        record.status = normalize_verification_status(record.status, record.error_message)
+        if record.status == VerificationStatus.CLIENT_RESTRICTED:
+            record.access_verdict = AccessVerdict.NOT_ACCESSIBLE
         records_by_endpoint.setdefault(record.endpoint_id, []).append(record)
 
     stats: dict[str, VerificationStats] = {}
@@ -214,6 +222,7 @@ def load_verification_stats(path: Path) -> dict[str, VerificationStats]:
                 VerificationStatus.SUCCESS,
                 VerificationStatus.RATE_LIMITED,
                 VerificationStatus.QUOTA_EXHAUSTED,
+                VerificationStatus.CLIENT_RESTRICTED,
                 VerificationStatus.NOT_TESTED,
             }
         ]

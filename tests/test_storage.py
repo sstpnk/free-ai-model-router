@@ -118,6 +118,37 @@ def test_load_latest_verification_records_uses_newest_record(tmp_path) -> None:
     assert latest["test/model"].status == VerificationStatus.SUCCESS
 
 
+def test_load_latest_verification_records_normalizes_client_restricted_history(tmp_path) -> None:
+    path = tmp_path / "history" / "verification.jsonl"
+    path.parent.mkdir(parents=True)
+    path.write_text(
+        json.dumps(
+            {
+                "run_id": "run-1",
+                "checked_at": "2026-01-01T00:00:00+00:00",
+                "endpoint_id": "opencode/free",
+                "provider_id": "opencode",
+                "canonical_model_id": "opencode/free",
+                "provider_model_id": "free",
+                "status": "authentication_failed",
+                "access_verdict": "not_accessible",
+                "http_status": 403,
+                "error_message": (
+                    '{"error":{"type":"FreeTierError",'
+                    '"message":"free tier can only be used from within OpenCode"}}'
+                ),
+            }
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+
+    latest = load_latest_verification_records(path)
+
+    assert latest["opencode/free"].status == VerificationStatus.CLIENT_RESTRICTED
+    assert latest["opencode/free"].access_verdict == AccessVerdict.NOT_ACCESSIBLE
+
+
 def test_provider_access_history_keeps_latest_record(tmp_path) -> None:
     path = tmp_path / "history" / "provider-access.jsonl"
     first = ProviderAccessRecord(

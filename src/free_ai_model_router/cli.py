@@ -115,6 +115,10 @@ def _provider_doctor_status(
         return "подключен, но лимит"
     if VerificationStatus.SUCCESS in statuses:
         return "подключен и работает"
+    if VerificationStatus.CLIENT_RESTRICTED in statuses and VerificationStatus.QUOTA_EXHAUSTED in statuses:
+        return "часть моделей только из клиента, часть требует баланс"
+    if VerificationStatus.CLIENT_RESTRICTED in statuses:
+        return "только через клиент провайдера"
     if VerificationStatus.AUTHENTICATION_FAILED in statuses:
         return "ошибка доступа/ключа"
     if VerificationStatus.QUOTA_EXHAUSTED in statuses:
@@ -161,18 +165,27 @@ def collect(ctx: click.Context) -> None:
     default=None,
     help="Maximum runtime probes to run; defaults to 2 when --provider is set",
 )
+@click.option(
+    "--all-models",
+    is_flag=True,
+    help="Verify every model returned by the provider /models API. Requires --provider.",
+)
 @click.pass_context
-def verify(ctx: click.Context, provider: str | None, max_probes: int | None) -> None:
+def verify(ctx: click.Context, provider: str | None, max_probes: int | None, all_models: bool) -> None:
     """Run API verification checks for configured providers."""
     settings: Settings = ctx.obj["settings"]
     base_dir: Path = ctx.obj["base_dir"]
     provider_ids = None
+    if all_models and not provider:
+        raise click.ClickException("--all-models requires --provider to avoid accidental broad API usage")
+    if all_models and max_probes is not None:
+        raise click.ClickException("--all-models cannot be combined with --max-probes")
     if provider:
         provider_config = _get_provider_or_fail(settings, provider)
         if not provider_config.enabled:
             raise click.ClickException(f"Provider '{provider}' is disabled in config/providers.yaml")
         provider_ids = {provider}
-        if max_probes is None:
+        if max_probes is None and not all_models:
             max_probes = 2
 
     orch = PipelineOrchestrator(settings, base_dir)

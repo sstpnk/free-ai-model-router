@@ -38,6 +38,21 @@ def test_quota_exhaustion_has_account_specific_verdict() -> None:
     assert is_routable_status(status) is False
 
 
+def test_client_restricted_free_tier_is_evidence_but_not_routable() -> None:
+    status = classify_http_status(
+        403,
+        (
+            '{"type":"error","error":{"type":"FreeTierError",'
+            '"message":"OpenCode free tier can only be used from within OpenCode"}}'
+        ),
+    )
+
+    assert status == VerificationStatus.CLIENT_RESTRICTED
+    assert access_verdict_for_status(status) == AccessVerdict.NOT_ACCESSIBLE
+    assert is_evidence_status(status) is True
+    assert is_routable_status(status) is False
+
+
 def test_model_not_found_is_not_routable() -> None:
     status = classify_http_status(404, "model not found")
 

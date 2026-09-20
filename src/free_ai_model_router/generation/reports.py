@@ -208,6 +208,7 @@ def generate_provider_health_report(endpoints: list[ProviderEndpoint]) -> str:
                 VerificationStatus.SUCCESS,
                 VerificationStatus.RATE_LIMITED,
                 VerificationStatus.QUOTA_EXHAUSTED,
+                VerificationStatus.CLIENT_RESTRICTED,
                 VerificationStatus.NOT_TESTED,
             }
         ]
@@ -286,8 +287,17 @@ def _provider_access_status(
     statuses = runtime_statuses or [ep.runtime_check.status for ep in checked]
     if VerificationStatus.SUCCESS in statuses:
         return "подключен и работает", "Хотя бы один endpoint успешно ответил на generation probe."
-    if VerificationStatus.AUTHENTICATION_FAILED in statuses:
-        return "ошибка доступа/ключа", "Runtime probe получил ошибку аутентификации."
+    if VerificationStatus.CLIENT_RESTRICTED in statuses and VerificationStatus.QUOTA_EXHAUSTED in statuses:
+        return (
+            "часть моделей только из клиента, часть требует баланс",
+            "Free-tier модели достижимы, но runtime разрешен только из официального клиента провайдера; "
+            "остальные требуют баланс или пакет.",
+        )
+    if VerificationStatus.CLIENT_RESTRICTED in statuses:
+        return (
+            "только через клиент провайдера",
+            "Runtime probe дошел до модели, но провайдер ограничивает free-tier официальным клиентом.",
+        )
     if VerificationStatus.QUOTA_EXHAUSTED in statuses:
         return (
             "требуется баланс/квота",
@@ -295,6 +305,8 @@ def _provider_access_status(
         )
     if VerificationStatus.RATE_LIMITED in statuses:
         return "подключен, но лимит", "Провайдер достижим, но генерация уперлась в rate limit."
+    if VerificationStatus.AUTHENTICATION_FAILED in statuses:
+        return "ошибка доступа/ключа", "Runtime probe получил ошибку аутентификации."
     if statuses:
         return "проверен, без успеха", "Runtime probes выполнялись, но не дали usable/throttled evidence."
     if endpoints:
@@ -324,8 +336,9 @@ def generate_provider_access_report(
         "",
         f"*Generated: {datetime.now(UTC).strftime('%Y-%m-%d %H:%M:%S UTC')}*",
         "",
-        "| Provider | Name | Status | Key | Models API | Checked | Success | Auth errors | Limited | Env var | Notes |",
-        "|:---|:---|:---|:---|:---|---:|---:|---:|---:|:---|:---|",
+        "| Provider | Name | Status | Key | Models API | Checked | Success | Auth errors | Limited | "
+        "Client restricted | Env var | Notes |",
+        "|:---|:---|:---|:---|:---|---:|---:|---:|---:|---:|:---|:---|",
     ]
 
     endpoints_by_provider: dict[str, list[ProviderEndpoint]] = {}
@@ -343,6 +356,7 @@ def generate_provider_access_report(
             1 for status in statuses
             if status in {VerificationStatus.RATE_LIMITED, VerificationStatus.QUOTA_EXHAUSTED}
         )
+        client_restricted_count = statuses.count(VerificationStatus.CLIENT_RESTRICTED)
         provider_access_record = provider_access_records.get(provider.provider_id)
         key_present = api_key_presence.get(provider.provider_id, False) or (
             provider_access_record.api_key_present if provider_access_record else False
@@ -372,7 +386,7 @@ def generate_provider_access_report(
         lines.append(
             f"| {provider.provider_id} | {provider.name} | {status} | {key_state} | "
             f"{models_api} | {len(statuses)} | {success_count} | {auth_error_count} | {limited_count} | "
-            f"{env_var} | {notes} |"
+            f"{client_restricted_count} | {env_var} | {notes} |"
         )
 
     return "\n".join(lines)

@@ -8,10 +8,19 @@ from email.utils import parsedate_to_datetime
 
 from free_ai_model_router.models import AccessVerdict, VerificationStatus
 
+CLIENT_RESTRICTED_MARKERS = (
+    "freetiererror",
+    "free tier can only be used from within opencode",
+    "free tier can only be used in opencode",
+    "missing sessionid",
+    "x-opencode-session",
+)
+
 EVIDENCE_STATUSES = {
     VerificationStatus.SUCCESS,
     VerificationStatus.RATE_LIMITED,
     VerificationStatus.QUOTA_EXHAUSTED,
+    VerificationStatus.CLIENT_RESTRICTED,
 }
 
 ROUTABLE_VERIFICATION_STATUSES = {
@@ -58,7 +67,6 @@ def classify_http_status(status_code: int, body_text: str = "") -> VerificationS
         "resource_exhausted",
     )
     region_markers = ("region", "country", "geo", "location is not supported")
-
     if status_code == 200:
         return VerificationStatus.SUCCESS
     if status_code == 401:
@@ -66,6 +74,8 @@ def classify_http_status(status_code: int, body_text: str = "") -> VerificationS
     if status_code == 402:
         return VerificationStatus.QUOTA_EXHAUSTED
     if status_code == 403:
+        if any(marker in body for marker in CLIENT_RESTRICTED_MARKERS):
+            return VerificationStatus.CLIENT_RESTRICTED
         if any(marker in body for marker in quota_markers):
             return VerificationStatus.QUOTA_EXHAUSTED
         if any(marker in body for marker in region_markers):
@@ -82,6 +92,19 @@ def classify_http_status(status_code: int, body_text: str = "") -> VerificationS
     if 500 <= status_code <= 599:
         return VerificationStatus.PROVIDER_UNAVAILABLE
     return VerificationStatus.INVALID_RESPONSE
+
+
+def normalize_verification_status(
+    status: VerificationStatus,
+    error_message: str | None = None,
+) -> VerificationStatus:
+    """Upgrade older persisted records when their error body has a more precise meaning."""
+    if status != VerificationStatus.AUTHENTICATION_FAILED or not error_message:
+        return status
+    body = error_message.lower()
+    if any(marker in body for marker in CLIENT_RESTRICTED_MARKERS):
+        return VerificationStatus.CLIENT_RESTRICTED
+    return status
 
 
 def parse_retry_after_seconds(headers: Mapping[str, str]) -> int | None:
