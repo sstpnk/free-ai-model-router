@@ -13,6 +13,7 @@ from free_ai_model_router.models import (
     VerificationStats,
     VerificationStatus,
 )
+from free_ai_model_router.policy.free_candidates import annotate_free_candidate
 
 
 def test_generate_runtime_catalog_includes_verification_metadata() -> None:
@@ -27,6 +28,7 @@ def test_generate_runtime_catalog_includes_verification_metadata() -> None:
         api_style=ApiStyle.OPENAI_COMPATIBLE,
         free_status=FreeStatus.VERIFIED_FREE,
     )
+    annotate_free_candidate(endpoint)
     endpoint.runtime_check.retry_after_seconds = 7
     endpoint.models_api_checked_at = checked_at
     endpoint.models_api_source_url = "https://api.test/v1/models"
@@ -73,5 +75,6 @@ def test_generate_runtime_catalog_includes_verification_metadata() -> None:
     assert catalog["endpoints"][0]["models_api"]["source_url"] == "https://api.test/v1/models"
     assert catalog["endpoints"][0]["retry_after_seconds"] == 7
     assert catalog["endpoints"][0]["api_base"] == "https://api.test/v1"
+    assert catalog["endpoints"][0]["free_candidate"]["reason"] == "provider_verified_free_status"
     assert catalog["endpoints"][0]["reliability"]["attempts"] == 3
     assert catalog["endpoints"][0]["reliability"]["p95_latency_ms"] == 456

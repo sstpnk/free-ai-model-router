@@ -17,6 +17,7 @@ from free_ai_model_router.models import (
     VerificationStats,
     VerificationStatus,
 )
+from free_ai_model_router.policy.free_candidates import classify_free_candidate
 from free_ai_model_router.verification.status import is_routable_status
 
 logger = logging.getLogger(__name__)
@@ -29,15 +30,6 @@ def _fmt(val: object, default: str = "—") -> str:
     return str(val)
 
 
-_KNOWN_FREE_STATUSES = {
-    FreeStatus.VERIFIED_FREE,
-    FreeStatus.DOCUMENTED_FREE,
-    FreeStatus.ACCOUNT_SPECIFIC_FREE,
-    FreeStatus.TEMPORARY_FREE,
-    FreeStatus.TRIAL_CREDIT,
-}
-
-
 def _fmt_report_error(value: str | None, *, max_length: int = 120) -> str:
     if not value:
         return "—"
@@ -48,23 +40,26 @@ def _fmt_report_error(value: str | None, *, max_length: int = 120) -> str:
 
 
 def _free_status_for_report(endpoint: ProviderEndpoint | None, provider_model_id: str) -> str:
-    if endpoint:
-        if endpoint.free_status != FreeStatus.UNKNOWN:
-            return endpoint.free_status.value
-        model_id = endpoint.provider_model_id
-    else:
-        model_id = provider_model_id
-
-    normalized_model_id = model_id.lower()
-    if ":free" in normalized_model_id or normalized_model_id.endswith("-free"):
+    evidence = _free_candidate_for_report(endpoint, provider_model_id)
+    if endpoint and endpoint.free_status != FreeStatus.UNKNOWN:
+        return endpoint.free_status.value
+    if evidence.reason == "model_id_free_marker":
         return "inferred_free_name"
     return FreeStatus.UNKNOWN.value
 
 
-def _is_free_for_report(endpoint: ProviderEndpoint | None, provider_model_id: str) -> bool:
-    if endpoint and endpoint.free_status in _KNOWN_FREE_STATUSES:
-        return True
-    return _free_status_for_report(endpoint, provider_model_id) == "inferred_free_name"
+def _free_candidate_for_report(endpoint: ProviderEndpoint | None, provider_model_id: str):
+    if endpoint and endpoint.free_candidate.is_candidate:
+        return endpoint.free_candidate
+    if endpoint:
+        return classify_free_candidate(
+            provider_model_id=endpoint.provider_model_id,
+            free_status=endpoint.free_status,
+        )
+    return classify_free_candidate(
+        provider_model_id=provider_model_id,
+        free_status=FreeStatus.UNKNOWN,
+    )
 
 
 def _fmt_limits(endpoint: ProviderEndpoint) -> str:
@@ -257,6 +252,32 @@ def generate_provider_health_report(endpoints: list[ProviderEndpoint]) -> str:
         lines.append(
             f"| {provider_id} | {len(provider_endpoints)} | {len(checked)} | {len(usable)} | "
             f"{len(throttled)} | {len(quota)} | {len(not_tested)} | {len(hard_fail)} | {avg_latency} |"
+        )
+
+    return "\n".join(lines)
+
+
+def generate_free_candidates_report(endpoints: list[ProviderEndpoint]) -> str:
+    """Generate the free-candidate policy report before runtime routing."""
+    lines = [
+        "# Free Candidate Policy",
+        "",
+        f"*Generated: {datetime.now(UTC).strftime('%Y-%m-%d %H:%M:%S UTC')}*",
+        "",
+    ]
+    if not endpoints:
+        lines.append("_No endpoints available._")
+        return "\n".join(lines)
+
+    lines.append("| Provider | Model | Candidate | Route eligible | Source | Reason | Free status |")
+    lines.append("|:---|:---|:---|:---|:---|:---|:---|")
+    for endpoint in sorted(endpoints, key=lambda item: (item.provider_id, item.provider_model_id)):
+        evidence = _free_candidate_for_report(endpoint, endpoint.provider_model_id)
+        lines.append(
+            f"| {endpoint.provider_id} | {endpoint.provider_model_id} | "
+            f"{'yes' if evidence.is_candidate else 'no'} | "
+            f"{'yes' if evidence.route_eligible else 'no'} | "
+            f"{evidence.source} | {evidence.reason} | {endpoint.free_status.value} |"
         )
 
     return "\n".join(lines)
@@ -505,7 +526,7 @@ def generate_model_verdicts_report(
             continue
         if status and record.status != status:
             continue
-        if free_only and not _is_free_for_report(endpoint, record.provider_model_id):
+        if free_only and not _free_candidate_for_report(endpoint, record.provider_model_id).is_candidate:
             continue
         rows.append((record, endpoint))
 
@@ -566,6 +587,9 @@ def generate_and_write_reports(
 
     throttled_report = generate_throttled_report(endpoints)
     (reports_dir / "throttled.md").write_text(throttled_report, encoding="utf-8")
+
+    free_candidates_report = generate_free_candidates_report(endpoints)
+    (reports_dir / "free-candidates.md").write_text(free_candidates_report, encoding="utf-8")
 
     if providers is not None:
         provider_access_report = generate_provider_access_report(

@@ -18,7 +18,6 @@ from free_ai_model_router.models import (
     ApiStyle,
     CanonicalModel,
     ChangeRecord,
-    FreeStatus,
     PipelineState,
     ProviderAccessRecord,
     ProviderEndpoint,
@@ -27,6 +26,7 @@ from free_ai_model_router.models import (
     SourceHealth,
     VerificationStatus,
 )
+from free_ai_model_router.policy.free_candidates import annotate_free_candidate
 from free_ai_model_router.providers.base import ProviderModel
 from free_ai_model_router.providers.cerebras import CerebrasAdapter
 from free_ai_model_router.providers.cloudflare import CloudflareAdapter
@@ -220,6 +220,7 @@ class PipelineOrchestrator:
                 all_models.extend(models)
                 for m in models:
                     ep = adapter.to_provider_endpoint(m)
+                    annotate_free_candidate(ep)
                     ep.listed_in_models_api = True
                     ep.models_api_checked_at = collected_at
                     ep.models_api_source_url = (
@@ -465,16 +466,10 @@ class PipelineOrchestrator:
         """Build the router output with verified :free endpoints."""
         logger.info("Building router output...")
 
-        free_statuses = {
-            FreeStatus.VERIFIED_FREE,
-            FreeStatus.DOCUMENTED_FREE,
-            FreeStatus.ACCOUNT_SPECIFIC_FREE,
-            FreeStatus.TEMPORARY_FREE,
-        }
-
         routed: list[RoutedEndpoint] = []
         for ep in self.collected_endpoints:
-            if ep.free_status not in free_statuses:
+            candidate = annotate_free_candidate(ep).free_candidate
+            if not candidate.route_eligible:
                 continue
             if ep.runtime_check.checked and not is_routable_status(ep.runtime_check.status):
                 continue
@@ -494,6 +489,8 @@ class PipelineOrchestrator:
                 canonical_model_id=ep.canonical_model_id,
                 model_name=ep.provider_model_id,
                 free_status=ep.free_status,
+                free_candidate_reason=candidate.reason,
+                free_candidate_source=candidate.source,
                 runtime_status=ep.runtime_check.status,
                 access_verdict=ep.runtime_check.access_verdict,
                 latency_ms=ep.runtime_check.latency_ms,

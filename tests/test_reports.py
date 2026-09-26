@@ -3,6 +3,7 @@
 from free_ai_model_router.generation.reports import (
     generate_and_write_reports,
     generate_changes_report,
+    generate_free_candidates_report,
     generate_history_summary_report,
     generate_model_verdicts_report,
     generate_models_report,
@@ -23,6 +24,7 @@ from free_ai_model_router.models import (
     VerificationStats,
     VerificationStatus,
 )
+from free_ai_model_router.policy.free_candidates import annotate_free_candidate
 
 
 def _sample_router_output() -> RouterOutput:
@@ -215,13 +217,13 @@ def test_history_summary_report_includes_reliability_metrics() -> None:
 
 
 def test_model_verdicts_report_lists_latest_records() -> None:
-    endpoint = ProviderEndpoint(
+    endpoint = annotate_free_candidate(ProviderEndpoint(
         endpoint_id="opencode/free",
         provider_id="opencode",
         canonical_model_id="opencode/free",
         provider_model_id="free-model",
         free_status=FreeStatus.VERIFIED_FREE,
-    )
+    ))
     record = VerificationHistoryRecord(
         run_id="run-1",
         checked_at=endpoint.discovered_at,
@@ -248,6 +250,29 @@ def test_model_verdicts_report_lists_latest_records() -> None:
     assert "free-model" in report
     assert "verified_free" in report
     assert "client_restricted" in report
+
+
+def test_free_candidates_report_explains_policy_decisions() -> None:
+    explicit = annotate_free_candidate(ProviderEndpoint(
+        endpoint_id="test/free",
+        provider_id="test",
+        canonical_model_id="test/free",
+        provider_model_id="model",
+        free_status=FreeStatus.DOCUMENTED_FREE,
+    ))
+    named = annotate_free_candidate(ProviderEndpoint(
+        endpoint_id="test/named-free",
+        provider_id="test",
+        canonical_model_id="test/named-free",
+        provider_model_id="named-free",
+        free_status=FreeStatus.UNKNOWN,
+    ))
+
+    report = generate_free_candidates_report([explicit, named])
+
+    assert "provider_documented_free_status" in report
+    assert "model_id_free_marker" in report
+    assert "| test | named-free | yes | yes | model_id |" in report
 
 
 def test_model_verdicts_report_free_filter_accepts_free_model_names() -> None:

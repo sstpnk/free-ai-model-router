@@ -206,6 +206,16 @@ class VerificationStats(BaseModel):
     p95_latency_ms: Optional[int] = None
 
 
+class FreeCandidateEvidence(BaseModel):
+    """Why an endpoint is treated as a free-access candidate."""
+
+    is_candidate: bool = False
+    route_eligible: bool = False
+    source: str = "none"
+    reason: str = "no_free_evidence"
+    detail: Optional[str] = None
+
+
 class ProviderEndpoint(BaseModel):
     """A specific model endpoint at a provider."""
 
@@ -218,6 +228,7 @@ class ProviderEndpoint(BaseModel):
     api_style: ApiStyle = ApiStyle.OPENAI_COMPATIBLE
     availability: Availability = Availability.AVAILABLE
     free_status: FreeStatus = FreeStatus.UNKNOWN
+    free_candidate: FreeCandidateEvidence = Field(default_factory=FreeCandidateEvidence)
     limits: Limits = Field(default_factory=Limits)
     context_tokens: Optional[int] = None
     max_output_tokens: Optional[int] = None
@@ -351,6 +362,8 @@ class RoutedEndpoint(BaseModel):
     canonical_model_id: str
     model_name: str
     free_status: FreeStatus
+    free_candidate_reason: Optional[str] = None
+    free_candidate_source: Optional[str] = None
     runtime_status: VerificationStatus = VerificationStatus.NOT_TESTED
     access_verdict: AccessVerdict = AccessVerdict.UNKNOWN
     latency_ms: Optional[int] = None

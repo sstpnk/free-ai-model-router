@@ -30,6 +30,7 @@ def generate_runtime_catalog(
                 "api_base": endpoint.api_base if endpoint else None,
                 "api_style": endpoint.api_style.value if endpoint else None,
                 "free_status": routed.free_status.value,
+                "free_candidate": endpoint.free_candidate.model_dump(mode="json") if endpoint else None,
                 "runtime_status": routed.runtime_status.value,
                 "access_verdict": routed.access_verdict.value,
                 "models_api": (

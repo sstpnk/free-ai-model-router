@@ -3,8 +3,6 @@
 from __future__ import annotations
 
 import logging
-from datetime import datetime, timezone
-from typing import Optional
 
 from free_ai_model_router.models import (
     FreeStatus,
@@ -54,6 +52,10 @@ def generate_litellm_config(
         config_lines.append(f"  #   Tools: {tools_str}")
         config_lines.append(f"  #   Modality: {modality_str}")
         config_lines.append(f"  #   Free status: {routed_ep.free_status.value}")
+        if routed_ep.free_candidate_reason:
+            config_lines.append(
+                f"  #   Free candidate: {routed_ep.free_candidate_reason} ({routed_ep.free_candidate_source})"
+            )
 
         if routed_ep.free_status in (FreeStatus.ACCOUNT_SPECIFIC_FREE, FreeStatus.TEMPORARY_FREE):
             config_lines.append(f"  #   NOTE: {routed_ep.free_status.value} — verify before relying on this route")
@@ -78,7 +80,7 @@ def generate_litellm_config(
     fallback_names = [f"coding-auto-{i + 1}" for i in range(len(router_output.endpoints))]
 
     if fallback_names:
-        config_lines.append(f"    - coding-auto:")
+        config_lines.append("    - coding-auto:")
         for name in fallback_names:
             config_lines.append(f"        - {name}")
 

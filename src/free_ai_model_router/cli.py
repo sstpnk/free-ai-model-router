@@ -10,7 +10,10 @@ from pathlib import Path
 import click
 
 from free_ai_model_router.config_loader import Settings
-from free_ai_model_router.generation.reports import generate_model_verdicts_report
+from free_ai_model_router.generation.reports import (
+    generate_free_candidates_report,
+    generate_model_verdicts_report,
+)
 from free_ai_model_router.models import ProviderConfig, VerificationStatus
 from free_ai_model_router.pipeline.orchestrator import PipelineOrchestrator
 from free_ai_model_router.storage.state import (
@@ -286,6 +289,18 @@ def model_verdicts(ctx: click.Context, provider: str | None, status: str | None,
             free_only=free_only,
         )
     )
+
+
+@cli.command("free-candidates")
+@click.option("--provider", default=None, help="Filter by provider id")
+@click.pass_context
+def free_candidates(ctx: click.Context, provider: str | None) -> None:
+    """Show free-candidate policy decisions without network calls."""
+    settings: Settings = ctx.obj["settings"]
+    _, endpoints = load_normalized_data(settings.normalized_dir)
+    if provider:
+        endpoints = [endpoint for endpoint in endpoints if endpoint.provider_id == provider]
+    click.echo(generate_free_candidates_report(endpoints))
 
 
 @cli.command()

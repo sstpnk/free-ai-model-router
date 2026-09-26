@@ -1,19 +1,20 @@
 """Tests for LiteLLM config generation."""
 
+from free_ai_model_router.generation.litellm_config import (
+    generate_litellm_config,
+)
 from free_ai_model_router.models import (
     FreeStatus,
     Limits,
     ProviderEndpoint,
-    RouterOutput,
     RoutedEndpoint,
+    RouterOutput,
 )
-from free_ai_model_router.generation.litellm_config import (
-    generate_litellm_config,
-)
+from free_ai_model_router.policy.free_candidates import annotate_free_candidate
 
 
 def _sample_endpoint(ep_id: str, provider: str, model: str) -> ProviderEndpoint:
-    return ProviderEndpoint(
+    return annotate_free_candidate(ProviderEndpoint(
         endpoint_id=ep_id,
         provider_id=provider,
         canonical_model_id=f"{provider}/{model}",
@@ -22,7 +23,7 @@ def _sample_endpoint(ep_id: str, provider: str, model: str) -> ProviderEndpoint:
         api_base=f"https://api.{provider}.com/v1",
         free_status=FreeStatus.VERIFIED_FREE,
         limits=Limits(requests_per_day=1000),
-    )
+    ))
 
 
 def _sample_routed(ep_id: str, provider: str, model: str) -> RoutedEndpoint:
@@ -33,6 +34,8 @@ def _sample_routed(ep_id: str, provider: str, model: str) -> RoutedEndpoint:
         canonical_model_id=f"{provider}/{model}",
         model_name=model,
         free_status=FreeStatus.VERIFIED_FREE,
+        free_candidate_reason="provider_verified_free_status",
+        free_candidate_source="free_status",
         tool_calling=True,
         modalities=["text"],
     )
@@ -63,3 +66,4 @@ def test_generate_litellm_config_shows_tools_and_modality() -> None:
     yaml_str = generate_litellm_config(output, {"test/ep1": ep})
     assert "Tools:" in yaml_str
     assert "Modality:" in yaml_str
+    assert "Free candidate:" in yaml_str

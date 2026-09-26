@@ -29,6 +29,8 @@ def test_provider_endpoint_defaults() -> None:
         provider_model_id="model-v1",
     )
     assert ep.free_status == FreeStatus.UNKNOWN
+    assert ep.free_candidate.is_candidate is False
+    assert ep.free_candidate.reason == "no_free_evidence"
     assert ep.runtime_check.checked is False
     assert ep.runtime_check.status.value == "not_tested"
     assert ep.runtime_check.access_verdict == AccessVerdict.UNKNOWN
@@ -45,6 +47,8 @@ def test_router_output() -> None:
         canonical_model_id="test/model",
         model_name="model-v1",
         free_status=FreeStatus.VERIFIED_FREE,
+        free_candidate_reason="provider_verified_free_status",
+        free_candidate_source="free_status",
         tool_calling=True,
         modalities=["text"],
     )
