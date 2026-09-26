@@ -13,6 +13,7 @@ from free_ai_model_router.config_loader import Settings
 from free_ai_model_router.generation.catalog import generate_runtime_catalog_file
 from free_ai_model_router.generation.litellm_config import generate_litellm_config_file
 from free_ai_model_router.generation.reports import generate_and_write_reports
+from free_ai_model_router.generation.tinyllm_config import generate_tinyllm_config_file
 from free_ai_model_router.http_client.client import HttpClient
 from free_ai_model_router.models import (
     ApiStyle,
@@ -172,6 +173,7 @@ class PipelineOrchestrator:
             # Step 4: Generate LiteLLM config
             self._generate_config(router_output)
             self._generate_runtime_catalog(router_output)
+            self._generate_tinyllm_config(router_output)
 
             # Step 5: Generate reports
             previous_output = load_previous_output(self.settings.output_dir / "latest.json")
@@ -587,6 +589,16 @@ class PipelineOrchestrator:
             self.collected_endpoints,
             self.settings.output_dir / "free-router-catalog.json",
             self.verification_stats,
+        )
+
+    def _generate_tinyllm_config(self, router_output: RouterOutput) -> None:
+        """Generate TinyLLM-compatible dynamic routing YAML."""
+        logger.info("Generating TinyLLM routing config...")
+        generate_tinyllm_config_file(
+            router_output,
+            self.collected_endpoints,
+            self.settings.output_dir / "tinyllm-router-config.yaml",
+            providers=self.settings.providers.providers,
         )
 
     def _generate_reports(
