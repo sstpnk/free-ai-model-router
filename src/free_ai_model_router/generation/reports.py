@@ -8,10 +8,12 @@ from pathlib import Path
 
 from free_ai_model_router.models import (
     ChangeRecord,
+    FreeStatus,
     ProviderAccessRecord,
     ProviderConfig,
     ProviderEndpoint,
     RouterOutput,
+    VerificationHistoryRecord,
     VerificationStats,
     VerificationStatus,
 )
@@ -25,6 +27,44 @@ def _fmt(val: object, default: str = "—") -> str:
     if val is None:
         return default
     return str(val)
+
+
+_KNOWN_FREE_STATUSES = {
+    FreeStatus.VERIFIED_FREE,
+    FreeStatus.DOCUMENTED_FREE,
+    FreeStatus.ACCOUNT_SPECIFIC_FREE,
+    FreeStatus.TEMPORARY_FREE,
+    FreeStatus.TRIAL_CREDIT,
+}
+
+
+def _fmt_report_error(value: str | None, *, max_length: int = 120) -> str:
+    if not value:
+        return "—"
+    collapsed = " ".join(value.split())
+    if len(collapsed) <= max_length:
+        return collapsed
+    return f"{collapsed[: max_length - 1]}…"
+
+
+def _free_status_for_report(endpoint: ProviderEndpoint | None, provider_model_id: str) -> str:
+    if endpoint:
+        if endpoint.free_status != FreeStatus.UNKNOWN:
+            return endpoint.free_status.value
+        model_id = endpoint.provider_model_id
+    else:
+        model_id = provider_model_id
+
+    normalized_model_id = model_id.lower()
+    if ":free" in normalized_model_id or normalized_model_id.endswith("-free"):
+        return "inferred_free_name"
+    return FreeStatus.UNKNOWN.value
+
+
+def _is_free_for_report(endpoint: ProviderEndpoint | None, provider_model_id: str) -> bool:
+    if endpoint and endpoint.free_status in _KNOWN_FREE_STATUSES:
+        return True
+    return _free_status_for_report(endpoint, provider_model_id) == "inferred_free_name"
 
 
 def _fmt_limits(endpoint: ProviderEndpoint) -> str:
@@ -417,9 +457,9 @@ def generate_history_summary_report(
     endpoint_lookup = {endpoint.endpoint_id: endpoint for endpoint in endpoints}
     lines.append(
         "| Provider | Model | Attempts | Success rate | Last success | Last checked | "
-        "Rate limits | Quota | Hard failures | p50 | p95 |"
+        "Rate limits | Quota | Client restricted | Hard failures | p50 | p95 |"
     )
-    lines.append("|:---|:---|---:|---:|:---|:---|---:|---:|---:|---:|---:|")
+    lines.append("|:---|:---|---:|---:|:---|:---|---:|---:|---:|---:|---:|---:|")
     for endpoint_id in sorted(verification_stats):
         stats = verification_stats[endpoint_id]
         endpoint = endpoint_lookup.get(endpoint_id)
@@ -428,8 +468,70 @@ def generate_history_summary_report(
         lines.append(
             f"| {provider_id} | {model} | {stats.attempts} | {stats.success_rate:.0%} | "
             f"{_fmt_datetime(stats.last_success_at)} | {_fmt_datetime(stats.last_checked_at)} | "
-            f"{stats.rate_limited_count} | {stats.quota_exhausted_count} | {stats.hard_failure_count} | "
+            f"{stats.rate_limited_count} | {stats.quota_exhausted_count} | "
+            f"{stats.client_restricted_count} | {stats.hard_failure_count} | "
             f"{_fmt(stats.p50_latency_ms)} | {_fmt(stats.p95_latency_ms)} |"
+        )
+
+    return "\n".join(lines)
+
+
+def generate_model_verdicts_report(
+    *,
+    endpoints: list[ProviderEndpoint],
+    latest_records: dict[str, VerificationHistoryRecord],
+    provider_id: str | None = None,
+    status: VerificationStatus | None = None,
+    free_only: bool = False,
+) -> str:
+    """Generate latest model-level verification verdicts from local history."""
+    lines = [
+        "# Model Verification Verdicts",
+        "",
+        f"*Generated: {datetime.now(UTC).strftime('%Y-%m-%d %H:%M:%S UTC')}*",
+        "",
+    ]
+
+    endpoint_lookup = {endpoint.endpoint_id: endpoint for endpoint in endpoints}
+    records = sorted(
+        latest_records.values(),
+        key=lambda record: (record.provider_id, record.provider_model_id),
+    )
+
+    rows: list[tuple[VerificationHistoryRecord, ProviderEndpoint | None]] = []
+    for record in records:
+        endpoint = endpoint_lookup.get(record.endpoint_id)
+        if provider_id and record.provider_id != provider_id:
+            continue
+        if status and record.status != status:
+            continue
+        if free_only and not _is_free_for_report(endpoint, record.provider_model_id):
+            continue
+        rows.append((record, endpoint))
+
+    if provider_id:
+        lines.append(f"Provider filter: `{provider_id}`")
+    if status:
+        lines.append(f"Status filter: `{status.value}`")
+    if free_only:
+        lines.append("Free filter: known free/trial/account-specific endpoints only")
+    if len(lines) > 4:
+        lines.append("")
+
+    if not rows:
+        lines.append("_No matching verification records in local history._")
+        return "\n".join(lines)
+
+    lines.append("| Provider | Model | Free status | Verdict | Probe | HTTP | Last checked | Error |")
+    lines.append("|:---|:---|:---|:---|:---|---:|:---|:---|")
+    for record, endpoint in rows:
+        free_status = _free_status_for_report(endpoint, record.provider_model_id)
+        http_status = _fmt(record.http_status)
+        checked_at = record.checked_at.strftime("%Y-%m-%d %H:%M:%S UTC")
+        lines.append(
+            f"| {record.provider_id} | {record.provider_model_id} | {free_status} | "
+            f"{record.access_verdict.value} | {record.status.value} | {http_status} | "
+            f"{checked_at} | {_fmt_report_error(record.error_message)} |"
         )
 
     return "\n".join(lines)

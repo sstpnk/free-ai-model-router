@@ -216,6 +216,7 @@ def load_verification_stats(path: Path) -> dict[str, VerificationStats]:
         success_records = [record for record in records if record.status == VerificationStatus.SUCCESS]
         rate_limited = [record for record in records if record.status == VerificationStatus.RATE_LIMITED]
         quota_exhausted = [record for record in records if record.status == VerificationStatus.QUOTA_EXHAUSTED]
+        client_restricted = [record for record in records if record.status == VerificationStatus.CLIENT_RESTRICTED]
         hard_failures = [
             record for record in records
             if record.status not in {
@@ -233,6 +234,7 @@ def load_verification_stats(path: Path) -> dict[str, VerificationStats]:
             success_count=len(success_records),
             rate_limited_count=len(rate_limited),
             quota_exhausted_count=len(quota_exhausted),
+            client_restricted_count=len(client_restricted),
             hard_failure_count=len(hard_failures),
             success_rate=round(len(success_records) / attempts, 4) if attempts else 0.0,
             last_checked_at=max((record.checked_at for record in records), default=None),

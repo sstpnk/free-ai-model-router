@@ -204,16 +204,30 @@ def test_load_verification_stats_aggregates_endpoint_history(tmp_path) -> None:
     limited.runtime_check.latency_ms = 300
     limited.runtime_check.checked_at = success.discovered_at.replace(year=success.discovered_at.year + 1)
 
+    client_restricted = ProviderEndpoint(
+        endpoint_id="test/model",
+        provider_id="test",
+        canonical_model_id="test/model",
+        provider_model_id="model",
+    )
+    client_restricted.runtime_check.checked = True
+    client_restricted.runtime_check.status = VerificationStatus.CLIENT_RESTRICTED
+    client_restricted.runtime_check.access_verdict = AccessVerdict.NOT_ACCESSIBLE
+    client_restricted.runtime_check.checked_at = success.discovered_at.replace(year=success.discovered_at.year + 2)
+
     path = tmp_path / "history" / "verification.jsonl"
     append_verification_history(endpoints=[success], run_id="run-1", path=path)
     append_verification_history(endpoints=[limited], run_id="run-2", path=path)
+    append_verification_history(endpoints=[client_restricted], run_id="run-3", path=path)
 
     stats = load_verification_stats(path)
 
-    assert stats["test/model"].attempts == 2
+    assert stats["test/model"].attempts == 3
     assert stats["test/model"].success_count == 1
     assert stats["test/model"].rate_limited_count == 1
-    assert stats["test/model"].success_rate == 0.5
+    assert stats["test/model"].client_restricted_count == 1
+    assert stats["test/model"].hard_failure_count == 0
+    assert stats["test/model"].success_rate == 0.3333
     assert stats["test/model"].last_success_at == success.discovered_at
     assert stats["test/model"].p50_latency_ms == 100
     assert stats["test/model"].p95_latency_ms == 300

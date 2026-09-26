@@ -10,6 +10,7 @@ from pathlib import Path
 import click
 
 from free_ai_model_router.config_loader import Settings
+from free_ai_model_router.generation.reports import generate_model_verdicts_report
 from free_ai_model_router.models import ProviderConfig, VerificationStatus
 from free_ai_model_router.pipeline.orchestrator import PipelineOrchestrator
 from free_ai_model_router.storage.state import (
@@ -251,6 +252,40 @@ def providers_status(ctx: click.Context) -> None:
             f"{provider.provider_id} | {status} | {key_state} | {models_api} | {endpoint_count} | "
             f"{_fmt_dt(max(success_dates, default=None))} | {_fmt_dt(max(checked_dates, default=None))}"
         )
+
+
+@cli.command("model-verdicts")
+@click.option("--provider", default=None, help="Filter by provider id")
+@click.option("--status", default=None, help="Filter by verification status")
+@click.option(
+    "--free-only",
+    is_flag=True,
+    help="Show only endpoints classified as free/trial/account-specific",
+)
+@click.pass_context
+def model_verdicts(ctx: click.Context, provider: str | None, status: str | None, free_only: bool) -> None:
+    """Show latest model-level verification verdicts without network calls."""
+    settings: Settings = ctx.obj["settings"]
+    _, endpoints = load_normalized_data(settings.normalized_dir)
+    latest_records = load_latest_verification_records(settings.history_dir / "verification.jsonl")
+
+    status_filter: VerificationStatus | None = None
+    if status:
+        try:
+            status_filter = VerificationStatus(status)
+        except ValueError as exc:
+            known = ", ".join(item.value for item in VerificationStatus)
+            raise click.ClickException(f"Unknown verification status '{status}'. Known statuses: {known}") from exc
+
+    click.echo(
+        generate_model_verdicts_report(
+            endpoints=endpoints,
+            latest_records=latest_records,
+            provider_id=provider,
+            status=status_filter,
+            free_only=free_only,
+        )
+    )
 
 
 @cli.command()

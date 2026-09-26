@@ -4,6 +4,7 @@ from free_ai_model_router.generation.reports import (
     generate_and_write_reports,
     generate_changes_report,
     generate_history_summary_report,
+    generate_model_verdicts_report,
     generate_models_report,
     generate_provider_access_report,
     generate_provider_health_report,
@@ -18,6 +19,7 @@ from free_ai_model_router.models import (
     ProviderEndpoint,
     RoutedEndpoint,
     RouterOutput,
+    VerificationHistoryRecord,
     VerificationStats,
     VerificationStatus,
 )
@@ -196,6 +198,7 @@ def test_history_summary_report_includes_reliability_metrics() -> None:
         success_count=3,
         success_rate=0.75,
         rate_limited_count=1,
+        client_restricted_count=1,
         p50_latency_ms=100,
         p95_latency_ms=250,
     )
@@ -207,7 +210,67 @@ def test_history_summary_report_includes_reliability_metrics() -> None:
 
     assert "75%" in report
     assert "| test | model | 4 |" in report
-    assert "| 1 | 0 | 0 | 100 | 250 |" in report
+    assert "Client restricted" in report
+    assert "| 1 | 0 | 1 | 0 | 100 | 250 |" in report
+
+
+def test_model_verdicts_report_lists_latest_records() -> None:
+    endpoint = ProviderEndpoint(
+        endpoint_id="opencode/free",
+        provider_id="opencode",
+        canonical_model_id="opencode/free",
+        provider_model_id="free-model",
+        free_status=FreeStatus.VERIFIED_FREE,
+    )
+    record = VerificationHistoryRecord(
+        run_id="run-1",
+        checked_at=endpoint.discovered_at,
+        endpoint_id="opencode/free",
+        provider_id="opencode",
+        canonical_model_id="opencode/free",
+        provider_model_id="free-model",
+        status=VerificationStatus.CLIENT_RESTRICTED,
+        access_verdict=AccessVerdict.NOT_ACCESSIBLE,
+        http_status=403,
+        error_message="free tier can only be used from within OpenCode",
+    )
+
+    report = generate_model_verdicts_report(
+        endpoints=[endpoint],
+        latest_records={"opencode/free": record},
+        provider_id="opencode",
+        status=VerificationStatus.CLIENT_RESTRICTED,
+        free_only=True,
+    )
+
+    assert "Provider filter: `opencode`" in report
+    assert "Status filter: `client_restricted`" in report
+    assert "free-model" in report
+    assert "verified_free" in report
+    assert "client_restricted" in report
+
+
+def test_model_verdicts_report_free_filter_accepts_free_model_names() -> None:
+    record = VerificationHistoryRecord(
+        run_id="run-1",
+        checked_at=_sample_router_output().generated_at,
+        endpoint_id="opencode/jev-1.13-free",
+        provider_id="opencode",
+        canonical_model_id="opencode/jev-1.13-free",
+        provider_model_id="jev-1.13-free",
+        status=VerificationStatus.CLIENT_RESTRICTED,
+        access_verdict=AccessVerdict.NOT_ACCESSIBLE,
+        http_status=403,
+    )
+
+    report = generate_model_verdicts_report(
+        endpoints=[],
+        latest_records={"opencode/jev-1.13-free": record},
+        free_only=True,
+    )
+
+    assert "jev-1.13-free" in report
+    assert "inferred_free_name" in report
 
 
 def test_provider_access_report_uses_historical_runtime_statuses() -> None:

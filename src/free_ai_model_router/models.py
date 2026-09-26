@@ -197,6 +197,7 @@ class VerificationStats(BaseModel):
     success_count: int = 0
     rate_limited_count: int = 0
     quota_exhausted_count: int = 0
+    client_restricted_count: int = 0
     hard_failure_count: int = 0
     success_rate: float = 0.0
     last_checked_at: Optional[datetime] = None
