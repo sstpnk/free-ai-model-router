@@ -42,6 +42,10 @@ timeouts:
   response_seconds: 120
   stream_idle_seconds: 180
 providers:
+  deepseek2api:
+    type: openai-compatible
+    base_url: https://deepseek.stpnk.tech/v1
+    api_key_env: DEEPSEEK2API_API_KEY
   openrouter:
     type: openai-compatible
     base_url: https://openrouter.ai/api/v1
@@ -56,6 +60,10 @@ routes:
   coding-auto:
     - provider: openrouter
       model: poolside/laguna-s-2.1:free
+    - provider: deepseek2api
+      model: deepseek-v4-flash
+    - provider: deepseek2api
+      model: deepseek-v4-pro
   agent-auto-pay: []
   coding-auto-pay: []
 
@@ -92,6 +100,7 @@ routes:
 - python -m compileall -q tinyllm
 - git diff --check
 
+Динамический файл уже может содержать статический provider `deepseek2api` с моделями `deepseek-v4-flash` и `deepseek-v4-pro`; для него нужен env `DEEPSEEK2API_API_KEY`, но значение ключа не должно попадать в YAML.
 Не меняй free-ai-model-router в этой задаче. Не деплой. Не добавляй реальные API ключи в файлы или тесты.
 В финале дай краткую сводку изменений, точные команды проверки и статус git.
 ```

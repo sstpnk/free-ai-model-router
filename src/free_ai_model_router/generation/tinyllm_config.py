@@ -43,6 +43,19 @@ TINYLLM_ROUTE_NAMES = (
     "coding-auto-pay",
 )
 
+STATIC_TINYLLM_PROVIDERS: dict[str, dict[str, Any]] = {
+    "deepseek2api": {
+        "type": "openai-compatible",
+        "base_url": "https://deepseek.stpnk.tech/v1",
+        "api_key_env": "DEEPSEEK2API_API_KEY",
+    },
+}
+
+STATIC_TINYLLM_ROUTE_STEPS: list[dict[str, str]] = [
+    {"provider": "deepseek2api", "model": "deepseek-v4-flash"},
+    {"provider": "deepseek2api", "model": "deepseek-v4-pro"},
+]
+
 
 def _tinyllm_provider_name(provider_id: str) -> str:
     aliases = {
@@ -133,6 +146,17 @@ def _coding_deepseek_steps(steps: list[dict[str, str]]) -> list[dict[str, str]]:
     ]
 
 
+def _with_static_steps(
+    steps: list[dict[str, str]],
+    *,
+    max_route_steps: int,
+) -> list[dict[str, str]]:
+    """Keep static local endpoints in the route without exceeding TinyLLM attempts."""
+    static_steps = _dedupe_steps(STATIC_TINYLLM_ROUTE_STEPS)
+    dynamic_limit = max(max_route_steps - len(static_steps), 0)
+    return _dedupe_steps(steps[:dynamic_limit] + static_steps)[:max_route_steps]
+
+
 def generate_tinyllm_config(
     router_output: RouterOutput,
     endpoints_by_id: dict[str, ProviderEndpoint],
@@ -154,7 +178,7 @@ def generate_tinyllm_config(
             continue
         selected_endpoints.append(endpoint)
 
-    provider_configs: dict[str, dict[str, Any]] = {}
+    provider_configs: dict[str, dict[str, Any]] = dict(STATIC_TINYLLM_PROVIDERS)
     steps: list[dict[str, str]] = []
     for endpoint in selected_endpoints:
         provider_name = _tinyllm_provider_name(endpoint.provider_id)
@@ -164,7 +188,10 @@ def generate_tinyllm_config(
         provider_configs.setdefault(provider_name, provider_config)
         steps.append(_route_step(endpoint))
 
-    steps = _dedupe_steps(steps)[:max_route_steps]
+    steps = _with_static_steps(
+        _dedupe_steps(steps),
+        max_route_steps=max_route_steps,
+    )
     agent_steps = _dedupe_steps(
         sorted(
             steps,

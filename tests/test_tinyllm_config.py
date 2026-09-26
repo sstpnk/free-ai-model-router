@@ -89,9 +89,16 @@ def test_generate_tinyllm_config_matches_current_tinyllm_sections() -> None:
         "HTTP-Referer": "https://llm.stpnk.tech",
         "X-Title": "TinyLLM",
     }
+    assert generated["providers"]["deepseek2api"] == {
+        "type": "openai-compatible",
+        "base_url": "https://deepseek.stpnk.tech/v1",
+        "api_key_env": "DEEPSEEK2API_API_KEY",
+    }
     assert generated["routes"]["coding-auto"] == [
         {"provider": "opencode-zen", "model": "ling-3.0-flash-fin-free"},
         {"provider": "openrouter", "model": "poolside/laguna-s-2.1:free"},
+        {"provider": "deepseek2api", "model": "deepseek-v4-flash"},
+        {"provider": "deepseek2api", "model": "deepseek-v4-pro"},
     ]
     assert generated["routes"]["agent-auto"] == generated["routes"]["coding-auto"]
 
@@ -107,6 +114,7 @@ def test_generate_tinyllm_config_omits_secret_values() -> None:
     generated = yaml.safe_load(config_text)
 
     assert "api_key:" not in config_text
+    assert "DEEPSEEK2API_API_KEY" in config_text
     assert generated["providers"]["z-ai"]["api_key_env"] == "ZAI_API_KEY"
 
 
@@ -125,6 +133,10 @@ def test_generate_tinyllm_config_limits_routes_to_max_attempts() -> None:
     )
 
     assert len(generated["routes"]["coding-auto"]) == 6
+    assert generated["routes"]["coding-auto"][-2:] == [
+        {"provider": "deepseek2api", "model": "deepseek-v4-flash"},
+        {"provider": "deepseek2api", "model": "deepseek-v4-pro"},
+    ]
     assert generated["routing"]["max_attempts"] == 6
 
 
@@ -149,9 +161,11 @@ def test_generate_tinyllm_config_falls_back_to_provider_registry() -> None:
 
     assert generated["providers"]["openrouter"]["base_url"] == "https://openrouter.ai/api/v1"
     assert generated["routes"]["coding-auto"] == [
-        {"provider": "openrouter", "model": "poolside/laguna-s-2.1:free"}
+        {"provider": "openrouter", "model": "poolside/laguna-s-2.1:free"},
+        {"provider": "deepseek2api", "model": "deepseek-v4-flash"},
+        {"provider": "deepseek2api", "model": "deepseek-v4-pro"},
     ]
-    assert generated["metadata"]["route_count"] == 1
+    assert generated["metadata"]["route_count"] == 3
 
 
 def test_generate_tinyllm_config_skips_placeholder_provider_base_url() -> None:
@@ -171,6 +185,27 @@ def test_generate_tinyllm_config_skips_placeholder_provider_base_url() -> None:
         )
     )
 
-    assert generated["providers"] == {}
-    assert generated["routes"]["coding-auto"] == []
-    assert generated["metadata"]["route_count"] == 0
+    assert generated["providers"] == {
+        "deepseek2api": {
+            "type": "openai-compatible",
+            "base_url": "https://deepseek.stpnk.tech/v1",
+            "api_key_env": "DEEPSEEK2API_API_KEY",
+        }
+    }
+    assert generated["routes"]["coding-auto"] == [
+        {"provider": "deepseek2api", "model": "deepseek-v4-flash"},
+        {"provider": "deepseek2api", "model": "deepseek-v4-pro"},
+    ]
+    assert generated["metadata"]["route_count"] == 2
+
+
+def test_generate_tinyllm_config_always_includes_static_deepseek2api_routes() -> None:
+    generated = yaml.safe_load(generate_tinyllm_config(RouterOutput(), {}))
+
+    assert generated["providers"]["deepseek2api"]["base_url"] == "https://deepseek.stpnk.tech/v1"
+    assert generated["providers"]["deepseek2api"]["api_key_env"] == "DEEPSEEK2API_API_KEY"
+    assert generated["routes"]["coding-auto"] == [
+        {"provider": "deepseek2api", "model": "deepseek-v4-flash"},
+        {"provider": "deepseek2api", "model": "deepseek-v4-pro"},
+    ]
+    assert generated["routes"]["coding-deepseek"] == generated["routes"]["coding-auto"]
