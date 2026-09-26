@@ -88,6 +88,7 @@ class PipelineOrchestrator:
         offline: bool = False,
         provider_ids: set[str] | None = None,
         max_verification_probes: int | None = None,
+        free_candidates_only: bool = True,
     ) -> PipelineState:
         """Run the complete pipeline: collect → verify → generate → report."""
         logger.info("Starting full pipeline run")
@@ -126,7 +127,11 @@ class PipelineOrchestrator:
 
             # Step 2: Verify models (if keys configured and checks not disabled)
             if not no_runtime_checks and not offline:
-                await self._verify_models(provider_ids, max_verification_probes)
+                await self._verify_models(
+                    provider_ids,
+                    max_verification_probes,
+                    free_candidates_only=free_candidates_only,
+                )
                 evidence_count = sum(
                     1 for ep in self.collected_endpoints
                     if is_evidence_status(ep.runtime_check.status)
@@ -345,6 +350,8 @@ class PipelineOrchestrator:
         self,
         provider_ids: set[str] | None = None,
         max_probes: int | None = None,
+        *,
+        free_candidates_only: bool = True,
     ) -> None:
         """Verify endpoints with actual API calls where keys are available."""
         assert self.http is not None
@@ -355,12 +362,17 @@ class PipelineOrchestrator:
         latest_history = load_latest_verification_records(self.settings.history_dir / "verification.jsonl")
         now = datetime.now(UTC)
         skipped_recent = 0
+        skipped_non_candidates = 0
 
         # Build list of (endpoint, adapter, api_key) triples to verify
         to_verify: list[tuple[ProviderEndpoint, Any, str]] = []
         for endpoint in self.collected_endpoints:
             provider_id = endpoint.provider_id
             if provider_ids and provider_id not in provider_ids:
+                continue
+            candidate = annotate_free_candidate(endpoint).free_candidate
+            if free_candidates_only and not candidate.is_candidate:
+                skipped_non_candidates += 1
                 continue
             api_key = self.settings.get_provider_api_key(provider_id)
 
@@ -455,9 +467,10 @@ class PipelineOrchestrator:
             last_success_at=datetime.now(UTC),
         )
         logger.info(
-            "  Verification complete: %d probed, %d reused from recent history",
+            "  Verification complete: %d probed, %d reused from recent history, %d skipped as non-candidates",
             len(to_verify),
             skipped_recent,
+            skipped_non_candidates,
         )
 
 

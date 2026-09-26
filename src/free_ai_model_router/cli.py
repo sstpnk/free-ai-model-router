@@ -86,6 +86,16 @@ def _fmt_dt(value) -> str:
     return value.strftime("%Y-%m-%d %H:%M:%S")
 
 
+def _emit_report(report: str, output: str | None) -> None:
+    if output:
+        output_path = Path(output)
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        output_path.write_text(report, encoding="utf-8")
+        click.echo(f"Wrote {output_path}")
+        return
+    click.echo(report)
+
+
 def _provider_errors_from_state(errors: list[str]) -> dict[str, str]:
     provider_errors: dict[str, str] = {}
     for error in errors:
@@ -174,8 +184,20 @@ def collect(ctx: click.Context) -> None:
     is_flag=True,
     help="Verify every model returned by the provider /models API. Requires --provider.",
 )
+@click.option(
+    "--free-candidates-only/--include-non-candidates",
+    default=True,
+    show_default=True,
+    help="Limit runtime probes to endpoints classified by the free-candidate policy.",
+)
 @click.pass_context
-def verify(ctx: click.Context, provider: str | None, max_probes: int | None, all_models: bool) -> None:
+def verify(
+    ctx: click.Context,
+    provider: str | None,
+    max_probes: int | None,
+    all_models: bool,
+    free_candidates_only: bool,
+) -> None:
     """Run API verification checks for configured providers."""
     settings: Settings = ctx.obj["settings"]
     base_dir: Path = ctx.obj["base_dir"]
@@ -184,6 +206,8 @@ def verify(ctx: click.Context, provider: str | None, max_probes: int | None, all
         raise click.ClickException("--all-models requires --provider to avoid accidental broad API usage")
     if all_models and max_probes is not None:
         raise click.ClickException("--all-models cannot be combined with --max-probes")
+    if all_models:
+        free_candidates_only = False
     if provider:
         provider_config = _get_provider_or_fail(settings, provider)
         if not provider_config.enabled:
@@ -197,6 +221,7 @@ def verify(ctx: click.Context, provider: str | None, max_probes: int | None, all
         no_runtime_checks=False,
         provider_ids=provider_ids,
         max_verification_probes=max_probes,
+        free_candidates_only=free_candidates_only,
     ))
     _print_state_and_exit(state)
 
@@ -265,8 +290,15 @@ def providers_status(ctx: click.Context) -> None:
     is_flag=True,
     help="Show only endpoints classified as free/trial/account-specific",
 )
+@click.option("--output", default=None, help="Write report to this markdown file instead of stdout")
 @click.pass_context
-def model_verdicts(ctx: click.Context, provider: str | None, status: str | None, free_only: bool) -> None:
+def model_verdicts(
+    ctx: click.Context,
+    provider: str | None,
+    status: str | None,
+    free_only: bool,
+    output: str | None,
+) -> None:
     """Show latest model-level verification verdicts without network calls."""
     settings: Settings = ctx.obj["settings"]
     _, endpoints = load_normalized_data(settings.normalized_dir)
@@ -280,27 +312,29 @@ def model_verdicts(ctx: click.Context, provider: str | None, status: str | None,
             known = ", ".join(item.value for item in VerificationStatus)
             raise click.ClickException(f"Unknown verification status '{status}'. Known statuses: {known}") from exc
 
-    click.echo(
+    _emit_report(
         generate_model_verdicts_report(
             endpoints=endpoints,
             latest_records=latest_records,
             provider_id=provider,
             status=status_filter,
             free_only=free_only,
-        )
+        ),
+        output,
     )
 
 
 @cli.command("free-candidates")
 @click.option("--provider", default=None, help="Filter by provider id")
+@click.option("--output", default=None, help="Write report to this markdown file instead of stdout")
 @click.pass_context
-def free_candidates(ctx: click.Context, provider: str | None) -> None:
+def free_candidates(ctx: click.Context, provider: str | None, output: str | None) -> None:
     """Show free-candidate policy decisions without network calls."""
     settings: Settings = ctx.obj["settings"]
     _, endpoints = load_normalized_data(settings.normalized_dir)
     if provider:
         endpoints = [endpoint for endpoint in endpoints if endpoint.provider_id == provider]
-    click.echo(generate_free_candidates_report(endpoints))
+    _emit_report(generate_free_candidates_report(endpoints), output)
 
 
 @cli.command()

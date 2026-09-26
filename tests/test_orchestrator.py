@@ -83,13 +83,13 @@ def test_verify_models_filters_by_provider_id(tmp_path: Path) -> None:
         endpoint_id="wanted/model",
         provider_id="wanted",
         canonical_model_id="wanted/model",
-        provider_model_id="model",
+        provider_model_id="model-free",
     )
     limited_out = ProviderEndpoint(
         endpoint_id="wanted/model-2",
         provider_id="wanted",
         canonical_model_id="wanted/model-2",
-        provider_model_id="model-2",
+        provider_model_id="model-2-free",
     )
     skipped = ProviderEndpoint(
         endpoint_id="skipped/model",
@@ -104,3 +104,72 @@ def test_verify_models_filters_by_provider_id(tmp_path: Path) -> None:
     assert wanted.runtime_check.status == VerificationStatus.SUCCESS
     assert limited_out.runtime_check.status == VerificationStatus.NOT_TESTED
     assert skipped.runtime_check.status == VerificationStatus.NOT_TESTED
+
+
+def test_verify_models_skips_non_free_candidates_by_default(tmp_path: Path) -> None:
+    class FakeAdapter:
+        provider_id = "wanted"
+
+        async def verify_model(self, model, api_key: str) -> VerificationResult:
+            return VerificationResult(
+                provider_model_id=model.provider_model_id,
+                status=VerificationStatus.SUCCESS,
+            )
+
+    settings = SimpleNamespace(
+        history_dir=tmp_path / "history",
+        providers=SimpleNamespace(providers=[]),
+        get_provider_api_key=lambda provider_id: "key" if provider_id == "wanted" else None,
+    )
+    orchestrator = PipelineOrchestrator(settings, tmp_path)
+    orchestrator.http = SimpleNamespace()
+    orchestrator._init_adapters = lambda _provider_ids=None: [FakeAdapter()]
+    candidate = ProviderEndpoint(
+        endpoint_id="wanted/free",
+        provider_id="wanted",
+        canonical_model_id="wanted/free",
+        provider_model_id="model-free",
+    )
+    non_candidate = ProviderEndpoint(
+        endpoint_id="wanted/paid",
+        provider_id="wanted",
+        canonical_model_id="wanted/paid",
+        provider_model_id="model",
+    )
+    orchestrator.collected_endpoints = [non_candidate, candidate]
+
+    asyncio.run(orchestrator._verify_models({"wanted"}))
+
+    assert candidate.runtime_check.status == VerificationStatus.SUCCESS
+    assert non_candidate.runtime_check.status == VerificationStatus.NOT_TESTED
+
+
+def test_verify_models_can_include_non_candidates(tmp_path: Path) -> None:
+    class FakeAdapter:
+        provider_id = "wanted"
+
+        async def verify_model(self, model, api_key: str) -> VerificationResult:
+            return VerificationResult(
+                provider_model_id=model.provider_model_id,
+                status=VerificationStatus.SUCCESS,
+            )
+
+    settings = SimpleNamespace(
+        history_dir=tmp_path / "history",
+        providers=SimpleNamespace(providers=[]),
+        get_provider_api_key=lambda provider_id: "key" if provider_id == "wanted" else None,
+    )
+    orchestrator = PipelineOrchestrator(settings, tmp_path)
+    orchestrator.http = SimpleNamespace()
+    orchestrator._init_adapters = lambda _provider_ids=None: [FakeAdapter()]
+    non_candidate = ProviderEndpoint(
+        endpoint_id="wanted/paid",
+        provider_id="wanted",
+        canonical_model_id="wanted/paid",
+        provider_model_id="model",
+    )
+    orchestrator.collected_endpoints = [non_candidate]
+
+    asyncio.run(orchestrator._verify_models({"wanted"}, free_candidates_only=False))
+
+    assert non_candidate.runtime_check.status == VerificationStatus.SUCCESS
