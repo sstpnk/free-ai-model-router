@@ -7,6 +7,7 @@ build/
 
 # Generated output — tracked in git for daily workflow commits
 reports/
+action-reports/
 
 # Temp data dirs (cache, raw fetched data, history diffs)
 data/cache/
