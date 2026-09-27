@@ -2,6 +2,21 @@ name: Daily Model Update
 
 on:
   workflow_dispatch:
+    inputs:
+      verification_mode:
+        description: "Runtime model verification mode"
+        required: true
+        default: "bounded"
+        type: choice
+        options:
+          - none
+          - bounded
+          - full
+      max_verification_probes:
+        description: "Maximum runtime probes when verification_mode=bounded"
+        required: true
+        default: "20"
+        type: string
   schedule:
     # 05:17 UTC daily — avoids top-of-hour scheduler congestion
     - cron: "17 5 * * *"
@@ -10,10 +25,17 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: daily-model-update
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    env:
+      VERIFICATION_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.verification_mode || 'bounded' }}
+      MAX_VERIFICATION_PROBES: ${{ github.event_name == 'workflow_dispatch' && inputs.max_verification_probes || '20' }}
 
     steps:
       - name: Checkout repository
@@ -71,7 +93,24 @@ jobs:
           XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
 
       - name: Verify API access
-        run: python -m free_ai_model_router verify
+        run: |
+          case "$VERIFICATION_MODE" in
+            none)
+              echo "Skipping runtime model verification"
+              ;;
+            bounded)
+              echo "Running bounded runtime verification with max probes: ${MAX_VERIFICATION_PROBES}"
+              python -m free_ai_model_router verify --max-probes "${MAX_VERIFICATION_PROBES}"
+              ;;
+            full)
+              echo "Running full runtime verification"
+              python -m free_ai_model_router verify
+              ;;
+            *)
+              echo "Unknown VERIFICATION_MODE=${VERIFICATION_MODE}" >&2
+              exit 2
+              ;;
+          esac
         env:
           ARTIFICIAL_ANALYSIS_API_KEY: ${{ secrets.ARTIFICIAL_ANALYSIS_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
@@ -147,6 +186,7 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "- **Date:** $(date +'%Y-%m-%d')" >> $GITHUB_STEP_SUMMARY
           echo "- **Config:** \`output/litellm-config-sample.yaml\`" >> $GITHUB_STEP_SUMMARY
+          echo "- **Verification mode:** \`${VERIFICATION_MODE:-bounded}\`" >> $GITHUB_STEP_SUMMARY
           echo "- **Reports artifact:** \`free-ai-model-router-reports-${{ github.run_number }}\`" >> $GITHUB_STEP_SUMMARY
           echo "- **Included reports:** provider status, free candidates, free model verdicts, generated reports, runtime catalog, LiteLLM config, TinyLLM config" >> $GITHUB_STEP_SUMMARY
           if [ -f reports/models.md ]; then

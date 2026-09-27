@@ -13,13 +13,11 @@ from free_ai_model_router.models import (
     FreeStatus,
     Limits,
     ProviderEndpoint,
-    RuntimeCheck,
     VerificationStatus,
 )
 from free_ai_model_router.providers.base import (
     LimitRecord,
     PricingRecord,
-    ProviderAdapter,
     ProviderModel,
     VerificationResult,
 )
@@ -92,12 +90,14 @@ class OpenRouterAdapter:
         results: list[PricingRecord] = []
         for m in models_raw:
             pricing = m.get("pricing", {})
+            prompt_price = pricing.get("prompt")
+            completion_price = pricing.get("completion")
             results.append(PricingRecord(
                 provider_model_id=m.get("id", ""),
-                input_price_per_million=float(pricing.get("prompt", 0)) * 1_000_000 if pricing.get("prompt") else None,
-                output_price_per_million=float(pricing.get("completion", 0)) * 1_000_000 if pricing.get("completion") else None,
-                free_input=pricing.get("prompt") == "0",
-                free_output=pricing.get("completion") == "0",
+                input_price_per_million=float(prompt_price) * 1_000_000 if prompt_price else None,
+                output_price_per_million=float(completion_price) * 1_000_000 if completion_price else None,
+                free_input=prompt_price == "0",
+                free_output=completion_price == "0",
                 source_url=OPENROUTER_MODELS_URL,
             ))
         return results

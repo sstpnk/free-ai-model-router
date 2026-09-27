@@ -49,7 +49,14 @@ class Settings:
         self.cache_dir = data_dir / "cache"
 
         # Ensure directories exist
-        for d in [self.raw_dir, self.normalized_dir, self.history_dir, self.cache_dir, self.output_dir, self.reports_dir]:
+        for d in [
+            self.raw_dir,
+            self.normalized_dir,
+            self.history_dir,
+            self.cache_dir,
+            self.output_dir,
+            self.reports_dir,
+        ]:
             d.mkdir(parents=True, exist_ok=True)
 
         # Load configs

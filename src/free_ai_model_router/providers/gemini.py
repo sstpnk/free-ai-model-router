@@ -11,7 +11,6 @@ from free_ai_model_router.models import (
     ApiStyle,
     Availability,
     FreeStatus,
-    Limits,
     Modality,
     ProviderEndpoint,
     VerificationStatus,
@@ -19,7 +18,6 @@ from free_ai_model_router.models import (
 from free_ai_model_router.providers.base import (
     LimitRecord,
     PricingRecord,
-    ProviderAdapter,
     ProviderModel,
     VerificationResult,
 )
@@ -77,6 +75,12 @@ class GeminiAdapter:
             is_generative = any("generate" in m for m in supported_methods)
             free_status = FreeStatus.DOCUMENTED_FREE if is_generative else FreeStatus.UNKNOWN
 
+            modalities = (
+                [Modality.IMAGE_ANALYSIS]
+                if "vision" in model_id.lower() or "imagen" in model_id.lower()
+                else None
+            )
+
             results.append(ProviderModel(
                 provider_model_id=model_id,
                 name=display_name,
@@ -86,7 +90,7 @@ class GeminiAdapter:
                 context_tokens=None,  # Not exposed in list endpoint
                 free_status=free_status,
                 tool_calling=True,
-                modalities=[Modality.IMAGE_ANALYSIS] if ("vision" in model_id.lower() or "imagen" in model_id.lower()) else None,
+                modalities=modalities,
                 raw_data=m,
             ))
         return results
