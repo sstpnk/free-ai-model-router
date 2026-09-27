@@ -1,0 +1,114 @@
+metadata:
+  schema_version: 1
+  generated_by: free-ai-model-router
+  generated_at: '2026-09-27T10:33:12.579890+00:00'
+  source_output: output/free-router-catalog.json
+  route_count: 6
+  secrets_policy: api keys are referenced by env var name only
+routing:
+  cooldown_seconds: 300
+  max_attempts: 6
+  min_requests_for_trust: 20
+  min_success_rate: 0.5
+  max_empty_rate: 0.3
+  min_score: 0.0
+timeouts:
+  connect_seconds: 30
+  response_seconds: 120
+  stream_idle_seconds: 180
+providers:
+  deepseek2api:
+    type: openai-compatible
+    base_url: https://deepseek.stpnk.tech/v1
+    api_key_env: DEEPSEEK2API_API_KEY
+  openrouter:
+    type: openai-compatible
+    base_url: https://openrouter.ai/api/v1
+    api_key_env: OPENROUTER_API_KEY
+    headers:
+      HTTP-Referer: https://llm.stpnk.tech
+      X-Title: TinyLLM
+  opencode-zen:
+    type: openai-compatible
+    base_url: https://opencode.ai/zen/v1
+    api_key_env: OPENCODE_ZEN_API_KEY
+    headers:
+      User-Agent: OpenAI/JS 6.45.0
+  z-ai:
+    type: openai-compatible
+    base_url: https://api.z.ai/api/paas/v4
+    api_key_env: ZAI_API_KEY
+  groq:
+    type: openai-compatible
+    base_url: https://api.groq.com/openai/v1
+    api_key_env: GROQ_API_KEY
+  mistral:
+    type: openai-compatible
+    base_url: https://api.mistral.ai/v1
+    api_key_env: MISTRAL_API_KEY
+  cloudflare:
+    type: openai-compatible
+    base_url: https://api.cloudflare.com/client/v4/accounts/1ae907087b044bef0ad45de2d93e9086/ai/v1
+    api_key_env: CLOUDFLARE_API_KEY
+  deepinfra:
+    type: openai-compatible
+    base_url: https://api.deepinfra.com/v1/openai
+    api_key_env: DEEPINFRA_API_KEY
+routes:
+  agent-auto:
+  - provider: openrouter
+    model: dots-studio/dots-3-note-preview:free
+  - provider: openrouter
+    model: inclusionai/ling-3.0-flash-fin:free
+  - provider: openrouter
+    model: inclusionai/ling-3.0-flash-sante:free
+  - provider: openrouter
+    model: qwen/qwen3.8-27b:free
+  - provider: deepseek2api
+    model: deepseek-v4-flash
+  - provider: deepseek2api
+    model: deepseek-v4-pro
+  coding-auto:
+  - provider: openrouter
+    model: inclusionai/ling-3.0-flash-sante:free
+  - provider: openrouter
+    model: inclusionai/ling-3.0-flash-fin:free
+  - provider: openrouter
+    model: qwen/qwen3.8-27b:free
+  - provider: openrouter
+    model: dots-studio/dots-3-note-preview:free
+  - provider: deepseek2api
+    model: deepseek-v4-flash
+  - provider: deepseek2api
+    model: deepseek-v4-pro
+  agent-auto-pay:
+  - provider: openrouter
+    model: dots-studio/dots-3-note-preview:free
+  - provider: openrouter
+    model: inclusionai/ling-3.0-flash-fin:free
+  - provider: openrouter
+    model: inclusionai/ling-3.0-flash-sante:free
+  - provider: openrouter
+    model: qwen/qwen3.8-27b:free
+  - provider: deepseek2api
+    model: deepseek-v4-flash
+  - provider: deepseek2api
+    model: deepseek-v4-pro
+  coding-auto-pay:
+  - provider: openrouter
+    model: inclusionai/ling-3.0-flash-sante:free
+  - provider: openrouter
+    model: inclusionai/ling-3.0-flash-fin:free
+  - provider: openrouter
+    model: qwen/qwen3.8-27b:free
+  - provider: openrouter
+    model: dots-studio/dots-3-note-preview:free
+  - provider: deepseek2api
+    model: deepseek-v4-flash
+  - provider: deepseek2api
+    model: deepseek-v4-pro
+  coding-deepseek:
+  - provider: deepseek2api
+    model: deepseek-v4-flash
+  - provider: deepseek2api
+    model: deepseek-v4-pro
