@@ -47,21 +47,11 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-          cache: pip
-          cache-dependency-path: pyproject.toml
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -e ".[litellm]"
-
-      - name: Restore data cache
-        uses: actions/cache@v4
-        with:
-          path: data/cache/
-          key: ${{ runner.os }}-model-cache-${{ github.run_id }}
-          restore-keys: |
-            ${{ runner.os }}-model-cache-
 
       # Consolidated pipeline run — each individual command runs the full pipeline
       # anyway, so run-all with --no-runtime-checks does collect+discover+benchmark+score+generate+report
@@ -165,7 +155,7 @@ jobs:
           name: free-ai-model-router-reports-${{ github.run_number }}
           path: action-reports/
           if-no-files-found: warn
-          retention-days: 30
+          retention-days: 3
 
       - name: Commit and push
         run: |

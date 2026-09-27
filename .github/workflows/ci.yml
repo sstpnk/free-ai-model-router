@@ -37,8 +37,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-          cache: pip
-          cache-dependency-path: pyproject.toml
 
       - name: Install dependencies
         run: |
@@ -89,11 +87,3 @@ jobs:
           print(f"Providers: {', '.join(sorted(generated['providers']))}")
           print(f"coding-auto steps: {len(generated['routes']['coding-auto'])}")
           PY
-
-      - name: Upload generated smoke artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: tinyllm-router-config-smoke
-          path: artifacts/tinyllm-router-config.yaml
-          if-no-files-found: error
-          retention-days: 7
