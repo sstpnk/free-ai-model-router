@@ -1,7 +1,7 @@
 metadata:
   schema_version: 1
   generated_by: free-ai-model-router
-  generated_at: '2026-09-28T11:40:39.177698+00:00'
+  generated_at: '2026-09-29T11:21:22.676503+00:00'
   source_output: output/free-router-catalog.json
   route_count: 6
   secrets_policy: api keys are referenced by env var name only
@@ -59,9 +59,9 @@ routes:
   - provider: openrouter
     model: dots-studio/dots-3-note-preview:free
   - provider: openrouter
-    model: inclusionai/ling-3.0-flash-fin:free
-  - provider: openrouter
     model: inclusionai/ling-3.0-flash-sante:free
+  - provider: openrouter
+    model: liquid/lfm-2.5-2.6b:free
   - provider: openrouter
     model: qwen/qwen3.8-27b:free
   - provider: deepseek2api
@@ -72,11 +72,11 @@ routes:
   - provider: openrouter
     model: inclusionai/ling-3.0-flash-sante:free
   - provider: openrouter
-    model: inclusionai/ling-3.0-flash-fin:free
-  - provider: openrouter
     model: qwen/qwen3.8-27b:free
   - provider: openrouter
     model: dots-studio/dots-3-note-preview:free
+  - provider: openrouter
+    model: liquid/lfm-2.5-2.6b:free
   - provider: deepseek2api
     model: deepseek-v4-flash
   - provider: deepseek2api
@@ -85,9 +85,9 @@ routes:
   - provider: openrouter
     model: dots-studio/dots-3-note-preview:free
   - provider: openrouter
-    model: inclusionai/ling-3.0-flash-fin:free
-  - provider: openrouter
     model: inclusionai/ling-3.0-flash-sante:free
+  - provider: openrouter
+    model: liquid/lfm-2.5-2.6b:free
   - provider: openrouter
     model: qwen/qwen3.8-27b:free
   - provider: deepseek2api
@@ -98,11 +98,11 @@ routes:
   - provider: openrouter
     model: inclusionai/ling-3.0-flash-sante:free
   - provider: openrouter
-    model: inclusionai/ling-3.0-flash-fin:free
-  - provider: openrouter
     model: qwen/qwen3.8-27b:free
   - provider: openrouter
     model: dots-studio/dots-3-note-preview:free
+  - provider: openrouter
+    model: liquid/lfm-2.5-2.6b:free
   - provider: deepseek2api
     model: deepseek-v4-flash
   - provider: deepseek2api
