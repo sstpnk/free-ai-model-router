@@ -1,7 +1,7 @@
 metadata:
   schema_version: 1
   generated_by: free-ai-model-router
-  generated_at: '2026-10-01T11:36:59.052799+00:00'
+  generated_at: '2026-10-02T11:05:47.787424+00:00'
   source_output: output/free-router-catalog.json
   route_count: 6
   secrets_policy: api keys are referenced by env var name only
@@ -57,11 +57,11 @@ providers:
 routes:
   agent-auto:
   - provider: openrouter
+    model: apodex/apodex-1.1-mini:free
+  - provider: openrouter
     model: dots-studio/dots-3-note-preview:free
   - provider: openrouter
     model: inclusionai/ling-3.0-flash-sante:free
-  - provider: openrouter
-    model: liquid/lfm-2.5-2.6b:free
   - provider: openrouter
     model: qwen/qwen3.8-27b:free
   - provider: deepseek2api
@@ -70,24 +70,24 @@ routes:
     model: deepseek-v4-pro
   coding-auto:
   - provider: openrouter
+    model: apodex/apodex-1.1-mini:free
+  - provider: openrouter
     model: inclusionai/ling-3.0-flash-sante:free
   - provider: openrouter
     model: qwen/qwen3.8-27b:free
   - provider: openrouter
     model: dots-studio/dots-3-note-preview:free
-  - provider: openrouter
-    model: liquid/lfm-2.5-2.6b:free
   - provider: deepseek2api
     model: deepseek-v4-flash
   - provider: deepseek2api
     model: deepseek-v4-pro
   agent-auto-pay:
   - provider: openrouter
+    model: apodex/apodex-1.1-mini:free
+  - provider: openrouter
     model: dots-studio/dots-3-note-preview:free
   - provider: openrouter
     model: inclusionai/ling-3.0-flash-sante:free
-  - provider: openrouter
-    model: liquid/lfm-2.5-2.6b:free
   - provider: openrouter
     model: qwen/qwen3.8-27b:free
   - provider: deepseek2api
@@ -96,13 +96,13 @@ routes:
     model: deepseek-v4-pro
   coding-auto-pay:
   - provider: openrouter
+    model: apodex/apodex-1.1-mini:free
+  - provider: openrouter
     model: inclusionai/ling-3.0-flash-sante:free
   - provider: openrouter
     model: qwen/qwen3.8-27b:free
   - provider: openrouter
     model: dots-studio/dots-3-note-preview:free
-  - provider: openrouter
-    model: liquid/lfm-2.5-2.6b:free
   - provider: deepseek2api
     model: deepseek-v4-flash
   - provider: deepseek2api
