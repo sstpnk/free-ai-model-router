@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T11:46:21.232267Z",
+  "generated_at": "2026-10-08T12:00:59.264392Z",
   "endpoints": [
     {
       "endpoint_id": "openrouter/apodex/apodex-1.1-mini:free",
@@ -12,8 +12,8 @@
       "free_candidate_source": "free_status",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 591,
-      "last_checked_at": "2026-10-07T11:46:15.292246Z",
+      "latency_ms": 783,
+      "last_checked_at": "2026-10-08T12:00:51.514688Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -30,8 +30,8 @@
       "free_candidate_source": "free_status",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 573,
-      "last_checked_at": "2026-10-07T11:46:15.883779Z",
+      "latency_ms": 1444,
+      "last_checked_at": "2026-10-08T12:00:52.972782Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -48,8 +48,8 @@
       "free_candidate_source": "free_status",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 1890,
-      "last_checked_at": "2026-10-07T11:46:17.791826Z",
+      "latency_ms": 1722,
+      "last_checked_at": "2026-10-08T12:00:54.708739Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -66,8 +66,8 @@
       "free_candidate_source": "free_status",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 628,
-      "last_checked_at": "2026-10-07T11:46:18.438550Z",
+      "latency_ms": 651,
+      "last_checked_at": "2026-10-08T12:00:55.373849Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -84,8 +84,8 @@
       "free_candidate_source": "free_status",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 672,
-      "last_checked_at": "2026-10-07T11:46:19.130014Z",
+      "latency_ms": 792,
+      "last_checked_at": "2026-10-08T12:00:56.180415Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -102,8 +102,8 @@
       "free_candidate_source": "free_status",
       "runtime_status": "rate_limited",
       "access_verdict": "exists_but_throttled",
-      "latency_ms": 110,
-      "last_checked_at": "2026-10-07T11:46:19.304174Z",
+      "latency_ms": 102,
+      "last_checked_at": "2026-10-08T12:00:56.345366Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -120,8 +120,8 @@
       "free_candidate_source": "free_status",
       "runtime_status": "rate_limited",
       "access_verdict": "exists_but_throttled",
-      "latency_ms": 96,
-      "last_checked_at": "2026-10-07T11:46:19.474805Z",
+      "latency_ms": 120,
+      "last_checked_at": "2026-10-08T12:00:56.559852Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -138,8 +138,8 @@
       "free_candidate_source": "free_status",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 394,
-      "last_checked_at": "2026-10-07T11:46:19.887357Z",
+      "latency_ms": 267,
+      "last_checked_at": "2026-10-08T12:00:56.841141Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -156,8 +156,8 @@
       "free_candidate_source": "free_status",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 211,
-      "last_checked_at": "2026-10-07T11:46:20.116872Z",
+      "latency_ms": 993,
+      "last_checked_at": "2026-10-08T12:00:57.847568Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -174,8 +174,8 @@
       "free_candidate_source": "free_status",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 295,
-      "last_checked_at": "2026-10-07T11:46:20.430524Z",
+      "latency_ms": 405,
+      "last_checked_at": "2026-10-08T12:00:58.266699Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -192,8 +192,8 @@
       "free_candidate_source": "free_status",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 157,
-      "last_checked_at": "2026-10-07T11:46:20.605863Z",
+      "latency_ms": 152,
+      "last_checked_at": "2026-10-08T12:00:58.432115Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -210,8 +210,8 @@
       "free_candidate_source": "free_status",
       "runtime_status": "rate_limited",
       "access_verdict": "exists_but_throttled",
-      "latency_ms": 112,
-      "last_checked_at": "2026-10-07T11:46:20.736037Z",
+      "latency_ms": 163,
+      "last_checked_at": "2026-10-08T12:00:58.609480Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -228,8 +228,8 @@
       "free_candidate_source": "free_status",
       "runtime_status": "rate_limited",
       "access_verdict": "exists_but_throttled",
-      "latency_ms": 137,
-      "last_checked_at": "2026-10-07T11:46:20.891106Z",
+      "latency_ms": 140,
+      "last_checked_at": "2026-10-08T12:00:58.763673Z",
       "tool_calling": true,
       "modalities": [
         "text"
@@ -246,27 +246,9 @@
       "free_candidate_source": "free_status",
       "runtime_status": "success",
       "access_verdict": "usable_now",
-      "latency_ms": 290,
-      "last_checked_at": "2026-10-07T11:46:21.199832Z",
+      "latency_ms": 461,
+      "last_checked_at": "2026-10-08T12:00:59.238348Z",
       "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "opencode_zen/muse-spark-1.2-contributor-free",
-      "provider_id": "opencode_zen",
-      "provider_name": "opencode_zen",
-      "canonical_model_id": "opencode_zen/muse-spark-1.2-contributor-free",
-      "model_name": "muse-spark-1.2-contributor-free",
-      "free_status": "verified_free",
-      "free_candidate_reason": "provider_verified_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
       "modalities": [
         "text"
       ]
@@ -542,65 +524,11 @@
       ]
     },
     {
-      "endpoint_id": "groq/qwen/qwen3.8-27b",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/qwen/qwen3.8-27b",
-      "model_name": "qwen/qwen3.8-27b",
-      "free_status": "documented_free",
-      "free_candidate_reason": "provider_documented_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
       "endpoint_id": "groq/allam-2-7b",
       "provider_id": "groq",
       "provider_name": "groq",
       "canonical_model_id": "groq/allam-2-7b",
       "model_name": "allam-2-7b",
-      "free_status": "documented_free",
-      "free_candidate_reason": "provider_documented_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "groq/openai/gpt-oss-120b",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/openai/gpt-oss-120b",
-      "model_name": "openai/gpt-oss-120b",
-      "free_status": "documented_free",
-      "free_candidate_reason": "provider_documented_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": true,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "groq/canopylabs/orpheus-arabic-saudi",
-      "provider_id": "groq",
-      "provider_name": "groq",
-      "canonical_model_id": "groq/canopylabs/orpheus-arabic-saudi",
-      "model_name": "canopylabs/orpheus-arabic-saudi",
       "free_status": "documented_free",
       "free_candidate_reason": "provider_documented_free_status",
       "free_candidate_source": "free_status",
@@ -637,6 +565,60 @@
       "provider_name": "groq",
       "canonical_model_id": "groq/canopylabs/orpheus-v1-english",
       "model_name": "canopylabs/orpheus-v1-english",
+      "free_status": "documented_free",
+      "free_candidate_reason": "provider_documented_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/qwen/qwen3.8-27b",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/qwen/qwen3.8-27b",
+      "model_name": "qwen/qwen3.8-27b",
+      "free_status": "documented_free",
+      "free_candidate_reason": "provider_documented_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/openai/gpt-oss-120b",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/openai/gpt-oss-120b",
+      "model_name": "openai/gpt-oss-120b",
+      "free_status": "documented_free",
+      "free_candidate_reason": "provider_documented_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": true,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "groq/canopylabs/orpheus-arabic-saudi",
+      "provider_id": "groq",
+      "provider_name": "groq",
+      "canonical_model_id": "groq/canopylabs/orpheus-arabic-saudi",
+      "model_name": "canopylabs/orpheus-arabic-saudi",
       "free_status": "documented_free",
       "free_candidate_reason": "provider_documented_free_status",
       "free_candidate_source": "free_status",
@@ -2000,11 +1982,11 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/Qwen/Qwen3.5-2B",
+      "endpoint_id": "deepinfra/anthropic/claude-sonnet-5",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Qwen/Qwen3.5-2B",
-      "model_name": "Qwen/Qwen3.5-2B",
+      "canonical_model_id": "deepinfra/anthropic/claude-sonnet-5",
+      "model_name": "anthropic/claude-sonnet-5",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -2018,11 +2000,11 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/mistralai/Mistral-Nemo-Instruct-2407",
+      "endpoint_id": "deepinfra/meta-llama/Llama-4-Maverick-17B-128E-Instruct-Turbo",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/mistralai/Mistral-Nemo-Instruct-2407",
-      "model_name": "mistralai/Mistral-Nemo-Instruct-2407",
+      "canonical_model_id": "deepinfra/meta-llama/Llama-4-Maverick-17B-128E-Instruct-Turbo",
+      "model_name": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-Turbo",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -2036,11 +2018,137 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/google/gemini-3.1-pro",
+      "endpoint_id": "deepinfra/Qwen/Qwen3.8-Max",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/google/gemini-3.1-pro",
-      "model_name": "google/gemini-3.1-pro",
+      "canonical_model_id": "deepinfra/Qwen/Qwen3.8-Max",
+      "model_name": "Qwen/Qwen3.8-Max",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/MiniMaxAI/MiniMax-M2",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/MiniMaxAI/MiniMax-M2",
+      "model_name": "MiniMaxAI/MiniMax-M2",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/meta-llama/Llama-3.2-11B-Vision-Instruct",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/meta-llama/Llama-3.2-11B-Vision-Instruct",
+      "model_name": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/Qwen/Qwen3-14B",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/Qwen/Qwen3-14B",
+      "model_name": "Qwen/Qwen3-14B",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/Qwen/Qwen3-VL-4B-Thinking",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/Qwen/Qwen3-VL-4B-Thinking",
+      "model_name": "Qwen/Qwen3-VL-4B-Thinking",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/moonshotai/Kimi-K2.7-Code",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/moonshotai/Kimi-K2.7-Code",
+      "model_name": "moonshotai/Kimi-K2.7-Code",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/Qwen/Qwen2-7B-Instruct",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/Qwen/Qwen2-7B-Instruct",
+      "model_name": "Qwen/Qwen2-7B-Instruct",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/zai-org/GLM-5.1",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/zai-org/GLM-5.1",
+      "model_name": "zai-org/GLM-5.1",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -2072,353 +2180,11 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/openai/gpt-oss-120b",
+      "endpoint_id": "deepinfra/ibm-granite/granite-4.2-8b",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/openai/gpt-oss-120b",
-      "model_name": "openai/gpt-oss-120b",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/anthropic/claude-opus-5-5",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/anthropic/claude-opus-5-5",
-      "model_name": "anthropic/claude-opus-5-5",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/deepseek-ai/DeepSeek-V4-Pro-0813",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/deepseek-ai/DeepSeek-V4-Pro-0813",
-      "model_name": "deepseek-ai/DeepSeek-V4-Pro-0813",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/KoboldAI/LLaMA2-13B-Tiefighter",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/KoboldAI/LLaMA2-13B-Tiefighter",
-      "model_name": "KoboldAI/LLaMA2-13B-Tiefighter",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/anthropic/claude-sonnet-5-5",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/anthropic/claude-sonnet-5-5",
-      "model_name": "anthropic/claude-sonnet-5-5",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/Qwen/Qwen3-235B-A22B",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Qwen/Qwen3-235B-A22B",
-      "model_name": "Qwen/Qwen3-235B-A22B",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/meta-llama/Meta-Llama-3.1-8B-Instruct",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/meta-llama/Meta-Llama-3.1-8B-Instruct",
-      "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/deepseek-ai/DeepSeek-OCR",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/deepseek-ai/DeepSeek-OCR",
-      "model_name": "deepseek-ai/DeepSeek-OCR",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/deepinfra/airoboros-70b",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/deepinfra/airoboros-70b",
-      "model_name": "deepinfra/airoboros-70b",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/ibm-granite/granite-4.2-30b",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/ibm-granite/granite-4.2-30b",
-      "model_name": "ibm-granite/granite-4.2-30b",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/google/gemini-2.5-flash",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/google/gemini-2.5-flash",
-      "model_name": "google/gemini-2.5-flash",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/Qwen/Qwen3.5-4B",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Qwen/Qwen3.5-4B",
-      "model_name": "Qwen/Qwen3.5-4B",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/deepseek-ai/DeepSeek-V4-Flash-0731",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/deepseek-ai/DeepSeek-V4-Flash-0731",
-      "model_name": "deepseek-ai/DeepSeek-V4-Flash-0731",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/google/gemma-3-4b-it",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/google/gemma-3-4b-it",
-      "model_name": "google/gemma-3-4b-it",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/meta-llama/Meta-Llama-3-70B-Instruct",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/meta-llama/Meta-Llama-3-70B-Instruct",
-      "model_name": "meta-llama/Meta-Llama-3-70B-Instruct",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/google/gemini-2.5-pro",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/google/gemini-2.5-pro",
-      "model_name": "google/gemini-2.5-pro",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/zai-org/GLM-4.5-Air",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/zai-org/GLM-4.5-Air",
-      "model_name": "zai-org/GLM-4.5-Air",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
-      "model_name": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/deepseek-ai/DeepSeek-R1-0528",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/deepseek-ai/DeepSeek-R1-0528",
-      "model_name": "deepseek-ai/DeepSeek-R1-0528",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/Qwen/Qwen3.6-27B",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Qwen/Qwen3.6-27B",
-      "model_name": "Qwen/Qwen3.6-27B",
+      "canonical_model_id": "deepinfra/ibm-granite/granite-4.2-8b",
+      "model_name": "ibm-granite/granite-4.2-8b",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -2437,186 +2203,6 @@
       "provider_name": "deepinfra",
       "canonical_model_id": "deepinfra/XiaomiMiMo/MiMo-V2.5",
       "model_name": "XiaomiMiMo/MiMo-V2.5",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/mistralai/Devstral-Small-2505",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/mistralai/Devstral-Small-2505",
-      "model_name": "mistralai/Devstral-Small-2505",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/meta-llama/Llama-Guard-3-8B",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/meta-llama/Llama-Guard-3-8B",
-      "model_name": "meta-llama/Llama-Guard-3-8B",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/thinkingmachines/Inkling",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/thinkingmachines/Inkling",
-      "model_name": "thinkingmachines/Inkling",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/openai/gpt-oss-120b-Turbo",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/openai/gpt-oss-120b-Turbo",
-      "model_name": "openai/gpt-oss-120b-Turbo",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/google/gemma-1.1-7b-it",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/google/gemma-1.1-7b-it",
-      "model_name": "google/gemma-1.1-7b-it",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/Qwen/Qwen3-32B",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Qwen/Qwen3-32B",
-      "model_name": "Qwen/Qwen3-32B",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/Gryphe/MythoMax-L2-13b",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Gryphe/MythoMax-L2-13b",
-      "model_name": "Gryphe/MythoMax-L2-13b",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/stepfun-ai/Step-3.7-Flash",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/stepfun-ai/Step-3.7-Flash",
-      "model_name": "stepfun-ai/Step-3.7-Flash",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/zai-org/GLM-4.5",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/zai-org/GLM-4.5",
-      "model_name": "zai-org/GLM-4.5",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
-      "model_name": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -2666,492 +2252,6 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/thinkingmachines/Inkling-Small",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/thinkingmachines/Inkling-Small",
-      "model_name": "thinkingmachines/Inkling-Small",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/MiniMaxAI/MiniMax-M2.7-Turbo",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/MiniMaxAI/MiniMax-M2.7-Turbo",
-      "model_name": "MiniMaxAI/MiniMax-M2.7-Turbo",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/deepseek-ai/DeepSeek-V3-0324-Turbo",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/deepseek-ai/DeepSeek-V3-0324-Turbo",
-      "model_name": "deepseek-ai/DeepSeek-V3-0324-Turbo",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/MiniMaxAI/MiniMax-M2.5",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/MiniMaxAI/MiniMax-M2.5",
-      "model_name": "MiniMaxAI/MiniMax-M2.5",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/Qwen/Qwen3.8-2.4T-A95B",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Qwen/Qwen3.8-2.4T-A95B",
-      "model_name": "Qwen/Qwen3.8-2.4T-A95B",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/moonshotai/Kimi-K2-Thinking",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/moonshotai/Kimi-K2-Thinking",
-      "model_name": "moonshotai/Kimi-K2-Thinking",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/meta-llama/Llama-3.3-70B-Instruct",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/meta-llama/Llama-3.3-70B-Instruct",
-      "model_name": "meta-llama/Llama-3.3-70B-Instruct",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/Qwen/Qwen3.5-397B-A17B",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Qwen/Qwen3.5-397B-A17B",
-      "model_name": "Qwen/Qwen3.5-397B-A17B",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/Qwen/Qwen3-VL-4B-Instruct",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Qwen/Qwen3-VL-4B-Instruct",
-      "model_name": "Qwen/Qwen3-VL-4B-Instruct",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/deepseek-ai/DeepSeek-Prover-V2-671B",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/deepseek-ai/DeepSeek-Prover-V2-671B",
-      "model_name": "deepseek-ai/DeepSeek-Prover-V2-671B",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/deepseek-ai/DeepSeek-R1-Turbo",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/deepseek-ai/DeepSeek-R1-Turbo",
-      "model_name": "deepseek-ai/DeepSeek-R1-Turbo",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/Qwen/Qwen3-Coder-480B-A35B-Instruct",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Qwen/Qwen3-Coder-480B-A35B-Instruct",
-      "model_name": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/anthropic/claude-opus-4-7",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/anthropic/claude-opus-4-7",
-      "model_name": "anthropic/claude-opus-4-7",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/XiaomiMiMo/MiMo-V2.6-Flash",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/XiaomiMiMo/MiMo-V2.6-Flash",
-      "model_name": "XiaomiMiMo/MiMo-V2.6-Flash",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/zai-org/GLM-4.7",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/zai-org/GLM-4.7",
-      "model_name": "zai-org/GLM-4.7",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/zai-org/GLM-4.7-Flash",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/zai-org/GLM-4.7-Flash",
-      "model_name": "zai-org/GLM-4.7-Flash",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/anthropic/claude-opus-4-8",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/anthropic/claude-opus-4-8",
-      "model_name": "anthropic/claude-opus-4-8",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/Qwen/Qwen3-30B-A3B",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Qwen/Qwen3-30B-A3B",
-      "model_name": "Qwen/Qwen3-30B-A3B",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/Qwen/Qwen2-7B-Instruct",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Qwen/Qwen2-7B-Instruct",
-      "model_name": "Qwen/Qwen2-7B-Instruct",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/anthropic/claude-3-7-sonnet-latest",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/anthropic/claude-3-7-sonnet-latest",
-      "model_name": "anthropic/claude-3-7-sonnet-latest",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/Qwen/Qwen3-VL-4B-Thinking",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Qwen/Qwen3-VL-4B-Thinking",
-      "model_name": "Qwen/Qwen3-VL-4B-Thinking",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/Qwen/Qwen3.8-27B",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Qwen/Qwen3.8-27B",
-      "model_name": "Qwen/Qwen3.8-27B",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/deepseek-ai/DeepSeek-V4-Pro",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/deepseek-ai/DeepSeek-V4-Pro",
-      "model_name": "deepseek-ai/DeepSeek-V4-Pro",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/NousResearch/Hermes-3-Llama-3.1-70B",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/NousResearch/Hermes-3-Llama-3.1-70B",
-      "model_name": "NousResearch/Hermes-3-Llama-3.1-70B",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/anthropic/claude-haiku-4-5",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/anthropic/claude-haiku-4-5",
-      "model_name": "anthropic/claude-haiku-4-5",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/moonshotai/Kimi-K2.5",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/moonshotai/Kimi-K2.5",
-      "model_name": "moonshotai/Kimi-K2.5",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/meta-llama/Llama-3.2-3B-Instruct",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/meta-llama/Llama-3.2-3B-Instruct",
-      "model_name": "meta-llama/Llama-3.2-3B-Instruct",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
       "endpoint_id": "deepinfra/Qwen/Qwen3-VL-235B-A22B-Thinking",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
@@ -3170,11 +2270,11 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/anthropic/claude-4-sonnet",
+      "endpoint_id": "deepinfra/NovaSky-AI/Sky-T1-32B-Preview",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/anthropic/claude-4-sonnet",
-      "model_name": "anthropic/claude-4-sonnet",
+      "canonical_model_id": "deepinfra/NovaSky-AI/Sky-T1-32B-Preview",
+      "model_name": "NovaSky-AI/Sky-T1-32B-Preview",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -3188,11 +2288,11 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/moonshotai/Kimi-K2.5-Turbo",
+      "endpoint_id": "deepinfra/Qwen/Qwen2.5-Coder-7B",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/moonshotai/Kimi-K2.5-Turbo",
-      "model_name": "moonshotai/Kimi-K2.5-Turbo",
+      "canonical_model_id": "deepinfra/Qwen/Qwen2.5-Coder-7B",
+      "model_name": "Qwen/Qwen2.5-Coder-7B",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -3206,11 +2306,11 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/google/gemini-2.0-flash-001",
+      "endpoint_id": "deepinfra/cognitivecomputations/dolphin-2.9.1-llama-3-70b",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/google/gemini-2.0-flash-001",
-      "model_name": "google/gemini-2.0-flash-001",
+      "canonical_model_id": "deepinfra/cognitivecomputations/dolphin-2.9.1-llama-3-70b",
+      "model_name": "cognitivecomputations/dolphin-2.9.1-llama-3-70b",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -3224,11 +2324,11 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/Qwen/Qwen3-Next-80B-A3B-Instruct",
+      "endpoint_id": "deepinfra/meta-llama/Meta-Llama-3-70B-Instruct",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Qwen/Qwen3-Next-80B-A3B-Instruct",
-      "model_name": "Qwen/Qwen3-Next-80B-A3B-Instruct",
+      "canonical_model_id": "deepinfra/meta-llama/Meta-Llama-3-70B-Instruct",
+      "model_name": "meta-llama/Meta-Llama-3-70B-Instruct",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -3242,11 +2342,47 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/meta-llama/Meta-Llama-3.1-70B-Instruct",
+      "endpoint_id": "deepinfra/nvidia/NVIDIA-Nemotron-Nano-9B-v2",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/meta-llama/Meta-Llama-3.1-70B-Instruct",
-      "model_name": "meta-llama/Meta-Llama-3.1-70B-Instruct",
+      "canonical_model_id": "deepinfra/nvidia/NVIDIA-Nemotron-Nano-9B-v2",
+      "model_name": "nvidia/NVIDIA-Nemotron-Nano-9B-v2",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/ByteDance/Seed-2.0-mini",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/ByteDance/Seed-2.0-mini",
+      "model_name": "ByteDance/Seed-2.0-mini",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/Qwen/Qwen3-VL-235B-A22B-Instruct",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/Qwen/Qwen3-VL-235B-A22B-Instruct",
+      "model_name": "Qwen/Qwen3-VL-235B-A22B-Instruct",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -3278,11 +2414,11 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/moonshotai/Kimi-K2.7-Code",
+      "endpoint_id": "deepinfra/deepseek-ai/DeepSeek-V4-Pro-0813",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/moonshotai/Kimi-K2.7-Code",
-      "model_name": "moonshotai/Kimi-K2.7-Code",
+      "canonical_model_id": "deepinfra/deepseek-ai/DeepSeek-V4-Pro-0813",
+      "model_name": "deepseek-ai/DeepSeek-V4-Pro-0813",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -3296,11 +2432,11 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/google/gemma-4-31B-it-Ultra",
+      "endpoint_id": "deepinfra/NousResearch/Hermes-3-Llama-3.1-405B",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/google/gemma-4-31B-it-Ultra",
-      "model_name": "google/gemma-4-31B-it-Ultra",
+      "canonical_model_id": "deepinfra/NousResearch/Hermes-3-Llama-3.1-405B",
+      "model_name": "NousResearch/Hermes-3-Llama-3.1-405B",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -3314,11 +2450,11 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/nvidia/Nemotron-3-Nano-30B-A3B",
+      "endpoint_id": "deepinfra/mistralai/Mistral-7B-Instruct-v0.3",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/nvidia/Nemotron-3-Nano-30B-A3B",
-      "model_name": "nvidia/Nemotron-3-Nano-30B-A3B",
+      "canonical_model_id": "deepinfra/mistralai/Mistral-7B-Instruct-v0.3",
+      "model_name": "mistralai/Mistral-7B-Instruct-v0.3",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -3332,11 +2468,119 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/Qwen/Qwen3.5-27B",
+      "endpoint_id": "deepinfra/ByteDance/Seed-2.0-code",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Qwen/Qwen3.5-27B",
-      "model_name": "Qwen/Qwen3.5-27B",
+      "canonical_model_id": "deepinfra/ByteDance/Seed-2.0-code",
+      "model_name": "ByteDance/Seed-2.0-code",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/openai/gpt-oss-120b",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/openai/gpt-oss-120b",
+      "model_name": "openai/gpt-oss-120b",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+      "model_name": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/Qwen/Qwen3.8-Flash",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/Qwen/Qwen3.8-Flash",
+      "model_name": "Qwen/Qwen3.8-Flash",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/mistralai/Mixtral-8x7B-Instruct-v0.1",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/mistralai/Mixtral-8x7B-Instruct-v0.1",
+      "model_name": "mistralai/Mixtral-8x7B-Instruct-v0.1",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/google/gemini-3.7-flash",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/google/gemini-3.7-flash",
+      "model_name": "google/gemini-3.7-flash",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/Qwen/Qwen3-VL-8B-Thinking",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/Qwen/Qwen3-VL-8B-Thinking",
+      "model_name": "Qwen/Qwen3-VL-8B-Thinking",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -3368,6 +2612,96 @@
       ]
     },
     {
+      "endpoint_id": "deepinfra/meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
+      "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/PaddlePaddle/PaddleOCR-VL-0.9B",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/PaddlePaddle/PaddleOCR-VL-0.9B",
+      "model_name": "PaddlePaddle/PaddleOCR-VL-0.9B",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/Austism/chronos-hermes-13b-v2",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/Austism/chronos-hermes-13b-v2",
+      "model_name": "Austism/chronos-hermes-13b-v2",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/deepseek-ai/DeepSeek-V3",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/deepseek-ai/DeepSeek-V3",
+      "model_name": "deepseek-ai/DeepSeek-V3",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/google/gemma-4-E4B-it",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/google/gemma-4-E4B-it",
+      "model_name": "google/gemma-4-E4B-it",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
       "endpoint_id": "deepinfra/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
@@ -3386,11 +2720,11 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/microsoft/Phi-4-multimodal-instruct",
+      "endpoint_id": "deepinfra/tencent/Hy3",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/microsoft/Phi-4-multimodal-instruct",
-      "model_name": "microsoft/Phi-4-multimodal-instruct",
+      "canonical_model_id": "deepinfra/tencent/Hy3",
+      "model_name": "tencent/Hy3",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -3404,11 +2738,11 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/Qwen/Qwen3.6-35B-A3B",
+      "endpoint_id": "deepinfra/deepreinforce-ai/Ornith-1.0-35B",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Qwen/Qwen3.6-35B-A3B",
-      "model_name": "Qwen/Qwen3.6-35B-A3B",
+      "canonical_model_id": "deepinfra/deepreinforce-ai/Ornith-1.0-35B",
+      "model_name": "deepreinforce-ai/Ornith-1.0-35B",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -3422,11 +2756,11 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/Qwen/Qwen2-72B-Instruct",
+      "endpoint_id": "deepinfra/mistralai/Mistral-Small-3.1-24B-Instruct-2503",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Qwen/Qwen2-72B-Instruct",
-      "model_name": "Qwen/Qwen2-72B-Instruct",
+      "canonical_model_id": "deepinfra/mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+      "model_name": "mistralai/Mistral-Small-3.1-24B-Instruct-2503",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -3440,11 +2774,1199 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/microsoft/Phi-3-medium-4k-instruct",
+      "endpoint_id": "deepinfra/nvidia/Nemotron-3-Nano-30B-A3B",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/microsoft/Phi-3-medium-4k-instruct",
-      "model_name": "microsoft/Phi-3-medium-4k-instruct",
+      "canonical_model_id": "deepinfra/nvidia/Nemotron-3-Nano-30B-A3B",
+      "model_name": "nvidia/Nemotron-3-Nano-30B-A3B",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/deepseek-ai/DeepSeek-V3-0324",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/deepseek-ai/DeepSeek-V3-0324",
+      "model_name": "deepseek-ai/DeepSeek-V3-0324",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/nvidia/NVIDIA-Nemotron-3.5-Lightning",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/nvidia/NVIDIA-Nemotron-3.5-Lightning",
+      "model_name": "nvidia/NVIDIA-Nemotron-3.5-Lightning",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/nvidia/Nemotron-Content-Safety-3.5",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/nvidia/Nemotron-Content-Safety-3.5",
+      "model_name": "nvidia/Nemotron-Content-Safety-3.5",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL",
+      "model_name": "nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+      "model_name": "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/mistralai/Mistral-Small-24B-Instruct-2501",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/mistralai/Mistral-Small-24B-Instruct-2501",
+      "model_name": "mistralai/Mistral-Small-24B-Instruct-2501",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/moonshotai/Kimi-K2.6",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/moonshotai/Kimi-K2.6",
+      "model_name": "moonshotai/Kimi-K2.6",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/XiaomiMiMo/MiMo-V2.5-Pro",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/XiaomiMiMo/MiMo-V2.5-Pro",
+      "model_name": "XiaomiMiMo/MiMo-V2.5-Pro",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/zai-org/GLM-4.5",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/zai-org/GLM-4.5",
+      "model_name": "zai-org/GLM-4.5",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/zai-org/GLM-5.3",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/zai-org/GLM-5.3",
+      "model_name": "zai-org/GLM-5.3",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/Sao10K/L3-8B-Lunaris-v1",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/Sao10K/L3-8B-Lunaris-v1",
+      "model_name": "Sao10K/L3-8B-Lunaris-v1",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/anthropic/claude-opus-5",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/anthropic/claude-opus-5",
+      "model_name": "anthropic/claude-opus-5",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/Sao10K/L3-8B-Lunaris-v1-Turbo",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/Sao10K/L3-8B-Lunaris-v1-Turbo",
+      "model_name": "Sao10K/L3-8B-Lunaris-v1-Turbo",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/moonshotai/Kimi-K2.5-Turbo",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/moonshotai/Kimi-K2.5-Turbo",
+      "model_name": "moonshotai/Kimi-K2.5-Turbo",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/moonshotai/Kimi-K2.5",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/moonshotai/Kimi-K2.5",
+      "model_name": "moonshotai/Kimi-K2.5",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/Qwen/Qwen3-VL-30B-A3B-Thinking",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/Qwen/Qwen3-VL-30B-A3B-Thinking",
+      "model_name": "Qwen/Qwen3-VL-30B-A3B-Thinking",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/Qwen/Qwen3-32B",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/Qwen/Qwen3-32B",
+      "model_name": "Qwen/Qwen3-32B",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/meta-llama/Llama-4-Scout-17B-16E-Instruct",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/meta-llama/Llama-4-Scout-17B-16E-Instruct",
+      "model_name": "meta-llama/Llama-4-Scout-17B-16E-Instruct",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/meta-llama/Llama-2-13b-chat-hf",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/meta-llama/Llama-2-13b-chat-hf",
+      "model_name": "meta-llama/Llama-2-13b-chat-hf",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/deepseek-ai/DeepSeek-V3.1-Terminus",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/deepseek-ai/DeepSeek-V3.1-Terminus",
+      "model_name": "deepseek-ai/DeepSeek-V3.1-Terminus",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B",
+      "model_name": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/Qwen/Qwen3-235B-A22B-Thinking-2507",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/Qwen/Qwen3-235B-A22B-Thinking-2507",
+      "model_name": "Qwen/Qwen3-235B-A22B-Thinking-2507",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/deepseek-ai/DeepSeek-Prover-V2-671B",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/deepseek-ai/DeepSeek-Prover-V2-671B",
+      "model_name": "deepseek-ai/DeepSeek-Prover-V2-671B",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/stepfun-ai/Step-3.7-Flash",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/stepfun-ai/Step-3.7-Flash",
+      "model_name": "stepfun-ai/Step-3.7-Flash",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/meta-llama/Llama-3.3-70B-Instruct-Turbo",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/meta-llama/Llama-3.3-70B-Instruct-Turbo",
+      "model_name": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/Qwen/Qwen3-Coder-480B-A35B-Instruct",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/Qwen/Qwen3-Coder-480B-A35B-Instruct",
+      "model_name": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/Qwen/Qwen3.8-27B",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/Qwen/Qwen3.8-27B",
+      "model_name": "Qwen/Qwen3.8-27B",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/google/gemini-3.1-flash-lite",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/google/gemini-3.1-flash-lite",
+      "model_name": "google/gemini-3.1-flash-lite",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/moonshotai/Kimi-K2-Instruct-0905",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/moonshotai/Kimi-K2-Instruct-0905",
+      "model_name": "moonshotai/Kimi-K2-Instruct-0905",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/deepseek-ai/DeepSeek-V4.1-Flash",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/deepseek-ai/DeepSeek-V4.1-Flash",
+      "model_name": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/Qwen/Qwen3.5-122B-A10B",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/Qwen/Qwen3.5-122B-A10B",
+      "model_name": "Qwen/Qwen3.5-122B-A10B",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/nvidia/Llama-3.1-Nemotron-70B-Instruct",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/nvidia/Llama-3.1-Nemotron-70B-Instruct",
+      "model_name": "nvidia/Llama-3.1-Nemotron-70B-Instruct",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/openai/gpt-oss-120b-Ultra",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/openai/gpt-oss-120b-Ultra",
+      "model_name": "openai/gpt-oss-120b-Ultra",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/meta-llama/Meta-Llama-3.1-70B-Instruct",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/meta-llama/Meta-Llama-3.1-70B-Instruct",
+      "model_name": "meta-llama/Meta-Llama-3.1-70B-Instruct",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/deepseek-ai/DeepSeek-V3.1",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/deepseek-ai/DeepSeek-V3.1",
+      "model_name": "deepseek-ai/DeepSeek-V3.1",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/google/gemma-2-27b-it",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/google/gemma-2-27b-it",
+      "model_name": "google/gemma-2-27b-it",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/anthropic/claude-sonnet-5-5",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/anthropic/claude-sonnet-5-5",
+      "model_name": "anthropic/claude-sonnet-5-5",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/Qwen/QVQ-72B-Preview",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/Qwen/QVQ-72B-Preview",
+      "model_name": "Qwen/QVQ-72B-Preview",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/Qwen/QwQ-32B",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/Qwen/QwQ-32B",
+      "model_name": "Qwen/QwQ-32B",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/microsoft/WizardLM-2-7B",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/microsoft/WizardLM-2-7B",
+      "model_name": "microsoft/WizardLM-2-7B",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/Qwen/Qwen3.8-2.4T-A95B",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/Qwen/Qwen3.8-2.4T-A95B",
+      "model_name": "Qwen/Qwen3.8-2.4T-A95B",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/deepseek-ai/DeepSeek-V3.2",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/deepseek-ai/DeepSeek-V3.2",
+      "model_name": "deepseek-ai/DeepSeek-V3.2",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/mistralai/Mistral-7B-Instruct-v0.2",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/mistralai/Mistral-7B-Instruct-v0.2",
+      "model_name": "mistralai/Mistral-7B-Instruct-v0.2",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/Qwen/Qwen3.5-2B",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/Qwen/Qwen3.5-2B",
+      "model_name": "Qwen/Qwen3.5-2B",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/zai-org/GLM-5",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/zai-org/GLM-5",
+      "model_name": "zai-org/GLM-5",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo",
+      "model_name": "meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/openai/gpt-oss-120b-Turbo",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/openai/gpt-oss-120b-Turbo",
+      "model_name": "openai/gpt-oss-120b-Turbo",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+      "model_name": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/Qwen/Qwen3.5-397B-A17B",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/Qwen/Qwen3.5-397B-A17B",
+      "model_name": "Qwen/Qwen3.5-397B-A17B",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/microsoft/WizardLM-2-8x22B",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/microsoft/WizardLM-2-8x22B",
+      "model_name": "microsoft/WizardLM-2-8x22B",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/mistralai/Devstral-Small-2505",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/mistralai/Devstral-Small-2505",
+      "model_name": "mistralai/Devstral-Small-2505",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/ibm-granite/granite-4.2-30b",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/ibm-granite/granite-4.2-30b",
+      "model_name": "ibm-granite/granite-4.2-30b",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/meta-llama/Meta-Llama-3-8B-Instruct",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/meta-llama/Meta-Llama-3-8B-Instruct",
+      "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/google/gemma-3-27b-it",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/google/gemma-3-27b-it",
+      "model_name": "google/gemma-3-27b-it",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/google/gemma-4-31B-it-turbo",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/google/gemma-4-31B-it-turbo",
+      "model_name": "google/gemma-4-31B-it-turbo",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/zai-org/GLM-5.3-Flash",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/zai-org/GLM-5.3-Flash",
+      "model_name": "zai-org/GLM-5.3-Flash",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/XiaomiMiMo/MiMo-V2.6-Flash",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/XiaomiMiMo/MiMo-V2.6-Flash",
+      "model_name": "XiaomiMiMo/MiMo-V2.6-Flash",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/google/gemini-2.5-pro",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/google/gemini-2.5-pro",
+      "model_name": "google/gemini-2.5-pro",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/openai/gpt-oss-20b",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/openai/gpt-oss-20b",
+      "model_name": "openai/gpt-oss-20b",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/openchat/openchat_3.5",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/openchat/openchat_3.5",
+      "model_name": "openchat/openchat_3.5",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/Sao10K/L3.1-70B-Euryale-v2.2",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/Sao10K/L3.1-70B-Euryale-v2.2",
+      "model_name": "Sao10K/L3.1-70B-Euryale-v2.2",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/allenai/Olmo-3.1-32B-Instruct",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/allenai/Olmo-3.1-32B-Instruct",
+      "model_name": "allenai/Olmo-3.1-32B-Instruct",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/meta-llama/Llama-3.2-3B-Instruct",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/meta-llama/Llama-3.2-3B-Instruct",
+      "model_name": "meta-llama/Llama-3.2-3B-Instruct",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/deepseek-ai/DeepSeek-R1-Turbo",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/deepseek-ai/DeepSeek-R1-Turbo",
+      "model_name": "deepseek-ai/DeepSeek-R1-Turbo",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/google/gemma-4-31B-it",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/google/gemma-4-31B-it",
+      "model_name": "google/gemma-4-31B-it",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/anthropic/claude-fable-5",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/anthropic/claude-fable-5",
+      "model_name": "anthropic/claude-fable-5",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -3494,11 +4016,11 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "endpoint_id": "deepinfra/Qwen/Qwen3.5-27B",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Qwen/Qwen3-235B-A22B-Instruct-2507",
-      "model_name": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "canonical_model_id": "deepinfra/Qwen/Qwen3.5-27B",
+      "model_name": "Qwen/Qwen3.5-27B",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -3512,47 +4034,11 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL",
+      "endpoint_id": "deepinfra/meta-models/Muse-Glimmer-30B",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL",
-      "model_name": "nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/Phind/Phind-CodeLlama-34B-v2",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Phind/Phind-CodeLlama-34B-v2",
-      "model_name": "Phind/Phind-CodeLlama-34B-v2",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/Qwen/Qwen3-VL-30B-A3B-Instruct",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Qwen/Qwen3-VL-30B-A3B-Instruct",
-      "model_name": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+      "canonical_model_id": "deepinfra/meta-models/Muse-Glimmer-30B",
+      "model_name": "meta-models/Muse-Glimmer-30B",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -3584,11 +4070,11 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/Qwen/Qwen3-235B-A22B-Thinking-2507",
+      "endpoint_id": "deepinfra/meta-llama/Meta-Llama-3.1-8B-Instruct",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Qwen/Qwen3-235B-A22B-Thinking-2507",
-      "model_name": "Qwen/Qwen3-235B-A22B-Thinking-2507",
+      "canonical_model_id": "deepinfra/meta-llama/Meta-Llama-3.1-8B-Instruct",
+      "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -3602,11 +4088,11 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/NovaSky-AI/Sky-T1-32B-Preview",
+      "endpoint_id": "deepinfra/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/NovaSky-AI/Sky-T1-32B-Preview",
-      "model_name": "NovaSky-AI/Sky-T1-32B-Preview",
+      "canonical_model_id": "deepinfra/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning",
+      "model_name": "nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -3620,227 +4106,11 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/openchat/openchat-3.6-8b",
+      "endpoint_id": "deepinfra/google/codegemma-7b-it",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/openchat/openchat-3.6-8b",
-      "model_name": "openchat/openchat-3.6-8b",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo",
-      "model_name": "meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/meta-llama/Llama-3.2-90B-Vision-Instruct",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/meta-llama/Llama-3.2-90B-Vision-Instruct",
-      "model_name": "meta-llama/Llama-3.2-90B-Vision-Instruct",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/allenai/Olmo-3.1-32B-Instruct",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/allenai/Olmo-3.1-32B-Instruct",
-      "model_name": "allenai/Olmo-3.1-32B-Instruct",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
-      "model_name": "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/meta-llama/Llama-2-13b-chat-hf",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/meta-llama/Llama-2-13b-chat-hf",
-      "model_name": "meta-llama/Llama-2-13b-chat-hf",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/google/gemma-4-31B-it",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/google/gemma-4-31B-it",
-      "model_name": "google/gemma-4-31B-it",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/cognitivecomputations/dolphin-2.6-mixtral-8x7b",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/cognitivecomputations/dolphin-2.6-mixtral-8x7b",
-      "model_name": "cognitivecomputations/dolphin-2.6-mixtral-8x7b",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/Qwen/Qwen3-Coder-30B-A3B-Instruct",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Qwen/Qwen3-Coder-30B-A3B-Instruct",
-      "model_name": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/allenai/olmOCR-7B-0825",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/allenai/olmOCR-7B-0825",
-      "model_name": "allenai/olmOCR-7B-0825",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/stepfun-ai/Step-3.5-Flash",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/stepfun-ai/Step-3.5-Flash",
-      "model_name": "stepfun-ai/Step-3.5-Flash",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/deepseek-ai/DeepSeek-V4-Flash",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/deepseek-ai/DeepSeek-V4-Flash",
-      "model_name": "deepseek-ai/DeepSeek-V4-Flash",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/Qwen/Qwen3.7-Max",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Qwen/Qwen3.7-Max",
-      "model_name": "Qwen/Qwen3.7-Max",
+      "canonical_model_id": "deepinfra/google/codegemma-7b-it",
+      "model_name": "google/codegemma-7b-it",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -3872,11 +4142,11 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/Sao10K/L3.1-70B-Euryale-v2.2",
+      "endpoint_id": "deepinfra/KoboldAI/LLaMA2-13B-Tiefighter",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Sao10K/L3.1-70B-Euryale-v2.2",
-      "model_name": "Sao10K/L3.1-70B-Euryale-v2.2",
+      "canonical_model_id": "deepinfra/KoboldAI/LLaMA2-13B-Tiefighter",
+      "model_name": "KoboldAI/LLaMA2-13B-Tiefighter",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -3890,551 +4160,11 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/deepreinforce-ai/Ornith-1.0-35B",
+      "endpoint_id": "deepinfra/Gryphe/MythoMax-L2-13b-turbo",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/deepreinforce-ai/Ornith-1.0-35B",
-      "model_name": "deepreinforce-ai/Ornith-1.0-35B",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/moonshotai/Kimi-K3",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/moonshotai/Kimi-K3",
-      "model_name": "moonshotai/Kimi-K3",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/meta-llama/Llama-Guard-4-12B",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/meta-llama/Llama-Guard-4-12B",
-      "model_name": "meta-llama/Llama-Guard-4-12B",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/moonshotai/Kimi-K2.6",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/moonshotai/Kimi-K2.6",
-      "model_name": "moonshotai/Kimi-K2.6",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/Qwen/Qwen3.5-122B-A10B",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Qwen/Qwen3.5-122B-A10B",
-      "model_name": "Qwen/Qwen3.5-122B-A10B",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/nvidia/NVIDIA-Nemotron-3.5-Lightning",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/nvidia/NVIDIA-Nemotron-3.5-Lightning",
-      "model_name": "nvidia/NVIDIA-Nemotron-3.5-Lightning",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/google/gemma-2-27b-it",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/google/gemma-2-27b-it",
-      "model_name": "google/gemma-2-27b-it",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/allenai/olmOCR-7B-0725-FP8",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/allenai/olmOCR-7B-0725-FP8",
-      "model_name": "allenai/olmOCR-7B-0725-FP8",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/microsoft/phi-4-reasoning-plus",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/microsoft/phi-4-reasoning-plus",
-      "model_name": "microsoft/phi-4-reasoning-plus",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/zai-org/GLM-5.2",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/zai-org/GLM-5.2",
-      "model_name": "zai-org/GLM-5.2",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/deepseek-ai/DeepSeek-V3.2",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/deepseek-ai/DeepSeek-V3.2",
-      "model_name": "deepseek-ai/DeepSeek-V3.2",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/deepseek-ai/DeepSeek-R1-0528-Turbo",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/deepseek-ai/DeepSeek-R1-0528-Turbo",
-      "model_name": "deepseek-ai/DeepSeek-R1-0528-Turbo",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/PaddlePaddle/PaddleOCR-VL-0.9B",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/PaddlePaddle/PaddleOCR-VL-0.9B",
-      "model_name": "PaddlePaddle/PaddleOCR-VL-0.9B",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/zai-org/GLM-5.1",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/zai-org/GLM-5.1",
-      "model_name": "zai-org/GLM-5.1",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/nvidia/Llama-3.3-Nemotron-Super-49B-v1.5",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/nvidia/Llama-3.3-Nemotron-Super-49B-v1.5",
-      "model_name": "nvidia/Llama-3.3-Nemotron-Super-49B-v1.5",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/ByteDance/Seed-2.0-mini",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/ByteDance/Seed-2.0-mini",
-      "model_name": "ByteDance/Seed-2.0-mini",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/Qwen/Qwen2.5-VL-32B-Instruct",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Qwen/Qwen2.5-VL-32B-Instruct",
-      "model_name": "Qwen/Qwen2.5-VL-32B-Instruct",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/microsoft/WizardLM-2-8x22B",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/microsoft/WizardLM-2-8x22B",
-      "model_name": "microsoft/WizardLM-2-8x22B",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/anthropic/claude-fable-5",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/anthropic/claude-fable-5",
-      "model_name": "anthropic/claude-fable-5",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/meta-llama/Llama-4-Scout-17B-16E-Instruct",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/meta-llama/Llama-4-Scout-17B-16E-Instruct",
-      "model_name": "meta-llama/Llama-4-Scout-17B-16E-Instruct",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
-      "model_name": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/Qwen/Qwen3.8-Max",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Qwen/Qwen3.8-Max",
-      "model_name": "Qwen/Qwen3.8-Max",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/mistralai/Mistral-Small-3.1-24B-Instruct-2503",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/mistralai/Mistral-Small-3.1-24B-Instruct-2503",
-      "model_name": "mistralai/Mistral-Small-3.1-24B-Instruct-2503",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/google/gemma-4-31B-it-turbo",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/google/gemma-4-31B-it-turbo",
-      "model_name": "google/gemma-4-31B-it-turbo",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/MiniMaxAI/MiniMax-M2.7",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/MiniMaxAI/MiniMax-M2.7",
-      "model_name": "MiniMaxAI/MiniMax-M2.7",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/meta-llama/Meta-Llama-3-8B-Instruct",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/meta-llama/Meta-Llama-3-8B-Instruct",
-      "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/nvidia/Llama-3.1-Nemotron-70B-Instruct",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/nvidia/Llama-3.1-Nemotron-70B-Instruct",
-      "model_name": "nvidia/Llama-3.1-Nemotron-70B-Instruct",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/bigcode/starcoder2-15b-instruct-v0.1",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/bigcode/starcoder2-15b-instruct-v0.1",
-      "model_name": "bigcode/starcoder2-15b-instruct-v0.1",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
-      "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/google/gemini-3.1-flash-lite",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/google/gemini-3.1-flash-lite",
-      "model_name": "google/gemini-3.1-flash-lite",
-      "free_status": "account_specific_free",
-      "free_candidate_reason": "provider_account_specific_free_status",
-      "free_candidate_source": "free_status",
-      "runtime_status": "not_tested",
-      "access_verdict": "unknown",
-      "latency_ms": null,
-      "last_checked_at": null,
-      "tool_calling": false,
-      "modalities": [
-        "text"
-      ]
-    },
-    {
-      "endpoint_id": "deepinfra/deepseek-ai/DeepSeek-V3.1-Terminus",
-      "provider_id": "deepinfra",
-      "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/deepseek-ai/DeepSeek-V3.1-Terminus",
-      "model_name": "deepseek-ai/DeepSeek-V3.1-Terminus",
+      "canonical_model_id": "deepinfra/Gryphe/MythoMax-L2-13b-turbo",
+      "model_name": "Gryphe/MythoMax-L2-13b-turbo",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -4466,11 +4196,11 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/deepseek-ai/DeepSeek-V3.1",
+      "endpoint_id": "deepinfra/zai-org/GLM-4.7-Flash",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/deepseek-ai/DeepSeek-V3.1",
-      "model_name": "deepseek-ai/DeepSeek-V3.1",
+      "canonical_model_id": "deepinfra/zai-org/GLM-4.7-Flash",
+      "model_name": "zai-org/GLM-4.7-Flash",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -4484,11 +4214,11 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B",
+      "endpoint_id": "deepinfra/google/gemma-3-12b-it",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B",
-      "model_name": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B",
+      "canonical_model_id": "deepinfra/google/gemma-3-12b-it",
+      "model_name": "google/gemma-3-12b-it",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -4502,11 +4232,11 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+      "endpoint_id": "deepinfra/google/gemma-1.1-7b-it",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/mistralai/Mistral-Small-3.2-24B-Instruct-2506",
-      "model_name": "mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+      "canonical_model_id": "deepinfra/google/gemma-1.1-7b-it",
+      "model_name": "google/gemma-1.1-7b-it",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -4520,11 +4250,11 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/google/gemini-3.7-flash",
+      "endpoint_id": "deepinfra/Qwen/Qwen3-Max-Thinking",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/google/gemini-3.7-flash",
-      "model_name": "google/gemini-3.7-flash",
+      "canonical_model_id": "deepinfra/Qwen/Qwen3-Max-Thinking",
+      "model_name": "Qwen/Qwen3-Max-Thinking",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -4538,11 +4268,245 @@
       ]
     },
     {
-      "endpoint_id": "deepinfra/Sao10K/L3.3-70B-Euryale-v2.3",
+      "endpoint_id": "deepinfra/deepseek-ai/DeepSeek-V4-Flash-0731",
       "provider_id": "deepinfra",
       "provider_name": "deepinfra",
-      "canonical_model_id": "deepinfra/Sao10K/L3.3-70B-Euryale-v2.3",
-      "model_name": "Sao10K/L3.3-70B-Euryale-v2.3",
+      "canonical_model_id": "deepinfra/deepseek-ai/DeepSeek-V4-Flash-0731",
+      "model_name": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/anthropic/claude-opus-5-5",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/anthropic/claude-opus-5-5",
+      "model_name": "anthropic/claude-opus-5-5",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/MiniMaxAI/MiniMax-M2.7-Turbo",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/MiniMaxAI/MiniMax-M2.7-Turbo",
+      "model_name": "MiniMaxAI/MiniMax-M2.7-Turbo",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/Qwen/Qwen3.5-0.8B",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/Qwen/Qwen3.5-0.8B",
+      "model_name": "Qwen/Qwen3.5-0.8B",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/anthropic/claude-opus-4-8",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/anthropic/claude-opus-4-8",
+      "model_name": "anthropic/claude-opus-4-8",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/Gryphe/MythoMax-L2-13b",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/Gryphe/MythoMax-L2-13b",
+      "model_name": "Gryphe/MythoMax-L2-13b",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/meta-llama/Llama-Guard-3-8B",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/meta-llama/Llama-Guard-3-8B",
+      "model_name": "meta-llama/Llama-Guard-3-8B",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/Qwen/Qwen2.5-72B-Instruct",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/Qwen/Qwen2.5-72B-Instruct",
+      "model_name": "Qwen/Qwen2.5-72B-Instruct",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/anthropic/claude-opus-4-7",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/anthropic/claude-opus-4-7",
+      "model_name": "anthropic/claude-opus-4-7",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/Qwen/Qwen3.5-35B-A3B",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/Qwen/Qwen3.5-35B-A3B",
+      "model_name": "Qwen/Qwen3.5-35B-A3B",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/zai-org/GLM-4.5-Air",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/zai-org/GLM-4.5-Air",
+      "model_name": "zai-org/GLM-4.5-Air",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/mistralai/Mistral-Nemo-Instruct-2407",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/mistralai/Mistral-Nemo-Instruct-2407",
+      "model_name": "mistralai/Mistral-Nemo-Instruct-2407",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/microsoft/Phi-3-medium-4k-instruct",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/microsoft/Phi-3-medium-4k-instruct",
+      "model_name": "microsoft/Phi-3-medium-4k-instruct",
+      "free_status": "account_specific_free",
+      "free_candidate_reason": "provider_account_specific_free_status",
+      "free_candidate_source": "free_status",
+      "runtime_status": "not_tested",
+      "access_verdict": "unknown",
+      "latency_ms": null,
+      "last_checked_at": null,
+      "tool_calling": false,
+      "modalities": [
+        "text"
+      ]
+    },
+    {
+      "endpoint_id": "deepinfra/zai-org/GLM-4.6V",
+      "provider_id": "deepinfra",
+      "provider_name": "deepinfra",
+      "canonical_model_id": "deepinfra/zai-org/GLM-4.6V",
+      "model_name": "zai-org/GLM-4.6V",
       "free_status": "account_specific_free",
       "free_candidate_reason": "provider_account_specific_free_status",
       "free_candidate_source": "free_status",
@@ -4571,7 +4535,6 @@
     "openrouter/google/gemma-4-26b-a4b-it:free",
     "openrouter/google/gemma-4-31b-it:free",
     "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
-    "opencode_zen/muse-spark-1.2-contributor-free",
     "opencode_zen/muse-spark-1.3-contributor-free",
     "opencode_zen/jev-1.13-free",
     "opencode_zen/longcat-2.5-preview-free",
@@ -4587,12 +4550,12 @@
     "zai/glm-5.3",
     "zai/glm-5.3-flash",
     "zai/glm-5.3-flashx",
-    "groq/qwen/qwen3.8-27b",
     "groq/allam-2-7b",
-    "groq/openai/gpt-oss-120b",
-    "groq/canopylabs/orpheus-arabic-saudi",
     "groq/openai/gpt-oss-20b",
     "groq/canopylabs/orpheus-v1-english",
+    "groq/qwen/qwen3.8-27b",
+    "groq/openai/gpt-oss-120b",
+    "groq/canopylabs/orpheus-arabic-saudi",
     "mistral/codestral-2508",
     "mistral/codestral-latest",
     "mistral/mistral-code-latest",
@@ -4668,147 +4631,146 @@
     "cloudflare/@cf/meta/llama-4-scout-17b-16e-instruct",
     "cloudflare/@cf/cloudflare/clef-flash",
     "cloudflare/@cf/qwen/qwq-32b",
-    "deepinfra/Qwen/Qwen3.5-2B",
-    "deepinfra/mistralai/Mistral-Nemo-Instruct-2407",
-    "deepinfra/google/gemini-3.1-pro",
+    "deepinfra/anthropic/claude-sonnet-5",
+    "deepinfra/meta-llama/Llama-4-Maverick-17B-128E-Instruct-Turbo",
+    "deepinfra/Qwen/Qwen3.8-Max",
+    "deepinfra/MiniMaxAI/MiniMax-M2",
+    "deepinfra/meta-llama/Llama-3.2-11B-Vision-Instruct",
+    "deepinfra/Qwen/Qwen3-14B",
+    "deepinfra/Qwen/Qwen3-VL-4B-Thinking",
+    "deepinfra/moonshotai/Kimi-K2.7-Code",
+    "deepinfra/Qwen/Qwen2-7B-Instruct",
+    "deepinfra/zai-org/GLM-5.1",
     "deepinfra/anthropic/claude-sonnet-4-6",
-    "deepinfra/openai/gpt-oss-120b",
-    "deepinfra/anthropic/claude-opus-5-5",
-    "deepinfra/deepseek-ai/DeepSeek-V4-Pro-0813",
-    "deepinfra/KoboldAI/LLaMA2-13B-Tiefighter",
-    "deepinfra/anthropic/claude-sonnet-5-5",
-    "deepinfra/Qwen/Qwen3-235B-A22B",
-    "deepinfra/meta-llama/Meta-Llama-3.1-8B-Instruct",
-    "deepinfra/deepseek-ai/DeepSeek-OCR",
-    "deepinfra/deepinfra/airoboros-70b",
-    "deepinfra/ibm-granite/granite-4.2-30b",
-    "deepinfra/google/gemini-2.5-flash",
-    "deepinfra/Qwen/Qwen3.5-4B",
-    "deepinfra/deepseek-ai/DeepSeek-V4-Flash-0731",
-    "deepinfra/google/gemma-3-4b-it",
-    "deepinfra/meta-llama/Meta-Llama-3-70B-Instruct",
-    "deepinfra/google/gemini-2.5-pro",
-    "deepinfra/zai-org/GLM-4.5-Air",
-    "deepinfra/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
-    "deepinfra/deepseek-ai/DeepSeek-R1-0528",
-    "deepinfra/Qwen/Qwen3.6-27B",
+    "deepinfra/ibm-granite/granite-4.2-8b",
     "deepinfra/XiaomiMiMo/MiMo-V2.5",
-    "deepinfra/mistralai/Devstral-Small-2505",
-    "deepinfra/meta-llama/Llama-Guard-3-8B",
-    "deepinfra/thinkingmachines/Inkling",
-    "deepinfra/openai/gpt-oss-120b-Turbo",
-    "deepinfra/google/gemma-1.1-7b-it",
-    "deepinfra/Qwen/Qwen3-32B",
-    "deepinfra/Gryphe/MythoMax-L2-13b",
-    "deepinfra/stepfun-ai/Step-3.7-Flash",
-    "deepinfra/zai-org/GLM-4.5",
-    "deepinfra/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
     "deepinfra/mistralai/Mistral-7B-Instruct-v0.1",
     "deepinfra/meta-llama/Llama-3.2-1B-Instruct",
-    "deepinfra/thinkingmachines/Inkling-Small",
-    "deepinfra/MiniMaxAI/MiniMax-M2.7-Turbo",
-    "deepinfra/deepseek-ai/DeepSeek-V3-0324-Turbo",
-    "deepinfra/MiniMaxAI/MiniMax-M2.5",
-    "deepinfra/Qwen/Qwen3.8-2.4T-A95B",
-    "deepinfra/moonshotai/Kimi-K2-Thinking",
-    "deepinfra/meta-llama/Llama-3.3-70B-Instruct",
-    "deepinfra/Qwen/Qwen3.5-397B-A17B",
-    "deepinfra/Qwen/Qwen3-VL-4B-Instruct",
-    "deepinfra/deepseek-ai/DeepSeek-Prover-V2-671B",
-    "deepinfra/deepseek-ai/DeepSeek-R1-Turbo",
-    "deepinfra/Qwen/Qwen3-Coder-480B-A35B-Instruct",
-    "deepinfra/anthropic/claude-opus-4-7",
-    "deepinfra/XiaomiMiMo/MiMo-V2.6-Flash",
-    "deepinfra/zai-org/GLM-4.7",
-    "deepinfra/zai-org/GLM-4.7-Flash",
-    "deepinfra/anthropic/claude-opus-4-8",
-    "deepinfra/Qwen/Qwen3-30B-A3B",
-    "deepinfra/Qwen/Qwen2-7B-Instruct",
-    "deepinfra/anthropic/claude-3-7-sonnet-latest",
-    "deepinfra/Qwen/Qwen3-VL-4B-Thinking",
-    "deepinfra/Qwen/Qwen3.8-27B",
-    "deepinfra/deepseek-ai/DeepSeek-V4-Pro",
-    "deepinfra/NousResearch/Hermes-3-Llama-3.1-70B",
-    "deepinfra/anthropic/claude-haiku-4-5",
-    "deepinfra/moonshotai/Kimi-K2.5",
-    "deepinfra/meta-llama/Llama-3.2-3B-Instruct",
     "deepinfra/Qwen/Qwen3-VL-235B-A22B-Thinking",
-    "deepinfra/anthropic/claude-4-sonnet",
-    "deepinfra/moonshotai/Kimi-K2.5-Turbo",
-    "deepinfra/google/gemini-2.0-flash-001",
-    "deepinfra/Qwen/Qwen3-Next-80B-A3B-Instruct",
-    "deepinfra/meta-llama/Meta-Llama-3.1-70B-Instruct",
+    "deepinfra/NovaSky-AI/Sky-T1-32B-Preview",
+    "deepinfra/Qwen/Qwen2.5-Coder-7B",
+    "deepinfra/cognitivecomputations/dolphin-2.9.1-llama-3-70b",
+    "deepinfra/meta-llama/Meta-Llama-3-70B-Instruct",
+    "deepinfra/nvidia/NVIDIA-Nemotron-Nano-9B-v2",
+    "deepinfra/ByteDance/Seed-2.0-mini",
+    "deepinfra/Qwen/Qwen3-VL-235B-A22B-Instruct",
     "deepinfra/Qwen/QwQ-32B-Preview",
-    "deepinfra/moonshotai/Kimi-K2.7-Code",
-    "deepinfra/google/gemma-4-31B-it-Ultra",
-    "deepinfra/nvidia/Nemotron-3-Nano-30B-A3B",
-    "deepinfra/Qwen/Qwen3.5-27B",
+    "deepinfra/deepseek-ai/DeepSeek-V4-Pro-0813",
+    "deepinfra/NousResearch/Hermes-3-Llama-3.1-405B",
+    "deepinfra/mistralai/Mistral-7B-Instruct-v0.3",
+    "deepinfra/ByteDance/Seed-2.0-code",
+    "deepinfra/openai/gpt-oss-120b",
+    "deepinfra/deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+    "deepinfra/Qwen/Qwen3.8-Flash",
+    "deepinfra/mistralai/Mixtral-8x7B-Instruct-v0.1",
+    "deepinfra/google/gemini-3.7-flash",
+    "deepinfra/Qwen/Qwen3-VL-8B-Thinking",
     "deepinfra/MiniMaxAI/MiniMax-M3",
+    "deepinfra/meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
+    "deepinfra/PaddlePaddle/PaddleOCR-VL-0.9B",
+    "deepinfra/Austism/chronos-hermes-13b-v2",
+    "deepinfra/deepseek-ai/DeepSeek-V3",
+    "deepinfra/google/gemma-4-E4B-it",
     "deepinfra/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B",
-    "deepinfra/microsoft/Phi-4-multimodal-instruct",
-    "deepinfra/Qwen/Qwen3.6-35B-A3B",
-    "deepinfra/Qwen/Qwen2-72B-Instruct",
-    "deepinfra/microsoft/Phi-3-medium-4k-instruct",
+    "deepinfra/tencent/Hy3",
+    "deepinfra/deepreinforce-ai/Ornith-1.0-35B",
+    "deepinfra/mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+    "deepinfra/nvidia/Nemotron-3-Nano-30B-A3B",
+    "deepinfra/deepseek-ai/DeepSeek-V3-0324",
+    "deepinfra/nvidia/NVIDIA-Nemotron-3.5-Lightning",
+    "deepinfra/nvidia/Nemotron-Content-Safety-3.5",
+    "deepinfra/nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL",
+    "deepinfra/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+    "deepinfra/mistralai/Mistral-Small-24B-Instruct-2501",
+    "deepinfra/moonshotai/Kimi-K2.6",
+    "deepinfra/XiaomiMiMo/MiMo-V2.5-Pro",
+    "deepinfra/zai-org/GLM-4.5",
+    "deepinfra/zai-org/GLM-5.3",
+    "deepinfra/Sao10K/L3-8B-Lunaris-v1",
+    "deepinfra/anthropic/claude-opus-5",
+    "deepinfra/Sao10K/L3-8B-Lunaris-v1-Turbo",
+    "deepinfra/moonshotai/Kimi-K2.5-Turbo",
+    "deepinfra/moonshotai/Kimi-K2.5",
+    "deepinfra/Qwen/Qwen3-VL-30B-A3B-Thinking",
+    "deepinfra/Qwen/Qwen3-32B",
+    "deepinfra/meta-llama/Llama-4-Scout-17B-16E-Instruct",
+    "deepinfra/meta-llama/Llama-2-13b-chat-hf",
+    "deepinfra/deepseek-ai/DeepSeek-V3.1-Terminus",
+    "deepinfra/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B",
+    "deepinfra/Qwen/Qwen3-235B-A22B-Thinking-2507",
+    "deepinfra/deepseek-ai/DeepSeek-Prover-V2-671B",
+    "deepinfra/stepfun-ai/Step-3.7-Flash",
+    "deepinfra/meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "deepinfra/Qwen/Qwen3-Coder-480B-A35B-Instruct",
+    "deepinfra/Qwen/Qwen3.8-27B",
+    "deepinfra/google/gemini-3.1-flash-lite",
+    "deepinfra/moonshotai/Kimi-K2-Instruct-0905",
+    "deepinfra/deepseek-ai/DeepSeek-V4.1-Flash",
+    "deepinfra/Qwen/Qwen3.5-122B-A10B",
+    "deepinfra/nvidia/Llama-3.1-Nemotron-70B-Instruct",
+    "deepinfra/openai/gpt-oss-120b-Ultra",
+    "deepinfra/meta-llama/Meta-Llama-3.1-70B-Instruct",
+    "deepinfra/deepseek-ai/DeepSeek-V3.1",
+    "deepinfra/google/gemma-2-27b-it",
+    "deepinfra/anthropic/claude-sonnet-5-5",
+    "deepinfra/Qwen/QVQ-72B-Preview",
+    "deepinfra/Qwen/QwQ-32B",
+    "deepinfra/microsoft/WizardLM-2-7B",
+    "deepinfra/Qwen/Qwen3.8-2.4T-A95B",
+    "deepinfra/deepseek-ai/DeepSeek-V3.2",
+    "deepinfra/mistralai/Mistral-7B-Instruct-v0.2",
+    "deepinfra/Qwen/Qwen3.5-2B",
+    "deepinfra/zai-org/GLM-5",
+    "deepinfra/meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo",
+    "deepinfra/openai/gpt-oss-120b-Turbo",
+    "deepinfra/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "deepinfra/Qwen/Qwen3.5-397B-A17B",
+    "deepinfra/microsoft/WizardLM-2-8x22B",
+    "deepinfra/mistralai/Devstral-Small-2505",
+    "deepinfra/ibm-granite/granite-4.2-30b",
+    "deepinfra/meta-llama/Meta-Llama-3-8B-Instruct",
+    "deepinfra/google/gemma-3-27b-it",
+    "deepinfra/google/gemma-4-31B-it-turbo",
+    "deepinfra/zai-org/GLM-5.3-Flash",
+    "deepinfra/XiaomiMiMo/MiMo-V2.6-Flash",
+    "deepinfra/google/gemini-2.5-pro",
+    "deepinfra/openai/gpt-oss-20b",
+    "deepinfra/openchat/openchat_3.5",
+    "deepinfra/Sao10K/L3.1-70B-Euryale-v2.2",
+    "deepinfra/allenai/Olmo-3.1-32B-Instruct",
+    "deepinfra/meta-llama/Llama-3.2-3B-Instruct",
+    "deepinfra/deepseek-ai/DeepSeek-R1-Turbo",
+    "deepinfra/google/gemma-4-31B-it",
+    "deepinfra/anthropic/claude-fable-5",
     "deepinfra/tencent/Hy4-preview",
     "deepinfra/meta-llama/Meta-Llama-3.1-405B-Instruct",
-    "deepinfra/Qwen/Qwen3-235B-A22B-Instruct-2507",
-    "deepinfra/nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL",
-    "deepinfra/Phind/Phind-CodeLlama-34B-v2",
-    "deepinfra/Qwen/Qwen3-VL-30B-A3B-Instruct",
+    "deepinfra/Qwen/Qwen3.5-27B",
+    "deepinfra/meta-models/Muse-Glimmer-30B",
     "deepinfra/inclusionAI/Ling-3.0-flash-Fin",
-    "deepinfra/Qwen/Qwen3-235B-A22B-Thinking-2507",
-    "deepinfra/NovaSky-AI/Sky-T1-32B-Preview",
-    "deepinfra/openchat/openchat-3.6-8b",
-    "deepinfra/meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo",
-    "deepinfra/meta-llama/Llama-3.2-90B-Vision-Instruct",
-    "deepinfra/allenai/Olmo-3.1-32B-Instruct",
-    "deepinfra/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
-    "deepinfra/meta-llama/Llama-2-13b-chat-hf",
-    "deepinfra/google/gemma-4-31B-it",
-    "deepinfra/cognitivecomputations/dolphin-2.6-mixtral-8x7b",
-    "deepinfra/Qwen/Qwen3-Coder-30B-A3B-Instruct",
-    "deepinfra/allenai/olmOCR-7B-0825",
-    "deepinfra/stepfun-ai/Step-3.5-Flash",
-    "deepinfra/deepseek-ai/DeepSeek-V4-Flash",
-    "deepinfra/Qwen/Qwen3.7-Max",
+    "deepinfra/meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "deepinfra/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning",
+    "deepinfra/google/codegemma-7b-it",
     "deepinfra/meta-llama/Llama-2-70b-chat-hf",
-    "deepinfra/Sao10K/L3.1-70B-Euryale-v2.2",
-    "deepinfra/deepreinforce-ai/Ornith-1.0-35B",
-    "deepinfra/moonshotai/Kimi-K3",
-    "deepinfra/meta-llama/Llama-Guard-4-12B",
-    "deepinfra/moonshotai/Kimi-K2.6",
-    "deepinfra/Qwen/Qwen3.5-122B-A10B",
-    "deepinfra/nvidia/NVIDIA-Nemotron-3.5-Lightning",
-    "deepinfra/google/gemma-2-27b-it",
-    "deepinfra/allenai/olmOCR-7B-0725-FP8",
-    "deepinfra/microsoft/phi-4-reasoning-plus",
-    "deepinfra/zai-org/GLM-5.2",
-    "deepinfra/deepseek-ai/DeepSeek-V3.2",
-    "deepinfra/deepseek-ai/DeepSeek-R1-0528-Turbo",
-    "deepinfra/PaddlePaddle/PaddleOCR-VL-0.9B",
-    "deepinfra/zai-org/GLM-5.1",
-    "deepinfra/nvidia/Llama-3.3-Nemotron-Super-49B-v1.5",
-    "deepinfra/ByteDance/Seed-2.0-mini",
-    "deepinfra/Qwen/Qwen2.5-VL-32B-Instruct",
-    "deepinfra/microsoft/WizardLM-2-8x22B",
-    "deepinfra/anthropic/claude-fable-5",
-    "deepinfra/meta-llama/Llama-4-Scout-17B-16E-Instruct",
-    "deepinfra/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
-    "deepinfra/Qwen/Qwen3.8-Max",
-    "deepinfra/mistralai/Mistral-Small-3.1-24B-Instruct-2503",
-    "deepinfra/google/gemma-4-31B-it-turbo",
-    "deepinfra/MiniMaxAI/MiniMax-M2.7",
-    "deepinfra/meta-llama/Meta-Llama-3-8B-Instruct",
-    "deepinfra/nvidia/Llama-3.1-Nemotron-70B-Instruct",
-    "deepinfra/bigcode/starcoder2-15b-instruct-v0.1",
-    "deepinfra/meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
-    "deepinfra/google/gemini-3.1-flash-lite",
-    "deepinfra/deepseek-ai/DeepSeek-V3.1-Terminus",
+    "deepinfra/KoboldAI/LLaMA2-13B-Tiefighter",
+    "deepinfra/Gryphe/MythoMax-L2-13b-turbo",
     "deepinfra/microsoft/phi-4",
-    "deepinfra/deepseek-ai/DeepSeek-V3.1",
-    "deepinfra/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B",
-    "deepinfra/mistralai/Mistral-Small-3.2-24B-Instruct-2506",
-    "deepinfra/google/gemini-3.7-flash",
-    "deepinfra/Sao10K/L3.3-70B-Euryale-v2.3"
+    "deepinfra/zai-org/GLM-4.7-Flash",
+    "deepinfra/google/gemma-3-12b-it",
+    "deepinfra/google/gemma-1.1-7b-it",
+    "deepinfra/Qwen/Qwen3-Max-Thinking",
+    "deepinfra/deepseek-ai/DeepSeek-V4-Flash-0731",
+    "deepinfra/anthropic/claude-opus-5-5",
+    "deepinfra/MiniMaxAI/MiniMax-M2.7-Turbo",
+    "deepinfra/Qwen/Qwen3.5-0.8B",
+    "deepinfra/anthropic/claude-opus-4-8",
+    "deepinfra/Gryphe/MythoMax-L2-13b",
+    "deepinfra/meta-llama/Llama-Guard-3-8B",
+    "deepinfra/Qwen/Qwen2.5-72B-Instruct",
+    "deepinfra/anthropic/claude-opus-4-7",
+    "deepinfra/Qwen/Qwen3.5-35B-A3B",
+    "deepinfra/zai-org/GLM-4.5-Air",
+    "deepinfra/mistralai/Mistral-Nemo-Instruct-2407",
+    "deepinfra/microsoft/Phi-3-medium-4k-instruct",
+    "deepinfra/zai-org/GLM-4.6V"
   ]
 }
