@@ -101,7 +101,7 @@ def normalize_verification_status(
     """Upgrade older persisted records when their error body has a more precise meaning."""
     if status != VerificationStatus.AUTHENTICATION_FAILED or not error_message:
         return status
-    body = error_message.lower()
+    body = error_message.casefold()
     if any(marker in body for marker in CLIENT_RESTRICTED_MARKERS):
         return VerificationStatus.CLIENT_RESTRICTED
     return status
