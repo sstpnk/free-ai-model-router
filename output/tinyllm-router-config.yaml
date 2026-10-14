@@ -1,7 +1,7 @@
 metadata:
   schema_version: 1
   generated_by: free-ai-model-router
-  generated_at: '2026-10-13T12:41:32.304002+00:00'
+  generated_at: '2026-10-14T10:10:04.945869+00:00'
   source_output: output/free-router-catalog.json
   route_count: 6
   secrets_policy: api keys are referenced by env var name only
@@ -57,52 +57,52 @@ providers:
 routes:
   agent-auto:
   - provider: openrouter
-    model: apodex/apodex-1.1-mini:free
-  - provider: openrouter
     model: dots-studio/dots-3-note-preview:free
   - provider: openrouter
     model: liquid/lfm-2.5-2.6b:free
   - provider: openrouter
     model: nvidia/nemotron-3.5-lightning:free
+  - provider: openrouter
+    model: poolside/laguna-s-2.1:free
   - provider: deepseek2api
     model: deepseek-v4-flash
   - provider: deepseek2api
     model: deepseek-v4-pro
   coding-auto:
   - provider: openrouter
-    model: apodex/apodex-1.1-mini:free
-  - provider: openrouter
     model: dots-studio/dots-3-note-preview:free
   - provider: openrouter
     model: liquid/lfm-2.5-2.6b:free
   - provider: openrouter
     model: nvidia/nemotron-3.5-lightning:free
+  - provider: openrouter
+    model: poolside/laguna-s-2.1:free
   - provider: deepseek2api
     model: deepseek-v4-flash
   - provider: deepseek2api
     model: deepseek-v4-pro
   agent-auto-pay:
   - provider: openrouter
-    model: apodex/apodex-1.1-mini:free
-  - provider: openrouter
     model: dots-studio/dots-3-note-preview:free
   - provider: openrouter
     model: liquid/lfm-2.5-2.6b:free
   - provider: openrouter
     model: nvidia/nemotron-3.5-lightning:free
+  - provider: openrouter
+    model: poolside/laguna-s-2.1:free
   - provider: deepseek2api
     model: deepseek-v4-flash
   - provider: deepseek2api
     model: deepseek-v4-pro
   coding-auto-pay:
   - provider: openrouter
-    model: apodex/apodex-1.1-mini:free
-  - provider: openrouter
     model: dots-studio/dots-3-note-preview:free
   - provider: openrouter
     model: liquid/lfm-2.5-2.6b:free
   - provider: openrouter
     model: nvidia/nemotron-3.5-lightning:free
+  - provider: openrouter
+    model: poolside/laguna-s-2.1:free
   - provider: deepseek2api
     model: deepseek-v4-flash
   - provider: deepseek2api
