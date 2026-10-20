@@ -1,7 +1,7 @@
 metadata:
   schema_version: 1
   generated_by: free-ai-model-router
-  generated_at: '2026-10-19T10:44:17.276212+00:00'
+  generated_at: '2026-10-20T10:01:12.532217+00:00'
   source_output: output/free-router-catalog.json
   route_count: 6
   secrets_policy: api keys are referenced by env var name only
@@ -57,9 +57,9 @@ routes:
   - provider: openrouter
     model: dots-studio/dots-3-note-preview:free
   - provider: openrouter
-    model: liquid/lfm-2.5-2.6b:free
+    model: minimax/minimax-m3.1-flash:free
   - provider: openrouter
-    model: nvidia/nemotron-3.5-lightning:free
+    model: nvidia/nemotron-3.5-super-vl:free
   - provider: openrouter
     model: xingchen-agi/xing4.0-29b-a4b:free
   - provider: deepseek2api
@@ -68,13 +68,13 @@ routes:
     model: deepseek-v4-pro
   coding-auto:
   - provider: openrouter
+    model: minimax/minimax-m3.1-flash:free
+  - provider: openrouter
     model: xingchen-agi/xing4.0-29b-a4b:free
   - provider: openrouter
+    model: nvidia/nemotron-3.5-super-vl:free
+  - provider: openrouter
     model: dots-studio/dots-3-note-preview:free
-  - provider: openrouter
-    model: liquid/lfm-2.5-2.6b:free
-  - provider: openrouter
-    model: nvidia/nemotron-3.5-lightning:free
   - provider: deepseek2api
     model: deepseek-v4-flash
   - provider: deepseek2api
@@ -83,9 +83,9 @@ routes:
   - provider: openrouter
     model: dots-studio/dots-3-note-preview:free
   - provider: openrouter
-    model: liquid/lfm-2.5-2.6b:free
+    model: minimax/minimax-m3.1-flash:free
   - provider: openrouter
-    model: nvidia/nemotron-3.5-lightning:free
+    model: nvidia/nemotron-3.5-super-vl:free
   - provider: openrouter
     model: xingchen-agi/xing4.0-29b-a4b:free
   - provider: deepseek2api
@@ -94,13 +94,13 @@ routes:
     model: deepseek-v4-pro
   coding-auto-pay:
   - provider: openrouter
+    model: minimax/minimax-m3.1-flash:free
+  - provider: openrouter
     model: xingchen-agi/xing4.0-29b-a4b:free
   - provider: openrouter
+    model: nvidia/nemotron-3.5-super-vl:free
+  - provider: openrouter
     model: dots-studio/dots-3-note-preview:free
-  - provider: openrouter
-    model: liquid/lfm-2.5-2.6b:free
-  - provider: openrouter
-    model: nvidia/nemotron-3.5-lightning:free
   - provider: deepseek2api
     model: deepseek-v4-flash
   - provider: deepseek2api
