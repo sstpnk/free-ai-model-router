@@ -1,7 +1,7 @@
 metadata:
   schema_version: 1
   generated_by: free-ai-model-router
-  generated_at: '2026-10-24T09:31:00.188381+00:00'
+  generated_at: '2026-10-25T09:47:40.950125+00:00'
   source_output: output/free-router-catalog.json
   route_count: 6
   secrets_policy: api keys are referenced by env var name only
@@ -57,7 +57,7 @@ routes:
   - provider: openrouter
     model: dots-studio/dots-3-note-preview:free
   - provider: openrouter
-    model: liquid/lfm-2.5-2.6b:free
+    model: nvidia/nemotron-3.5-super-vl:free
   - provider: openrouter
     model: recursive/flint-v1.0:free
   - provider: openrouter
@@ -72,9 +72,9 @@ routes:
   - provider: openrouter
     model: xingchen-agi/xing4.0-29b-a4b:free
   - provider: openrouter
-    model: dots-studio/dots-3-note-preview:free
+    model: nvidia/nemotron-3.5-super-vl:free
   - provider: openrouter
-    model: liquid/lfm-2.5-2.6b:free
+    model: dots-studio/dots-3-note-preview:free
   - provider: deepseek2api
     model: deepseek-v4-flash
   - provider: deepseek2api
@@ -83,7 +83,7 @@ routes:
   - provider: openrouter
     model: dots-studio/dots-3-note-preview:free
   - provider: openrouter
-    model: liquid/lfm-2.5-2.6b:free
+    model: nvidia/nemotron-3.5-super-vl:free
   - provider: openrouter
     model: recursive/flint-v1.0:free
   - provider: openrouter
@@ -98,9 +98,9 @@ routes:
   - provider: openrouter
     model: xingchen-agi/xing4.0-29b-a4b:free
   - provider: openrouter
-    model: dots-studio/dots-3-note-preview:free
+    model: nvidia/nemotron-3.5-super-vl:free
   - provider: openrouter
-    model: liquid/lfm-2.5-2.6b:free
+    model: dots-studio/dots-3-note-preview:free
   - provider: deepseek2api
     model: deepseek-v4-flash
   - provider: deepseek2api
