@@ -1,7 +1,7 @@
 metadata:
   schema_version: 1
   generated_by: free-ai-model-router
-  generated_at: '2026-11-08T11:54:58.143037+00:00'
+  generated_at: '2026-11-09T13:52:05.674533+00:00'
   source_output: output/free-router-catalog.json
   route_count: 6
   secrets_policy: api keys are referenced by env var name only
@@ -44,10 +44,6 @@ providers:
     type: openai-compatible
     base_url: https://api.cloudflare.com/client/v4/accounts/1ae907087b044bef0ad45de2d93e9086/ai/v1
     api_key_env: CLOUDFLARE_API_KEY
-  huggingface:
-    type: openai-compatible
-    base_url: https://api-inference.huggingface.co/v1
-    api_key_env: HUGGINGFACE_API_KEY
   deepinfra:
     type: openai-compatible
     base_url: https://api.deepinfra.com/v1/openai
