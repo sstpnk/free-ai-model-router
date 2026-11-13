@@ -1,7 +1,7 @@
 metadata:
   schema_version: 1
   generated_by: free-ai-model-router
-  generated_at: '2026-11-12T13:44:09.570152+00:00'
+  generated_at: '2026-11-13T13:04:18.172996+00:00'
   source_output: output/free-router-catalog.json
   route_count: 6
   secrets_policy: api keys are referenced by env var name only
@@ -61,7 +61,7 @@ routes:
   - provider: openrouter
     model: nvidia/nemotron-3.5-super-vl:free
   - provider: openrouter
-    model: recursive/flint-v1.0:free
+    model: particle-ai/particle-1:free
   - provider: deepseek2api
     model: deepseek-v4-flash
   - provider: deepseek2api
@@ -72,7 +72,7 @@ routes:
   - provider: openrouter
     model: liquid/lfm-3-1.7b:free
   - provider: openrouter
-    model: recursive/flint-v1.0:free
+    model: particle-ai/particle-1:free
   - provider: openrouter
     model: nvidia/nemotron-3.5-super-vl:free
   - provider: deepseek2api
@@ -87,7 +87,7 @@ routes:
   - provider: openrouter
     model: nvidia/nemotron-3.5-super-vl:free
   - provider: openrouter
-    model: recursive/flint-v1.0:free
+    model: particle-ai/particle-1:free
   - provider: deepseek2api
     model: deepseek-v4-flash
   - provider: deepseek2api
@@ -98,7 +98,7 @@ routes:
   - provider: openrouter
     model: liquid/lfm-3-1.7b:free
   - provider: openrouter
-    model: recursive/flint-v1.0:free
+    model: particle-ai/particle-1:free
   - provider: openrouter
     model: nvidia/nemotron-3.5-super-vl:free
   - provider: deepseek2api
