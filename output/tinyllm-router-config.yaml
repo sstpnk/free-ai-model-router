@@ -1,7 +1,7 @@
 metadata:
   schema_version: 1
   generated_by: free-ai-model-router
-  generated_at: '2026-11-13T13:04:18.172996+00:00'
+  generated_at: '2026-11-14T12:08:43.324319+00:00'
   source_output: output/free-router-catalog.json
   route_count: 6
   secrets_policy: api keys are referenced by env var name only
@@ -57,9 +57,9 @@ routes:
   - provider: openrouter
     model: baidu/ernie-5.5-flash-preview:free
   - provider: openrouter
-    model: liquid/lfm-3-1.7b:free
+    model: inclusionai/ling-3.2-flash:free
   - provider: openrouter
-    model: nvidia/nemotron-3.5-super-vl:free
+    model: liquid/lfm-3-1.7b:free
   - provider: openrouter
     model: particle-ai/particle-1:free
   - provider: deepseek2api
@@ -68,13 +68,13 @@ routes:
     model: deepseek-v4-pro
   coding-auto:
   - provider: openrouter
+    model: inclusionai/ling-3.2-flash:free
+  - provider: openrouter
     model: baidu/ernie-5.5-flash-preview:free
   - provider: openrouter
     model: liquid/lfm-3-1.7b:free
   - provider: openrouter
     model: particle-ai/particle-1:free
-  - provider: openrouter
-    model: nvidia/nemotron-3.5-super-vl:free
   - provider: deepseek2api
     model: deepseek-v4-flash
   - provider: deepseek2api
@@ -83,9 +83,9 @@ routes:
   - provider: openrouter
     model: baidu/ernie-5.5-flash-preview:free
   - provider: openrouter
-    model: liquid/lfm-3-1.7b:free
+    model: inclusionai/ling-3.2-flash:free
   - provider: openrouter
-    model: nvidia/nemotron-3.5-super-vl:free
+    model: liquid/lfm-3-1.7b:free
   - provider: openrouter
     model: particle-ai/particle-1:free
   - provider: deepseek2api
@@ -94,13 +94,13 @@ routes:
     model: deepseek-v4-pro
   coding-auto-pay:
   - provider: openrouter
+    model: inclusionai/ling-3.2-flash:free
+  - provider: openrouter
     model: baidu/ernie-5.5-flash-preview:free
   - provider: openrouter
     model: liquid/lfm-3-1.7b:free
   - provider: openrouter
     model: particle-ai/particle-1:free
-  - provider: openrouter
-    model: nvidia/nemotron-3.5-super-vl:free
   - provider: deepseek2api
     model: deepseek-v4-flash
   - provider: deepseek2api
