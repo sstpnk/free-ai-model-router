@@ -16,6 +16,7 @@ from free_ai_model_router.verification.status import (
     classify_http_status,
     is_evidence_status,
     is_routable_status,
+    normalize_verification_status,
     parse_retry_after_seconds,
 )
 
@@ -101,3 +102,12 @@ def test_models_report_keeps_throttled_endpoint_visible() -> None:
     assert "exists_but_throttled" in report
     assert "rate_limited" in report
     assert "10s" in report
+
+
+def test_normalize_verification_status_casefolds_unicode_restricted_marker() -> None:
+    status = normalize_verification_status(
+        VerificationStatus.AUTHENTICATION_FAILED,
+        "Misſing SessionID for this client",
+    )
+
+    assert status is VerificationStatus.CLIENT_RESTRICTED
