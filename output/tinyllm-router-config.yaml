@@ -1,7 +1,7 @@
 metadata:
   schema_version: 1
   generated_by: free-ai-model-router
-  generated_at: '2026-11-23T15:55:57.739511+00:00'
+  generated_at: '2026-11-24T15:50:41.547483+00:00'
   source_output: output/free-router-catalog.json
   route_count: 6
   secrets_policy: api keys are referenced by env var name only
