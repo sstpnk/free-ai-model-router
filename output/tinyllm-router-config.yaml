@@ -1,7 +1,7 @@
 metadata:
   schema_version: 1
   generated_by: free-ai-model-router
-  generated_at: '2026-11-26T15:08:22.621865+00:00'
+  generated_at: '2026-11-27T15:00:24.775898+00:00'
   source_output: output/free-router-catalog.json
   route_count: 6
   secrets_policy: api keys are referenced by env var name only
@@ -53,24 +53,24 @@ routes:
   - provider: openrouter
     model: baidu/ernie-5.5-flash-preview:free
   - provider: openrouter
-    model: inclusionai/ling-3.2-flash:free
-  - provider: openrouter
     model: liquid/lfm-3-1.7b:free
   - provider: openrouter
     model: particle-ai/particle-1:free
+  - provider: openrouter
+    model: recursive/flint-v1.0:free
   - provider: deepseek2api
     model: deepseek-v4-flash
   - provider: deepseek2api
     model: deepseek-v4-pro
   coding-auto:
   - provider: openrouter
-    model: inclusionai/ling-3.2-flash:free
-  - provider: openrouter
     model: baidu/ernie-5.5-flash-preview:free
   - provider: openrouter
     model: liquid/lfm-3-1.7b:free
   - provider: openrouter
     model: particle-ai/particle-1:free
+  - provider: openrouter
+    model: recursive/flint-v1.0:free
   - provider: deepseek2api
     model: deepseek-v4-flash
   - provider: deepseek2api
@@ -79,24 +79,24 @@ routes:
   - provider: openrouter
     model: baidu/ernie-5.5-flash-preview:free
   - provider: openrouter
-    model: inclusionai/ling-3.2-flash:free
-  - provider: openrouter
     model: liquid/lfm-3-1.7b:free
   - provider: openrouter
     model: particle-ai/particle-1:free
+  - provider: openrouter
+    model: recursive/flint-v1.0:free
   - provider: deepseek2api
     model: deepseek-v4-flash
   - provider: deepseek2api
     model: deepseek-v4-pro
   coding-auto-pay:
   - provider: openrouter
-    model: inclusionai/ling-3.2-flash:free
-  - provider: openrouter
     model: baidu/ernie-5.5-flash-preview:free
   - provider: openrouter
     model: liquid/lfm-3-1.7b:free
   - provider: openrouter
     model: particle-ai/particle-1:free
+  - provider: openrouter
+    model: recursive/flint-v1.0:free
   - provider: deepseek2api
     model: deepseek-v4-flash
   - provider: deepseek2api
